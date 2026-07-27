@@ -1,0 +1,40 @@
+zone_id,name,shore,tier,value,density,access,workops,composite,matched_customers,access_note,priority_rank,priority_score_x_customers
+s04-westlake-lake-austin-marina,Westlake Dr corridor / Lake Austin Marina,S,A,100,55,91.6,80,83.7,55,ramp: Walsh Boat Landing 0.6 km (2nd Loop 360 Boat Ramp (Pennybacker) 5.25 km),1,4603.5
+n01-tarrytown-lake-austin-blvd,Tarrytown–Lake Austin Blvd corridor,N,A,100,55,95.52,45,79.4,9,ramp: Walsh Boat Landing 0.32 km (2nd Loop 360 Boat Ramp (Pennybacker) 5.57 km),2,714.6
+s02-laguna-loma,Laguna Loma,S,A,100,55,93.28,45,78.8,36,ramp: Walsh Boat Landing 0.48 km (2nd Loop 360 Boat Ramp (Pennybacker) 5.54 km),3,2836.7999999999997
+s08-austin-country-club,Austin Country Club environs,S,A,100,55,91.46000000000001,45,78.4,1,ramp: Loop 360 Boat Ramp (Pennybacker) 0.61 km (2nd Emma Long Metropolitan Park 4.58 km),4,78.4
+s03-oyster-landing-hula-hut,Oyster Landing / Hula Hut–Mozart's basin,S,B,60,90,90.08,80,78.0,14,ramp: Walsh Boat Landing 0.28 km (2nd Loop 360 Boat Ramp (Pennybacker) 6.11 km); canal/basin work — entrance width limits barge size,5,1092.0
+s06-rockcliff-estates,Rockcliff Rd estates,S,A,100,55,84.88,45,76.7,25,ramp: Loop 360 Boat Ramp (Pennybacker) 1.08 km (2nd Walsh Boat Landing 4.84 km),6,1917.5
+n09-ski-shores-pearce-manana,Ski Shores / Pearce / Manana strip,N,A,100,55,76.76,45,74.7,40,ramp: Emma Long Metropolitan Park 1.66 km (2nd Loop 360 Boat Ramp (Pennybacker) 3.29 km),7,2988.0
+s11-river-hills-weston,River Hills Rd / Weston Ln,S,A,100,55,75.36,45,74.3,3,ramp: Emma Long Metropolitan Park 1.76 km (2nd Commons Ford Ranch Metropolitan Park 1.93 km),8,222.89999999999998
+s07-davenport-ranch,Davenport Ranch,S,A,100,55,66.25999999999999,45,72.1,13,ramp: Loop 360 Boat Ramp (Pennybacker) 2.41 km (2nd Emma Long Metropolitan Park 3.49 km),9,937.3
+s10-rivercrest,Rivercrest,S,A,100,55,66.25999999999999,45,72.1,50,ramp: Emma Long Metropolitan Park 2.41 km (2nd Loop 360 Boat Ramp (Pennybacker) 2.51 km),9,3604.9999999999995
+s19-apache-shores,Apache Shores (incl. Lake Apache / Indian Creek),S,B,60,90,64.88,80,71.7,7,ramp: Jessica Hollis Park 2.08 km (2nd Mansfield Dam Park ramp 2.61 km); canal/basin work — entrance width limits barge size,11,501.90000000000003
+n16-steiner-bellagio-lake-club,Steiner Ranch waterfront — Bellagio / Lake Club,N,A,100,55,62.48,45,71.1,7,ramp: Jessica Hollis Park 2.68 km (2nd Mansfield Dam Park ramp 3.15 km),12,497.69999999999993
+n05-the-island-canal-grid,The Island at Mount Bonnell Shores — CANAL GRID,N,A,100,60,35.36,80,70.8,29,ramp: Loop 360 Boat Ramp (Pennybacker) 2.76 km (2nd Walsh Boat Landing 3.74 km); gated — coordinate entry with mgmt/HOA; canal/basin work — entrance width limits barge size,13,2053.2
+n03-mount-bonnell-shores,Mount Bonnell shores / Dry Creek mouth,N,A,100,55,60.1,45,70.5,43,ramp: Walsh Boat Landing 2.85 km (2nd Loop 360 Boat Ramp (Pennybacker) 3.72 km),14,3031.5
+s13-rob-roy-on-the-lake,Rob Roy on the Lake,S,A,100,40,63.06,45,67.5,0,ramp: Emma Long Metropolitan Park 1.21 km (2nd Commons Ford Ranch Metropolitan Park 1.76 km); gated — coordinate entry with mgmt/HOA,15,0.0
+n15-caslano,Caslano on Lake Austin (Steiner Ranch),N,A,100,40,62.78,45,67.4,6,ramp: Mary Quinlan Park 1.23 km (2nd Jessica Hollis Park 6.04 km); gated — coordinate entry with mgmt/HOA,16,404.40000000000003
+s16-austin-lake-hills,Austin Lake Hills,S,B,60,70,88.24,45,67.3,0,ramp: Commons Ford Ranch Metropolitan Park 0.84 km (2nd Emma Long Metropolitan Park 2.42 km),17,0.0
+s12-cypress-banks,Cypress Banks,S,B,60,70,87.96000000000001,45,67.2,5,ramp: Emma Long Metropolitan Park 0.86 km (2nd Commons Ford Ranch Metropolitan Park 1.17 km),18,336.0
+s15-cuernavaca,Cuernavaca / River Terrace / Saratoga Point,S,B,60,70,87.4,45,67.1,0,ramp: Commons Ford Ranch Metropolitan Park 0.9 km (2nd Emma Long Metropolitan Park 2.44 km),19,0.0
+s14-bee-creek-arm,Bee Creek arm,S,B,60,60,75.06,80,66.8,1,"ramp: Commons Ford Ranch Metropolitan Park 1.21 km (2nd Emma Long Metropolitan Park 1.83 km); creek arm — silted at drawdown, clearance constraints",20,66.8
+s01-stratford-hills-redbud,Stratford Hills / Redbud,S,B,60,70,82.5,45,65.9,0,ramp: Walsh Boat Landing 1.25 km (2nd Emma Long Metropolitan Park 6.59 km),21,0.0
+n07-bull-creek-mouth-county-line,Bull Creek arm mouth / County Line,N,B,60,60,71.28,80,65.8,4,"ramp: Loop 360 Boat Ramp (Pennybacker) 1.48 km (2nd Emma Long Metropolitan Park 6.3 km); creek arm — silted at drawdown, clearance constraints",22,263.2
+s18-lake-pointe,Lake Pointe,S,B,60,70,80.82,45,65.5,1,ramp: Mary Quinlan Park 1.37 km (2nd Commons Ford Ranch Metropolitan Park 5.63 km),23,65.5
+n08-greenshores,Greenshores on Lake Austin,N,A,100,40,53.260000000000005,45,65.1,40,ramp: Loop 360 Boat Ramp (Pennybacker) 1.91 km (2nd Emma Long Metropolitan Park 3.02 km); gated — coordinate entry with mgmt/HOA,24,2604.0
+n06-the-courtyard-bull-creek,"The Courtyard (gated, Bull Creek arm)",N,A,100,30,60.8,45,64.5,8,"ramp: Loop 360 Boat Ramp (Pennybacker) 0.8 km (2nd Emma Long Metropolitan Park 5.59 km); gated — coordinate entry with mgmt/HOA; creek arm — silted at drawdown, clearance constraints",25,516.0
+n11-coldwater,Coldwater / Sanctuary at Coldwater,N,A,100,40,44.16,45,62.8,10,ramp: Commons Ford Ranch Metropolitan Park 2.56 km (2nd Emma Long Metropolitan Park 2.84 km); gated — coordinate entry with mgmt/HOA,26,628.0
+s05-st-tropez,St. Tropez (gated villas),S,A,100,40,42.199999999999996,45,62.3,2,ramp: Walsh Boat Landing 2.7 km (2nd Loop 360 Boat Ramp (Pennybacker) 3.76 km); gated — coordinate entry with mgmt/HOA,27,124.6
+n04-watersedge,Watersedge (gated),N,A,100,40,41.5,45,62.1,21,ramp: Loop 360 Boat Ramp (Pennybacker) 2.75 km (2nd Walsh Boat Landing 3.71 km); gated — coordinate entry with mgmt/HOA,28,1304.1000000000001
+n12-river-place-panther-hollow,River Place / Panther Hollow arm,N,B,60,60,48.04,80,60.0,9,"ramp: Commons Ford Ranch Metropolitan Park 3.14 km (2nd Emma Long Metropolitan Park 3.6 km); creek arm — silted at drawdown, clearance constraints",29,540.0
+s20-hidden-valley-fritz-hughes,Hidden Valley / Fritz Hughes Park,S,B,60,55,73.28,45,59.8,8,ramp: Jessica Hollis Park 0.48 km (2nd Mansfield Dam Park ramp 1.01 km); gated — coordinate entry with mgmt/HOA,30,478.4
+n10-emma-long-park,Emma Long Metropolitan Park shore,N,C,30,35,100.0,30,48.8,9,ramp: Emma Long Metropolitan Park 0.0 km (2nd Commons Ford Ranch Metropolitan Park 1.75 km),31,439.2
+s09-loop360-boat-ramp,Loop 360 Boat Ramp / Pennybacker Bridge,S,C,30,35,100.0,30,48.8,1,ramp: Loop 360 Boat Ramp (Pennybacker) 0.0 km (2nd Emma Long Metropolitan Park 4.84 km),31,48.8
+n17-mary-quinlan-lake-austin-spa,Mary Quinlan Park / Lake Austin Spa shore,N,C,30,35,98.74,30,48.4,10,ramp: Mary Quinlan Park 0.09 km (2nd Commons Ford Ranch Metropolitan Park 6.35 km),33,484.0
+s21-mansfield-dam-s,Mansfield Dam terminus (S),S,C,30,35,96.64,30,47.9,0,ramp: Mansfield Dam Park ramp 0.24 km (2nd Jessica Hollis Park 0.33 km),34,0.0
+n18-mansfield-dam-n,Mansfield Dam terminus (N),N,C,30,35,96.64,30,47.9,2,ramp: Mansfield Dam Park ramp 0.24 km (2nd Jessica Hollis Park 0.33 km),34,95.8
+n02-laguna-gloria-mayfield,Laguna Gloria / Mayfield shore,N,C,30,35,73.4,30,42.1,30,ramp: Walsh Boat Landing 1.9 km (2nd Loop 360 Boat Ramp (Pennybacker) 4.62 km),36,1263.0
+n13-turkey-creek-arm,Turkey Creek arm,N,C,30,25,48.879999999999995,80,41.0,0,"ramp: Emma Long Metropolitan Park 3.08 km (2nd Commons Ford Ranch Metropolitan Park 3.44 km); creek arm — silted at drawdown, clearance constraints",37,0.0
+n14-selma-hughes-park,Selma Hughes Park shore,N,C,30,35,65.0,30,40.0,0,ramp: Mary Quinlan Park 2.5 km (2nd Commons Ford Ranch Metropolitan Park 4.32 km),38,0.0
+s17-commons-ford-park,Commons Ford Ranch Park shore,S,C,30,35,56.74,30,37.9,1,ramp: Commons Ford Ranch Metropolitan Park 3.09 km (2nd Mary Quinlan Park 3.56 km),39,37.9
