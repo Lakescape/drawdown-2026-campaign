@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drawdown 2026 — Team Onboarding Deck (26 Slides)</title>
+<!--
+  TEAM_Onboarding_SlideDeck_26pg_v1_FINAL.html
+  Version: v1 FINAL (after Draft -> Skill Poll -> Revision -> Board Review -> Devil's Advocate -> Final)
+  Date: July 2026
+  Author: DRAWDOWN 2026 Swarm — Creative Director + Copywriter (primary), all 6 roles polled
+  Status: FINAL — Board Approved with Notes; Red Team improvements applied
+  Deliverable: 5.1 — Team Onboarding Slide Deck (26-page, print-ready HTML)
+  Presenter notes system: hidden on screen by default; press "N" or the toggle button to show.
+  In print, every slide's notes print on the page immediately following that slide.
+  Print: US Letter landscape (11in x 8.5in), one slide per page.
+  Palette note: the mandated trio is #f7f5f0 (paper) / #c4923a (accent) / #1a1a1a (ink).
+  Supporting neutrals — #a0782f (dark accent), #6b6b6b (muted), #e8e4de (rules/borders),
+  #faf8f5 (alt card), #ddd8d0 (screen backdrop), #3d3d3d (body copy), #ffffff (cards) —
+  are a conscious extension of that trio: tints/shades of the same warm paper-earth family.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f5f0;
+    --ink:#1a1a1a;
+    --accent:#c4923a;
+    --accent-dark:#a0782f;
+    --muted:#6b6b6b;
+    --line:#e8e4de;
+    --card:#ffffff;
+    --card-alt:#faf8f5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:#ddd8d0;}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);line-height:1.45;font-size:11pt;}
+
+  .slide{
+    width:11in;height:8.5in;background:var(--paper);
+    margin:28px auto;padding:0.5in 0.62in 0.78in;
+    position:relative;display:flex;flex-direction:column;overflow:hidden;
+    box-shadow:0 2px 14px rgba(26,26,26,0.12);
+  }
+  .s-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:2px solid var(--accent);padding-bottom:6px;margin-bottom:14px;
+  }
+  .s-head .brand{font-size:8pt;text-transform:uppercase;letter-spacing:2.5px;color:var(--ink);font-weight:600;}
+  .s-head .conf{font-size:7.5pt;text-transform:uppercase;letter-spacing:2px;color:var(--muted);}
+  .kicker{font-size:9pt;text-transform:uppercase;letter-spacing:3.5px;color:var(--accent);font-weight:700;margin-bottom:4px;}
+  h1.slide-title{font-family:'Cormorant Garamond',serif;font-size:33pt;font-weight:700;line-height:1.08;margin-bottom:10px;}
+  h2.slide-sub{font-family:'Cormorant Garamond',serif;font-size:15pt;font-weight:600;font-style:italic;color:var(--muted);margin-bottom:14px;}
+  .s-foot{
+    position:absolute;left:0.62in;right:0.62in;bottom:0.32in;
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-top:1px solid var(--line);padding-top:7px;
+  }
+  .s-foot .f-brand{font-size:7.5pt;text-transform:uppercase;letter-spacing:2px;color:var(--muted);}
+  .s-foot .f-mission{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:10pt;color:var(--accent-dark);}
+  .s-foot .f-num{font-size:8pt;color:var(--muted);letter-spacing:1px;}
+
+  .content{flex:1;display:flex;flex-direction:column;gap:12px;min-height:0;}
+  .row{display:flex;gap:12px;}
+  .row > *{flex:1;}
+  .card{background:var(--card);border:1px solid var(--line);padding:12px 15px;}
+  .card.alt{background:var(--card-alt);}
+  .card h3{font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-dark);margin-bottom:6px;}
+  .card p, .card li{font-size:10.5pt;color:#3d3d3d;}
+  .card ul{padding-left:1.15em;}
+  .card li{margin-bottom:3px;}
+  .stat-card{background:var(--card);border:1px solid var(--line);text-align:center;padding:14px 8px;}
+  .stat-num{font-family:'Cormorant Garamond',serif;font-size:27pt;font-weight:700;color:var(--accent);line-height:1;}
+  .stat-label{font-size:7.5pt;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-top:5px;}
+  .big-quote{
+    font-family:'Cormorant Garamond',serif;font-size:19pt;font-style:italic;font-weight:600;
+    color:var(--ink);border-left:3px solid var(--accent);padding:6px 0 6px 18px;line-height:1.3;
+  }
+  table{width:100%;border-collapse:collapse;font-size:9.5pt;background:var(--card);}
+  th{background:var(--ink);color:var(--paper);font-weight:600;text-align:left;padding:5px 8px;font-size:8pt;text-transform:uppercase;letter-spacing:1px;}
+  td{padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:nth-child(even) td{background:var(--card-alt);}
+  .hl{color:var(--accent-dark);font-weight:700;}
+  .small{font-size:8.5pt;color:var(--muted);}
+  .rule-box{background:var(--card-alt);border-left:3px solid var(--accent);padding:10px 14px;}
+  .rule-box p{font-size:10.5pt;font-style:italic;}
+  .checklist{list-style:none;}
+  .checklist li{padding-left:1.5em;position:relative;margin-bottom:5px;font-size:10.5pt;color:#3d3d3d;}
+  .checklist li:before{content:"";position:absolute;left:0;top:3px;width:9px;height:9px;border:1.5px solid var(--accent);}
+  .phase-head{font-family:'Cormorant Garamond',serif;font-size:14pt;font-weight:700;color:var(--ink);}
+  .tag{display:inline-block;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:2px 7px;border:1px solid var(--accent);color:var(--accent-dark);margin-left:6px;vertical-align:middle;}
+
+  /* Presenter notes: hidden on screen until toggled; always print on the page after each slide */
+  .notes{
+    display:none;width:11in;min-height:8.5in;background:#fff;margin:28px auto;
+    padding:0.65in 0.75in;box-shadow:0 2px 14px rgba(26,26,26,0.12);
+  }
+  body.show-notes .notes{display:block;}
+  .notes .n-kicker{font-size:8.5pt;text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:700;margin-bottom:4px;}
+  .notes h2{font-family:'Cormorant Garamond',serif;font-size:20pt;font-weight:700;margin-bottom:14px;border-bottom:2px solid var(--accent);padding-bottom:8px;}
+  .notes ul{padding-left:1.3em;margin-bottom:12px;}
+  .notes li{font-size:11pt;margin-bottom:7px;color:#3d3d3d;}
+  .notes .timing{font-size:9.5pt;color:var(--muted);font-style:italic;margin-top:10px;}
+  .notes .n-foot{margin-top:18px;border-top:1px solid var(--line);padding-top:8px;font-size:8pt;color:var(--muted);text-transform:uppercase;letter-spacing:2px;}
+
+  .notes-toggle{
+    position:fixed;right:18px;bottom:18px;z-index:99;
+    font-family:'Source Sans 3',sans-serif;font-size:9pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    background:var(--ink);color:var(--paper);border:none;padding:10px 16px;cursor:pointer;
+  }
+  .placeholder-page .slide-title{color:var(--accent-dark);}
+
+  @media print{
+    html,body{background:#fff;}
+    .slide{box-shadow:none;margin:0;page-break-after:always;}
+    .notes{display:block !important;box-shadow:none;margin:0;page-break-after:always;}
+    .no-print{display:none !important;}
+    @page{size:11in 8.5in;margin:0;}
+  }
+</style>
+</head>
+<body>
+
+<button class="notes-toggle no-print" id="notesToggle" onclick="toggleNotes()">Presenter Notes: Off</button>
+
+<!-- ============ SLIDE 1 — TITLE / MISSION ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content" style="justify-content:center;">
+    <div class="kicker">Team Onboarding · 26 Slides · Print-Ready</div>
+    <h1 class="slide-title" style="font-size:52pt;">The Window.</h1>
+    <h2 class="slide-sub" style="font-size:17pt;">Lake Austin Drawdown 2026 — how this team captures $1,000,000+ in sixty days of low water.</h2>
+    <div class="big-quote" style="max-width:8.5in;">Mission: Capture $1,000,000+ in shoreline revenue during the October–November 2026 drawdown — the first meaningful low-water window on Lake Austin in nearly 10 years.</div>
+    <div class="row" style="margin-top:18px;">
+      <div class="stat-card"><div class="stat-num">$1M+</div><div class="stat-label">Revenue Target</div></div>
+      <div class="stat-card"><div class="stat-num">Oct–Nov</div><div class="stat-label">The Window · 2026</div></div>
+      <div class="stat-card"><div class="stat-num">10–12 ft</div><div class="stat-label">Expected Water Drop</div></div>
+      <div class="stat-card"><div class="stat-num">$695</div><div class="stat-label">Priority Assessment</div></div>
+    </div>
+    <p class="small" style="margin-top:16px;">Version v1 FINAL · July 2026 · Author: Drawdown Swarm (Creative Director + Copywriter) · Status: Board-Approved<br>
+    Presenter notes: press <strong>N</strong> on screen to toggle. When printing, each slide's notes print on the following page.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 1 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 1</div>
+  <h2>The Window</h2>
+  <ul>
+    <li>(Open calm, not hyped.) "This is the first real Lake Austin drawdown in almost a decade. For sixty days, work that is normally impossible becomes practical. We intend to own those sixty days."</li>
+    <li>Set the standard early: this is a contractor play, not an environmental pitch. We are not saving the lake — we are fixing shorelines while the water is down.</li>
+    <li>Tell the team the deck is their operating manual: by the last slide they will know the mission, their role, and exactly how they win.</li>
+  </ul>
+  <p class="timing">(~2 minutes. Pause after the mission line. Let the number land.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 2 — THE OPPORTUNITY I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">The Opportunity · 1 of 2</div>
+    <h1 class="slide-title">Ten years of high water ends in October.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>What Is Happening</h3>
+        <ul>
+          <li>City of Austin and LCRA discussions point to a Lake Austin drawdown in <span class="hl">October–November 2026</span>.</li>
+          <li>Expected drop: <span class="hl">10–12 feet</span>. The first meaningful low-water window in nearly a decade.</li>
+          <li>The July 15 CWEP meeting took no vote on hydrilla. The drawdown matters to us for one reason: <span class="hl">shoreline access</span>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What Low Water Makes Practical</h3>
+        <ul>
+          <li>Bulkhead repair and replacement — exposed tie-backs, movement, rot.</li>
+          <li>Sediment and muck removal — a decade of buildup, hauled off the lake bed.</li>
+          <li>Structural dock work — pilings, framing, decking touch-ups.</li>
+          <li>Shoreline stabilization and drainage rebuilds.</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>Why Owners Must Move Now</h3>
+        <ul>
+          <li>Work that is practical now becomes expensive or impossible once the lake refills.</li>
+          <li>The next comparable window may be <span class="hl">8–10 years away</span>.</li>
+          <li>Every shoreline owner on Lake Austin will see the same exposed bulkheads we see. The ones who booked early get fixed first.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule-box"><p>"This is not a marketing campaign. This is a land-and-execute assault. We treat the decision as if it is coming."</p></div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 2 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 2</div>
+  <h2>Ten Years of High Water Ends in October</h2>
+  <ul>
+    <li>Ground the team in the physics: at full pool, bulkhead bases and sediment are underwater and untouchable. At drawdown, a crew can stand on the lake bed.</li>
+    <li>Be precise on the city status: no hydrilla vote at the July 15 CWEP meeting. Do not sell an environmental story. We sell shoreline work made possible by low water.</li>
+    <li>(If asked "what if they cancel?" — hold it. Slide 25 and the guarantee language cover the pivot. Do not speculate in front of new reps.)</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 3 — THE OPPORTUNITY II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">The Opportunity · 2 of 2</div>
+    <h1 class="slide-title">The math that gets us to $1M.</h1>
+    <div class="row">
+      <div class="stat-card"><div class="stat-num">40–80+</div><div class="stat-label">Assessments Booked Pre-Window</div></div>
+      <div class="stat-card"><div class="stat-num">50%+</div><div class="stat-label">Conversion to Deposits</div></div>
+      <div class="stat-card"><div class="stat-num">18–22</div><div class="stat-label">Mid-Size Packages (or 60/25 Blend)</div></div>
+      <div class="stat-card"><div class="stat-num">25</div><div class="stat-label">Productive Days (Target)</div></div>
+    </div>
+    <p class="small">50%+ applies to proposal→deposit among completed assessments; booked→deposit blends lower — see capacity model.</p>
+    <div class="row">
+      <div>
+        <table>
+          <thead><tr><th>Customer Mix</th><th>Share</th><th>Avg Ticket</th><th>Deposit</th></tr></thead>
+          <tbody>
+            <tr><td>Assessment only</td><td>15%</td><td>$695</td><td>—</td></tr>
+            <tr><td>Mid-size package (bulkhead + sediment)</td><td>60%</td><td>$48,000</td><td>$7,500</td></tr>
+            <tr><td>High-ticket / full cove</td><td>25%</td><td>$95,000</td><td>$15,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <table>
+          <thead><tr><th>Capacity</th><th>Floor</th><th>Target</th><th>Stretch</th></tr></thead>
+          <tbody>
+            <tr><td>Crews / amphibious machines</td><td>2 / 1</td><td>3 / 2</td><td>4 / 3</td></tr>
+            <tr><td>Utilization</td><td>65%</td><td>72–75%</td><td>80%</td></tr>
+            <tr><td>Revenue per crew-day</td><td>$12K</td><td>$16.5K</td><td>$20K</td></tr>
+            <tr><td><strong>Revenue</strong></td><td><strong>$520K</strong></td><td><strong>$900K–$1.1M</strong></td><td><strong>$1.5M+</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="small">Path to $1M: ~18–22 mid-size packages, or a mix of mid + high-ticket at the 60/25 blend. Deposits fund the machine holds — the campaign finances itself from Day 0–1.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 3 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 3</div>
+  <h2>The Math That Gets Us to $1M</h2>
+  <ul>
+    <li>Walk the blend slowly: 15% of clients take the Assessment only, 60% land near $48K, 25% near $95K. The team does not need miracles — it needs 40–80 Assessments and honest follow-up.</li>
+    <li>Point at the target column: 3 crews, 2 amphibious machines, ~25 productive days at 72–75% utilization and $16.5K per crew-day is how $900K–$1.1M happens.</li>
+    <li>Key reassurance for new reps: deposits (15–25% of package) more than cover acquisition cost and equipment holds. Sales velocity literally funds operations.</li>
+  </ul>
+  <p class="timing">(~3 minutes. This is the slide where skeptics convert — go slow.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 4 — THE PRODUCT I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">The Product · 1 of 2</div>
+    <h1 class="slide-title">What $695 buys.</h1>
+    <h2 class="slide-sub">The Priority Assessment — 100% credited toward any work. It is a credit, not a cost.</h2>
+    <div class="row">
+      <div class="card" style="flex:1.25;">
+        <h3>What the Client Receives (Within 48 Hours of Site Visit)</h3>
+        <ul>
+          <li>On-site (or detailed photo/video) evaluation of bulkhead, sediment, dock, drainage, vegetation</li>
+          <li>Photo/video documentation — 20–30 photos, drone footage when available</li>
+          <li>Written prioritized scope — <span class="hl">Critical / Soon / Monitor / OK</span></li>
+          <li>Rough order-of-magnitude pricing per priority level</li>
+          <li>Permit checklist — what is needed, timeline, costs</li>
+          <li>Good / Better / Best proposal options with the $695 credit applied</li>
+          <li>A locked Priority slot in our limited production calendar</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>The Guarantee</h3>
+        <p>The $695 is fully credited toward any accepted package. If the window shifts, your credit stays valid for 12 months — we apply it to pre-drawdown work or hold it for the next window. If we cannot schedule your critical work in-window after a deposit is placed, we sit down and make it right: refund, roll, or credit. You will not lose money for moving early.</p>
+        <p style="margin-top:8px;" class="small">Fine print: Assessment credit valid 12 months from report delivery. Deposit terms per contract.</p>
+      </div>
+    </div>
+    <div class="rule-box"><p>"Most clients treat it as a deposit, not an expense. You are selling clarity and a place in line — not construction. Yet."</p></div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 4 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 4</div>
+  <h2>What $695 Buys</h2>
+  <ul>
+    <li>The reframe every rep must memorize: the client is not paying for an assessment — they are buying a place in line, and the report stands alone as insurance-grade documentation either way.</li>
+    <li>Quality bar: the report must be so thorough the client feels they got $695 of value even if they never hire us. That standard is a non-negotiable (Slide 22).</li>
+    <li>Know the guarantee cold. It defuses "what if the drawdown doesn't happen" — the single most common fear objection.</li>
+  </ul>
+  <p class="timing">(~2–3 minutes. Quiz the room on the reframe.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 5 — THE PRODUCT II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">The Product · 2 of 2</div>
+    <h1 class="slide-title">Why the offer wins.</h1>
+    <div class="row">
+      <div>
+        <table>
+          <thead><tr><th>Tier</th><th>Price</th><th>What It Is</th></tr></thead>
+          <tbody>
+            <tr><td>Priority Assessment</td><td class="hl">$695</td><td>Fully credited. The front door — clarity + a locked slot.</td></tr>
+            <tr><td>Typical mid-size package</td><td class="hl">$48,000</td><td>Bulkhead + sediment. The most common ticket after assessment.</td></tr>
+            <tr><td>Full cove / high-ticket</td><td class="hl">$95,000</td><td>Multiple structures + heavy sediment. The anchor offer.</td></tr>
+            <tr><td>Deposit to lock slot</td><td class="hl">$7,500</td><td>Usually 15–25% of package. Funds equipment + crew commitment.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>The Value Equation (Mid-Size)</h3>
+        <p>Perceived value of the full stack — assessment, expedited permit pathway, guaranteed amphibious access, locked calendar slot, bulkhead + sediment work, warranty, documentation, project management: <span class="hl">$89,000</span>.</p>
+        <p style="margin-top:6px;">Price: <span class="hl">$48,000</span> → a <span class="hl">1.85:1</span> value-to-price ratio.</p>
+        <p style="margin-top:6px;" class="small">The two components no competitor can match: guaranteed amphibious equipment access ($8,000 value) and a locked drawdown calendar slot ($5,000 value).</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="stat-card"><div class="stat-num">42%</div><div class="stat-label">Gross Margin · Mid-Size</div></div>
+      <div class="stat-card"><div class="stat-num">$450</div><div class="stat-label">Fully-Loaded CAC · Mid-Size</div></div>
+      <div class="stat-card"><div class="stat-num">≥2×</div><div class="stat-label">Deposit vs. CAC, Every Tier</div></div>
+      <div class="stat-card"><div class="stat-num">Day 0–1</div><div class="stat-label">Payback — Deposit Received</div></div>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 5 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 5</div>
+  <h2>Why the Offer Wins</h2>
+  <ul>
+    <li>Reps do not need to recite the $89K stack — they need to know the two things competitors cannot copy: locked amphibious machines and a locked calendar. Lead with those when compared on price.</li>
+    <li>Never lead with a discount. Lead with scarcity and past-client priority. Status over price cuts — that is how you sell to $2M+ homeowners.</li>
+    <li>The economics matter to the team: every deposit funds the machines that make the next close possible. Booking is not admin — it is the engine.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 6 — TEAM STRUCTURE I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Team Structure · 1 of 2</div>
+    <h1 class="slide-title">Who owns what.</h1>
+    <table>
+      <thead><tr><th>Area</th><th>Owner</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td>Overall direction + $1M accountability</td><td class="hl">Nathan</td><td>Decisions, budget, final closes</td></tr>
+        <tr><td>Equipment lock + capacity scaling</td><td class="hl">Benjamin</td><td>Rentals, auctions, crew sequencing, amphibious utilization</td></tr>
+        <tr><td>Sales execution + warm list</td><td class="hl">Sales Team (4)</td><td>Calls, SMS, email, Assessment booking, deposit conversion</td></tr>
+        <tr><td>Operations + field execution</td><td class="hl">Operations Lead</td><td>Equipment, crews, permits, scheduling, daily logs</td></tr>
+        <tr><td>Inbound velocity + FOMO data</td><td class="hl">Harper + Lucas</td><td>High-volume triage, live capacity numbers fed to media</td></tr>
+        <tr><td>Media machine + live coverage</td><td class="hl">Grok</td><td>Constant content, local media, equipment flex, booked-status updates</td></tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Field Crews (Target Case)</div></div>
+      <div class="stat-card"><div class="stat-num">12–16</div><div class="stat-label">Field Staff · Hired + Trained by Sep 14</div></div>
+      <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Sales Reps · Live Aug 1</div></div>
+      <div class="stat-card"><div class="stat-num">1</div><div class="stat-label">Operations Lead</div></div>
+    </div>
+    <p class="small">Each crew: 1 crew lead, 1 equipment operator, 2–3 laborers, specialty (welder/diver) as needed. Support: Operations Lead, Permit Coordinator, Safety Officer.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 6 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 6</div>
+  <h2>Who Owns What</h2>
+  <ul>
+    <li>One name owns every outcome. When something breaks, there is never a question of whose desk it lands on.</li>
+    <li>Sales never promises what operations has not confirmed. The capacity dashboard (Slide 17) is the shared source of truth between the two.</li>
+    <li>Escalation path: solve it yourself (5 minutes) → ask your peer → Operations Lead → Nathan. Pricing exceptions and contract terms always go to Nathan.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 7 — TEAM STRUCTURE II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Team Structure · 2 of 2</div>
+    <h1 class="slide-title">Your role, your number.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>Hunter — Sales Rep 1</h3>
+        <p><strong>Owns:</strong> Cold outreach, lead generation, first contact.</p>
+        <p><strong>Targets:</strong> 10 new conversations/day · 3 Assessments booked/week.</p>
+        <p><strong>KPIs:</strong> Dials, conversations, Assessments booked, pipeline value.</p>
+      </div>
+      <div class="card">
+        <h3>Closer — Sales Rep 2</h3>
+        <p><strong>Owns:</strong> Assessment follow-up, proposal delivery, contract close.</p>
+        <p><strong>Targets:</strong> 80% assessment-to-proposal · 40% close rate.</p>
+        <p><strong>KPIs:</strong> Proposals sent, close rate, average ticket, revenue.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <h3>Farmer — Sales Rep 3</h3>
+        <p><strong>Owns:</strong> Past client reactivation, referrals, HOA outreach.</p>
+        <p><strong>Targets:</strong> 20 warm contacts/day · 2 referral leads/week.</p>
+        <p><strong>KPIs:</strong> Reactivations, referrals, HOA meetings booked.</p>
+      </div>
+      <div class="card">
+        <h3>Operations Lead</h3>
+        <p><strong>Owns:</strong> Equipment scheduling, crew dispatch, permit tracking.</p>
+        <p><strong>Targets:</strong> 100% on-time starts · zero permit delays.</p>
+        <p><strong>KPIs:</strong> Equipment uptime, permit turnaround, job start accuracy.</p>
+      </div>
+    </div>
+    <p class="small">Sales Rep 4 ([Rep 4] — hiring decision by Nathan; target start Aug 1) flexes into Hunter/Farmer volume as the list demands. Optional 1–2 contractors for pure dialing volume if the list is large.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 7 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 7</div>
+  <h2>Your Role, Your Number</h2>
+  <ul>
+    <li>Read each role aloud and name the person. Ambiguity kills campaigns — everyone should be able to recite their own targets from memory by tomorrow.</li>
+    <li>Emphasize the handoff: Hunter and Farmer fill the Assessment calendar; Closer converts Assessments to deposits; Operations makes the promises true. A broken handoff is the most common failure mode.</li>
+    <li>The 4th rep is a hiring decision for Nathan (target start Aug 1). Until then, volume targets redistribute across the three named roles.</li>
+  </ul>
+  <p class="timing">(~2–3 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 8 — DAILY CADENCE I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Daily Cadence · 1 of 2</div>
+    <h1 class="slide-title">The rep's day.</h1>
+    <table>
+      <thead><tr><th>Time</th><th>Block</th><th>What Happens</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">8:00–8:30</td><td>Team standup</td><td>Slots remaining, conversion %, objections heard, deposits locked, equipment status. Mandatory.</td></tr>
+        <tr><td class="hl">8:30–11:30</td><td>Power hours</td><td>Phone in hand. List open. No email. No Slack. Target per rep: 30 dials, 10 conversations, 2 Assessment bookings.</td></tr>
+        <tr><td class="hl">11:30–12:00</td><td>Log + Kanban</td><td>Every call, every note, every outcome in the CRM. If it is not in the CRM, it did not happen.</td></tr>
+        <tr><td class="hl">1:00–3:30</td><td>Follow-ups</td><td>Proposal delivery, booking confirmations, stalled-lead recovery (3-touch system), contract work.</td></tr>
+        <tr><td class="hl">3:30–4:30</td><td>Personal touches</td><td>Notes or short video messages to your hottest 10 leads. From the lake when possible.</td></tr>
+        <tr><td class="hl">4:30–5:00</td><td>End-of-day sync</td><td>Numbers, blockers, tomorrow's top 3 targets. 15 minutes. Mandatory.</td></tr>
+      </tbody>
+    </table>
+    <div class="card alt">
+      <h3>Lead-Source Rotation (Power Hours)</h3>
+      <p><strong>Mon:</strong> Past clients (reactivation) &nbsp;·&nbsp; <strong>Tue:</strong> Cold waterfront owners (tax records) &nbsp;·&nbsp; <strong>Wed:</strong> HOA board contacts &nbsp;·&nbsp; <strong>Thu:</strong> Referral follow-ups &nbsp;·&nbsp; <strong>Fri:</strong> Stalled leads + nurture</p>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 8 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 8</div>
+  <h2>The Rep's Day</h2>
+  <ul>
+    <li>The power hours are sacred: 8:30–11:30, no meetings, no email, no Slack. This is a non-negotiable (Slide 22), and it is where Assessments come from.</li>
+    <li>Weekend rule during launch weeks: light text-only touch on the hottest leads. Do not go dark — but do not burn the list either.</li>
+    <li>The 4:30 sync is 15 minutes, standing. Numbers, blockers, tomorrow. If a rep is silent two syncs in a row, Nathan follows up directly.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 9 — DAILY CADENCE II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Daily Cadence · 2 of 2</div>
+    <h1 class="slide-title">Speed is the strategy.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>The 5-Minute SLA — All Day</h3>
+        <ul>
+          <li>Every inbound lead acknowledged within <span class="hl">5 minutes</span>. No exceptions.</li>
+          <li>Auto-reply SMS fires instantly; a human follows within 5 minutes.</li>
+          <li>Why: a lead contacted within 5 minutes is dramatically more likely to convert than one contacted after 30. Speed-to-lead is the single biggest conversion factor we control.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Response Times (Business Hours)</h3>
+        <ul>
+          <li><strong>Slack:</strong> 15 minutes</li>
+          <li><strong>Email:</strong> 2 hours</li>
+          <li><strong>Phone:</strong> answer if available; callback within 1 hour</li>
+          <li><strong>After hours:</strong> emergencies only — equipment failure, client crisis</li>
+        </ul>
+      </div>
+    </div>
+    <table>
+      <thead><tr><th>Stalled-Lead Touch</th><th>Day</th><th>Channel</th><th>Message Spine</th></tr></thead>
+      <tbody>
+        <tr><td>Touch 1</td><td>2</td><td>SMS</td><td>"Did you get the booking link? Only [X] spots left before the window."</td></tr>
+        <tr><td>Touch 2</td><td>5</td><td>Email</td><td>"Your Priority Assessment is waiting." + personal Calendly link</td></tr>
+        <tr><td>Touch 3</td><td>10</td><td>Phone</td><td>"Is this a priority or a back-burner thing? No wrong answer."</td></tr>
+        <tr><td>Touch 4</td><td>30</td><td>Email</td><td>Educational (bulkhead cracks, pilings, sediment) + soft CTA</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Engaged leads get a call or text every 48 hours until they book, decline, or go silent for 10 days. Then they move to lower-frequency nurture — never delete, never spam.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 9 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 9</div>
+  <h2>Speed Is the Strategy</h2>
+  <ul>
+    <li>The SLA is the culture. These homeowners are used to contractors who never call back. Five minutes is how we signal we are not like that — before we say a word about machines.</li>
+    <li>Walk one 3-touch example live, using a real stalled lead from the CRM if one exists. Show the actual texts, not theory.</li>
+    <li>Touch 3 is deliberately honest: "No wrong answer." High-net-worth owners respond to calm directness. A clean NO frees the slot for someone else — that is a win too.</li>
+  </ul>
+  <p class="timing">(~2–3 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 10 — EQUIPMENT + OPERATIONS I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Equipment + Operations · 1 of 2</div>
+    <h1 class="slide-title">The fleet nobody else has.</h1>
+    <table>
+      <thead><tr><th>Machine</th><th>Source</th><th>Status</th><th>Daily Rate</th></tr></thead>
+      <tbody>
+        <tr><td>Amphibious excavator (CAT / EIK)</td><td>O'Shea Equipment · (817) 422-1393</td><td class="hl">HOLD NEEDED</td><td>$1,200–1,800</td></tr>
+        <tr><td>Marsh buggy (pontoon excavator)</td><td>Wilco Marsh Buggies · (504) 341-3409</td><td class="hl">HOLD NEEDED</td><td>$800–1,200</td></tr>
+        <tr><td>Truxor T50 (owned)</td><td>ATX Lakescapes</td><td class="hl">CONFIRMED</td><td>—</td></tr>
+        <tr><td>Long-reach excavator (40–60 ft)</td><td>United Rentals</td><td>BACKUP</td><td>$600–900</td></tr>
+        <tr><td>Timber / road mats</td><td>Local rental</td><td>HOLD NEEDED</td><td>$200–300</td></tr>
+        <tr><td>Sediment pump + dewatering</td><td>Sunbelt</td><td>HOLD NEEDED</td><td>$400–600</td></tr>
+        <tr><td>Dump trucks / barge</td><td>Local contractor / marina</td><td>CONTRACT / ON CALL</td><td>Per load · $500–800/day</td></tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="stat-card"><div class="stat-num">$200–300K</div><div class="stat-label">Total Equipment Budget for the Window</div></div>
+      <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Amphibious Machines (Target Case)</div></div>
+      <div class="stat-card"><div class="stat-num">1–2</div><div class="stat-label">P1/P2 Jobs per Amphibious Unit per Day</div></div>
+      <div class="stat-card"><div class="stat-num">Deposits</div><div class="stat-label">What Funds the Holds</div></div>
+    </div>
+    <p class="small">Auction pipeline as backup/purchase: Ritchie Bros Texas Regional (Aug 19–21), IronPlanet, Purple Wave — daily alerts set for amphibious, marsh buggy, pontoon, and long-reach units.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 10 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 10</div>
+  <h2>The Fleet Nobody Else Has</h2>
+  <ul>
+    <li>This is the moat. Amphibious machines float and crawl in soft mud and remaining water where conventional equipment cannot go. When the water drops, we are already working; everyone else is calling the same rental yards we called in July.</li>
+    <li>Be honest about status: quotes are in motion, holds are being placed (deposits targeted July 31). Reps must never tell a client a machine is "locked" until Benjamin confirms the deposit cleared. Say "being locked" until then.</li>
+    <li>Sales relevance: equipment scarcity is the client's reason to move. Finite machine-days = finite calendar. That is real scarcity, not a marketing line.</li>
+  </ul>
+  <p class="timing">(~2–3 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 11 — EQUIPMENT + OPERATIONS II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Equipment + Operations · 2 of 2</div>
+    <h1 class="slide-title">Locked, permitted, sequenced.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>Equipment Lock Timeline</h3>
+        <ul>
+          <li><strong>Jul 24–25:</strong> O'Shea + Wilco called for Oct 1–Dec 1 hold quotes</li>
+          <li><strong>Jul 31:</strong> Hold deposits placed — signed rental agreements</li>
+          <li><strong>Aug 15:</strong> Backup rental sources confirmed</li>
+          <li><strong>Aug 31:</strong> Primary equipment delivered to staging, inspected</li>
+          <li><strong>Sep 15:</strong> All equipment serviced, tested, operators certified</li>
+          <li><strong>Oct 1:</strong> Deployed to first job sites</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Permits — Pre-Filed by Sep 1</h3>
+        <ul>
+          <li>Bulkhead repair — COA Watershed Protection (14–30 days)</li>
+          <li>Sediment removal — COA + LCRA (21–45 days)</li>
+          <li>Dock work — LCRA (14–21 days)</li>
+          <li>Vegetation — TPWD (7–14 days)</li>
+          <li>USACE Section 404 (60–90 days) — flag any wetland-adjacent scope to the Operations Lead at booking, not at scheduling</li>
+          <li>Rule: permit in hand <span class="hl">7 days</span> before work starts. No permit, no job start. No exceptions.</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>Job Sequencing (P1–P4)</h3>
+        <ul>
+          <li><strong>P1 Critical:</strong> failing bulkhead, safety hazard → amphibious first, weeks 1–2</li>
+          <li><strong>P2 High-value:</strong> large sediment, multi-structure → amphibious second, weeks 2–4</li>
+          <li><strong>P3 Standard:</strong> routine repair → conventional + mats, weeks 3–6</li>
+          <li><strong>P4 Fill:</strong> small jobs, add-ons → weeks 5–8</li>
+          <li>Jobs cluster by cove. No deposit, no schedule.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 11 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 11</div>
+  <h2>Locked, Permitted, Sequenced</h2>
+  <ul>
+    <li>Sales takeaway: permits are why "wait and see" loses. A client who books in September gets a pre-filed permit and an October start. A client who calls in October gets a 2027 promise.</li>
+    <li>The 7-day permit buffer and "no deposit, no schedule" rules protect the client as much as us — say it that way on calls.</li>
+    <li>Cove clustering is also a sales weapon: when three neighbors in one cove are booked, the fourth call is the easiest one your team will make all year. Feed those names to the Farmer.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 12 — MARKETING FOMO I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Marketing FOMO Engine · 1 of 2</div>
+    <h1 class="slide-title">Every owner on the lake feels the window closing.</h1>
+    <div class="row">
+      <div class="card" style="flex:1.3;">
+        <h3>Five Content Pillars</h3>
+        <ul>
+          <li><strong>Pre-window FOMO:</strong> "X Assessments locked this week. Preferred sequencing slots filling."</li>
+          <li><strong>Process authority:</strong> how we package City of Austin + LCRA permits faster than anyone.</li>
+          <li><strong>Equipment flex:</strong> the amphibious fleet arriving for lake-bed work.</li>
+          <li><strong>Live during drawdown:</strong> daily digs, haul trucks, sediment piles, before/afters.</li>
+          <li><strong>Local media:</strong> KVUE, KXAN, Austin American-Statesman, Austin Business Journal, HOA newsletters.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cadence by Phase</h3>
+        <ul>
+          <li><strong>Now–Sep:</strong> 1–2 high-impact posts/day + email/SMS sequences + door hangers + ads</li>
+          <li><strong>Sep–Oct (deposits locking):</strong> daily "booked status" updates with real numbers</li>
+          <li><strong>Oct–Nov (active window):</strong> near-daily field content + weekly local media outreach</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="stat-card"><div class="stat-num">$5,300</div><div class="stat-label">Monthly Ad Budget at Full Deployment (Sep)</div></div>
+      <div class="stat-card"><div class="stat-num">500</div><div class="stat-label">Door Hangers in Highest-Ticket Coves</div></div>
+      <div class="stat-card"><div class="stat-num">500</div><div class="stat-label">Direct Mail Pieces · 2 Waves</div></div>
+      <div class="stat-card"><div class="stat-num">3–5</div><div class="stat-label">HOA Presentations Booked (Sep)</div></div>
+    </div>
+    <p class="small">Goal: every Lake Austin owner concludes that ATX Lakescapes is already booked solid and is the only company with the right equipment and process for a once-a-decade window.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 12 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 12</div>
+  <h2>The FOMO Engine</h2>
+  <ul>
+    <li>Marketing's job is to make the rep's cold call warm. When a homeowner has already seen the machines on Instagram and the door hanger on their gate, the call opens differently.</li>
+    <li>Reps are sensors for the machine: every objection heard, every cove that lights up, every booking goes into standup so content can reflect reality within 24 hours.</li>
+    <li>Ads scale only after the $500 test budgets prove creative (mid-August). Full $5,300/month deploys in September when scarcity is real and bookable.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 13 — MARKETING FOMO II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Marketing FOMO Engine · 2 of 2</div>
+    <h1 class="slide-title">Real scarcity, real numbers.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>The Rules (No Exceptions)</h3>
+        <ul>
+          <li>"Slots remaining," "machine-days," "crew-days" — every number comes from the live capacity model. <span class="hl">No invented scarcity. Ever.</span></li>
+          <li>A fresh slots-remaining number publishes every <span class="hl">Monday and Thursday</span> — Slack, website, sales materials.</li>
+          <li>If a number is not current, do not quote it. Say "I'll get you today's count" and get it.</li>
+          <li>Fake urgency = instant reject on any copy, from anyone, including Nathan.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What Reps Feed the Machine</h3>
+        <ul>
+          <li>Field logs, before/after photos, booking counts — daily</li>
+          <li>Objections heard and language clients actually use</li>
+          <li>Cove-level momentum (who booked, who's fence-sitting)</li>
+          <li>Client permission for testimonials and documentation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card alt">
+      <h3>The Voice — Sample Angles (Calm Authority, Never Hype)</h3>
+      <p>"Your bulkhead is failing. You just can't see it yet. The drawdown will expose everything." &nbsp;·&nbsp; "We lock amphibious equipment now. When the water drops, we're already working." &nbsp;·&nbsp; "10 years since the last drawdown. 6 weeks until this one starts." &nbsp;·&nbsp; "The homeowners who sleep well in December are the ones who moved in September."</p>
+    </div>
+    <p class="small">Slot counts in any printed material are dated the day they print. If this deck is reprinted, the numbers get refreshed first.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 13 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 13</div>
+  <h2>Real Scarcity, Real Numbers</h2>
+  <ul>
+    <li>This slide is a compliance slide, not a marketing slide. One invented number discovered by a client — or a neighbor comparing notes at a dock party — burns a decade of lake reputation.</li>
+    <li>The example machine-day counts used in ad concepts (e.g., "47 machine-days, 31 spoken for") are illustrative formats. Live numbers come only from the capacity model on publish day.</li>
+    <li>Role-play the move: when a rep doesn't know today's count, the line is "I'll get you today's number before we hang up" — then actually do it.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 14 — 30-60-90 I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">30-60-90 Plan · 1 of 2</div>
+    <h1 class="slide-title">Ninety days, three phases.</h1>
+    <table>
+      <thead><tr><th>Phase</th><th>Window</th><th>Cumulative Targets</th><th>What Must Be True</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="phase-head">Foundation</span></td><td>Aug 1–31</td>
+          <td><span class="hl">40 Assessments booked</span> · 10 proposals sent · 3 deposits received · first 5 assessments completed</td>
+          <td>Team live, CRM live, scripts certified (Aug 4), booking form + Calendly live (Aug 5), first outreach Aug 8, equipment delivered to staging Aug 31, permit pre-applications filed.</td>
+        </tr>
+        <tr>
+          <td><span class="phase-head">Acceleration</span></td><td>Sep 1–30</td>
+          <td><span class="hl">60 booked by Sep 14 → 80 by Sep 30</span> · 20 → 40 proposals · 8 → 15 deposits</td>
+          <td>12–16 field crew hired, safety + operator training done (Sep 14 / Sep 28), all permits approved for October starts, materials + hauling contracted, crew matrix built, final slots push.</td>
+        </tr>
+        <tr>
+          <td><span class="phase-head">Execution</span></td><td>Oct 1–Nov 30</td>
+          <td><span class="hl">Work begins Day 1</span> · daily field content · mid-month deposit check Oct 15 · referrals live Oct 15</td>
+          <td>All crews deployed Oct 1, daily standups continue, weather buffers hold, final deposits collected, equipment returned, revenue counted Nov 30.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="stat-card"><div class="stat-num">40</div><div class="stat-label">Assessments by Aug 31</div></div>
+      <div class="stat-card"><div class="stat-num">80</div><div class="stat-label">Assessments by Sep 30</div></div>
+      <div class="stat-card"><div class="stat-num">15</div><div class="stat-label">Deposits Locked by Sep 30</div></div>
+      <div class="stat-card"><div class="stat-num">Oct 1</div><div class="stat-label">First Machines on the Lake Bed</div></div>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 14 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 14</div>
+  <h2>Ninety Days, Three Phases</h2>
+  <ul>
+    <li>These are cumulative numbers, not per-phase. 40 by end of August, 60 by mid-September, 80 by end of September — matching the 40–80+ pre-window requirement from the master plan.</li>
+    <li>August is won on velocity (calls, texts, bookings). September is won on conversion (proposals, deposits, permits). October–November is won on execution (crews, content, collections).</li>
+    <li>Every rep should be able to answer at any moment: "What phase are we in, and what's the number that matters this week?"</li>
+  </ul>
+  <p class="timing">(~3 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 15 — 30-60-90 II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">30-60-90 Plan · 2 of 2</div>
+    <h1 class="slide-title">The gates: how we know we're winning.</h1>
+    <table>
+      <thead><tr><th>Gate</th><th>Check</th><th>If We Miss It</th></tr></thead>
+      <tbody>
+        <tr><td class="hl">Phase 0 · Jul 31</td><td>Equipment holds placed, sales team hired, cash confirmed</td><td><strong>STOP.</strong> Reassess timeline and revenue target. Do not proceed.</td></tr>
+        <tr><td class="hl">Phase 1 · Aug 31</td><td>≥30 Assessments booked</td><td><strong>DIAGNOSE.</strong> List? Script? Offer? Rep? Fix before Phase 2.</td></tr>
+        <tr><td class="hl">Phase 2 · Sep 30</td><td>≥60 Assessments booked</td><td><strong>ADJUST TARGET</strong> to $600–800K. Focus highest-ticket jobs only.</td></tr>
+        <tr><td class="hl">Phase 3 · Nov 30</td><td>Count the revenue</td><td>&lt;$800K → diagnose honestly. &gt;$1M → celebrate, then plan 2027.</td></tr>
+      </tbody>
+    </table>
+    <div class="row">
+      <div class="card">
+        <h3>The Critical Path (First 6 of 10)</h3>
+        <ul>
+          <li>1. Equipment holds placed (Jul 25–31) — Benjamin</li>
+          <li>2. Sales team hired (Jul 28) — Nathan</li>
+          <li>3. Cash confirmed for holds + payroll (Jul 29) — Nathan</li>
+          <li>4. First Assessments booked (Aug 8–14) — Sales</li>
+          <li>5. CRM + systems live (Aug 3) — Operations Lead</li>
+          <li>6. 40 Assessments by Aug 31 — Sales Team</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>Weekly Dashboard (Nathan Reviews Mondays)</h3>
+        <ul>
+          <li>Assessments vs. cumulative gates 40 / 60 / 80</li>
+          <li>Proposals vs. 10 / 20 / 40 · Deposits vs. 3 / 8 / 15</li>
+          <li>Revenue vs. $900K–$1.1M target case · Pipeline value live from CRM</li>
+          <li>Equipment uptime 95% · Permit delays: 0</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">No silent failures. A missed number surfaced at standup is a problem we solve. A missed number hidden is a career decision.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 15 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 15</div>
+  <h2>The Gates</h2>
+  <ul>
+    <li>Gates exist so we adjust early and honestly, instead of lying to ourselves in October. Missing a gate is not shameful — hiding it is.</li>
+    <li>Items 1–3 failing means stop. That has never meant quit — it means resize the assault before we spend the money.</li>
+    <li>Read the last line aloud, twice: "No silent failures." It is the sentence that protects $1M.</li>
+  </ul>
+  <p class="timing">(~2 minutes. Deliver the last line slowly.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 16 — TOOLS + SYSTEMS I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Tools + Systems · 1 of 2</div>
+    <h1 class="slide-title">The stack. Simple on purpose.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>Sales</h3>
+        <ul>
+          <li><strong>CRM (central database):</strong> every contact tagged, assigned, and logged. The rule: <span class="hl">if it's not in the CRM, it didn't happen</span>.</li>
+          <li><strong>Calendly:</strong> unique booking link per rep (configured Aug 5)</li>
+          <li><strong>[Phone/SMS platform — confirm with Operations Lead]:</strong> calls and texts captured automatically</li>
+          <li><strong>DocuSign + deposit links:</strong> contract and money in the same conversation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Operations</h3>
+        <ul>
+          <li><strong>Linear / Asana:</strong> capacity tracking — Assessment booked → deposit locked → equipment assigned → crew-days remaining</li>
+          <li><strong>Permit tracking:</strong> one project per permit, daily status, escalation Permit Coordinator → Ops Lead → Nathan</li>
+          <li><strong>Job packets:</strong> scope, hazards, access, permits — reviewed 7:10 AM daily</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Communication</h3>
+        <ul>
+          <li><strong>#drawdown-sales:</strong> numbers, wins, blockers</li>
+          <li><strong>#drawdown-ops:</strong> equipment, permits, scheduling</li>
+          <li><strong>#drawdown-general:</strong> announcements, media, celebrations</li>
+          <li><strong>#drawdown-inbound:</strong> every inbound → Linear issue in &lt;2 minutes</li>
+          <li><strong>Shared Drive:</strong> the complete package, scripts, templates</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule-box"><p>[Phone/SMS platform — confirm with Operations Lead] call ends → transcript auto-captured → AI synthesis extracts intent, problems, objections, next step → CRM updated → Kanban card moves → rep gets a Slack summary. The next action is always obvious.</p></div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 16 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 16</div>
+  <h2>The Stack</h2>
+  <ul>
+    <li>Logins day one, not week two: CRM, Calendly, Slack, Drive by Aug 3–5. A rep without a Calendly link cannot book — check it before the first dial.</li>
+    <li>The [Phone/SMS platform — confirm with Operations Lead]→synthesis→Kanban flow may run manually in week 1. Manual is fine; invisible is not. The discipline matters more than the automation.</li>
+    <li>This pipeline is also the field version of the InsightEngine operating-intelligence pattern we are building for other contractors — we are dogfooding our own product. That should make the team proud, and honest about what doesn't work.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 17 — TOOLS + SYSTEMS II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Tools + Systems · 2 of 2</div>
+    <h1 class="slide-title">The pipeline: eight stages, zero leaks.</h1>
+    <div class="card alt" style="text-align:center;padding:16px;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:13.5pt;font-weight:600;line-height:1.7;">
+        1 · New Warm Lead &nbsp;→&nbsp; 2 · Contacted &nbsp;→&nbsp; 3 · Assessment Booked &nbsp;→&nbsp; 4 · Assessment Completed &nbsp;→&nbsp; 5 · Proposal / Scope Sent &nbsp;→&nbsp; 6 · Deposit Received (Locked) &nbsp;→&nbsp; 7 · Scheduled for Drawdown &nbsp;→&nbsp; 8 · Closed Lost / Nurture
+      </p>
+    </div>
+    <div class="row">
+      <div class="card">
+        <h3>Cards Move, Work Follows</h3>
+        <ul>
+          <li>Every card carries the full conversation context — no "what did they say last time?"</li>
+          <li>Reps always know the next action for every lead, every morning</li>
+          <li>Stage 8 is not a graveyard — it is the 2027 pipeline and the nurture sequence</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>The Capacity Dashboard</h3>
+        <ul>
+          <li>Real-time slots remaining and machine-days committed</li>
+          <li><span class="hl">Sales never oversells. Marketing never overpromises.</span></li>
+          <li>When deposits approach max concurrent capacity, waitlist handling kicks in automatically</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Commission Tracking</h3>
+        <ul>
+          <li>Reps see their own numbers daily — no month-end surprises</li>
+          <li>Bookings, proposals, closes, bonuses calculate automatically</li>
+          <li>Payouts verified against the CRM before the Dec 15 commission run</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 17 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 17</div>
+  <h2>The Pipeline</h2>
+  <ul>
+    <li>Walk one lead through all eight stages live in the CRM during onboarding week. Watching it once beats reading it ten times.</li>
+    <li>The dashboard is the referee between sales and ops. If sales says "we can take one more" and the dashboard says no, the dashboard wins — then we sell the waitlist honestly.</li>
+    <li>Stage 8 discipline: every Closed Lost gets a reason code and a nurture date. The 2027 window starts with this year's no's.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 18 — WAR MODE CHECKLIST I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">War Mode Checklist · 1 of 2</div>
+    <h1 class="slide-title">What's already done — and what happens this week.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>Pre-Onboarding — Completed by Jul 31 (Verify, Don't Redo)</h3>
+        <ul class="checklist">
+          <li>O'Shea (817-422-1393) + Wilco (504-341-3409) called for Oct–Nov hold quotes</li>
+          <li>Auction alerts set: IronPlanet / Ritchie Bros / Purple Wave</li>
+          <li>Linear project live with capacity tracking fields</li>
+          <li>Equipment hold deposits placed — signed rental agreements</li>
+          <li>Bridge capital / deposit funding confirmed</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Onboarding Week, Aug 1–8</h3>
+        <ul class="checklist">
+          <li><strong>Aug 1:</strong> This deck presented; roles confirmed; 8:00 AM standup on every calendar</li>
+          <li><strong>Aug 3:</strong> CRM setup + data import; Slack channels live (#drawdown-sales / -ops / -general)</li>
+          <li><strong>Aug 4:</strong> Script certification — 3 role-plays per rep; Drive shared with the full package</li>
+          <li><strong>Aug 5:</strong> Assessment booking form live (payments tested); Calendly link per rep; first "slots remaining" number published</li>
+          <li><strong>Aug 8:</strong> First outreach wave — past-client SMS + email blast; Hunter dials begin</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">Immediately after: website banner + Google Business Profile Aug 10 · Meta + Google ads live Aug 12 ($500 test budgets) · door hangers + yard signs ordered Aug 18 · first "equipment arriving" teaser Aug 18.</p>
+    <div class="row">
+      <div class="stat-card"><div class="stat-num">Aug 1</div><div class="stat-label">This Deck Presented · Roles Confirmed</div></div>
+      <div class="stat-card"><div class="stat-num">Aug 4</div><div class="stat-label">Reps Certified on Scripts (3 Role-Plays Each)</div></div>
+      <div class="stat-card"><div class="stat-num">Aug 5</div><div class="stat-label">First "Slots Remaining" Number Published</div></div>
+      <div class="stat-card"><div class="stat-num">Aug 8</div><div class="stat-label">First Warm-List Outreach Wave</div></div>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 18 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 18</div>
+  <h2>War Mode — Done vs. This Week</h2>
+  <ul>
+    <li>The left column is July work — verify it happened, do not redo it. If any pre-onboarding item is unconfirmed, that is a standup escalation on Aug 1, not a quiet to-do.</li>
+    <li>Check onboarding-week items off in order. Dependencies are real: no CRM, no outreach; no script certification, no dials.</li>
+    <li>The Aug 5 slots-remaining number is a milestone: it is the first time the whole market hears a real scarcity figure from us. It must be right.</li>
+    <li>Certification standard: 3 role-played calls per rep, opening + two objections each, scored by Nathan and the Closer. Nobody dials uncertified.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 19 — WAR MODE CHECKLIST II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">War Mode Checklist · 2 of 2</div>
+    <h1 class="slide-title">Days 5–7 + the standing rhythm.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>Onboarding Week · Verify + Expand</h3>
+        <ul class="checklist">
+          <li>Verify (don't redo) the July equipment holds with Benjamin — status reported at the Aug 1 standup</li>
+          <li>Expand content calendar: FOMO + equipment + process series</li>
+          <li>Pitch local media contacts for future live coverage</li>
+          <li>Daily standup now permanently includes: deposits locked / crew-days remaining / equipment status</li>
+          <li>Decide by end of Week 1 whether 1–2 dialing contractors are needed for volume</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>The Standing Rhythm (Every Week, All Campaign)</h3>
+        <ul>
+          <li><strong>Daily 8:00:</strong> standup — numbers, blockers, slot count</li>
+          <li><strong>Mon + Thu:</strong> fresh "slots remaining" published everywhere</li>
+          <li><strong>Every 48 hours:</strong> engaged leads touched until they book, decline, or go quiet 10 days</li>
+          <li><strong>Monday:</strong> Nathan reviews the dashboard against pace targets</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card alt">
+      <h3>The Division of Labor</h3>
+      <p>AI builds the playbook — documents, scripts, templates, creative, sequences. Humans run the plays — calls, equipment holds, permit filings, hiring, client relationships, machines. Nobody confuses the two.</p>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 19 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 19</div>
+  <h2>Days 5–7 + the Standing Rhythm</h2>
+  <ul>
+    <li>The rhythm is the culture. Campaigns do not fail in big dramatic moments; they fail when the Monday/Thursday numbers quietly stop publishing. Protect the rhythm.</li>
+    <li>Be blunt about the AI/human line: a template can be generated; a trust relationship with a $5M homeowner cannot. The phone calls are the job.</li>
+    <li>Contractor dialers are a volume lever, not a quality lever. They dial from the same scripts, under the same certification, or they do not dial.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 20 — COMMISSION I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Commission Structure · 1 of 2</div>
+    <h1 class="slide-title">How you get paid.</h1>
+    <table>
+      <thead><tr><th>Action</th><th>Compensation</th><th>Paid</th><th>Fine Print</th></tr></thead>
+      <tbody>
+        <tr><td>Assessment booked</td><td class="hl">$50</td><td>Weekly</td><td>Must be confirmed <em>and attended</em> to count</td></tr>
+        <tr><td>Proposal delivered</td><td class="hl">$100</td><td>Weekly</td><td>Must include full report + 3-tier pricing</td></tr>
+        <tr><td>Close — High-End ($45K+)</td><td class="hl">5% of contract value</td><td>On signing</td><td>$95K close = $4,750</td></tr>
+        <tr><td>Close — Mid-Tier ($18K–$45K)</td><td class="hl">4% of contract value</td><td>On signing</td><td>$35K close = $1,400</td></tr>
+        <tr><td>Close — Assessment only (no work)</td><td class="hl">$0</td><td>—</td><td>The $50 booking fee still applies</td></tr>
+        <tr><td>Top rep of the month</td><td class="hl">$500 bonus</td><td>Monthly</td><td>Highest total revenue closed</td></tr>
+        <tr><td>Team hits 80% of monthly target</td><td class="hl">$250 per rep</td><td>Monthly</td><td>Everyone rows or nobody eats</td></tr>
+        <tr><td>Team hits $1M for the window</td><td class="hl">$2,000 per rep</td><td>End of window (Dec 15 run)</td><td>Exceed $1.2M → additional $1,000 per rep</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Numbers are visible to every rep, every day, in the commission tracker. No month-end surprises. Payouts verified against CRM records before each run.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 20 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 20</div>
+  <h2>How You Get Paid</h2>
+  <ul>
+    <li>The structure pays for behavior at every step of the funnel — booking, proposing, closing — so a rep building pipeline in week 1 earns before the first contract signs.</li>
+    <li>Weekly payouts are deliberate: fast feedback keeps the cadence honest through a 90-day grind.</li>
+    <li>The team bonuses are the tell about our culture: 80% of target pays everyone. Help each other. A lead handed to a better-fit rep is money, not charity.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 21 — COMMISSION II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Commission Structure · 2 of 2</div>
+    <h1 class="slide-title">What a strong month looks like.</h1>
+    <div class="row">
+      <div class="card" style="flex:1.35;">
+        <h3>Illustrative Month — One Rep, Executing the Cadence</h3>
+        <table>
+          <thead><tr><th>Activity</th><th>Volume</th><th>Rate</th><th>Earned</th></tr></thead>
+          <tbody>
+            <tr><td>Assessments booked + attended</td><td>20</td><td>$50</td><td>$1,000</td></tr>
+            <tr><td>Proposals delivered</td><td>10</td><td>$100</td><td>$1,000</td></tr>
+            <tr><td>Mid-tier closes ($35K avg)</td><td>3</td><td>4%</td><td>$4,200</td></tr>
+            <tr><td>High-end closes ($95K avg)</td><td>1</td><td>5%</td><td>$4,750</td></tr>
+            <tr><td><strong>Month total (before bonuses)</strong></td><td>—</td><td>—</td><td class="hl"><strong>$10,950</strong></td></tr>
+          </tbody>
+        </table>
+        <p class="small" style="margin-top:6px;">Illustrative example built from the real rate card and in-band average tickets ($35K sits inside the sourced $18K–$45K mid-tier band) — not a guarantee. Your month is your cadence. Bonuses (top rep $500, team 80% $250, $1M window $2,000) stack on top.</p>
+      </div>
+      <div class="card alt">
+        <h3>How Reps Actually Get There</h3>
+        <ul>
+          <li>30 dials and 10 conversations a day, five days a week</li>
+          <li>Every engaged lead touched every 48 hours</li>
+          <li>Every Assessment followed to proposal within 48 hours of the report</li>
+          <li>Every proposal followed to a decision — a clean NO frees the slot</li>
+        </ul>
+        <p style="margin-top:8px;">The comp plan does not pay for charm. It pays for <span class="hl">cadence</span>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 21 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 21</div>
+  <h2>What a Strong Month Looks Like</h2>
+  <ul>
+    <li>Say the disclaimer out loud: this is arithmetic from the real rate card at real average tickets, not a promise. Then say the other truth: the inputs (dials, conversations, follow-ups) are fully in the rep's control.</li>
+    <li>Note the leverage: one additional high-end close is worth more than a week of booking fees. The booking fee keeps the lights on; closes build the year.</li>
+    <li>(If asked about taxes/1099 vs W-2 — route to Nathan. Do not improvise comp policy in the room.)</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 22 — NON-NEGOTIABLES I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Non-Negotiables · 1 of 2</div>
+    <h1 class="slide-title">Six rules. No exceptions.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>1 · The 5-Minute SLA</h3>
+        <p>Every lead acknowledged within 5 minutes. Auto-reply instantly, human touch inside five. No exceptions, no "I was on another call."</p>
+      </div>
+      <div class="card">
+        <h3>2 · CRM or It Didn't Happen</h3>
+        <p>Every call, every note, every outcome logged. Your memory is not a system. The next rep to touch that lead deserves the full story.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <h3>3 · The Power Hours Are Sacred</h3>
+        <p>8:30–11:30 AM is dialing time. No meetings. No email. No Slack. Protect it like the revenue it produces.</p>
+      </div>
+      <div class="card">
+        <h3>4 · End-of-Day Sync Is Mandatory</h3>
+        <p>4:30 PM, 15 minutes. Numbers, blockers, tomorrow's top 3. Two silent syncs in a row and Nathan calls you — not the other way around.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <h3>5 · Assessment Report Quality</h3>
+        <p>Every report thorough enough to stand alone — the client gets $695 of value even if they never hire us. No shortcuts. Ever.</p>
+      </div>
+      <div class="card">
+        <h3>6 · Equipment Lock</h3>
+        <p>Nothing moves, nothing gets promised, nothing gets scheduled without confirmed equipment. No exceptions.</p>
+      </div>
+    </div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 22 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 22</div>
+  <h2>Six Rules</h2>
+  <ul>
+    <li>Read all six aloud, slowly. Then ask: "Which one will be hardest for you personally?" Honest answers now prevent awkward conversations in September.</li>
+    <li>These are not management preferences. Each rule maps to a failure that has killed a campaign somewhere: slow follow-up, lost context, shallow pipeline, silent drift, thin deliverables, oversold capacity.</li>
+    <li>Rule 6 ties back to Slide 10: reps say "being locked" until Benjamin confirms the deposit cleared. Precision is trust.</li>
+  </ul>
+  <p class="timing">(~2–3 minutes. This is a culture slide — do not rush it.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 23 — NON-NEGOTIABLES II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Non-Negotiables · 2 of 2</div>
+    <h1 class="slide-title">Who you are on the phone.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>You Are Not</h3>
+        <ul>
+          <li>A telemarketer</li>
+          <li>A pushy salesperson</li>
+          <li>A contractor begging for work</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>You Are</h3>
+        <ul>
+          <li>A shoreline consultant</li>
+          <li>A trusted advisor</li>
+          <li>The expert who knows what happens when the water drops</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>The Two Tests (Every Word You Say or Send)</h3>
+        <ul>
+          <li>Would Nathan say this at a BBQ?</li>
+          <li>Would a $5M homeowner keep reading?</li>
+        </ul>
+        <p style="margin-top:6px;" class="small">If either answer is no, rewrite it before it leaves your hands.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <h3>Never Say</h3>
+        <ul>
+          <li>"We need the work."</li>
+          <li>"Can you afford this?"</li>
+          <li>"Our competitor charges less."</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Always Say</h3>
+        <ul>
+          <li>"This window comes once every 10 years."</li>
+          <li>"The Assessment is risk-free — it's a credit."</li>
+          <li>"Your neighbor is already on the Priority List."</li>
+        </ul>
+      </div>
+    </div>
+    <p class="small">Every conversation is about the client's property value, the client's peace of mind, and the client's opportunity — never our quota. Calm authority beats hype with this audience, every time.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 23 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 23</div>
+  <h2>Who You Are on the Phone</h2>
+  <ul>
+    <li>High-net-worth Lake Austin owners can smell commission breath through the phone. The posture is: we have the machines, we have the calendar, we are offering you a place in it. Take it or leave it — warmly.</li>
+    <li>"Your neighbor is already on the Priority List" is only said when it is true in that cove. Same real-numbers rule as everything else.</li>
+    <li>Run the two tests on one real email from the templates as a group exercise. Let the team feel how quickly generic contractor language fails them.</li>
+  </ul>
+  <p class="timing">(~2 minutes + 5-minute group exercise if time allows.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 24 — THE CLOSE I ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">The Close · 1 of 2</div>
+    <h1 class="slide-title">Why we win.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>The Edge Is Real</h3>
+        <ul>
+          <li>The only company with amphibious equipment locked for the window — machines that work the lake bed, not the shore</li>
+          <li>City and LCRA relationships that move permits in weeks, not months</li>
+          <li>A fully booked system: CRM, capacity dashboard, permit pipeline, media machine — built before the water drops</li>
+          <li>A guarantee competitors won't match: schedule the critical work in-window, or we make it right — refund, roll, or credit</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>What the Competitor's October Looks Like</h3>
+        <ul>
+          <li>Calling the same rental yards we called in July — and hearing that the good machines are already spoken for</li>
+          <li>Quoting from the shore, guessing at sediment depth</li>
+          <li>Starting permits when ours are already approved</li>
+          <li>Marketing "we can probably get to you" while our crews are on the bed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="big-quote">"When the water drops, we are already working. Everyone else is scrambling."</div>
+    <p class="small">We never say a competitor's name. We never knock their price. We simply have the machines, the permits, and the calendar — and we let the client do the math.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 24 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 24</div>
+  <h2>Why We Win</h2>
+  <ul>
+    <li>Confidence without contempt. We do not disparage competitors by name — Lake Austin is a small world, and today's competitor is next year's subcontractor.</li>
+    <li>The honest framing for reps: our advantage was built in July, in rental-yards and permit offices, not in ad copy. That is why it is durable.</li>
+    <li>When a client says "the other quote was cheaper," the move is apples-to-apples: did it include sediment removal, permit handling, and equipment access at low water? Our price is all-in.</li>
+  </ul>
+  <p class="timing">(~2 minutes.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 25 — THE CLOSE II ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">The Close · 2 of 2</div>
+    <h1 class="slide-title">What November 30 looks like.</h1>
+    <div class="row">
+      <div class="card">
+        <h3>If We Execute</h3>
+        <ul>
+          <li>Revenue counted: <span class="hl">$1M+</span> — target case, with the capacity to stretch to $1.5M</li>
+          <li>Commissions and bonuses paid <span class="hl">Dec 15</span> — team paid in full, retention secured</li>
+          <li>3–5 full before/after case studies published — the sales assets for 2027</li>
+          <li>Referral credits fulfilled ($500 per booked referral) and a 2027 priority pipeline already seeded</li>
+          <li>A maintenance program launching January — recurring revenue after the window closes</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>If the Window Moves</h3>
+        <ul>
+          <li>Assessment credits stay valid 12 months — no client loses by moving early</li>
+          <li>Timing stays flexible; scopes and permits carry forward</li>
+          <li>We pivot to pre-booking the next window from a position of strength — with a warm list, case studies, and equipment relationships no one else built</li>
+          <li>We tell clients the truth, early, in plain language. That is the whole contingency plan, and it is enough.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="big-quote">"$1M is the floor if we execute with this intensity. The window is short. The machines are ours. The calendar is the product. Let's go fill it."</div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 25 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 25</div>
+  <h2>What November 30 Looks Like</h2>
+  <ul>
+    <li>Paint both columns. A team that has only heard the victory speech panics at the first weather delay. A team that knows the pivot executes it calmly.</li>
+    <li>The Dec 15 payout date matters: say it plainly. People do their best work when they trust the scoreboard and the payout.</li>
+    <li>Close this slide with the quote, then stop talking. Let it sit for three seconds before moving to Q&amp;A.</li>
+  </ul>
+  <p class="timing">(~2 minutes, plus the pause.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ SLIDE 26 — Q+A ============ -->
+<section class="slide">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Team Onboarding · Confidential</span></div>
+  <div class="content">
+    <div class="kicker">Questions · Then Execute</div>
+    <h1 class="slide-title">Q + A.</h1>
+    <div class="row">
+      <div class="card" style="flex:1.3;">
+        <h3>Before You Leave This Room, You Can Answer</h3>
+        <ul class="checklist">
+          <li>What is the mission, and what is the number?</li>
+          <li>What is your role, and what are your three targets?</li>
+          <li>What are the six non-negotiables?</li>
+          <li>Where do "slots remaining" numbers come from?</li>
+          <li>What happens at 8:00 AM tomorrow?</li>
+        </ul>
+        <p class="small" style="margin-top:8px;">If any answer is fuzzy, ask now. There is no dumb question in onboarding — only expensive ones in October.</p>
+      </div>
+      <div class="card">
+        <h3>Your Next 7 Days</h3>
+        <ul>
+          <li><strong>Aug 3:</strong> CRM + Slack + Drive logins confirmed</li>
+          <li><strong>Aug 4:</strong> Script certification — 3 role-plays each</li>
+          <li><strong>Aug 5:</strong> Your Calendly link live; first slots number published</li>
+          <li><strong>Aug 8:</strong> First outreach wave — SMS + email + dials</li>
+          <li><strong>Daily:</strong> 8:00 standup. 30 dials. 10 conversations. 2 bookings.</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>Who to Ask</h3>
+        <ul>
+          <li><strong>Nathan</strong> — pricing exceptions, contract terms, client issues · nate@atxlakescapes.com</li>
+          <li><strong>Operations Lead</strong> — scheduling, equipment, permits</li>
+          <li><strong>Your peer rep</strong> — everything else, first</li>
+          <li><strong>#drawdown-sales</strong> — wins, blockers, numbers</li>
+        </ul>
+      </div>
+    </div>
+    <div class="big-quote">"Questions? Ask Nathan. Then execute."</div>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Slide 26 / 26</span></div>
+</section>
+<div class="notes">
+  <div class="n-kicker">Presenter Notes — Slide 26</div>
+  <h2>Q + A</h2>
+  <ul>
+    <li>Budget 10–15 minutes here. Cold-call each rep on the checklist — gently. Mastery now beats embarrassment with a homeowner later.</li>
+    <li>Capture every question you cannot answer in #drawdown-general with an owner and a date. Close the loop publicly so the team sees that questions get answers.</li>
+    <li>End the session with the room stating the mission back to you in one sentence. If they can say it, they can sell it.</li>
+  </ul>
+  <p class="timing">(~10–15 minutes. Do not skip the read-back.)</p>
+  <div class="n-foot">ATX Lakescapes · Drawdown 2026 · Presenter Notes</div>
+</div>
+
+<!-- ============ PLACEHOLDERS PAGE (internal, not a numbered slide) ============ -->
+<section class="slide placeholder-page">
+  <div class="s-head"><span class="brand">ATX Lakescapes — Drawdown 2026</span><span class="conf">Internal · Remove Before External Use</span></div>
+  <div class="content">
+    <div class="kicker">Internal — Production Notes</div>
+    <h1 class="slide-title">Placeholders to fill.</h1>
+    <div class="card">
+      <h3>Open Items — Owner + Deadline</h3>
+      <ul>
+        <li><strong>[Rep 4]</strong> — Fourth sales rep name and final role assignment. Owner: Nathan. Hiring decision by Nathan; target start Aug 1.</li>
+        <li><strong>[Direct Number] per rep</strong> — Direct lines for SMS/email signatures and voicemail scripts. Owner: Operations Lead, before Aug 8 outreach.</li>
+        <li><strong>[Calendly link] per rep</strong> — Unique booking links. Owner: Operations Lead, by Aug 5 (Order of Operations #17).</li>
+        <li><strong>[Phone/SMS platform]</strong> — Calling/texting platform on Slides 16–17 unconfirmed; name in earlier drafts appeared in no source document. Owner: Operations Lead, before Aug 8 outreach.</li>
+        <li><strong>[X] live counts</strong> — Current Assessments booked / slots remaining / machine-days committed. Owner: Harper + Lucas from the capacity model; published Mon + Thu. Any printed copy must be dated and refreshed on reprint.</li>
+        <li><strong>Equipment hold status</strong> — Deck correctly shows HOLD NEEDED; update to LOCKED only after Benjamin confirms deposits cleared (targeted Jul 31). Until then, reps say "being locked."</li>
+        <li><strong>Crew lead names (Lead 1–3)</strong> — Field crew hiring completes by Sep 14; names backfill the crew structure table.</li>
+      </ul>
+    </div>
+    <p class="small">All other figures in this deck come from the DRAWDOWN 2026 source package (Master Attack Plan, Order of Operations, Operations Playbook, Sales Copy Suite, Team Onboarding Guide). The illustrative commission month on Slide 21 is arithmetic from the real rate card at in-band average tickets, labeled as such on the slide.</p>
+  </div>
+  <div class="s-foot"><span class="f-brand">ATX Lakescapes</span><span class="f-mission">Own the window. Lock the machines. Fill the calendar.</span><span class="f-num">Appendix</span></div>
+</section>
+
+<script>
+  function toggleNotes(){
+    document.body.classList.toggle('show-notes');
+    var on = document.body.classList.contains('show-notes');
+    document.getElementById('notesToggle').textContent = 'Presenter Notes: ' + (on ? 'On' : 'Off');
+  }
+  document.addEventListener('keydown', function(e){
+    if((e.key === 'n' || e.key === 'N') && !e.metaKey && !e.ctrlKey && !e.altKey){ toggleNotes(); }
+  });
+</script>
+
+</body>
+</html>

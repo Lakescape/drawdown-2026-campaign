@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lake Austin Drawdown — One-Page Summary | ATX Lakescapes</title>
+<!--
+  ASSET_OnePager_Summary_v1_FINAL.html
+  Version: v1 FINAL (Draft -> Skill Poll -> Revision -> Board Review -> Devil's Advocate -> Final)
+  Date: 2026-07-26
+  Author: DRAWDOWN 2026 Swarm — Specialist Writer (all 6 roles polled)
+  Status: FINAL — Board approved with notes. DO NOT PRINT until placeholders are filled:
+          [QR CODE] booking link + [Nathan's direct line]. See ASSET_OnePager_Summary_v1_REVIEW_NOTES.md
+  Purpose: THE one-page summary promised in the Master Call Script (Branches 1D, 2D, 2G, Rebuttal 10),
+           Email B1 (offered on reply), and Cold VM1. External-facing: survives printing, forwarding,
+           HOA circulation, and screenshots. Hedged drawdown language only; structural scarcity only.
+  Print: US Letter portrait (8.5in x 11in), exactly one page. Only external dependency: Google Fonts.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f5f0;
+    --ink:#1a1a1a;
+    --accent:#c4923a;
+    --accent-dark:#a0782f;
+    --muted:#6b6b6b;
+    --line:#e8e4de;
+    --card:#ffffff;
+    --card-alt:#faf8f5;
+    --body:#3d3d3d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:#ddd8d0;}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);line-height:1.4;font-size:10pt;}
+
+  .page{
+    width:8.5in;height:11in;background:var(--paper);
+    margin:24px auto;padding:0.42in 0.55in 0.85in;
+    position:relative;display:flex;flex-direction:column;overflow:hidden;
+    box-shadow:0 2px 14px rgba(26,26,26,0.12);
+  }
+
+  .s-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:2px solid var(--accent);padding-bottom:5px;margin-bottom:12px;
+  }
+  .s-head .brand{font-size:8pt;text-transform:uppercase;letter-spacing:2.5px;font-weight:600;}
+  .s-head .tag-r{font-size:7.5pt;text-transform:uppercase;letter-spacing:2px;color:var(--muted);}
+
+  .kicker{font-size:8.5pt;text-transform:uppercase;letter-spacing:3.5px;color:var(--accent);font-weight:700;margin-bottom:3px;}
+  h1{font-family:'Cormorant Garamond',serif;font-size:26pt;font-weight:700;line-height:1.06;margin-bottom:5px;}
+  .sub{font-family:'Cormorant Garamond',serif;font-size:12.5pt;font-weight:600;font-style:italic;color:var(--muted);line-height:1.3;margin-bottom:11px;}
+
+  .intro{font-size:10pt;color:var(--body);margin-bottom:12px;}
+  .intro strong{color:var(--ink);}
+
+  .row{display:flex;gap:11px;margin-bottom:11px;}
+  .row > *{flex:1;}
+
+  .card{background:var(--card);border:1px solid var(--line);padding:11px 14px;}
+  .card.alt{background:var(--card-alt);}
+  .card h2{font-size:8.5pt;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-dark);margin-bottom:6px;}
+  .card p, .card li{font-size:9.8pt;color:var(--body);}
+  .card ul{list-style:none;}
+  .card li{padding-left:1.4em;position:relative;margin-bottom:3px;}
+  .card li:before{content:"";position:absolute;left:0;top:4px;width:8px;height:8px;border:1.5px solid var(--accent);}
+  .hl{color:var(--accent-dark);font-weight:700;}
+  .price{font-family:'Cormorant Garamond',serif;font-size:19pt;font-weight:700;color:var(--accent);line-height:1;}
+  .price-sub{font-size:8pt;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin-top:3px;}
+  .credit-line{margin-top:8px;border-top:1px solid var(--line);padding-top:7px;font-size:9.3pt;color:var(--body);}
+  .stack{display:flex;flex-direction:column;gap:11px;}
+  .stack .card{flex:1;}
+
+  .who{
+    background:var(--card-alt);border-left:3px solid var(--accent);
+    padding:9px 14px;margin-bottom:11px;
+  }
+  .who p{font-size:9.8pt;color:var(--body);font-style:italic;}
+  .who strong{color:var(--ink);font-style:normal;}
+
+  .book{display:flex;gap:14px;align-items:stretch;margin-bottom:0;}
+  .qr{
+    width:1.15in;min-width:1.15in;border:1.5px dashed var(--accent);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6px;background:var(--card);
+  }
+  .qr .qr-label{font-size:6.8pt;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent-dark);line-height:1.5;}
+  .book-copy{flex:1;display:flex;flex-direction:column;justify-content:center;}
+  .book-copy h2{font-family:'Cormorant Garamond',serif;font-size:15pt;font-weight:700;margin-bottom:4px;}
+  .book-copy p{font-size:9.8pt;color:var(--body);margin-bottom:2px;}
+  .book-copy .phone{font-size:11.5pt;font-weight:700;color:var(--ink);letter-spacing:0.5px;}
+
+  .s-foot{
+    position:absolute;left:0.55in;right:0.55in;bottom:0.3in;
+    border-top:1px solid var(--line);padding-top:7px;
+  }
+  .s-foot .f-line{display:flex;justify-content:space-between;align-items:baseline;}
+  .s-foot .f-brand{font-size:7.5pt;text-transform:uppercase;letter-spacing:2px;color:var(--muted);}
+  .s-foot .f-credit{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:10.5pt;color:var(--accent-dark);margin-top:3px;}
+
+  @media print{
+    html,body{background:#fff;}
+    .page{box-shadow:none;margin:0;}
+    @page{size:8.5in 11in;margin:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <div class="s-head">
+    <span class="brand">ATX Lakescapes &mdash; Lake Austin Shoreline Construction</span>
+    <span class="tag-r">For Waterfront Owners &middot; Fall 2026</span>
+  </div>
+
+  <div class="kicker">Lake Austin &middot; Projected October&ndash;November 2026</div>
+  <h1>Ten years of high water is about to show its work.</h1>
+  <div class="sub">The City and LCRA are exploring the first meaningful Lake Austin drawdown in nearly a decade. Here is what it means for your shoreline &mdash; and the one thing worth doing before the water drops.</div>
+
+  <p class="intro"><strong>What is happening on Lake Austin.</strong> The City of Austin and the LCRA are exploring a drawdown this fall &mdash; a projected ten-to-twelve-foot drop over roughly six to eight weeks, the first meaningful low-water window in nearly ten years. Nothing is official until it&rsquo;s official, but the work is being lined up, and we are preparing as if it&rsquo;s coming. When the water drops, everything that has been underwater on your shoreline for a decade &mdash; the bulkhead, the sediment, the base of your dock &mdash; is exposed and, for a few weeks, practical to fix. When the lake refills, that window closes for years.</p>
+
+  <div class="row">
+    <div class="card">
+      <h2>The Priority Assessment</h2>
+      <div class="price">$695</div>
+      <div class="price-sub">100% credited toward any work you book</div>
+      <ul style="margin-top:8px;">
+        <li>On-site evaluation of your <strong>bulkhead, sediment depth, dock structure, and drainage</strong></li>
+        <li>Photo and video documentation of everything we find</li>
+        <li>A written, prioritized scope &mdash; <strong>what must happen this window vs. what can wait</strong></li>
+        <li>Rough order-of-magnitude pricing for each priority level (most Lake Austin projects land between $15,000 and $95,000, depending on scope)</li>
+        <li>A reserved place in a genuinely limited production calendar</li>
+      </ul>
+      <div class="credit-line">Every dollar of the $695 credits toward any work you book, and the credit is <strong>valid for 12 months</strong> &mdash; if the drawdown timing shifts, it applies to pre-drawdown work or the next window. If we find nothing worth doing, we&rsquo;ll tell you that to your face, and you&rsquo;ll have documentation saying so &mdash; worth having for insurance and resale on its own.</div>
+    </div>
+    <div class="stack">
+      <div class="card alt">
+        <h2>Why the Window Matters</h2>
+        <p>At full water, this work means crews working blind from barges &mdash; around the water instead of on the lake bed. During a drawdown, the same work is typically <span class="hl">30&ndash;40% less expensive</span>, and some of it is simply not possible any other way: sediment removal behind a bulkhead, tie-back replacement, undermined dock structure. These jobs wait for low water. Based on this lake&rsquo;s history, the next comparable window <span class="hl">may be eight to ten years away</span>.</p>
+      </div>
+      <div class="card alt">
+        <h2>The Capacity Reality</h2>
+        <p>We have committed <span class="hl">two amphibious machines</span> for the window &mdash; equipment that can work the soft lake bed where conventional machines can&rsquo;t go &mdash; and we committed in July. The window gives us <span class="hl">roughly 25 working days</span>. That is the honest constraint: once those machine-days are spoken for, we cannot add work, no matter how good the project.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="who">
+    <p><strong>Who we are.</strong> ATX Lakescapes builds and repairs shorelines on Lake Austin &mdash; it&rsquo;s our home water, and it&rsquo;s where our crews, our equipment, and our reputation live. We run amphibious equipment, handle LCRA and City of Austin permits start to finish, and most of our work comes from neighbors telling neighbors. &mdash; <strong>Nathan Menkin, owner</strong></p>
+  </div>
+
+  <div class="book">
+    <div class="qr">
+      <div class="qr-label">[QR CODE]<br>Booking page link &mdash; insert before print</div>
+    </div>
+    <div class="book-copy">
+      <h2>Book your Priority Assessment</h2>
+      <p>Scan the code, call or text <span class="phone">[Nathan&rsquo;s direct line]</span>, or simply <strong>reply to the email this came with</strong> &mdash; it goes straight to Nathan&rsquo;s desk.</p>
+      <p>No deposit, no paperwork to hold a slot while you decide. Assessments are scheduled in the order they&rsquo;re booked.</p>
+    </div>
+  </div>
+
+  <div class="s-foot">
+    <div class="f-line">
+      <span class="f-brand">ATX Lakescapes &middot; atxlakescapes.com &middot; nate@atxlakescapes.com</span>
+      <span class="f-brand">Lake Austin &middot; Texas</span>
+    </div>
+    <div class="f-credit">If the window shifts, your credit holds for 12 months.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
