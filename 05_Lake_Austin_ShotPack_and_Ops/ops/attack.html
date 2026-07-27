@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lake Austin Sales Attack Board — ATX Lakescapes</title>
+<style>
+:root{--bg:#f2f0e6;--ink:#2d1e1e;--accent:#716a4b;--line:#d8d3c0;--a:#b08d35;--b:#5a6e78;--c:#8c8c87}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+header{padding:1.4rem 1.8rem;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:2rem;flex-wrap:wrap}
+h1{font:700 1.7rem Georgia,serif}
+.kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);width:100%}
+.stats{display:flex;gap:1.6rem;flex-wrap:wrap}
+.stats b{font:700 1.2rem Georgia,serif} .stats span{font-size:10.5px;color:var(--accent);text-transform:uppercase;letter-spacing:.07em;display:block}
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;padding:1.2rem 1.8rem;align-items:start}
+.col h2{font:700 1.05rem Georgia,serif;padding:.55rem .8rem;border-bottom:2px solid var(--ink);margin-bottom:10px}
+.col h2 span{float:right;font:600 12px sans-serif;color:var(--accent)}
+.card{background:#fbfaf5;border:1px solid var(--line);border-left:4px solid var(--c);padding:.7rem .8rem;margin-bottom:10px}
+.card.tA{border-left-color:var(--a)} .card.tB{border-left-color:var(--b)} .card.tC{border-left-color:var(--c)}
+.card.b2b{border-left-color:var(--accent)}
+.chead{display:flex;gap:.5rem;align-items:baseline}
+.chead b{font-size:14.5px}
+.score{margin-left:auto;font:700 15px Georgia,serif;color:var(--accent)}
+.badge{display:inline-block;min-width:1.5em;text-align:center;font-weight:700;color:#fff;border-radius:3px;padding:0 .3em;font-size:12px}
+.badge.tA{background:var(--a)}.badge.tB{background:var(--b)}.badge.tC{background:var(--c)}
+.meta{font-size:12px;margin-top:.25rem}
+.pods{font-size:11px;color:var(--accent);margin-top:.2rem}
+.chip{display:inline-block;background:#e9e5d5;border-radius:3px;padding:0 .35em;margin:1px}
+.seq{font-size:12.5px;font-weight:600;margin-top:.3rem;color:#4a3f28}
+.note{font-size:11.5px;color:#5b5240;margin-top:.25rem}
+footer{padding:1rem 1.8rem 2rem;font-size:12px;color:var(--accent)}
+</style></head><body>
+<header><div class="kicker">ATX Lakescapes · Sales attack board · aggregate zone data only — no customer PII</div>
+<h1>Lake Austin Sales Attack Board</h1>
+<div class="stats">
+<div><b>500</b><span>clients on-water</span></div>
+<div><b>14</b><span>attack-now zones</span></div>
+<div><b>15</b><span>this-month zones</span></div>
+<div><b>5+2</b><span>B2B HOA unlocks</span></div>
+<div><b>Oct–Nov 2026?</b><span>drawdown trigger</span></div>
+</div></header>
+<div class="board">
+<div class="col"><h2>ATTACK NOW <span>P1 · highest $ × clients</span></h2>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Westlake Dr corridor / Lake Austin Marina</b><span class="score">83.7</span></div>
+ <div class="meta">S bank · rank #1 · <b>55 customers</b> · 4 pods</div>
+ <div class="pods">pod sizes: <span class="chip">40</span><span class="chip">8</span><span class="chip">4</span><span class="chip">3</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (0.6 km)</div>
+ <div class="seq">▸ Marina-commercial + ramp-corridor</div>
+ <div class="note">ramp: Walsh Boat Landing 0.6 km (2nd Loop 360 Boat Ramp (Pennybacker) 5.25 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Tarrytown–Lake Austin Blvd corridor</b><span class="score">79.4</span></div>
+ <div class="meta">N bank · rank #2 · <b>9 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">9</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (0.32 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Walsh Boat Landing 0.32 km (2nd Loop 360 Boat Ramp (Pennybacker) 5.57 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Laguna Loma</b><span class="score">78.8</span></div>
+ <div class="meta">S bank · rank #3 · <b>36 customers</b> · 4 pods</div>
+ <div class="pods">pod sizes: <span class="chip">23</span><span class="chip">7</span><span class="chip">5</span><span class="chip">1</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (0.48 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Walsh Boat Landing 0.48 km (2nd Loop 360 Boat Ramp (Pennybacker) 5.54 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Austin Country Club environs</b><span class="score">78.4</span></div>
+ <div class="meta">S bank · rank #4 · <b>1 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">1</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (0.61 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 0.61 km (2nd Emma Long Metropolitan Park 4.58 km)</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Oyster Landing / Hula Hut–Mozart&#x27;s basin</b><span class="score">78.0</span></div>
+ <div class="meta">S bank · rank #5 · <b>14 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">13</span><span class="chip">1</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (0.28 km)</div>
+ <div class="seq">▸ Marina-commercial + ramp-corridor</div>
+ <div class="note">ramp: Walsh Boat Landing 0.28 km (2nd Loop 360 Boat Ramp (Pennybacker) 6.11 km); canal/basin work — entrance width limits barge size</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Rockcliff Rd estates</b><span class="score">76.7</span></div>
+ <div class="meta">S bank · rank #6 · <b>25 customers</b> · 4 pods</div>
+ <div class="pods">pod sizes: <span class="chip">16</span><span class="chip">4</span><span class="chip">3</span><span class="chip">2</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (1.08 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 1.08 km (2nd Walsh Boat Landing 4.84 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Ski Shores / Pearce / Manana strip</b><span class="score">74.7</span></div>
+ <div class="meta">N bank · rank #7 · <b>40 customers</b> · 4 pods</div>
+ <div class="pods">pod sizes: <span class="chip">29</span><span class="chip">6</span><span class="chip">3</span><span class="chip">2</span></div>
+ <div class="meta">ramp: Emma Long Metropolitan Park (1.66 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Emma Long Metropolitan Park 1.66 km (2nd Loop 360 Boat Ramp (Pennybacker) 3.29 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>River Hills Rd / Weston Ln</b><span class="score">74.3</span></div>
+ <div class="meta">S bank · rank #8 · <b>3 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">2</span><span class="chip">1</span></div>
+ <div class="meta">ramp: Emma Long Metropolitan Park (1.76 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Emma Long Metropolitan Park 1.76 km (2nd Commons Ford Ranch Metropolitan Park 1.93 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Davenport Ranch</b><span class="score">72.1</span></div>
+ <div class="meta">S bank · rank #9 · <b>13 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">11</span><span class="chip">2</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (2.41 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 2.41 km (2nd Emma Long Metropolitan Park 3.49 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Rivercrest</b><span class="score">72.1</span></div>
+ <div class="meta">S bank · rank #9 · <b>50 customers</b> · 3 pods</div>
+ <div class="pods">pod sizes: <span class="chip">40</span><span class="chip">6</span><span class="chip">4</span></div>
+ <div class="meta">ramp: Emma Long Metropolitan Park (2.41 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Emma Long Metropolitan Park 2.41 km (2nd Loop 360 Boat Ramp (Pennybacker) 2.51 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>The Island at Mount Bonnell Shores — CANAL GRID</b><span class="score">70.8</span></div>
+ <div class="meta">N bank · rank #13 · <b>29 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">29</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (2.76 km)</div>
+ <div class="seq">▸ A-tier canal-grid estate</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 2.76 km (2nd Walsh Boat Landing 3.74 km); gated — coordinate entry with mgmt/HOA; canal/basin work — entrance width limits barge size</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Mount Bonnell shores / Dry Creek mouth</b><span class="score">70.5</span></div>
+ <div class="meta">N bank · rank #14 · <b>43 customers</b> · 4 pods</div>
+ <div class="pods">pod sizes: <span class="chip">30</span><span class="chip">5</span><span class="chip">5</span><span class="chip">3</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (2.85 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Walsh Boat Landing 2.85 km (2nd Loop 360 Boat Ramp (Pennybacker) 3.72 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Greenshores on Lake Austin</b><span class="score">65.1</span></div>
+ <div class="meta">N bank · rank #24 · <b>40 customers</b> · 6 pods</div>
+ <div class="pods">pod sizes: <span class="chip">20</span><span class="chip">7</span><span class="chip">5</span><span class="chip">4</span><span class="chip">3</span><span class="chip">1</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (1.91 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 1.91 km (2nd Emma Long Metropolitan Park 3.02 km); gated — coordinate entry with mgmt/HOA</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Laguna Gloria / Mayfield shore</b><span class="score">42.1</span></div>
+ <div class="meta">N bank · rank #36 · <b>30 customers</b> · 3 pods</div>
+ <div class="pods">pod sizes: <span class="chip">15</span><span class="chip">11</span><span class="chip">4</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (1.9 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Walsh Boat Landing 1.9 km (2nd Loop 360 Boat Ramp (Pennybacker) 4.62 km)</div>
+</div></div>
+<div class="col"><h2>THIS MONTH <span>P2</span></h2>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Apache Shores (incl. Lake Apache / Indian Creek)</b><span class="score">71.7</span></div>
+ <div class="meta">S bank · rank #11 · <b>7 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">6</span><span class="chip">1</span></div>
+ <div class="meta">ramp: Jessica Hollis Park (2.08 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Jessica Hollis Park 2.08 km (2nd Mansfield Dam Park ramp 2.61 km); canal/basin work — entrance width limits barge size</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Steiner Ranch waterfront — Bellagio / Lake Club</b><span class="score">71.1</span></div>
+ <div class="meta">N bank · rank #12 · <b>7 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">7</span></div>
+ <div class="meta">ramp: Jessica Hollis Park (2.68 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Jessica Hollis Park 2.68 km (2nd Mansfield Dam Park ramp 3.15 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Rob Roy on the Lake</b><span class="score">67.5</span></div>
+ <div class="meta">S bank · rank #15 · <b>0 customers</b> · 0 pods</div>
+ <div class="pods">pod sizes: <span class="chip">0</span></div>
+ <div class="meta">ramp: Emma Long Metropolitan Park (1.21 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Emma Long Metropolitan Park 1.21 km (2nd Commons Ford Ranch Metropolitan Park 1.76 km); gated — coordinate entry with mgmt/HOA</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Caslano on Lake Austin (Steiner Ranch)</b><span class="score">67.4</span></div>
+ <div class="meta">N bank · rank #16 · <b>6 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">5</span><span class="chip">1</span></div>
+ <div class="meta">ramp: Mary Quinlan Park (1.23 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Mary Quinlan Park 1.23 km (2nd Jessica Hollis Park 6.04 km); gated — coordinate entry with mgmt/HOA</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Austin Lake Hills</b><span class="score">67.3</span></div>
+ <div class="meta">S bank · rank #17 · <b>0 customers</b> · 0 pods</div>
+ <div class="pods">pod sizes: <span class="chip">0</span></div>
+ <div class="meta">ramp: Commons Ford Ranch Metropolitan Park (0.84 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Commons Ford Ranch Metropolitan Park 0.84 km (2nd Emma Long Metropolitan Park 2.42 km)</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Cypress Banks</b><span class="score">67.2</span></div>
+ <div class="meta">S bank · rank #18 · <b>5 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">5</span></div>
+ <div class="meta">ramp: Emma Long Metropolitan Park (0.86 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Emma Long Metropolitan Park 0.86 km (2nd Commons Ford Ranch Metropolitan Park 1.17 km)</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Cuernavaca / River Terrace / Saratoga Point</b><span class="score">67.1</span></div>
+ <div class="meta">S bank · rank #19 · <b>0 customers</b> · 0 pods</div>
+ <div class="pods">pod sizes: <span class="chip">0</span></div>
+ <div class="meta">ramp: Commons Ford Ranch Metropolitan Park (0.9 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Commons Ford Ranch Metropolitan Park 0.9 km (2nd Emma Long Metropolitan Park 2.44 km)</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Bee Creek arm</b><span class="score">66.8</span></div>
+ <div class="meta">S bank · rank #20 · <b>1 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">1</span></div>
+ <div class="meta">ramp: Commons Ford Ranch Metropolitan Park (1.21 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Commons Ford Ranch Metropolitan Park 1.21 km (2nd Emma Long Metropolitan Park 1.83 km); creek arm — silted at drawdown, clearance constraints</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Stratford Hills / Redbud</b><span class="score">65.9</span></div>
+ <div class="meta">S bank · rank #21 · <b>0 customers</b> · 0 pods</div>
+ <div class="pods">pod sizes: <span class="chip">0</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (1.25 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Walsh Boat Landing 1.25 km (2nd Emma Long Metropolitan Park 6.59 km)</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Bull Creek arm mouth / County Line</b><span class="score">65.8</span></div>
+ <div class="meta">N bank · rank #22 · <b>4 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">4</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (1.48 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 1.48 km (2nd Emma Long Metropolitan Park 6.3 km); creek arm — silted at drawdown, clearance constraints</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Lake Pointe</b><span class="score">65.5</span></div>
+ <div class="meta">S bank · rank #23 · <b>1 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">1</span></div>
+ <div class="meta">ramp: Mary Quinlan Park (1.37 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Mary Quinlan Park 1.37 km (2nd Commons Ford Ranch Metropolitan Park 5.63 km)</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>The Courtyard (gated, Bull Creek arm)</b><span class="score">64.5</span></div>
+ <div class="meta">N bank · rank #25 · <b>8 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">8</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (0.8 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 0.8 km (2nd Emma Long Metropolitan Park 5.59 km); gated — coordinate entry with mgmt/HOA; creek arm — silted at drawdown, clearance constraints</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Coldwater / Sanctuary at Coldwater</b><span class="score">62.8</span></div>
+ <div class="meta">N bank · rank #26 · <b>10 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">5</span><span class="chip">5</span></div>
+ <div class="meta">ramp: Commons Ford Ranch Metropolitan Park (2.56 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Commons Ford Ranch Metropolitan Park 2.56 km (2nd Emma Long Metropolitan Park 2.84 km); gated — coordinate entry with mgmt/HOA</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>St. Tropez (gated villas)</b><span class="score">62.3</span></div>
+ <div class="meta">S bank · rank #27 · <b>2 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">2</span></div>
+ <div class="meta">ramp: Walsh Boat Landing (2.7 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Walsh Boat Landing 2.7 km (2nd Loop 360 Boat Ramp (Pennybacker) 3.76 km); gated — coordinate entry with mgmt/HOA</div>
+</div>
+<div class="card tA">
+ <div class="chead"><span class="badge tA">A</span><b>Watersedge (gated)</b><span class="score">62.1</span></div>
+ <div class="meta">N bank · rank #28 · <b>21 customers</b> · 5 pods</div>
+ <div class="pods">pod sizes: <span class="chip">11</span><span class="chip">4</span><span class="chip">2</span><span class="chip">2</span><span class="chip">2</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (2.75 km)</div>
+ <div class="seq">▸ A-tier main-body estate</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 2.75 km (2nd Walsh Boat Landing 3.71 km); gated — coordinate entry with mgmt/HOA</div>
+</div></div>
+<div class="col"><h2>B2B / HOA PLAYS <span>one signature, many doors</span></h2><div class="card b2b"><div class="chead"><b>Goodwin &amp; Company</b></div><div class="meta">5 HOAs: The Courtyard · St. Tropez · Davenport Ranch · SRROA (Steiner) · River Place Estates</div><div class="note">One TownSq vendor approval unlocks 5 zones. Ask: approved-vendor onboarding for dock/bulkhead/sediment work; offer drawdown-readiness assessments to boards.</div><div class="seq">855-289-6007 · goodwintx.com · contacts per HOA in HOA_CONTACTS.md</div></div><div class="card b2b"><div class="chead"><b>Spectrum Association Mgmt</b></div><div class="meta">2 HOAs: Apache Shores · Rob Roy on the Lake</div><div class="note">Rob Roy = highest-$ gated enclave; Apache = volume ramp community. Vendor packet + insurance + references.</div><div class="seq">512-834-3900</div></div><div class="card b2b"><div class="chead"><b>Cohere</b></div><div class="meta">Lake Pointe (since Oct 2024)</div><div class="note">New mgmt = open vendor list. Fast pitch window.</div><div class="seq">lakepointe@coherelife.com</div></div><div class="card b2b"><div class="chead"><b>Direct gated plays</b></div><div class="meta">Watersedge · The Island · Greenshores · Caslano · Coldwater</div><div class="note">No mgmt found — door-knock/captain-led intros; use existing customers inside as references.</div><div class="seq"></div></div><div class="card b2b"><div class="chead"><b>Marinas &amp; clubs</b></div><div class="meta">Lake Austin Marina (168 slips) · Oyster Landing basin · Austin Country Club · Ski Shores · County Line</div><div class="note">Commercial slip-dredging + dock maintenance contracts; season-timed before drawdown window.</div><div class="seq"></div></div></div>
+<div class="col"><h2>NURTURE <span>P3 · stay visible</span></h2>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>River Place / Panther Hollow arm</b><span class="score">60.0</span></div>
+ <div class="meta">N bank · rank #29 · <b>9 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">7</span><span class="chip">2</span></div>
+ <div class="meta">ramp: Commons Ford Ranch Metropolitan Park (3.14 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Commons Ford Ranch Metropolitan Park 3.14 km (2nd Emma Long Metropolitan Park 3.6 km); creek arm — silted at drawdown, clearance constraints</div>
+</div>
+<div class="card tB">
+ <div class="chead"><span class="badge tB">B</span><b>Hidden Valley / Fritz Hughes Park</b><span class="score">59.8</span></div>
+ <div class="meta">S bank · rank #30 · <b>8 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">8</span></div>
+ <div class="meta">ramp: Jessica Hollis Park (0.48 km)</div>
+ <div class="seq">▸ B-tier volume pod</div>
+ <div class="note">ramp: Jessica Hollis Park 0.48 km (2nd Mansfield Dam Park ramp 1.01 km); gated — coordinate entry with mgmt/HOA</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Emma Long Metropolitan Park shore</b><span class="score">48.8</span></div>
+ <div class="meta">N bank · rank #31 · <b>9 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">6</span><span class="chip">3</span></div>
+ <div class="meta">ramp: Emma Long Metropolitan Park (0.0 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Emma Long Metropolitan Park 0.0 km (2nd Commons Ford Ranch Metropolitan Park 1.75 km)</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Loop 360 Boat Ramp / Pennybacker Bridge</b><span class="score">48.8</span></div>
+ <div class="meta">S bank · rank #31 · <b>1 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">1</span></div>
+ <div class="meta">ramp: Loop 360 Boat Ramp (Pennybacker) (0.0 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Loop 360 Boat Ramp (Pennybacker) 0.0 km (2nd Emma Long Metropolitan Park 4.84 km)</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Mary Quinlan Park / Lake Austin Spa shore</b><span class="score">48.4</span></div>
+ <div class="meta">N bank · rank #33 · <b>10 customers</b> · 2 pods</div>
+ <div class="pods">pod sizes: <span class="chip">6</span><span class="chip">4</span></div>
+ <div class="meta">ramp: Mary Quinlan Park (0.09 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Mary Quinlan Park 0.09 km (2nd Commons Ford Ranch Metropolitan Park 6.35 km)</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Mansfield Dam terminus (S)</b><span class="score">47.9</span></div>
+ <div class="meta">S bank · rank #34 · <b>0 customers</b> · 0 pods</div>
+ <div class="pods">pod sizes: <span class="chip">0</span></div>
+ <div class="meta">ramp: Mansfield Dam Park ramp (0.24 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Mansfield Dam Park ramp 0.24 km (2nd Jessica Hollis Park 0.33 km)</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Mansfield Dam terminus (N)</b><span class="score">47.9</span></div>
+ <div class="meta">N bank · rank #34 · <b>2 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">2</span></div>
+ <div class="meta">ramp: Mansfield Dam Park ramp (0.24 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Mansfield Dam Park ramp 0.24 km (2nd Jessica Hollis Park 0.33 km)</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Turkey Creek arm</b><span class="score">41.0</span></div>
+ <div class="meta">N bank · rank #37 · <b>0 customers</b> · 0 pods</div>
+ <div class="pods">pod sizes: <span class="chip">0</span></div>
+ <div class="meta">ramp: Emma Long Metropolitan Park (3.08 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Emma Long Metropolitan Park 3.08 km (2nd Commons Ford Ranch Metropolitan Park 3.44 km); creek arm — silted at drawdown, clearance constraints</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Selma Hughes Park shore</b><span class="score">40.0</span></div>
+ <div class="meta">N bank · rank #38 · <b>0 customers</b> · 0 pods</div>
+ <div class="pods">pod sizes: <span class="chip">0</span></div>
+ <div class="meta">ramp: Mary Quinlan Park (2.5 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Mary Quinlan Park 2.5 km (2nd Commons Ford Ranch Metropolitan Park 4.32 km)</div>
+</div>
+<div class="card tC">
+ <div class="chead"><span class="badge tC">C</span><b>Commons Ford Ranch Park shore</b><span class="score">37.9</span></div>
+ <div class="meta">S bank · rank #39 · <b>1 customers</b> · 1 pods</div>
+ <div class="pods">pod sizes: <span class="chip">1</span></div>
+ <div class="meta">ramp: Commons Ford Ranch Metropolitan Park (3.09 km)</div>
+ <div class="seq">▸ Benchmark / context only</div>
+ <div class="note">ramp: Commons Ford Ranch Metropolitan Park 3.09 km (2nd Mary Quinlan Park 3.56 km)</div>
+</div></div>
+</div>
+<footer>Sources: zone_scorecard.csv · customers-matched.xlsx (pod counts) · HOA_CONTACTS.md · L3 workops research. Drawdown campaign pre-built in OUTREACH_PLAYBOOK.md — fire on LCRA confirmation. Compliance gate (OUTREACH_COMPLIANCE.md) must pass before any sequence ships.</footer>
+</body></html>
