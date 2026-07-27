@@ -1,0 +1,236 @@
+{
+ "n01-tarrytown-lake-austin-blvd": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 0.32,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 5.57
+ },
+ "n02-laguna-gloria-mayfield": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 1.9,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 4.62
+ },
+ "n03-mount-bonnell-shores": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 2.85,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 3.72
+ },
+ "n04-watersedge": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 2.75,
+  "second": "Walsh Boat Landing",
+  "second_km": 3.71
+ },
+ "n05-the-island-canal-grid": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 2.76,
+  "second": "Walsh Boat Landing",
+  "second_km": 3.74
+ },
+ "n06-the-courtyard-bull-creek": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 0.8,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 5.59
+ },
+ "n07-bull-creek-mouth-county-line": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 1.48,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 6.3
+ },
+ "n08-greenshores": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 1.91,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 3.02
+ },
+ "n09-ski-shores-pearce-manana": {
+  "nearest_ramp": "Emma Long Metropolitan Park",
+  "ramp_km": 1.66,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 3.29
+ },
+ "n10-emma-long-park": {
+  "nearest_ramp": "Emma Long Metropolitan Park",
+  "ramp_km": 0.0,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 1.75
+ },
+ "n11-coldwater": {
+  "nearest_ramp": "Commons Ford Ranch Metropolitan Park",
+  "ramp_km": 2.56,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 2.84
+ },
+ "n12-river-place-panther-hollow": {
+  "nearest_ramp": "Commons Ford Ranch Metropolitan Park",
+  "ramp_km": 3.14,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 3.6
+ },
+ "n13-turkey-creek-arm": {
+  "nearest_ramp": "Emma Long Metropolitan Park",
+  "ramp_km": 3.08,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 3.44
+ },
+ "n14-selma-hughes-park": {
+  "nearest_ramp": "Mary Quinlan Park",
+  "ramp_km": 2.5,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 4.32
+ },
+ "n15-caslano": {
+  "nearest_ramp": "Mary Quinlan Park",
+  "ramp_km": 1.23,
+  "second": "Jessica Hollis Park",
+  "second_km": 6.04
+ },
+ "n16-steiner-bellagio-lake-club": {
+  "nearest_ramp": "Jessica Hollis Park",
+  "ramp_km": 2.68,
+  "second": "Mansfield Dam Park ramp",
+  "second_km": 3.15
+ },
+ "n17-mary-quinlan-lake-austin-spa": {
+  "nearest_ramp": "Mary Quinlan Park",
+  "ramp_km": 0.09,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 6.35
+ },
+ "n18-mansfield-dam-n": {
+  "nearest_ramp": "Mansfield Dam Park ramp",
+  "ramp_km": 0.24,
+  "second": "Jessica Hollis Park",
+  "second_km": 0.33
+ },
+ "s01-stratford-hills-redbud": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 1.25,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 6.59
+ },
+ "s02-laguna-loma": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 0.48,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 5.54
+ },
+ "s03-oyster-landing-hula-hut": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 0.28,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 6.11
+ },
+ "s04-westlake-lake-austin-marina": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 0.6,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 5.25
+ },
+ "s05-st-tropez": {
+  "nearest_ramp": "Walsh Boat Landing",
+  "ramp_km": 2.7,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 3.76
+ },
+ "s06-rockcliff-estates": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 1.08,
+  "second": "Walsh Boat Landing",
+  "second_km": 4.84
+ },
+ "s07-davenport-ranch": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 2.41,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 3.49
+ },
+ "s08-austin-country-club": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 0.61,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 4.58
+ },
+ "s09-loop360-boat-ramp": {
+  "nearest_ramp": "Loop 360 Boat Ramp (Pennybacker)",
+  "ramp_km": 0.0,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 4.84
+ },
+ "s10-rivercrest": {
+  "nearest_ramp": "Emma Long Metropolitan Park",
+  "ramp_km": 2.41,
+  "second": "Loop 360 Boat Ramp (Pennybacker)",
+  "second_km": 2.51
+ },
+ "s11-river-hills-weston": {
+  "nearest_ramp": "Emma Long Metropolitan Park",
+  "ramp_km": 1.76,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 1.93
+ },
+ "s12-cypress-banks": {
+  "nearest_ramp": "Emma Long Metropolitan Park",
+  "ramp_km": 0.86,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 1.17
+ },
+ "s13-rob-roy-on-the-lake": {
+  "nearest_ramp": "Emma Long Metropolitan Park",
+  "ramp_km": 1.21,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 1.76
+ },
+ "s14-bee-creek-arm": {
+  "nearest_ramp": "Commons Ford Ranch Metropolitan Park",
+  "ramp_km": 1.21,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 1.83
+ },
+ "s15-cuernavaca": {
+  "nearest_ramp": "Commons Ford Ranch Metropolitan Park",
+  "ramp_km": 0.9,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 2.44
+ },
+ "s16-austin-lake-hills": {
+  "nearest_ramp": "Commons Ford Ranch Metropolitan Park",
+  "ramp_km": 0.84,
+  "second": "Emma Long Metropolitan Park",
+  "second_km": 2.42
+ },
+ "s17-commons-ford-park": {
+  "nearest_ramp": "Commons Ford Ranch Metropolitan Park",
+  "ramp_km": 3.09,
+  "second": "Mary Quinlan Park",
+  "second_km": 3.56
+ },
+ "s18-lake-pointe": {
+  "nearest_ramp": "Mary Quinlan Park",
+  "ramp_km": 1.37,
+  "second": "Commons Ford Ranch Metropolitan Park",
+  "second_km": 5.63
+ },
+ "s19-apache-shores": {
+  "nearest_ramp": "Jessica Hollis Park",
+  "ramp_km": 2.08,
+  "second": "Mansfield Dam Park ramp",
+  "second_km": 2.61
+ },
+ "s20-hidden-valley-fritz-hughes": {
+  "nearest_ramp": "Jessica Hollis Park",
+  "ramp_km": 0.48,
+  "second": "Mansfield Dam Park ramp",
+  "second_km": 1.01
+ },
+ "s21-mansfield-dam-s": {
+  "nearest_ramp": "Mansfield Dam Park ramp",
+  "ramp_km": 0.24,
+  "second": "Jessica Hollis Park",
+  "second_km": 0.33
+ }
+}

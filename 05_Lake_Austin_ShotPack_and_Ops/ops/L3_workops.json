@@ -1,0 +1,74 @@
+{
+  "report": "ATX Lakescapes L3 work-ops research - Lake Austin sediment removal",
+  "date": "2026-07-27",
+  "reference_point": {"lat": 30.34, "lon": -97.85},
+  "bathymetry": {
+    "conservation_pool_ft_msl": 492.8,
+    "datum": "NGVD29 (TWDB lists 'NGVD29 -0.04'; NAVD88 approx +0.31 ft)",
+    "target_operating_range_ft": [491.8, 492.8],
+    "volume_acre_ft_lcra": 24644,
+    "conservation_capacity_acre_ft_twdb_2008": 23972,
+    "surface_area_acres": 1830,
+    "length_mi": 20.25,
+    "historic_low_ft": {"value": 474.3, "date": "1963-02-17"},
+    "historic_high_ft": {"value": 495.2, "date": "1981-05-25"},
+    "dead_pool_ft": 462.0,
+    "level_2026_07_27_ft": 492.13,
+    "bathymetric_data": [
+      {"name": "TWDB elevation-area-capacity curves + GIS downloads (survey 2008-12-01)", "url": "https://waterdatafortexas2.org/reservoirs/individual/austin", "date_accessed": "2026-07-27"},
+      {"name": "TWDB Lake Austin & Lady Bird Lake underwater contour lines (ArcGIS item)", "url": "https://www.arcgis.com/home/item.html?id=60d9607abda24d33b357aa0c3623899a", "date_published": "2021-06-21"},
+      {"name": "LCRA Hydromet (levels only, no depth maps)", "url": "https://hydromet.lcra.org"}
+    ],
+    "notes": "No public bathymetric survey newer than TWDB 2008 found. Lake is a constant-level pass-through reservoir; 2017 drawdown was -10 ft (to ~481.2-482.8 ft)."
+  },
+  "permits": [
+    {"rule": "COA LDC 25-8-652 - dredging/fill in Lake Austin prohibited except as provided", "agency": "City of Austin", "summary": "Baseline prohibition on dredging or placing fill in Lake Austin; exceptions via administrative approval.", "source": "https://www.austintexas.gov/edims/document.cfm?id=208028"},
+    {"rule": "COA administrative dredging approval <25 cubic yards per address (navigation safety)", "agency": "City of Austin", "summary": "Director may approve <25 cy dredging per address; confirmed in 2025 Board of Adjustment cases. Larger per-address volumes effectively barred.", "source": "https://mcclibraryfunctions.azurewebsites.us/api/ordinanceDownload/15303/660316/pdf"},
+    {"rule": "COA site plan exemption (drawdown) vs engineer-sealed site plan (normal pool)", "agency": "City of Austin DSD / Development Assistance Center 512-974-6370", "summary": "<=25 cy slip cleanout during drawdown may proceed under site plan exemption; spoil must leave floodplain; wetlands avoided. Wet-season dredging requires full site plan.", "source": "https://ericmorelandgroup.com/blog/lakefront-development-frequently-asked-questions"},
+    {"rule": "Drawdown lakewide permit registration (lcra.org/lakelowerings)", "agency": "LCRA + USACE", "summary": "During announced drawdowns, registered owners may do maintenance dredging up to 2,000 cy and repair walls/slips/ramps under LCRA's USACE Lakewide Permit; permit notice posted onsite; no burning in lakebed. Lake Austin 2026 drawdown not confirmed; LCRA now schedules drawdowns in fall.", "source": "https://www.lcra.org/news/news-releases/lcra-to-lower-inks-lake-for-eight-weeks-beginning-oct-1/"},
+    {"rule": "Highland Lakes Dredge and Fill Ordinance (eff. 2022-01-01)", "agency": "LCRA", "summary": "Tier I <500 cy/<500 lf = notification; Tier II >=500 cy or >=500 lf = LCRA permit; Tier III commercial dredging allowed only in zones on lakes Buchanan and LBJ (none on Lake Austin). Applicability of HLDO tiers to Lake Austin is ambiguous - LCRA elsewhere assigns Lake Austin dredge jurisdiction to City of Austin. Confirm with LCRA 512-578-2324.", "source": "https://www.lcra.org/water/permits-contracts/dredge-fill-ordinance/"},
+    {"rule": "CWA Section 404 / Section 10", "agency": "USACE Fort Worth District", "summary": "Mechanical dredging with any discharge in Lake Austin (Water of the US) needs 404 authorization; typically covered by LCRA programmatic/lakewide general permits during drawdowns; otherwise NWP or individual permit.", "source": "https://www.lcra.org/water/permits-contracts/lakebed-clearing/"},
+    {"rule": "CWA Section 401 Water Quality Certification (30 TAC 279)", "agency": "TCEQ", "summary": "Companion to any 404 permit. Tier I (<3 ac/<1500 lf): waived with TCEQ BMPs incl turbidity control; Tier II: individual certification. Contact 401Certs@tceq.texas.gov.", "source": "https://reduceflooding.com/wp-content/uploads/2025/02/Kingwood-Diversion-Channel-PER_Final_2025-0205v4-SML.pdf"},
+    {"rule": "TPDES Construction General Permit TXR150000", "agency": "TCEQ", "summary": "SWPPP + erosion controls required for upland disturbance >=1 acre (staging/dewatering yards, access).", "source": "https://railroads.dot.gov/sites/fra.dot.gov/files/fra_net/17954/1%20Dallas%20to%20Houston%20High%20Speed%20Rail%20DEIS_MAIN%20TEXT%20I.pdf"},
+    {"rule": "Submerged-land ownership / title", "agency": "County records / LCRA / COA", "summary": "Right to dredge depends on ownership or permission for the submerged tract; COA is primary shoreline regulator on Lake Austin; verify title per tract.", "source": "https://www.lcra.org/contact-us/frequently-asked-questions/"},
+    {"rule": "Drawdown status 2026", "agency": "City of Austin + LCRA", "summary": "COA 2025-10-10 memo: working group exploring potential 2026 drawdown (~10 ft, ~6 weeks); fall timing per ERCOT guidance; not confirmed as of 2026-07-27.", "source": "https://services.austintexas.gov/edims/document.cfm?id=460715"}
+  ],
+  "disposal": [
+    {"name": "WM Austin Community Landfill (MSW 249D)", "lat": 30.34, "lon": -97.64, "address": "9900 Giles Rd, Austin TX 78754", "type": "Type I MSW landfill", "distance_km": 20.2, "acceptance": "Non-hazardous waste; dewatered spoil likely accepted - call-first to confirm profile/rates", "confidence": "verified facility, spoil acceptance call-first", "source": "https://www.wmsolutions.com/locations/details/id/109"},
+    {"name": "Texas Disposal Systems Landfill (MSW 2123)", "lat": 30.094, "lon": -97.746, "address": "3016 FM 1327, Creedmoor TX 78610", "type": "Type I MSW landfill + compost/C&D", "distance_km": 29.1, "acceptance": "Clean dirt/sand/aggregates (debris-free) accepted; sludge/special waste by approval; $60/ton MSW-C&D 2-ton min (2025); M-Sat 7-7; no liquids", "confidence": "high (published acceptance list)", "source": "https://www.texasdisposal.com/whats-accepted/"},
+    {"name": "Travis County Landfill (MSW 1841B)", "lat": 30.19, "lon": -97.67, "address": "9600 FM 812, Austin TX 78719", "type": "Type IV landfill (brush/C&D/inert)", "distance_km": 24.0, "acceptance": "C&D/brush; sediment acceptance call-first", "confidence": "verified facility, spoil acceptance call-first", "source": "https://www.austintexas.gov/development-services/private-waste-hauler"},
+    {"name": "Williamson County Recycling & Disposal Facility (WM, MSW 1405B)", "lat": 30.545, "lon": -97.545, "address": "near Hutto TX", "type": "Type I MSW landfill", "distance_km": 37.1, "acceptance": "Non-hazardous; spoil acceptance call-first", "confidence": "verified facility, spoil acceptance call-first", "source": "https://www.lrgvdc.org/downloads/solid-waste/MSW%202023.pdf"},
+    {"name": "Marcelo's Dump Site", "lat": 30.215, "lon": -97.66, "address": "9502 Ramirez Ln, Austin TX 78742", "type": "Private clean-fill reclamation", "distance_km": 22.9, "acceptance": "Sand/gravel/loam/dirt/topsoil/rock<24in; NO liquids, wood, trash, concrete; good for dewatered clean sediment", "confidence": "unverified - call-first", "source": "https://www.marceloslp.com/dump-site-haul-off"},
+    {"name": "Beneficial reuse as clean fill (private sites)", "lat": null, "lon": null, "address": "varies (fill-match market, e.g. DirtMatch Austin)", "type": "beneficial reuse", "distance_km": null, "acceptance": "Uncontaminated sediment reusable as fill; document origin; keep out of floodplain/wetlands", "confidence": "unverified mechanism - per project", "source": "https://dirtmatch.com/fill-dirt-austin"},
+    {"name": "130 Environmental Park Landfill (Caldwell Co, MSW 2383)", "lat": 29.85, "lon": -97.62, "address": "Caldwell County TX", "type": "Type I MSW", "distance_km": 58.8, "acceptance": "outside 30-mi radius - listed for completeness", "confidence": "out of range", "source": "https://www.lrgvdc.org/downloads/solid-waste/MSW%202023.pdf"}
+  ],
+  "ramps": [
+    {"name": "Walsh Boat Landing", "lat": 30.2972, "lon": -97.7838, "status": "open", "operator": "City of Austin PARD", "barge_capable": "yes - best lower-lake staging", "notes": "$10 launch fee card kiosk; 2-lane concrete; commercial use requires PARD permit under 2020-08-14 guidelines", "source": "https://www.austintexas.gov/parks/locations/walsh-boat-landing"},
+    {"name": "Loop 360 Boat Ramp (Pennybacker)", "lat": 30.3485, "lon": -97.7974, "status": "open (closes below 492 ft lake level)", "operator": "Travis County Parks", "barge_capable": "yes - 24-hr access but ~10 trailer spaces", "notes": "3-lane concrete; $5/person cash day use + $7/trailer; 5019 N Capital of Texas Hwy", "source": "https://parks.traviscountytx.gov/parks/loop-360"},
+    {"name": "Emma Long Metropolitan Park", "lat": 30.328, "lon": -97.8419, "status": "open", "operator": "City of Austin PARD", "barge_capable": "yes - best mid-lake heavy staging", "notes": "Vehicle entry fee ~$5 weekday/$10 weekend seasonal; large parking; 1600 City Park Rd", "source": "https://www.austintexas.gov/page/lake-austin"},
+    {"name": "Mary Quinlan Park", "lat": 30.3274, "lon": -97.927, "status": "open (closes below 492 ft lake level)", "operator": "Travis County Parks", "barge_capable": "marginal - single lane, small lot", "notes": "1-lane concrete; free; 1601 Quinlan Park Rd S; only public ramp for several miles of upper lake", "source": "https://parks.traviscountytx.gov/parks/mary-quinlan"},
+    {"name": "Selma Hughes Park", "lat": 30.338, "lon": -97.904, "status": "no-ramp", "operator": "Travis County Parks", "barge_capable": "no", "notes": "Shoreline park only, 400 ft frontage; possible shore staging with county permission", "source": "https://parks.traviscountytx.gov/parks/selma-hughes"},
+    {"name": "Fritz Hughes Park", "lat": 30.386, "lon": -97.912, "status": "no-ramp", "operator": "Travis County Parks", "barge_capable": "no", "notes": "Lake access/fishing only below Mansfield Dam; no boat ramp", "source": "https://parks.traviscountytx.gov/parks/fritz-hughes"},
+    {"name": "Jessica Hollis Park", "lat": 30.39, "lon": -97.91, "status": "open - small craft only", "operator": "LCRA", "barge_capable": "no - paddlecraft/small boats", "notes": "14100 Low Water Crossing Rd; very limited trailer capacity", "source": "https://lcraparks.com/uploads/files/Map-PDFs/JHP-Map.pdf"},
+    {"name": "Commons Ford Ranch Metropolitan Park", "lat": 30.33, "lon": -97.86, "status": "open - limited hours (verify)", "operator": "City of Austin PARD", "barge_capable": "marginal - small craft", "notes": "614 Commons Ford Rd; small ramp; park reportedly opens afternoons Tue-Sun", "source": "https://naturalatlas.com/boat-launches/commons-ford-ranch-metro-park-2133836"},
+    {"name": "Apache Shores POA lake park ramp", "lat": 30.39, "lon": -97.88, "status": "restricted - private POA", "operator": "Apache Shores POA / Club Apache", "barge_capable": "possible with POA agreement - call-first", "notes": "Private launch + day docks near Indian Creek/Lake Apache; only ramp serving Apache Shores reach", "source": "https://apacheshorespoa.com/neighborhood/"},
+    {"name": "Steiner Ranch Lake Club ramp", "lat": 30.35, "lon": -97.9, "status": "restricted - key fob; dock access closed per HOA page", "operator": "Steiner Ranch HOA", "barge_capable": "possible with HOA arrangement - call-first", "notes": "12300 River Bend; 8 slips; trailer parking permit $35; HOA page labels it 'public access' but requires key fob", "source": "https://steinerranchhoa.org/lake-club/"},
+    {"name": "Hidden Valley HOA ramp", "lat": null, "lon": null, "status": "NOT FOUND", "operator": "Hidden Valley HOA", "barge_capable": "unknown", "notes": "No official confirmation of an operational ramp found", "source": null},
+    {"name": "Mansfield Dam Park ramp", "lat": 30.394, "lon": -97.907, "status": "open - Lake Travis side only", "operator": "Travis County Parks", "barge_capable": "not usable for Lake Austin (dam between)", "notes": "4-lane, 112 trailer spaces; wrong lake", "source": "https://parks.traviscountytx.gov/parks/mansfield-dam"}
+  ],
+  "removal_zones": [
+    {"id": "Z1", "name": "Lower Lake", "reach": "Tom Miller Dam to Loop 360 bridge, incl The Island canal grid (Mt Bonnell Shores)", "ramps": ["Walsh Boat Landing"], "notes": "Oyster Landing and Lake Austin Marina basins; densest dock/bulkhead demand; PARD commercial-use permit needed at Walsh"},
+    {"id": "Z2", "name": "360-Bull Creek arm", "reach": "Loop 360 bridge to Bull Creek mouth (Party Cove delta)", "ramps": ["Loop 360 Boat Ramp"], "notes": "Signature Bull Creek delta hot spot; 24-hr ramp; limited trailer parking - stage at Emma Long"},
+    {"id": "Z3", "name": "Mid Lake", "reach": "360 bridge to Emma Long/Commons Ford bend, incl Bee Creek arm", "ramps": ["Emma Long Park", "Commons Ford (marginal)"], "notes": "Bee Creek delta; Emma Long lot is best truck/dewatering staging on lake"},
+    {"id": "Z4", "name": "North-shore mid-upper", "reach": "Emma Long bend to Selma Hughes, incl Turkey Creek arm", "ramps": ["Mary Quinlan Park", "Selma Hughes (shore only)"], "notes": "Turkey Creek delta; quiet reach; possible county shore staging at Selma Hughes"},
+    {"id": "Z5", "name": "Upper Lake", "reach": "Quinlan to Mansfield Dam, incl Panther Hollow Creek arm and Steiner Ranch frontage", "ramps": ["Mary Quinlan Park", "Steiner Ranch Lake Club (restricted)", "Jessica Hollis (small craft)"], "notes": "Narrow shallow riverine reach; ramp scarcity - secure HOA agreement or work land-based during drawdown"},
+    {"id": "Z6", "name": "Apache Shores interior", "reach": "Lake Apache / Indian Creek interior system behind RR 620", "ramps": ["Apache Shores POA ramp (restricted)"], "notes": "Interior silting independent of main lake; POA permission mandatory; likely land-based excavation during drawdown"}
+  ],
+  "not_found": [
+    "Official 2017 Lake Austin drawdown lakewide USACE permit document",
+    "Confirmation that LCRA HLDO tiers apply on Lake Austin (COA is primary regulator per LCRA FAQ)",
+    "Hidden Valley HOA ramp verification",
+    "Public bathymetric survey newer than TWDB 2008",
+    "LCRA/COA spoils-disposal guidance document specific to Lake Austin"
+  ]
+}
