@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drawdown 2026 — Desk Card (Quick Reference)</title>
+<!--
+  TEAM_QuickReferenceCard_v1_FINAL.html
+  Version: v1 FINAL (Draft -> Skill Poll -> Revision -> Board Review -> Red Team -> Final)
+  Date: 2026-07-27
+  Author: DRAWDOWN 2026 Swarm — Team Onboarding Writer (Deliverable 5.2)
+  Status: FINAL — Board Approved with Notes; Red Team improvements applied
+  Deliverable: 5.2 — Quick Reference Card, 1 page, US Letter PORTRAIT, print-ready.
+  Print: US Letter portrait (8.5in x 11in), single page. @media print removes screen chrome.
+  Palette: #f7f5f0 (paper) / #c4923a (accent) / #1a1a1a (ink), with tints of the same warm family.
+  SOURCES (all FINAL / binding): COPY_CallScript_Master_v1_FINAL, SALES_SlackBoard_Rulebook_v1_FINAL,
+  RECONCILIATION_Sheet_2026-07-27, TEAM_Kickoff_Rollout_2026-07-27. Nothing on this card improvises.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f5f0; --ink:#1a1a1a; --accent:#c4923a; --accent-dark:#a0782f;
+    --muted:#6b6b6b; --line:#e8e4de; --card:#ffffff; --card-alt:#faf8f5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:#ddd8d0;}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);font-size:8.2pt;line-height:1.32;}
+  .page{
+    width:8.5in;height:11in;background:var(--paper);
+    margin:24px auto;padding:0.34in 0.4in 0.3in;
+    display:flex;flex-direction:column;gap:7px;
+    box-shadow:0 2px 14px rgba(26,26,26,0.14);
+  }
+  /* ---------- header ---------- */
+  .hdr{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2.5px solid var(--accent);padding-bottom:4px;}
+  .hdr .brand{font-size:7pt;text-transform:uppercase;letter-spacing:2.5px;font-weight:700;}
+  .hdr .conf{font-size:6.5pt;text-transform:uppercase;letter-spacing:1.8px;color:var(--muted);}
+  h1{font-family:'Cormorant Garamond',serif;font-size:20pt;font-weight:700;line-height:1.02;margin:3px 0 1px;}
+  .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:10pt;color:var(--muted);margin-bottom:2px;}
+  /* ---------- generic blocks ---------- */
+  .row{display:flex;gap:7px;}
+  .blk{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:6px 8px;flex:1;}
+  .blk.alt{background:var(--card-alt);}
+  .bt{font-size:6.8pt;text-transform:uppercase;letter-spacing:2px;font-weight:700;color:var(--accent-dark);border-bottom:1px solid var(--line);padding-bottom:2px;margin-bottom:4px;}
+  .serif{font-family:'Cormorant Garamond',serif;}
+  p{margin-bottom:3px;} p:last-child{margin-bottom:0;}
+  ul{list-style:none;} li{margin-bottom:2px;padding-left:9px;position:relative;}
+  li:before{content:"–";position:absolute;left:0;color:var(--accent-dark);}
+  b.k{color:var(--accent-dark);}
+  .tiny{font-size:7pt;color:var(--muted);}
+  /* ---------- opening script ---------- */
+  .opener{font-family:'Cormorant Garamond',serif;font-size:11.5pt;line-height:1.28;font-weight:600;}
+  .opener .fill{color:var(--accent-dark);}
+  /* ---------- live counters ---------- */
+  .counters{display:flex;gap:6px;text-align:center;margin-top:2px;}
+  .ctr{flex:1;border:1.5px dashed var(--accent);border-radius:4px;padding:4px 2px;background:var(--card-alt);}
+  .ctr .x{font-family:'Cormorant Garamond',serif;font-size:17pt;font-weight:700;color:var(--accent-dark);line-height:1;}
+  .ctr .lbl{font-size:5.9pt;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:2px;line-height:1.2;}
+  .upd{font-size:6.6pt;color:var(--muted);margin-top:3px;font-style:italic;}
+  /* ---------- objections ---------- */
+  .obj{display:flex;gap:7px;}
+  .ob{flex:1;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:5px 7px;}
+  .ob .q{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:9.5pt;font-style:italic;margin-bottom:2px;}
+  .ob .a{font-size:7.6pt;}
+  /* ---------- cadence timeline ---------- */
+  .cad li{padding-left:0;} .cad li:before{content:"";}
+  .cad .t{display:inline-block;min-width:62px;font-weight:700;color:var(--accent-dark);}
+  /* ---------- commission ---------- */
+  table.comm{width:100%;border-collapse:collapse;font-size:7.8pt;}
+  table.comm td{padding:2px 4px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table.comm tr:last-child td{border-bottom:none;}
+  table.comm td.amt{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:10.5pt;color:var(--accent-dark);white-space:nowrap;text-align:right;}
+  /* ---------- ten rules ---------- */
+  .rules{columns:2;column-gap:10px;font-size:7.3pt;}
+  .rules li{break-inside:avoid;margin-bottom:2.5px;padding-left:12px;}
+  .rules li:before{content:attr(data-n);font-weight:700;color:var(--accent-dark);left:0;}
+  /* ---------- escalate ---------- */
+  .esc{background:var(--ink);color:var(--paper);border-radius:4px;padding:6px 9px;}
+  .esc .bt{color:var(--accent);border-bottom-color:#3d3d3d;}
+  .esc p{font-size:7.6pt;}
+  .esc b{color:var(--accent);}
+  /* ---------- footer ---------- */
+  .ftr{margin-top:auto;border-top:1px solid var(--line);padding-top:4px;display:flex;justify-content:space-between;font-size:6.4pt;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;}
+
+  @media print{
+    @page{size:Letter portrait;margin:0;}
+    html,body{background:#fff;}
+    .page{margin:0;box-shadow:none;width:8.5in;height:11in;page-break-after:avoid;}
+    a{color:inherit;text-decoration:none;}
+  }
+  @media screen{
+    .printflag{position:fixed;top:8px;right:12px;font-size:8pt;color:#6b6b6b;background:#fff;border:1px solid #e8e4de;border-radius:4px;padding:3px 8px;}
+  }
+  @media print{.printflag{display:none;}}
+</style>
+</head>
+<body>
+<div class="printflag">Print me: US Letter portrait · 1 page · tape to desk</div>
+<div class="page">
+
+  <!-- HEADER -->
+  <div>
+    <div class="hdr"><span class="brand">ATX Lakescapes · Drawdown 2026</span><span class="conf">Confidential — internal use only</span></div>
+    <h1>The Desk Card</h1>
+    <div class="sub">Everything you're allowed to say, in reach of the phone. If it's not on this card or the pinned counters, it doesn't leave your mouth.</div>
+  </div>
+
+  <!-- ROW: OPENING + LIVE COUNTERS -->
+  <div class="row">
+    <div class="blk" style="flex:1.35;">
+      <div class="bt">The Opening — 30 words, any list</div>
+      <p class="opener">"Hi <span class="fill">[Name]</span>, <span class="fill">[Rep]</span> with ATX Lakescapes. The City and LCRA are lining up the first Lake Austin drawdown in a decade — October–November. Got 90 seconds? It affects your shoreline."</p>
+      <p class="tiny">Compressed desk version. Scenario openers in the Master Call Script (Scenarios 1–4) govern — know which list you're dialing before you dial. Every call ends: booked · next touch with a date · gracious exit. Never a fourth outcome.</p>
+    </div>
+    <div class="blk alt" style="flex:1;">
+      <div class="bt">Live Counts — quote ONLY these</div>
+      <div class="counters">
+        <div class="ctr"><div class="x">[X]</div><div class="lbl">Assessments booked (paid-or-held)</div></div>
+        <div class="ctr"><div class="x">[X]</div><div class="lbl">Slots remaining</div></div>
+        <div class="ctr"><div class="x">[X]</div><div class="lbl">Machine-days left</div></div>
+      </div>
+      <p class="upd">◄ Weekly update spot: copy the pinned war-room counters here every Monday &amp; Thursday after standup. Say it as <b>"as of [Monday/Thursday]'s count."</b> No pin, no number — "the calendar is filling" is the whole sentence.</p>
+    </div>
+  </div>
+
+  <!-- ROW: TOP 3 OBJECTIONS -->
+  <div>
+    <div class="bt" style="margin-bottom:4px;">Top 3 Objections — first-response language (full library: Master Script, Rebuttals 1–10)</div>
+    <div class="obj">
+      <div class="ob">
+        <div class="q">"I need to think about it."</div>
+        <div class="a">"Of course — it's your shoreline and your money. One thing to think with: the equipment and calendar are being committed now, not in October. I'll hold a slot 48 hours, send the one-pager tonight, and call you [day]. If it's a no then, it's a no. Fair?" <span class="tiny">(Rebuttal 2 — honor autonomy, attach expiry to reality.)</span></div>
+      </div>
+      <div class="ob">
+        <div class="q">"That's too expensive." ($48K-type numbers)</div>
+        <div class="a">"Those are real numbers. The same work is typically 30–40% cheaper during the drawdown — at full water we'd be working blind from barges. And you don't decide that number today: the $695 Assessment, fully credited, tells you what's critical vs. what can wait." <span class="tiny">(Rebuttal 1 — shrink the decision back to $695.)</span></div>
+      </div>
+      <div class="ob">
+        <div class="q">"$695 feels high for an assessment."</div>
+        <div class="a">"Fair — it's priced that way on purpose. You get a documented evaluation, a written prioritized scope, rough pricing, and a reserved calendar place — and the full $695 credits to any work. Think of it as a deposit that comes with answers. If we find nothing, I'll tell you to your face." <span class="tiny">(Rebuttal 9 — paid diagnosis with a credit.)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW: CADENCE + COMMISSION -->
+  <div class="row">
+    <div class="blk">
+      <div class="bt">Your Day — the cadence</div>
+      <ul class="cad">
+        <li><span class="t">8:00 AM</span> Standup (war-room, 15 min): numbers, list, count check.</li>
+        <li><span class="t">All day</span> Claim inbound replies in <b class="k">≤5 min</b> (👀 in #drawdown-inbound). Work the board. Approved scripts only.</li>
+        <li><span class="t">4:45 PM</span> Harper/Lucas hygiene audit — fix your cards before 6.</li>
+        <li><span class="t">6:00 PM</span> Linear log, same day, no exceptions. <b class="k">No log = it didn't happen.</b></li>
+        <li><span class="t">Mon + Thu</span> Counters update. Mon 8:30 AM pipeline review sets the dialing week.</li>
+        <li><span class="t">Never</span> Sends before 9 AM, after 6 PM, or weekends. Business hours 9–6 CT, Mon–Fri.</li>
+      </ul>
+    </div>
+    <div class="blk">
+      <div class="bt">Commission — quick look</div>
+      <table class="comm">
+        <tr><td>Assessment booked <b>and attended</b></td><td class="amt">$50</td></tr>
+        <tr><td>Proposal delivered</td><td class="amt">$100</td></tr>
+        <tr><td>Closed work</td><td class="amt">4–5%</td></tr>
+        <tr><td>Bonuses</td><td class="amt">per deck</td></tr>
+      </table>
+      <p class="tiny" style="margin-top:3px;">Full rate card: Onboarding Deck, Slides 20–21. Typical package ~$48K → 4–5% is the real money. Assessments are the engine that gets you there. A strong month is five figures.</p>
+      <p class="tiny"><b>The offer (learn cold):</b> $695 Assessment · 100% credited · valid 12 months · tiers $15–25K / $35–55K / $65–95K · deposit 15–25% locks the slot.</p>
+    </div>
+  </div>
+
+  <!-- ROW: FOLLOW-UP + GATES -->
+  <div class="row">
+    <div class="blk">
+      <div class="bt">Follow-Up — the 3-Touch Rule</div>
+      <ul>
+        <li><b class="k">1 — Trade, never give.</b> Info out = a scheduled touch back ("one-pager tonight, I call you Thursday"). Info with no follow-up is a dead lead in a costume.</li>
+        <li><b class="k">2 — 48-hour cadence while engaged.</b> Touch every 2 business days. A promised date is a promise — miss two and Ops reassigns the card.</li>
+        <li><b class="k">3 — 10 silent days = Nurture.</b> Silence counts from THEIR last reply; your touches don't reset it. Park it honestly; one Branch 1F email; no calls for 10 days.</li>
+      </ul>
+      <p class="tiny" style="margin-top:2px;">After a scope goes out, two tracks run: Sequence C texts (C1 ≤60 min / C2 Day 3 / C3 Day 7 — sent manually until L3) + your Day 2 / 4 / 7 phone calls. Never double a channel on the same day.</p>
+    </div>
+    <div class="blk alt">
+      <div class="bt">Gates — how the campaign is judged</div>
+      <table class="comm">
+        <tr><td><b>40</b> paid-or-held assessments</td><td class="amt" style="font-size:9pt;">by Aug 31</td></tr>
+        <tr><td><b>60</b> (interim checkpoint)</td><td class="amt" style="font-size:9pt;">by mid-Sep</td></tr>
+        <tr><td><b>80</b> — the target</td><td class="amt" style="font-size:9pt;">by Sep 30</td></tr>
+        <tr><td><b>&lt;60</b> on Sep 30 = DIAGNOSE floor</td><td class="amt" style="font-size:9pt;">escalates</td></tr>
+      </table>
+      <p class="tiny" style="margin-top:3px;">Only <b>paid-or-held</b> bookings count — $695 collected at booking or a logged 48-hr hold. "Pay on site" does not exist. Proposal→deposit planning floor is 25% (capacity math, not a target).</p>
+    </div>
+  </div>
+
+  <!-- TEN RULES -->
+  <div class="blk">
+    <div class="bt">The Ten Rules — condensed (full text: Team Kickoff)</div>
+    <ul class="rules">
+      <li data-n="1. ">Hedge the drawdown — "lining up," "projected Oct–Nov." Every sentence survives a screenshot.</li>
+      <li data-n="2. ">Real numbers only — pinned counters or approved scarcity (2 machines, ~25 days, locked in July).</li>
+      <li data-n="3. ">Never claim competitors can't get machines. Say what WE locked.</li>
+      <li data-n="4. ">You are yourself on every channel. Never speak as Nathan.</li>
+      <li data-n="5. ">Reply YES is the only SMS CTA. Triage replies in 5 minutes.</li>
+      <li data-n="6. ">No sends weekends, before 9 AM, after 6 PM. Mondays 10 AM or later.</li>
+      <li data-n="7. ">$500 referral credit launches Oct 15 — embargoed before then; "I'll note your neighbor now."</li>
+      <li data-n="8. ">$695 is a fee that credits — 100%, 12 months. Not a discount.</li>
+      <li data-n="9. ">One-pager is the leave-behind — only after QR + Nathan's line are filled (Ops gate).</li>
+      <li data-n="10. ">Log everything in Linear same-day. Slack is the floor; Linear is the proof.</li>
+    </ul>
+  </div>
+
+  <!-- ESCALATE -->
+  <div class="esc">
+    <div class="bt">Escalate to Nathan — same day, no judgment calls</div>
+    <p>Structural emergency (collapsing bulkhead, safety hazard — flag same-day regardless of window) · pricing negotiation on a full-cove prospect · <b>any HOA group-terms ask</b> (no terms exist until Nathan writes them) · anyone angry · press contact · refund or scope-change request · a DNC violation · <b>any ask to bend the Ten Rules.</b> Card stays put with "ESCALATED TO NATHAN [date]" until he hands it back.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ftr">
+    <span>Desk Card v1 FINAL · 2026-07-27 · Deliverable 5.2</span>
+    <span>Own the window. Lock the machines. Fill the calendar.</span>
+    <span>Sources: Master Script · Rulebook · Reconciliation Sheet · Kickoff</span>
+  </div>
+
+</div>
+</body>
+</html>
