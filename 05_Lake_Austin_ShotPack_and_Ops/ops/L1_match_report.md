@@ -17,7 +17,7 @@ Census batch API unreachable from sandbox; rebuilt as fully-local OSM geocoder (
 s04-westlake-lake-austin-marina S4 · Westlake Dr corridor / Lake Austin Marina          A     S       55     1     56
                  s10-rivercrest                               S10 · Rivercrest          A     S       50     0     50
        n03-mount-bonnell-shores    N3 · Mount Bonnell shores / Dry Creek mouth          A     N       43     1     44
-   n09-ski-shores-pearce-manana        N9 · Ski Shores / Pearce / Manana strip          A     N       40     4     44
+       n09-ski-shores-pearce-manana        N9 · Ski Shores / Pearce / Manana strip          A     N       40     4     44
                 n08-greenshores                N8 · Greenshores on Lake Austin          A     N       40     3     43
                 s02-laguna-loma                               S2 · Laguna Loma          A     S       36     1     37
      n02-laguna-gloria-mayfield            N2 · Laguna Gloria / Mayfield shore          C     N       30     7     37
