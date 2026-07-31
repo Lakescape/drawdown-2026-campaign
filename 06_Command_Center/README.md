@@ -32,3 +32,13 @@ Zone data in the app was sourced from:
 `05_Lake_Austin_ShotPack_and_Ops/ops/zone_scorecard.csv`
 
 Pushed 2026-07-31 by Grok Build.
+
+## Go live
+
+Full checklist: in app repo → `docs/GO_LIVE.md`
+
+1. Import `drawdown-command-center` on Vercel  
+2. Set `SLACK_INBOUND_WEBHOOK_URL`  
+3. Password-protect production  
+4. Point Netlify form → `https://<prod>/api/inbound`  
+5. Pin URL in `#drawdown-war-room`
