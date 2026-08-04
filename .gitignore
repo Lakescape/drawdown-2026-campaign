@@ -3,3 +3,7 @@
 06_Media_Build/equipment-reference/*.jpg
 06_Media_Build/equipment-reference/*.webp
 05_Lake_Austin_ShotPack_and_Ops/data/twdb-austin-2008/
+05_Lake_Austin_ShotPack_and_Ops/ops/lot_exposure_*.json
+05_Lake_Austin_ShotPack_and_Ops/ops/lot_exposure_*.csv
+05_Lake_Austin_ShotPack_and_Ops/data/tcad_waterfront_parcels.geojson
+05_Lake_Austin_ShotPack_and_Ops/data/coa_waterfront_addresses.json
