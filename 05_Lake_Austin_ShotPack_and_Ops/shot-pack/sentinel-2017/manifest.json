@@ -1,0 +1,36 @@
+{
+  "bbox": [
+    -97.92,
+    30.28,
+    -97.77,
+    30.4
+  ],
+  "normal_pool_ft": 492.04,
+  "floor_ft": 481.69,
+  "source": "Sentinel-2 L2A via earth-search.aws.element84.com",
+  "gsd_m": 10,
+  "scenes": {
+    "drawdown_floor": {
+      "date": "2017-01-30",
+      "id": "S2A_14RNU_20170130_0_L2A",
+      "cloud_cover": 0.06,
+      "size": [
+        591,
+        1345
+      ],
+      "file": "lake-austin_2017-01-30_FLOOR_482ft.png",
+      "lake_level_ft": 482.02,
+      "ft_below_normal": 10.02
+    },
+    "full_pool": {
+      "date": "2018-02-04",
+      "id": "S2A_14RNU_20180204_0_L2A",
+      "cloud_cover": 0.06,
+      "size": [
+        591,
+        1345
+      ],
+      "file": "lake-austin_2018-02-04_FULL.png"
+    }
+  }
+}

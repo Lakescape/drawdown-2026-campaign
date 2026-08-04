@@ -1,0 +1,20 @@
+{
+  "floor_date": "2017-01-30",
+  "floor_ft": 481.98,
+  "full_date": "2018-02-04",
+  "full_ft": 492.08,
+  "delta_ft": 10.1,
+  "gsd_m": 10.0,
+  "ndwi_threshold": 0.0,
+  "full_pool_acres": 1016.9,
+  "floor_acres": 929.6,
+  "exposed_acres": 123.3,
+  "net_surface_loss_acres": 87.3,
+  "gross_exposed_acres": 123.3,
+  "noise_acres": 36.0,
+  "honest_range_acres": [
+    87.3,
+    123.3
+  ],
+  "note": "Gross exposed (full-water AND NOT floor-water) exceeds net surface loss; the difference is NDWI threshold + co-registration noise. Quote the range, not a point."
+}
