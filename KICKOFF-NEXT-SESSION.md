@@ -70,9 +70,10 @@ Read first:
   ~/drawdown-2026-campaign/CLOSEOUT-2026-08-04-media-and-exposure.md
   ~/drawdown-2026-campaign/MEDIA_ClaimLedger_Drawdown_v1.md
 
-Add both working dirs:
-  /add-dir /Users/austinlakescapes/InsightEngineMacOSPRO/ATX-Media-Mogul
-  /add-dir /Users/austinlakescapes/drawdown-2026-campaign
+Both repos live under /Users/austinlakescapes/ and are reachable by absolute
+path from any session. No /add-dir needed (it does not exist in the desktop
+app). If you want ATX-Media-Mogul to be the session's home, start the session
+with that folder selected — the drawdown repo stays reachable either way.
 
 Outcome for this session (one line): a Gate 0 pillar check for DRAWDOWN,
 filled out and ready for my sign-off, with the concept built on the verified
