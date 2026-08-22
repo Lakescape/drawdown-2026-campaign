@@ -34,7 +34,7 @@ This is a short announcement + booking offer. It is not current until Nate appro
 >
 > If you want us on your shoreline in that window, start with an assessment: $695, credited for 12 months. We book in the order requests come in.
 >
-> Reply here, or call/text me: [Nathan's direct line].
+> Reply here, or call/text me: (254) 780-6971.
 >
 > Nathan Menkin  
 > ATX Lakescapes
@@ -43,4 +43,4 @@ This is a short announcement + booking offer. It is not current until Nate appro
 
 ## Customer text
 
-> Hey [First Name] — Nathan at ATX Lakescapes. City of Austin / LCRA announced Aug 20: Lake Austin down about ten feet, Oct 12 through Nov 30, refill Nov 24. They may shorten or cancel it. Assessment is $695, credited 12 months. We book in order. Reply or call [Nathan's direct line].
+> Hey [First Name] — Nathan at ATX Lakescapes. City of Austin / LCRA announced Aug 20: Lake Austin down about ten feet, Oct 12 through Nov 30, refill Nov 24. They may shorten or cancel it. Assessment is $695, credited 12 months. We book in order. Reply or call (254) 780-6971.
