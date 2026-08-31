@@ -14,7 +14,7 @@ Close week. Public posts = **window + $695**, not named-lot iron, not CY. Craft 
 
 | # | Piece | Script | Status | File |
 |---|--------|--------|--------|------|
-| 0 | Lead-in 16s | trim of Truxor 77s | **v3 in kitchen — C7 card + Victoria VO** | `DRAWDOWN_LeadIn_916_v3_VO_DRAFT.mp4` + `build_leadin_vo.py`. Desk copy `truxor-leadin-15.mp4` STILL CARRIES THE KILLED CARD — do not post it |
+| 0 | Lead-in 16s | registry Ken Burns | **v4 silent — claim_ok pins only** | `DRAWDOWN_LeadIn_916_v4_REGISTRY_SILENT.mp4`. Splice VO archived. Wait on wife EL voice. |
 | 1 | Honest Math | 06 | **G3 draft, unsigned** — Nate watch | `DRAWDOWN_Math_916_FINAL.mp4` + `build_math_card.py` |
 | 2 | Exposed Truth | 01 | **G3 draft, unsigned** — Nate watch | `DRAWDOWN_ExposedTruth_916_DRAFT.mp4` + `SHOTLIST_ExposedTruth_01_2026-08-30.md` |
 | 3 | Fleet still | — | plate on desk | `~/drawdown-sprint/dcc-close-book/public/media/fleet.jpg` — LinkedIn caption |
@@ -27,13 +27,25 @@ Skip: generated Meet-the-Machine (02/05), Neighbor (07) without a real booking, 
 ### 2026-08-30 Hermes
 - 77s Truxor = Claude Code / Opus, Aug 4, `compose.py`. Not Cursor. Scratch VO, Arial, too long for a lead-in.
 - Hermes cut silent 16s: hydrilla → projected 10–12 ft → iron → $695.
-- Later same day: muxed the Aug 4 scratch VO onto those trims → `truxor-leadin-15-vo.mp4` (~18s). **Do not post — splices jump.** Lineup is Resolve: `resolve/leadin-lineup/` (picture clips + VO wavs + FCPXML). ffmpeg is preview only.
+- Registry play (Cursor ATX-1867, this Mac): `registry.py` 39 assets. DRAWDOWN pins mac-usable: @bulkhead_undercut, @two_machines, @farshore_golden (claim_ok). @dock_lowwater is mythology — do not caption as proof. Stills copied to `resolve/leadin-lineup/stills/`. @truxor tag is pending (no sha). Cloud gaps: no Drive on the claim plates.
 - Claude Code then built Script 06 type card (12s, cream, `[X]` literal). Watch it before 01.
 
 ### 2026-08-30 Nate ruling
 - **`truxor-leadin-15-vo.mp4` DOES NOT SHIP.** Scratch VO is not a Nate read and
   not a Nate-approved voice. Delete or archive it; do not put it on the desk.
 - New VO to be recorded in Nate's wife's ElevenLabs voice. Script below, unread.
+
+### 2026-08-31 C7 defect — desk was shipping a false equipment claim
+- `leadin-registry-silent.mp4` (registered `M-TRUXOR-LEADIN`, status draft) had a
+  **TWO AMPHIBIOUS MACHINES** card over a frame showing **one knuckleboom crane
+  on a barge**. No second machine, no pontoon undercarriage. Violates C7.
+- Root cause is the pin, not the render: `@two_machines` is mislabeled at source
+  (`resolve/leadin-lineup/stills/03_@two_machines.jpg` is the crane barge).
+- That pin lives on **unmerged PR #83** (ATX-1867). The asset-registry skill is
+  installed on every seat but `scripts/visual-library/registry.py` is NOT on
+  main — the commands in the skill fail. Doc shipped, mechanism did not.
+- Desk swapped to `leadin-v3-victoria.mp4` (C7-verified plates, spoken hedge).
+  Resolve is still the intended finisher; this is a claim-clean stand-in.
 
 ### Next Claude session
 Script 01 only. Audit Poseidon by caption. Pin sha256. Do not recut 16s or 12s math unless Nate says.

@@ -10,3 +10,5 @@
 06_Media_Build/QC_*.png
 06_Media_Build/comp_*.jpg
 06_Media_Build/card_*.png
+.DS_Store
+**/.DS_Store
