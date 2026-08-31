@@ -1,0 +1,298 @@
+{
+  "floor_ft": 481.69,
+  "pool_ft": 492.04,
+  "drop_ft": 10.35,
+  "grid_ft": 25.0,
+  "source": "TWDB 2008-12 volumetric survey (soundings + lake polygon)",
+  "lakewide_exposed_acres": 559.4,
+  "twdb_table_acres": 523.5,
+  "qc_ratio": 1.069,
+  "zones": [
+    {
+      "zone_id": "s21-mansfield-dam-s",
+      "name": "S21 \u00b7 Mansfield Dam terminus (S)",
+      "shore": "S",
+      "tier": "C",
+      "full_pool_water_acres": 215.6,
+      "exposed_acres": 155.3,
+      "pct_of_zone_water_exposed": 72.0,
+      "exposed_sqft": 6764374
+    },
+    {
+      "zone_id": "n16-steiner-bellagio-lake-club",
+      "name": "N16 \u00b7 Steiner Ranch waterfront \u2014 Bellagio / Lake Club",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 89.1,
+      "exposed_acres": 49.0,
+      "pct_of_zone_water_exposed": 55.0,
+      "exposed_sqft": 2133125
+    },
+    {
+      "zone_id": "s20-hidden-valley-fritz-hughes",
+      "name": "S20 \u00b7 Hidden Valley / Fritz Hughes Park",
+      "shore": "S",
+      "tier": "B",
+      "full_pool_water_acres": 47.8,
+      "exposed_acres": 47.8,
+      "pct_of_zone_water_exposed": 100.0,
+      "exposed_sqft": 2083750
+    },
+    {
+      "zone_id": "n18-mansfield-dam-n",
+      "name": "N18 \u00b7 Mansfield Dam terminus (N)",
+      "shore": "N",
+      "tier": "C",
+      "full_pool_water_acres": 41.7,
+      "exposed_acres": 41.7,
+      "pct_of_zone_water_exposed": 100.0,
+      "exposed_sqft": 1818125
+    },
+    {
+      "zone_id": "n03-mount-bonnell-shores",
+      "name": "N3 \u00b7 Mount Bonnell shores / Dry Creek mouth",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 110.8,
+      "exposed_acres": 41.4,
+      "pct_of_zone_water_exposed": 37.3,
+      "exposed_sqft": 1802500
+    },
+    {
+      "zone_id": "s06-rockcliff-estates",
+      "name": "S6 \u00b7 Rockcliff Rd estates",
+      "shore": "S",
+      "tier": "A",
+      "full_pool_water_acres": 78.8,
+      "exposed_acres": 25.9,
+      "pct_of_zone_water_exposed": 32.9,
+      "exposed_sqft": 1128750
+    },
+    {
+      "zone_id": "s02-laguna-loma",
+      "name": "S2 \u00b7 Laguna Loma",
+      "shore": "S",
+      "tier": "A",
+      "full_pool_water_acres": 33.1,
+      "exposed_acres": 25.0,
+      "pct_of_zone_water_exposed": 75.3,
+      "exposed_sqft": 1086875
+    },
+    {
+      "zone_id": "s09-loop360-boat-ramp",
+      "name": "S9 \u00b7 Loop 360 Boat Ramp / Pennybacker Bridge",
+      "shore": "S",
+      "tier": "C",
+      "full_pool_water_acres": 97.1,
+      "exposed_acres": 24.4,
+      "pct_of_zone_water_exposed": 25.1,
+      "exposed_sqft": 1061875
+    },
+    {
+      "zone_id": "n10-emma-long-park",
+      "name": "N10 \u00b7 Emma Long Metropolitan Park shore",
+      "shore": "N",
+      "tier": "C",
+      "full_pool_water_acres": 71.5,
+      "exposed_acres": 22.7,
+      "pct_of_zone_water_exposed": 31.7,
+      "exposed_sqft": 988750
+    },
+    {
+      "zone_id": "s04-westlake-lake-austin-marina",
+      "name": "S4 \u00b7 Westlake Dr corridor / Lake Austin Marina",
+      "shore": "S",
+      "tier": "A",
+      "full_pool_water_acres": 53.1,
+      "exposed_acres": 21.2,
+      "pct_of_zone_water_exposed": 39.8,
+      "exposed_sqft": 922500
+    },
+    {
+      "zone_id": "n08-greenshores",
+      "name": "N8 \u00b7 Greenshores on Lake Austin",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 72.5,
+      "exposed_acres": 19.4,
+      "pct_of_zone_water_exposed": 26.8,
+      "exposed_sqft": 845625
+    },
+    {
+      "zone_id": "n12-river-place-panther-hollow",
+      "name": "N12 \u00b7 River Place / Panther Hollow arm",
+      "shore": "N",
+      "tier": "B",
+      "full_pool_water_acres": 58.6,
+      "exposed_acres": 18.2,
+      "pct_of_zone_water_exposed": 31.1,
+      "exposed_sqft": 793125
+    },
+    {
+      "zone_id": "n04-watersedge",
+      "name": "N4 \u00b7 Watersedge (gated)",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 78.2,
+      "exposed_acres": 17.9,
+      "pct_of_zone_water_exposed": 22.9,
+      "exposed_sqft": 780000
+    },
+    {
+      "zone_id": "n06-the-courtyard-bull-creek",
+      "name": "N6 \u00b7 The Courtyard (gated, Bull Creek arm)",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 18.2,
+      "exposed_acres": 16.0,
+      "pct_of_zone_water_exposed": 88.1,
+      "exposed_sqft": 696875
+    },
+    {
+      "zone_id": "n15-caslano",
+      "name": "N15 \u00b7 Caslano on Lake Austin (Steiner Ranch)",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 67.2,
+      "exposed_acres": 14.7,
+      "pct_of_zone_water_exposed": 21.8,
+      "exposed_sqft": 638750
+    },
+    {
+      "zone_id": "n17-mary-quinlan-lake-austin-spa",
+      "name": "N17 \u00b7 Mary Quinlan Park / Lake Austin Spa shore",
+      "shore": "N",
+      "tier": "C",
+      "full_pool_water_acres": 61.9,
+      "exposed_acres": 14.3,
+      "pct_of_zone_water_exposed": 23.1,
+      "exposed_sqft": 622500
+    },
+    {
+      "zone_id": "n14-selma-hughes-park",
+      "name": "N14 \u00b7 Selma Hughes Park shore",
+      "shore": "N",
+      "tier": "C",
+      "full_pool_water_acres": 84.7,
+      "exposed_acres": 12.3,
+      "pct_of_zone_water_exposed": 14.5,
+      "exposed_sqft": 536875
+    },
+    {
+      "zone_id": "s17-commons-ford-park",
+      "name": "S17 \u00b7 Commons Ford Ranch Park shore",
+      "shore": "S",
+      "tier": "C",
+      "full_pool_water_acres": 71.3,
+      "exposed_acres": 12.2,
+      "pct_of_zone_water_exposed": 17.2,
+      "exposed_sqft": 532500
+    },
+    {
+      "zone_id": "s10-rivercrest",
+      "name": "S10 \u00b7 Rivercrest",
+      "shore": "S",
+      "tier": "A",
+      "full_pool_water_acres": 38.3,
+      "exposed_acres": 9.2,
+      "pct_of_zone_water_exposed": 24.1,
+      "exposed_sqft": 402500
+    },
+    {
+      "zone_id": "n05-the-island-canal-grid",
+      "name": "N5 \u00b7 The Island at Mount Bonnell Shores \u2014 CANAL GRID",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 9.1,
+      "exposed_acres": 9.1,
+      "pct_of_zone_water_exposed": 100.0,
+      "exposed_sqft": 397500
+    },
+    {
+      "zone_id": "s12-cypress-banks",
+      "name": "S12 \u00b7 Cypress Banks",
+      "shore": "S",
+      "tier": "B",
+      "full_pool_water_acres": 31.1,
+      "exposed_acres": 8.4,
+      "pct_of_zone_water_exposed": 27.0,
+      "exposed_sqft": 365000
+    },
+    {
+      "zone_id": "s15-cuernavaca",
+      "name": "S15 \u00b7 Cuernavaca / River Terrace / Saratoga Point",
+      "shore": "S",
+      "tier": "B",
+      "full_pool_water_acres": 43.2,
+      "exposed_acres": 8.2,
+      "pct_of_zone_water_exposed": 18.9,
+      "exposed_sqft": 356250
+    },
+    {
+      "zone_id": "n09-ski-shores-pearce-manana",
+      "name": "N9 \u00b7 Ski Shores / Pearce / Manana strip",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 58.4,
+      "exposed_acres": 7.4,
+      "pct_of_zone_water_exposed": 12.7,
+      "exposed_sqft": 323750
+    },
+    {
+      "zone_id": "n02-laguna-gloria-mayfield",
+      "name": "N2 \u00b7 Laguna Gloria / Mayfield shore",
+      "shore": "N",
+      "tier": "C",
+      "full_pool_water_acres": 20.5,
+      "exposed_acres": 6.8,
+      "pct_of_zone_water_exposed": 33.2,
+      "exposed_sqft": 295625
+    },
+    {
+      "zone_id": "n11-coldwater",
+      "name": "N11 \u00b7 Coldwater / Sanctuary at Coldwater",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 34.5,
+      "exposed_acres": 6.1,
+      "pct_of_zone_water_exposed": 17.7,
+      "exposed_sqft": 265625
+    },
+    {
+      "zone_id": "s11-river-hills-weston",
+      "name": "S11 \u00b7 River Hills Rd / Weston Ln",
+      "shore": "S",
+      "tier": "A",
+      "full_pool_water_acres": 46.8,
+      "exposed_acres": 5.8,
+      "pct_of_zone_water_exposed": 12.3,
+      "exposed_sqft": 251250
+    },
+    {
+      "zone_id": "n01-tarrytown-lake-austin-blvd",
+      "name": "N1 \u00b7 Tarrytown\u2013Lake Austin Blvd corridor",
+      "shore": "N",
+      "tier": "A",
+      "full_pool_water_acres": 24.5,
+      "exposed_acres": 4.2,
+      "pct_of_zone_water_exposed": 17.2,
+      "exposed_sqft": 183750
+    },
+    {
+      "zone_id": "s08-austin-country-club",
+      "name": "S8 \u00b7 Austin Country Club environs",
+      "shore": "S",
+      "tier": "A",
+      "full_pool_water_acres": 2.4,
+      "exposed_acres": 2.4,
+      "pct_of_zone_water_exposed": 100.0,
+      "exposed_sqft": 105625
+    }
+  ],
+  "caveats": [
+    "Zone polygons OVERLAP: the per-zone acres sum to 647.0 but the lake-wide figure is 559.4. Each zone number is valid on its own; do not add them.",
+    "Deepest sounding is 489.6 ft, so the shallowest 2.4 ft of the band (489.6-492.04) has no direct survey coverage and is filled by nearest neighbour. This is the likely source of the +7% vs the TWDB table.",
+    "Bathymetry is the 2008-12 survey. Sediment has accumulated since; shoreline geometry is stable but shallow-margin depths may read slightly deep.",
+    "Quote the TWDB table figure (523.5 acres) lake-wide. Use these per-zone numbers for relative targeting, stated as approximate."
+  ]
+}
