@@ -97,3 +97,30 @@ months. If your dock and bulkhead are fine, we will tell you that.
   "2 amphibious machines locked".
 - C7 needs two machines AND visible amphibious undercarriage. The frame at
   t=9.5 carries both. Reel caption's two-machine line is now backed on screen.
+
+---
+
+## VO script — 16s lead-in v2 · DRAFT, unread, unapproved
+
+The claim ledger's binding note says C1 and C4 are the legal exposure and the
+video "must be at least as careful, spoken not just captioned." So the hedge is
+spoken here, not left to the card.
+
+Timed to the four cards: hydrilla (0-3.5) · bank (3.5-6.5) · two Truxors
+(6.5-13) · $695 (13-16). ~43 words, ~150 wpm.
+
+```
+Ten years of high water hid this shoreline on Lake Austin.
+
+The City and LCRA are exploring a drawdown — projected, ten to twelve feet.
+
+We committed two amphibious machines in July.
+
+Six ninety-five to walk yours. Credited back in full.
+```
+
+Ledger: C3 unhedged (correct) · C1 "exploring" spoken · C2 "projected" spoken ·
+C7 two machines + July, both on the approved structural list, both on screen ·
+C9 unhedged · C11 Lake Austin named. No slot count. No "we're full."
+
+"Six ninety-five" is spelled out because TTS reads "$695" inconsistently.
