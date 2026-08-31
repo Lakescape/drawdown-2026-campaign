@@ -3,6 +3,14 @@
 Written 2026-08-03 after a freeballed DRAWDOWN highlight cut exposed the gaps.
 Owner: Nate. Applies to every client- or market-facing video and still.
 
+> ⚠️ **SUPERSEDED 2026-08-04 — not process. Do not put this on a reading list.**
+> Studio gate law governs every ATX/IE asset:
+> `~/InsightEngineMacOSPRO/ATX-Media-Mogul/STUDIO-WORKFLOWS.md` (five gates),
+> `doctrine/pillar-gate-checklist.md` (Gate 0), `pipeline/gates-sop.md`.
+> This file duplicated gate law that already existed. It is kept **only** for the
+> four documented defect post-mortems in §1 — read those, follow the gates.
+> See `KICKOFF-NEXT-SESSION.md` ("Do not write a parallel process doc").
+
 ---
 
 ## 1. What actually went wrong (evidence, not vibes)
