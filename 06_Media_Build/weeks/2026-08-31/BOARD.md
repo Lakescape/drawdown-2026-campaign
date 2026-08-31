@@ -28,6 +28,12 @@ Skip: generated Meet-the-Machine (02/05), Neighbor (07) without a real booking, 
 - 77s Truxor = Claude Code / Opus, Aug 4, `compose.py`. Not Cursor. Scratch VO, Arial, too long for a lead-in.
 - Hermes cut silent 16s: hydrilla → projected 10–12 ft → iron → $695.
 - Registry play (Cursor ATX-1867, this Mac): `registry.py` 39 assets. DRAWDOWN pins mac-usable: @bulkhead_undercut, @two_machines, @farshore_golden (claim_ok). @dock_lowwater is mythology — do not caption as proof. Stills copied to `resolve/leadin-lineup/stills/`. @truxor tag is pending (no sha). Cloud gaps: no Drive on the claim plates.
+  - **ERRATUM 2026-08-31 (appended, Hermes' line left intact): `@two_machines` is
+    NOT `claim_ok`.** Its source frame is a knuckleboom crane on a barge — one
+    machine, no amphibious undercarriage. It fails C7 and must be treated as
+    EXCLUDED until the pin is relabelled on PR #83. C7-safe substitutes, both
+    eyeballed, sha-pinned in `compose.py`: `c6b6853c038a` (two Truxors working,
+    pontoons visible) and `fd49bf6ffe3e` (two Truxors staged).
 - Claude Code then built Script 06 type card (12s, cream, `[X]` literal). Watch it before 01.
 
 ### 2026-08-30 Nate ruling

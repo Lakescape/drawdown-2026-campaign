@@ -25,6 +25,12 @@ import urllib.request
 HERE = os.path.dirname(os.path.abspath(__file__))
 ENV = os.path.expanduser("~/InsightEngineMacOSPRO/InsightEngine/.env")
 VOICE_ID = "QKljEqkNTmMOcROLnPla"          # Victoria Short Record
+
+# Nate confirmed the VOICE is Victoria (2026-08-31). Victoria has NOT read these
+# four lines. Consenting to a clone existing is not consenting to a script, and
+# this is her voice on customer-facing marketing making a hedged claim about a
+# lake drawdown. Flipping this is a person's decision, not an agent's.
+SCRIPT_APPROVED_BY_VICTORIA = False
 MODEL = "eleven_multilingual_v2"
 SRC = os.path.join(HERE, "DRAWDOWN_LeadIn_916_v2_DRAFT.mp4")
 MP3 = os.path.join(HERE, "vo_victoria_leadin.mp3")
@@ -92,6 +98,9 @@ def mux():
 
 
 if __name__ == "__main__":
+    assert SCRIPT_APPROVED_BY_VICTORIA, (
+        "Victoria has not approved this script. Do not generate her voice saying "
+        "words she has not read. Flip SCRIPT_APPROVED_BY_VICTORIA once she has.")
     assert os.path.exists(SRC), "build the v2 picture first: " + SRC
     tts()
     mux()
