@@ -1,0 +1,76 @@
+You are in ~/drawdown-2026-campaign/06_Media_Build.
+
+READ FIRST, in order:
+1. KICKOFF-VIRAL-LEADIN-STUDIO-2026-08-31.md (full brief)
+2. weeks/CURRENT → weeks/2026-08-31/BOARD.md  (append when you finish)
+3. ~/InsightEngineMacOSPRO/ATX-Media-Mogul/STUDIO-WORKFLOWS.md  (five gates)
+4. ~/InsightEngineMacOSPRO/ATX-Media-Mogul/lore/canon/HIGGSFIELD-LEARNINGS.md  (Rule 11)
+5. ../MEDIA_ClaimLedger_Drawdown_v1.md
+6. compose.py header + PICKS  (bleed vs fit; C7 two-machine law)
+7. ~/.claude/skills/asset-registry/SKILL.md
+8. weeks/2026-08-31/GROK_VIDEO_HydrillaHorrorWindow_v1_DRAFT.md  (Hermes script — barge plates in older copies are STALE; use underwater hydrilla + working Truxor pair)
+
+Do NOT treat MEDIA_Production_Process_v1_2026-08-03.md as process.
+Do NOT run gen-line.sh / Higgsfield / t2v / i2v on ATX machines.
+Do NOT start a second image catalog.
+
+THIS SESSION = one 9:16 viral lead-in, ~15s, silent-first.
+
+OBJECTIVE
+Stop the thumb. Teach the window. Show real iron. Close on scrape/haul/staple + phone.
+NOT a Priority Assessment ad. Nate 2026-08-31: forget the inspection.
+
+MUTED HOOK (0–2s must work with sound off)
+Monster hydrilla under a Lake Austin dock. Strap: THIS IS UNDER YOUR DOCK.
+
+BEATS (lock overlay vs ledger; hedge in the same breath)
+0–3s   problem   hydrilla monster     THIS IS UNDER YOUR DOCK.
+3–7s   stakes    the hidden bed       TEN YEARS. YOU'VE NEVER SEEN IT.
+7–11s  capability TWO real Truxors    TWO TRUXORS. PROJECTED 10–12 FT.
+11–15s inform    work + home water    SCRAPE. HAUL. STAPLE.  /  254-780-6971
+
+BANNED ON THIS CUT
+- $695, credited, assessment, "walk yours", "I'll tell you to your face"
+- @two_machines  (sha 1334bce67b99) — knuckleboom on a barge. C7 fail.
+- @dock_lowwater — mythology, not fleet evidence
+- @bulkhead_undercut as the "never seen it" plate — Nate rejected it
+- splicing the 77s scratch VO
+- inventing a slot count
+
+PLATE SEARCH (audit Poseidon by CAPTION, then pin sha256)
+Registry CLI:
+  cd ~/actions-runner-atx-media-mogul/_work/ATX-Media-Mogul/ATX-Media-Mogul
+  python3 scripts/visual-library/registry.py search truxor
+  python3 scripts/visual-library/registry.py resolve @TAG --seat mac
+Poseidon:
+  ~/Poseidon/visual-library/library.db + photos/<sha>.jpg
+
+Known-good (eyeballed this Mac, still audit yourself):
+  opener monster     4e23ecccd59f  @hydrilla_cove_carpet   (ref 99, --no-claim)
+  never-seen-it      924c9e39682b  underwater hydrilla     (compose.py s01)
+  two Truxors work   c6b6853c038a  FIT mode — both machines in frame
+  two Truxors staged fd49bf6ffe3e  FIT mode
+You may beat these with a better caption hit. You may NOT put a barge on a Truxor line.
+
+CRAFT
+Reuse compose.py: 1350x2400 composites, bleed vs fit, Ken Burns to 1080x1920.
+New slug. New filter graph. Do not silently overwrite DRAWDOWN_ViralHydrilla_916_v1*.mp4
+(those are Hermes previews — leave them; your master is DRAWDOWN_ViralHydrilla_916_STUDIO.mp4).
+
+PIPELINE (studio, not a one-liner)
+1. Gate 0 in one block (title / pole / CTA / six pillars / GREENLIGHT). Inspection CTA is an OVERRIDE — Nate stripped it.
+2. Audit 6–12 Poseidon candidates. Log machine count, type, Lake Austin?, people?, claim_ok.
+3. Lock 4 plates + overlay strings. Stopwatch. Silent first.
+4. Compose + render 9:16 1080x1920 silent, faststart, CRF 18–19.
+5. QC: extract t=1, mid of each beat, last frame. Reject if card contradicts the frame (C7).
+6. Resolve bin: resolve/viral-leadin/stills/ + README. ffmpeg is preview.
+7. VO: lock a 14–16s script (Victoria clone / wife). Do NOT mux a splice. Optional new ElevenLabs read only if the script is locked and you already have the clone path from build_leadin_vo.py — still deliver silent as the master.
+8. Desk: copy silent mp4 → ~/drawdown-sprint/dcc-close-book/public/media/viral-leadin-studio.mp4
+   Add/update a mediaDesk.ts row status: draft. Do not Vercel ship. Do not mark posted.
+9. Append weeks/2026-08-31/BOARD.md (don't rewrite history). Show Nate 4 frames + duration + exact overlay strings.
+
+If ledger/script conflict: stop and write the conflict in BOARD.md.
+If you cannot find two amphibious Truxors in one still: FIT-letterbox a verified pair, or say so — never fake the count.
+
+One piece. Full studio. Make it the one that stops the thumb.
+When done, print: output path, duration, four plate shas, overlay lines, and where the Resolve bin lives.
