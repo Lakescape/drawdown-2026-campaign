@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+<fcpxml version="1.8">
+    <resources>
+        <format id="r1" name="FFVideoFormatRateundefined" frameDuration="1/24s" width="1080" height="1920"/>
+        <asset id="rV1" name="V1_hydrilla_handles" uid="rV1" start="0s" duration="7s" hasVideo="1" hasAudio="0" videoSources="1">
+            <media-rep kind="original-media" src="file:///Users/austinlakescapes/drawdown-2026-campaign/06_Media_Build/resolve/leadin-lineup/picture/V1_hydrilla_handles.mp4"/>
+        </asset>
+        <asset id="rV2" name="V2_drop_handles" uid="rV2" start="0s" duration="8s" hasVideo="1" hasAudio="0" videoSources="1">
+            <media-rep kind="original-media" src="file:///Users/austinlakescapes/drawdown-2026-campaign/06_Media_Build/resolve/leadin-lineup/picture/V2_drop_handles.mp4"/>
+        </asset>
+        <asset id="rV3" name="V3_iron_handles" uid="rV3" start="0s" duration="11s" hasVideo="1" hasAudio="0" videoSources="1">
+            <media-rep kind="original-media" src="file:///Users/austinlakescapes/drawdown-2026-campaign/06_Media_Build/resolve/leadin-lineup/picture/V3_iron_handles.mp4"/>
+        </asset>
+        <asset id="rV4" name="V4_695_handles" uid="rV4" start="0s" duration="10s" hasVideo="1" hasAudio="0" videoSources="1">
+            <media-rep kind="original-media" src="file:///Users/austinlakescapes/drawdown-2026-campaign/06_Media_Build/resolve/leadin-lineup/picture/V4_695_handles.mp4"/>
+        </asset>
+        <asset id="rA1" name="VO_victoria_14s" uid="rA1" start="0s" duration="14257/1000s" hasVideo="0" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <media-rep kind="original-media" src="file:///Users/austinlakescapes/drawdown-2026-campaign/06_Media_Build/resolve/leadin-lineup/audio/VO_victoria_14s.wav"/>
+        </asset>
+    </resources>
+    <library>
+        <event name="DRAWDOWN Lead-in">
+            <project name="Lead-in VO lineup">
+                <sequence format="r1" duration="16s" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <video ref="rV1" offset="0s" duration="5s" start="1s"/>
+                        <video ref="rV2" offset="5s" duration="4s" start="2s"/>
+                        <video ref="rV3" offset="9s" duration="4s" start="2s"/>
+                        <video ref="rV4" offset="13s" duration="3s" start="2s"/>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

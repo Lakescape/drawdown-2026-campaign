@@ -1,0 +1,44 @@
+You are in ~/drawdown-2026-campaign/06_Media_Build.
+
+READ FIRST:
+1. weeks/2026-08-31/GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md
+2. KICKOFF-SCRAPE-HAUL-STAPLE-2026-08-31.md
+3. weeks/CURRENT → weeks/2026-08-31/BOARD.md (append when done; don't rewrite history)
+4. compose.py header + PICKS (bleed vs fit, C7)
+5. ~/.claude/skills/asset-registry/SKILL.md
+6. Rule 11: never t2v a machine or tarp we should have shot.
+
+THIS SESSION = one piece. New slug:
+  DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4
+Do NOT overwrite DRAWDOWN_ViralHydrilla_916_STUDIO.mp4 or the Math/Exposed cuts.
+
+OBJECTIVE
+A Lake Austin homeowner can repeat the dry-window job in three words after 15 silent seconds.
+
+THE JOB (locked close-sheet — do not invent)
+1. Scrape the marked bed (top muck, hydrilla, debris).
+2. Haul spoil off the work area.
+3. Staple woven tarp, 12-inch overlap, while the lake is down.
+4. If a seam we stapled opens the first high-water season because of our work, restaple that seam once.
+5. Do not sell hydrilla extinct.
+
+BEATS
+0–4s   SCRAPE   sha c6b6853c038a  FIT   strap: SCRAPE. / We cut it off the bed.
+4–9s   HAUL     sha 83f97f1642cd  bleed strap: HAUL. / Off your lot.
+9–13s  STAPLE   real tarp/seam plate if Poseidon caption-audit finds one; else type-only cream card. strap: STAPLE. / Woven tarp. 12-inch overlap.
+13–15s hold     That’s the job. / 254-780-6971
+
+NATE 2026-08-31
+- The drawdown IS official. NEVER say exploring, unofficial, or “nothing is official yet.” Not on this cut. Not in VO. Not in captions.
+- No $695, credited, assessment, extinct, CY.
+- @two_machines (1334bce67b99) is a barge. Banned. Two Truxors = c6b6853c038a FIT so both stay in 9:16.
+- Do not generate a tarp. Search Poseidon by caption (tarp / mat / overlap / fabric / sandbaggy). If none: type-only staple beat and log the gap.
+
+CRAFT
+Reuse compose.py. 9:16 1080x1920. Silent first (no AAC stub). CRF 18–19. faststart.
+QC extract t=mid of each beat. Card must match frame.
+Resolve bin: resolve/scrape-haul-staple/stills/ + README.
+Desk draft only: ~/drawdown-sprint/dcc-close-book/public/media/scrape-haul-staple-studio.mp4 + mediaDesk.ts status draft.
+No Vercel. No post.
+
+When done print: path, duration, four shas (or TYPE-ONLY on staple), overlay strings, Resolve bin path.
