@@ -168,8 +168,9 @@ Sign-off: marketing owner + one non-sender reviewer. File completed checklist wi
 
 **Content**
 - [ ] Email: accurate From/subject, ad identification, physical postal address, working opt-out link (tested this week), List-Unsubscribe header.
-- [ ] No drawdown deadline/date claims unless both S7 trigger conditions (agency announcement + LCRA registration open) are met and cited in the piece.
-- [ ] No claims of City/LCRA/HOA endorsement; permit statements match `L3_workops.json` (<25 cy/address normal; 2,000 cy only in registered drawdown; Tier III commercial dredging not available on Lake Austin).
+- [ ] No drawdown deadline/date claims unless both S7 trigger conditions (agency announcement + published authorization path) are met and cited in the piece.
+- [ ] No claims of City/LCRA/HOA endorsement; permit statements match `L3_workops.json` (<25 cy/address under LDC §25-8-261(C)(9)(a); anything larger = City variance + LCRA HLDO answer; HLDO Tier II at 500 cy **or** 500 LF; Tier III commercial dredging not available on Lake Austin).
+- [ ] ⛔ **No piece quotes a volume allowance above 25 cy.** The "2,000 cy per registered address" / "LCRA-USACE Lakewide Permit" path is **retracted** — it is an Inks Lake model, and LCRA's lakewide permits cover Buchanan and Travis only. See `PERMIT-AUTHORITY-v2-2026-08-04.md` §3.
 - [ ] Neighbor/pod claims in S3 copy are literally true as of send date.
 
 **Operations**
