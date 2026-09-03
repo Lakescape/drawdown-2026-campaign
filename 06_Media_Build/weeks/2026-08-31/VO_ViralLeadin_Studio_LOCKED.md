@@ -13,13 +13,14 @@ signs off on these words — new read only, never a splice.
 > This is what's under Lake Austin docks.
 > Nobody's seen it in nearly ten years.
 >
-> The City and LCRA are drawing Lake Austin down this fall.
+> The City and LCRA are drawing Lake Austin down.
 > A projected ten to twelve feet.
 >
 > While it's dry we scrape, haul, and staple.
 > Two amphibious machines.
 
-38 words. ~14 s at a conversational read. (Was 41 before the C1 hedge was retired 2026-08-29.)
+36 words. ~13.5 s at a conversational read. (Was 41 before the C1 hedge was
+retired 2026-08-29; "this fall" dropped 2026-09-03 — see the DATES row.)
 
 ## Ledger trace
 
@@ -29,6 +30,7 @@ signs off on these words — new read only, never a splice.
 | "the City and LCRA **are drawing Lake Austin down**" | **C1** | no hedge — LCRA announced 2026-08-29 |
 | "**projected** ten to twelve feet" | **C2** | hedge present, still mandatory |
 | "two amphibious machines" | **C7** | frame carries the count |
+| *(no timing asserted)* | **C1 — DATES** | **Was "this fall", removed 2026-09-03.** C1 retired the hedge on the EVENT only; DEPTH and DATES stay mandatory. This trace previously had no DATES row at all, which is how a bare season passed a locked script. |
 
 Deliberately absent: $695, "credited", "assessment", "walk yours", "I'll tell
 you to your face", any slot count.
