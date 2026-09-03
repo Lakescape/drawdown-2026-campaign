@@ -16,7 +16,7 @@ Packet: `weeks/2026-08-31/GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md`.
 | Duration | **15.00 s** (450 frames) |
 | Format | 1080x1920, 30 fps, H.264 CRF 18, yuv420p, +faststart |
 | Audio | **none.** No stream at all — not a null AAC track (Nate 2026-08-31). |
-| Beats | 3 plates + 1 type card, 0.35 s crossfades |
+| Beats | 4 plates, 0.35 s crossfades |
 
 ## Beats
 
@@ -24,10 +24,10 @@ Packet: `weeks/2026-08-31/GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md`.
 |---|----|--------|------|-------|-----|
 | 1 | 0.00 | `c6b6853c038a87b18338b0a6fd0c94a377f84947475caa53cbab3da44d1cff83` | **fit** | `SCRAPE.` / `We cut it off the bed.` | Two Truxors working, one throwing spray. C7 count + amphibious undercarriage. |
 | 2 | 4.00 | `83f97f1642cd2172ab76216d46fbee631e81d36e942516fc5136febd889ab75c` | **fit** | `HAUL.` / `Off your lot.` | Spoil mound on the work platform with the LOAD TRAIL dump trailer on the bank behind it. |
-| 3 | 9.00 | **TYPE-ONLY** | card | `STAPLE.` / `Woven tarp.` / `12-inch overlap.` | No real plate exists. See the gap below. |
+| 3 | 9.00 | `247ed525d59d` (prefix as pinned in `BEATS`) | **fit** | `COVER.` / `Mat on the bed.` | Green erosion-control matting rolled onto a scraped bed. Honest product, honest strap — a mat, not a tarp. |
 | 4 | 13.00 | `870b907f2401c31452ee002d03078b75be932bfcdba8d642e8d5a65abb6e89ac` | bleed | `That's the job.` / `254-780-6971` | Operator POV over the cutter head, cut weed on the rake, clean water beyond. |
 
-## The staple gap — the reason beat 3 is type
+## The staple gap — why beat 3 says COVER, not STAPLE
 
 A full sweep of Poseidon's **3,619 VLM captions** for
 `staple / overlap / geotextile / weed barrier / landscape fabric / woven tarp /

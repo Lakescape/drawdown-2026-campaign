@@ -19,7 +19,7 @@ Close week. Public posts = **window + $695**, not named-lot iron, not CY. Craft 
 | 2 | Exposed Truth | 01 | **G3 draft, unsigned** — Nate watch | `DRAWDOWN_ExposedTruth_916_DRAFT.mp4` + `SHOTLIST_ExposedTruth_01_2026-08-30.md` |
 | 3 | Fleet still | — | plate on desk | `~/drawdown-sprint/dcc-close-book/public/media/fleet.jpg` — LinkedIn caption |
 | 4 | Under the dock | 04 | only if a real plate exists | skip otherwise |
-| 5 | Scrape Haul Staple | method explainer | **G3 draft on desk, unsigned** — Nate watch | `DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4` + `build_scrape_haul_staple.py` + `resolve/scrape-haul-staple/`. Silent master, 15.00s. Staple beat is TYPE-ONLY — Poseidon audit found no tarp plate. |
+| 5 | Scrape Haul Staple | method explainer | **G3 draft on desk, unsigned** — Nate watch | `DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4` + `build_scrape_haul_staple.py` + `resolve/scrape-haul-staple/`. Silent master, 15.00s. Beat 3 ships as **COVER** — the erosion-matting plate with matching copy, NOT a type card. Corrected 2026-09-02, see below. |
 
 Skip: generated Meet-the-Machine (02/05), Neighbor (07) without a real booking, `AI生成` vision clip, Vercel ship, Studio Post Ready.
 
@@ -162,13 +162,13 @@ Resolve bin + README: `resolve/scrape-haul-staple/` (`stills/`, `composites/`,
 `M-SCRAPE-HAUL-STAPLE`, **status draft**. Not posted. Not shipped to Vercel.
 `npx tsc --noEmit` on the close-book exits 0.
 
-**Beats — three real plates and one honest hole.**
+**Beats — four real plates.** Beat 3 is a COVER picture, not the type card this section originally described (corrected 2026-09-02).
 
 | # | In | Sha256 | Mode | Strap |
 |---|----|--------|------|-------|
 | 1 | 0.00 | `c6b6853c038a87b18338b0a6fd0c94a377f84947475caa53cbab3da44d1cff83` | **fit** | `SCRAPE.` / `We cut it off the bed.` |
 | 2 | 4.00 | `83f97f1642cd2172ab76216d46fbee631e81d36e942516fc5136febd889ab75c` | **fit** | `HAUL.` / `Off your lot.` |
-| 3 | 9.00 | **TYPE-ONLY** | card | `STAPLE.` / `Woven tarp.` / `12-inch overlap.` |
+| 3 | 9.00 | `247ed525d59d` (prefix as pinned in `BEATS`) | **fit** | `COVER.` / `Mat on the bed.` |
 | 4 | 13.00 | `870b907f2401c31452ee002d03078b75be932bfcdba8d642e8d5a65abb6e89ac` | bleed | `That's the job.` / `254-780-6971` |
 
 **THE STAPLE GAP — logged, not faked.** Swept all **3,619 Poseidon VLM captions**
@@ -181,15 +181,22 @@ The nearest real thing is **green erosion-control matting on a bank** —
 water's edge, and it is genuinely close in shape (fabric, over a scraped bed,
 while the water is down). It is still a **different product doing a different
 job**, and "Woven tarp. 12-inch overlap." over green erosion netting is the same
-overclaim class as the `@two_machines` barge, one notch smaller. So the beat is a
-cream type card and the candidate is parked in
-`resolve/scrape-haul-staple/stills/GAP-CANDIDATE_erosion-matting-NOT-a-tarp_247ed525d59d.jpg`
-**for a Nate ruling, not for a cut.** Four more of the same class:
-`049c9c5aefa0`, `af49fffbf0ab`, `7a549dd65708`, `4b0528304977`.
+overclaim class as the `@two_machines` barge, one notch smaller.
 
-**To close it: shoot it.** One frame of woven tarp on a dry bed with the overlap
-and a staple visible replaces the card and the piece is complete. Do not generate
-one — Rule 11.
+**What was actually built** (corrected 2026-09-02 — the next two sentences used to
+say the beat was a cream type card and the plate was parked out of the cut; both
+were wrong): the plate IS beat 3, at `fit`, and the *copy* was changed to match it
+rather than the beat being replaced. The strap reads `COVER.` / `Mat on the bed.`
+Green matting on screen, a mat in the words. The tarp claim is never asserted over
+it, which is what this section exists to prevent. A copy of the plate is also
+staged as
+`resolve/scrape-haul-staple/stills/GAP-CANDIDATE_erosion-matting-NOT-a-tarp_247ed525d59d.jpg`.
+Four more of the same class: `049c9c5aefa0`, `af49fffbf0ab`, `7a549dd65708`,
+`4b0528304977`.
+
+**To close it properly: shoot it.** One frame of woven tarp on a dry bed with the
+overlap and a staple visible lets beat 3 carry `STAPLE.` and makes the piece match
+its own title. Do not generate one — Rule 11.
 
 **Deliberate deviation from the packet: beat 2 ships FIT, not bleed.** A 9:16
 cover-crop of the 1080x810 native keeps the spoil mound and **cuts the LOAD TRAIL
@@ -216,3 +223,42 @@ No t2v anywhere.
 Open for Nate: (1) does green erosion matting get to carry the staple beat with
 reworded copy, or does somebody shoot the tarp — his call, not mine; (2) straps
 are still Arial, which is what `resolve/scrape-haul-staple/` is staged for.
+
+### 2026-09-02 CORRECTION — beat 3 is COVER, and this board said otherwise
+
+Recovering this session's work for commit surfaced a mismatch between what this
+board recorded and what `build_scrape_haul_staple.py` actually renders. Two
+independent PR reviewers flagged it on PR #4 before the merge; the code confirms
+it. The board was wrong, not the cut.
+
+**What ships.** `BEATS` holds four picture entries. Beat 3 is
+`("b3", "247ed525d59d", "fit", 4.35, "out")` — the green erosion-control matting
+plate — carrying the strap `COVER.` / `Mat on the bed.`
+
+**What this board claimed.** That beat 3 was a type-only card reading
+`STAPLE.` / `Woven tarp.` / `12-inch overlap.`, and that the matting plate was
+parked as a GAP-CANDIDATE "for a Nate ruling, not for a cut." The plate is in the
+cut. It has been since the piece was built.
+
+**Nothing overclaims.** Whoever built it swapped the *copy* rather than the beat:
+green matting on screen, "Mat on the bed." in the words. The tarp claim was never
+asserted over a matting picture — which is the failure this section was written to
+prevent. The Poseidon sweep below stands and is still the reason there is no tarp
+beat: 3,619 captions, zero hits.
+
+**Two things left open by this correction:**
+
+1. `STAPLE_CARD` at `build_scrape_haul_staple.py:81` is **dead code** — no `BEATS`
+   entry uses `mode == "card"`, so the `if mode == "card"` branches at lines 109
+   and 185 never execute. That dead constant still reads
+   `STAPLE.` / `Woven tarp.` / `12-inch overlap.` It is one `BEATS` edit away from
+   putting the retired tarp claim on screen. Delete it, or wire it deliberately.
+
+2. The piece is still titled **Scrape. Haul. Staple.** while its third beat says
+   COVER. Either the title follows the picture, or somebody shoots the tarp and
+   the beat follows the title. Nate's call, not the builder's.
+
+The upstream briefs — `KICKOFF-SCRAPE-HAUL-STAPLE-2026-08-31.md`,
+`CLAUDE_PROMPT_SHS.txt`, and `GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md` — still
+specify the type-only beat. They are left as written: they are the ask that went
+in, not the record of what came out. This board is the record.
