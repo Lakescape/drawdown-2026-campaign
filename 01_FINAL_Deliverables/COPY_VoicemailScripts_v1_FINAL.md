@@ -59,7 +59,7 @@ Voicemails are event-anchored to the call cadence, not blast sends — the dates
 
 **Word count: 48 | Read time: ~19–20 seconds**
 
-> "Hi [First], this is [Rep] from Nathan Menkin's crew at ATX Lakescapes. The City and LCRA are exploring a drawdown this fall, first in about a decade. I emailed you a short note about it yesterday — happy to send the one-page summary if it's relevant. [Number]. That's [Number]."
+> "Hi [First], this is [Rep] from Nathan Menkin's crew at ATX Lakescapes. The City and LCRA have announced a drawdown this fall, first in about a decade. I emailed you a short note about it yesterday — happy to send the one-page summary if it's relevant. [Number]. That's [Number]."
 
 **Delivery notes:**
 - The number is said twice. Voicemail transcription mangles numbers, and a cold contact has no text from you to fall back on.

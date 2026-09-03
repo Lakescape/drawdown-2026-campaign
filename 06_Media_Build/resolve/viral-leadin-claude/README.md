@@ -16,7 +16,7 @@ Different plates, different builder. Do not mix the two bins. See BOARD.md.
 |---|--------|-------|-------------------|------|------|-------|
 | 1 | 0.00–3.40 | `@hydrilla_under_dock` | `f730acf1ac49` | bleed | push 1.000→1.075 | THIS IS UNDER / YOUR DOCK. |
 | 2 | 3.07–7.27 | `@hydrilla_submerged_bed` | `924c9e39682b` | bleed | pull 1.090→1.000 | TEN YEARS. / YOU'VE NEVER SEEN IT. |
-| 3 | 6.93–11.13 | `@truxors_pair_working` | `c6b6853c038a` | **fit** | vertical pan, zoom pinned 1.000 | TWO TRUXORS. / PROJECTED 10–12 FT. / *NOTHING IS OFFICIAL YET* |
+| 3 | 6.93–11.13 | `@truxors_pair_working` | `c6b6853c038a` | **fit** | vertical pan, zoom pinned 1.000 | TWO TRUXORS. / PROJECTED 10–12 FT. |
 | 4 | 10.80–15.00 | `@truxor_hauled_windrow` | `cd351a221a00` | bleed | push 1.020→1.085 | SCRAPE. HAUL. STAPLE. / *LAKE AUSTIN IS OUR HOME WATER* / 254-780-6971 |
 
 Dissolves: 0.33s (10 frames) between every beat. Straps fade in over 0.35s and
@@ -60,8 +60,8 @@ carries the claim and the phone.
 - **C7** — beat 3. Two amphibious machines. Frame shows two Truxors, one cutting
   and one at the bank, pontoon decks visible.
 - **C2** — beat 3. "PROJECTED" retained verbatim.
-- **C1** — beat 3. Drawdown is exploratory. Hedged **on the same plate**
-  ("NOTHING IS OFFICIAL YET"), not deferred to an end card.
+- **C1** — beat 3. Drawdown announced by LCRA 2026-08-29; the event hedge was
+  removed. The depth hedge ("PROJECTED") stays on the same plate.
 - **C11** — beat 4. Reads as Lake Austin, and says so.
 
 Stripped per Nate 2026-08-31: **$695, credited, assessment, "walk yours",

@@ -65,7 +65,7 @@ This brief is self-contained. You do **not** need any other session context to p
 
 | Fact | Approved language |
 |------|-------------------|
-| Drawdown status | **Hedged only.** "The City and LCRA are exploring / lining up a drawdown," "projected for October–November," "pointing to," "a ten-to-twelve-foot drop." Never "the drawdown is happening." Never unhedged dates. |
+| Drawdown status | **Updated 2026-08-29 — LCRA announced it.** The event may be stated: "the City and LCRA have announced a drawdown." The DEPTH and the WINDOW stay hedged: "projected for October–November," "a projected ten-to-twelve-foot drop." Never an unhedged date. |
 | Assessment offer | **$695, 100% credited toward any work, credit valid 12 months.** These three elements travel together. |
 | Scarcity (the ONLY approved structural numbers) | **2 amphibious machines locked · ~25 working days in-window · committed in July.** Live slot/booking counts come only from the Mon/Thu published count, quoted as "as of [Monday/Thursday]'s count." Anything else = [X]. |
 | Retired line (never reuse) | ~~"47 machine-days available. 31 spoken for."~~ — invented, caught, retired. Do not resurrect it or anything like it. |
@@ -283,7 +283,7 @@ This brief is self-contained. You do **not** need any other session context to p
 
 **Craft rules:**
 - Journalists smell hype. The pitch is calm, factual, and offers access: the machines, the crew, a shoreline owner, the exposed lake bed.
-- Hedged drawdown language applies to press too — "the City is exploring," "projected" — until official confirmation exists. Never let ATX be the source that over-asserts a City decision.
+- Updated 2026-08-29: LCRA announced the drawdown, so the event may be stated to press as fact. "Projected" still applies to the DEPTH and the WINDOW. Never let ATX be the source that over-asserts a City decision on dates.
 - Timing per the Media Dominance Calendar: KVUE ~Oct 15, Austin Monitor ~Oct 30, Statesman ~Nov 1, ABJ ~Nov 15, KXAN ~Oct 22. Pitches are written now, sent on schedule, and re-verified for hedging the week they send.
 
 #### FINISHED EXAMPLE PITCH — KVUE (news desk, target send ~Oct 15)
@@ -292,7 +292,7 @@ This brief is self-contained. You do **not** need any other session context to p
 
 **3-paragraph pitch:**
 
-> The City of Austin and LCRA are exploring the first meaningful Lake Austin drawdown in nearly a decade — a ten-to-twelve-foot drop projected for October–November. When the water falls, a decade of hidden damage on private shorelines becomes visible for the first time: failing bulkheads, rotting tie-backs, two to four feet of sediment.
+> The City of Austin and LCRA have announced the first meaningful Lake Austin drawdown in nearly a decade — a ten-to-twelve-foot drop projected for October–November. When the water falls, a decade of hidden damage on private shorelines becomes visible for the first time: failing bulkheads, rotting tie-backs, two to four feet of sediment.
 >
 > My company, ATX Lakescapes, has committed two amphibious machines — equipment that can work the soft exposed lake bed — and our crews will be restoring shorelines across Lake Austin through the roughly 25-working-day window. It is one of the rare chances to film this kind of work: machines working where the lake floor used to be underwater, homeowners seeing their shoreline's real condition for the first time in ten years.
 >
@@ -318,7 +318,7 @@ This brief is self-contained. You do **not** need any other session context to p
 >
 > **Dateline:** AUSTIN, Texas —
 >
-> **¶1 — The news:** The City of Austin and LCRA are exploring the first meaningful Lake Austin drawdown in ~10 years, projected for [Oct–Nov]. ATX Lakescapes crews are restoring private shorelines during the roughly [25]-working-day window.
+> **¶1 — The news:** The City of Austin and LCRA have announced the first meaningful Lake Austin drawdown in ~10 years, projected for [Oct–Nov]. ATX Lakescapes crews are restoring private shorelines during the roughly [25]-working-day window.
 >
 > **¶2 — What's happening:** Two amphibious machines, committed in July, working the exposed lake bed: bulkhead repair, sediment removal, dock structure work. [X] properties scheduled, per the current count.
 >

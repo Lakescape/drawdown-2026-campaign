@@ -5,7 +5,7 @@
 
 ## THE MISSION
 
-The City is exploring the first real Lake Austin drawdown in nearly a decade, pointing to October–November. When the water drops, shoreline work that's impossible at full water becomes practical — typically 30–40% cheaper than the same work at full water. We committed two amphibious machines and ~25 working days back in July — that's what we locked. Our job: fill the assessment calendar before the window, convert assessments to deposits, and deliver flawlessly when the water drops. Target: $1M+.
+The City and LCRA have announced the first real Lake Austin drawdown in nearly a decade, projected for October–November. When the water drops, shoreline work that's impossible at full water becomes practical — typically 30–40% cheaper than the same work at full water. We committed two amphibious machines and ~25 working days back in July — that's what we locked. Our job: fill the assessment calendar before the window, convert assessments to deposits, and deliver flawlessly when the water drops. Target: $1M+.
 
 **The offer:** $695 Priority Assessment. 100% credited toward any work. Credit valid 12 months. If the window shifts, the credit holds.
 
@@ -67,7 +67,7 @@ In Drive `07_Swarm_Deliverables_FINAL/` and GitHub `01_FINAL_Deliverables/`:
 
 ## THE TEN RULES (non-negotiable)
 
-1. **Hedge the drawdown.** "The City is exploring it" / "projected for Oct–Nov." Never "it's happening," never flat dates. Every sentence must survive a screenshot.
+1. **Hedge the DEPTH and the DATES, not the event.** Updated 2026-08-29: LCRA announced the drawdown, so "it's happening" is now accurate. Keep "projected" on the 10–12 ft and on the Oct–Nov window — an announced drawdown is not a scheduled one. Never a flat date. Every sentence must survive a screenshot.
 2. **Real numbers only.** Quote the pinned counters or approved structural scarcity (2 machines, ~25 working days, committed in July). Nothing else.
 3. **Never claim competitors can't get machines.** We say what WE locked, not what others can't.
 4. **You are yourself on every channel.** Never speak or write as Nathan.

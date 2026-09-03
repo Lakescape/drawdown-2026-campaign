@@ -60,7 +60,7 @@ COUNT_RE = re.compile(r"\b(TWO|BOTH|PAIR|2)\b")
 # (kind, source, in_point, seconds, headline, subline, sub_color)
 BEATS = [
     ("clip", BEFORE, 6.0, 3.4, "THIS IS UNDER", "YOUR DOCK.", None),
-    ("clip", BEFORE, 13.0, 3.2, "PROJECTED 10–12 FT", "NOTHING IS OFFICIAL YET", COPPER),
+    ("clip", BEFORE, 13.0, 3.2, "PROJECTED 10–12 FT", "LAKE AUSTIN, THIS FALL", COPPER),
     ("still", MACHINE_SHA, 0, 3.2, "TWO WEED ANNIHILATORS", "COMMITTED IN JULY", COPPER),
     ("clip", OPEN, 40.0, 3.2, "SCRAPE. HAUL. STAPLE.", "LAKE AUSTIN IS OUR HOME WATER", COPPER),
     ("card", None, 0, 2.0, "$695 ASSESSMENT.", "100% CREDITED.", None),

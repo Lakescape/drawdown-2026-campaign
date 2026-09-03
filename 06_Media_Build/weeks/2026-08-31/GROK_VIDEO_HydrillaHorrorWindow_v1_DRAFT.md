@@ -41,7 +41,7 @@ Pole: Hydrilla Horror. Avatar: Lake Austin homeowner who has never seen the bed.
 VO (Victoria clone — optional; muted cut must stand alone):
 
 > This is what's been growing under Lake Austin docks for ten years.  
-> The City and LCRA are exploring a drawdown — projected ten to twelve feet.  
+> The City and LCRA are drawing Lake Austin down — projected ten to twelve feet.  
 > While it's dry we scrape, haul, and staple. Two amphibious machines. Roughly twenty-five working days.  
 > Lake Austin is our home water.
 
@@ -79,7 +79,7 @@ Caption (IG/TT):
 
 > This is under Lake Austin docks. Ten years of it.  
 >  
-> The City is exploring a drawdown — projected 10 to 12 feet.  
+> The City and LCRA are drawing the lake down — projected 10 to 12 feet.  
 > While it's dry: scrape, haul, staple.  
 > Two amphibious machines. About 25 working days.  
 >  

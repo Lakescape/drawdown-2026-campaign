@@ -16,7 +16,7 @@ not a Nate read and not a Nate-approved voice. Same rule applies here.
 |-----|---------|------|
 | 0.5–3.0 | hydrilla under the dock | This is what's under Lake Austin docks. |
 | 3.5–7.0 | submerged bed, clear water | Ten years of it. Nobody's seen the bottom. |
-| 7.5–11.0 | two Truxors working | The City's exploring a drawdown. Projected ten to twelve feet. |
+| 7.5–11.0 | two Truxors working | The City and LCRA are drawing the lake down. Projected ten to twelve feet. |
 | 11.5–14.3 | Truxor + hauled windrow | While it's dry, we work. Lake Austin is our home water. |
 
 VO ends at 14.3s so the last 0.7s fades clean. Bed −20 LUFS under the read,
@@ -26,14 +26,15 @@ programme target −14 LUFS. Low cello or lake ambience — not a meme track.
 
 The cards carry the information; the voice carries the tone. Fitting everything
 on screen into 15 seconds of speech would need ~250 wpm, which is an auctioneer,
-not a neighbour. The cards keep **TWO TRUXORS** and **NOTHING IS OFFICIAL YET**;
-the read keeps **exploring** and **projected**.
+not a neighbour. The cards keep **TWO TRUXORS** and **PROJECTED 10–12 FT.**;
+the read keeps **projected**. The C1 hedge was retired 2026-08-29 when LCRA
+announced the drawdown — the depth hedge stays.
 
 ## Hedge audit (`../../MEDIA_ClaimLedger_Drawdown_v1.md`)
 
 | Row | Requirement | Where it lands |
 |-----|-------------|----------------|
-| **C1** drawdown is exploratory | hedge mandatory, spoken not just captioned | spoken — "**exploring** a drawdown"; captioned — "NOTHING IS OFFICIAL YET" |
+| **C1** drawdown announced 2026-08-29 | no hedge required for the event | spoken — "are drawing the lake down"; captioned — no hedge line |
 | **C2** 10–12 ft | keep "projected" | spoken — "**projected** ten to twelve feet"; captioned identically |
 | **C3** ten-year window | no hedge required | "Ten years of it. Nobody's seen the bottom." |
 | **C7** two amphibious machines | must SHOW two + undercarriage | carried by the card and the frame, not the read |

@@ -55,7 +55,7 @@ Audience: Lake Austin owners we've already worked for. They know Nathan. Every e
 
 > Hey [First Name],
 >
-> The City and LCRA have been lining up the first meaningful Lake Austin drawdown in almost a decade — October into November, a ten-to-twelve-foot drop. Nothing is official until it's official, but the work is being lined up and we're preparing as if it's coming.
+> The City and LCRA have announced the first meaningful Lake Austin drawdown in almost a decade — a ten-to-twelve-foot drop, pointing to October into November. The exact window is not yet fixed, so we're preparing now and will confirm dates when they are set.
 >
 > When the water drops, everything that's been underwater on your shoreline for ten years — the bulkhead, the sediment, the base of the dock — is exposed and, for a few weeks, practical to fix. When the lake refills, that window closes for years.
 >
@@ -197,7 +197,7 @@ Audience: Lake Austin waterfront owners with no prior relationship. They did not
 >
 > I'm Nathan Menkin with ATX Lakescapes — my crews build and repair shorelines on Lake Austin. I'm writing to waterfront owners because something rare is lining up for this fall, and it directly affects your property.
 >
-> The City and LCRA are exploring a drawdown in October–November — a ten-to-twelve-foot drop, the first meaningful one in nearly a decade. When the water drops, work that is normally impractical becomes straightforward: bulkhead repair, sediment removal, dock structure work. When the lake refills, that window closes for years.
+> The City and LCRA have announced a drawdown, projected for October–November — a ten-to-twelve-foot drop, the first meaningful one in nearly a decade. When the water drops, work that is normally impractical becomes straightforward: bulkhead repair, sediment removal, dock structure work. When the lake refills, that window closes for years.
 >
 > We're offering Priority Assessments now — $695, fully credited toward any work — so owners know exactly what they're dealing with before the window opens, and have a reserved place in a production calendar that can't take everyone.
 >

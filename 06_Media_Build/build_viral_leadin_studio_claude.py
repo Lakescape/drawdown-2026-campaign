@@ -33,7 +33,7 @@ Claim ledger bindings (../MEDIA_ClaimLedger_Drawdown_v1.md):
                  undercarriage. FIT mode exists for this line and only this line.
            C2   "PROJECTED" 10–12 ft retained verbatim
            C1   drawdown is exploratory -> hedged on the same plate, not an
-                end card ("NOTHING IS OFFICIAL YET")
+                end card (C1 hedge retired 2026-08-29 — LCRA announced)
   beat 4 -> C11  must read as Lake Austin
 
 Stripped per Nate 2026-08-31: $695, credited, assessment, "walk yours",
@@ -90,8 +90,7 @@ BEATS = [
         secs=4.20, mode="fit", bias=(0.50, 0.50), zoom=(1.000, 1.000),
         grade=(1.02, 1.05, 1.06), pan=(0.355, 0.425),
         lines=[("TWO TRUXORS.", 88, CREAM),
-               ("PROJECTED 10–12 FT.", 58, CREAM),
-               ("NOTHING IS OFFICIAL YET", 38, COPPER)],
+               ("PROJECTED 10–12 FT.", 58, COPPER)],
         note="C7 count — one cutting, one at the bank, pontoon decks visible",
     ),
     dict(
