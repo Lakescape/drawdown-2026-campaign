@@ -21,7 +21,7 @@ Status: Ready for final polish in Resolve / Poseidon
 
 | Time | Visual | On-screen Text (final) | Voiceover |
 |------|--------|------------------------|-----------|
-| 0:00–0:03 | Aerial push | **FIRST REAL WINDOW IN ~10 YEARS** | “The City is exploring the first real Lake Austin drawdown in nearly ten years.” |
+| 0:00–0:03 | Aerial push | **FIRST REAL WINDOW IN ~10 YEARS** | “The City and LCRA have announced the first real Lake Austin drawdown in nearly ten years.” |
 | 0:03–0:07.5 | Bulkhead detail | **MOST WILL WAIT** | “Most people will wait for the final word. The ones who move early get the clean path.” |
 | 0:07.5–0:11.5 | Amphibious machine | **WE LOCKED THE EQUIPMENT IN JULY** | Soft machine + ambient only (or short VO if desired) |
 | 0:11.5–0:15 | End card | **$695 · 100% CREDITED**<br>PROTECT YOUR OPTION<br>**DM ASSESS** | “Past clients first. DM ‘ASSESS’.” |

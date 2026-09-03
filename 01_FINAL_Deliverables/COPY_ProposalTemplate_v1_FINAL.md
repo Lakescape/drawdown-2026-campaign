@@ -163,7 +163,7 @@ There's no wrong option here — only the one that fits your property and your p
 
 ## PAGE 5 — TERMS & CONDITIONS
 
-**Scheduling.** Work is planned for the projected drawdown window — the work currently being lined up points to October–November 2026. Nothing is official until the City and LCRA finalize it. Your specific work dates are confirmed in writing once the window is set, and we confirm your mobilization date [X] weeks ahead of it. Your preliminary calendar position holds through [Calendar-Hold Date].
+**Scheduling.** Work is planned for the projected drawdown window — LCRA announced the drawdown on 2026-08-29 and the work being lined up points to October–November 2026. The exact window is not final until the City and LCRA fix the dates. Your specific work dates are confirmed in writing once the window is set, and we confirm your mobilization date [X] weeks ahead of it. Your preliminary calendar position holds through [Calendar-Hold Date].
 
 **Deposit.** [15–25]% of your chosen package reserves equipment and crew for your projected dates: **$[deposit]**, due with the signed acceptance page. [Deposit link / payment instructions].
 

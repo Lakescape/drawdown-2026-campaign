@@ -7,9 +7,9 @@
 
 **Ten years of high water is about to show its work.**
 
-*The City and LCRA are exploring the first meaningful Lake Austin drawdown in nearly a decade. Here is what it means for your shoreline — and the one thing worth doing before the water drops.*
+*The City and LCRA have announced the first meaningful Lake Austin drawdown in nearly a decade. Here is what it means for your shoreline — and the one thing worth doing before the water drops.*
 
-**What is happening on Lake Austin.** The City of Austin and the LCRA are exploring a drawdown this fall — a projected ten-to-twelve-foot drop over roughly six to eight weeks, the first meaningful low-water window in nearly ten years. Nothing is official until it's official, but the work is being lined up, and we are preparing as if it's coming. When the water drops, everything that has been underwater on your shoreline for a decade — the bulkhead, the sediment, the base of your dock — is exposed and, for a few weeks, practical to fix. When the lake refills, that window closes for years.
+**What is happening on Lake Austin.** The City of Austin and the LCRA have announced a drawdown this fall — a projected ten-to-twelve-foot drop over roughly six to eight weeks, the first meaningful low-water window in nearly ten years. The exact window is not yet fixed, so we are preparing now and will confirm dates when they are set. When the water drops, everything that has been underwater on your shoreline for a decade — the bulkhead, the sediment, the base of your dock — is exposed and, for a few weeks, practical to fix. When the lake refills, that window closes for years.
 
 ---
 

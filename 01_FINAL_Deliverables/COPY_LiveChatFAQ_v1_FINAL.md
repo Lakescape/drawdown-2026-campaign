@@ -22,7 +22,7 @@ Status: FINAL — Board approved with notes; red-team improvements applied. See 
 
 ## GREETING (AUTO-OPEN MESSAGE)
 
-> Welcome to ATX Lakescapes — the City is exploring a Lake Austin drawdown pointing to October–November, the first meaningful one in nearly a decade, and we're helping owners get ready for it. What can I help you with — a question about your shoreline, or getting an Assessment on the calendar?
+> Welcome to ATX Lakescapes — the City and LCRA have announced a Lake Austin drawdown, projected for October–November, the first meaningful one in nearly a decade, and we're helping owners get ready for it. What can I help you with — a question about your shoreline, or getting an Assessment on the calendar?
 
 (One greeting, hedged, two sentences, ends with a booking-oriented prompt. Carries no placeholders, so it is safe for the widget to auto-serve. Delivered per external red-team fix F13.)
 
@@ -40,7 +40,7 @@ Status: FINAL — Board approved with notes; red-team improvements applied. See 
 
 ### 3. "When is the drawdown happening?"
 
-> Nothing is official until it's official — the City is exploring a drawdown, and the work being lined up points to October–November, the first meaningful one in nearly a decade. We're preparing as if it's coming, because equipment and calendar have to be locked months ahead, not the week the water drops. Want me to hold an Assessment slot so you're ready either way?
+> LCRA announced it — the drawdown is happening, and the work being lined up points to October–November, the first meaningful one in nearly a decade. The exact window is not fixed yet, and we prepare ahead of it because equipment and calendar have to be locked months out, not the week the water drops. Want me to hold an Assessment slot so you're ready either way?
 
 ### 4. "Can I get a quote without the Assessment?"
 
