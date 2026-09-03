@@ -36,7 +36,7 @@ Send from your own address, one at a time, not a blast. These are warm past clie
 >
 > Hi [First],
 >
-> Quick one. The City of Austin and LCRA are lining up a drawdown this fall — the water drops ten to twelve feet for roughly six to eight weeks. Nothing is official until they confirm it, but we're preparing as if it's coming, and it's the first meaningful low-water window in nearly a decade.
+> Quick one. The City of Austin and LCRA have announced a drawdown this fall — the water drops a projected ten to twelve feet for roughly six to eight weeks. The dates aren't fixed yet, but it's happening, and it's the first meaningful low-water window in nearly a decade.
 >
 > When the water drops, everything that's been underwater on your shoreline for ten years — the bulkhead, the sediment, the base of the dock — is exposed and, for a few weeks, practical to fix. At full water the same work means crews working blind from barges, and it typically runs thirty to forty percent more.
 >
@@ -83,7 +83,7 @@ Three laws from the CRM/SLA spec, and they are not style preferences:
 2. **The 2 machines / ~25 working days line is conditional.** It's real, but only send it once equipment status is verified that morning. Don't reach for it to add urgency.
 3. **No referral-credit mentions.** The $500 referral program launches in October. No pre-window asset mentions it, in any channel.
 
-Also: don't promise a drawdown date. It's projected, not confirmed — "the City and LCRA are exploring it" is the honest framing and it's what the website says. The 12-month credit is what removes the risk, so lead with that instead of a date.
+Also: don't promise a drawdown date. LCRA announced the drawdown on 2026-08-29, but the WINDOW is projected, not confirmed — "it's happening, the dates aren't set" is the honest framing. The 12-month credit is what removes the risk, so lead with that instead of a date.
 
 ---
 

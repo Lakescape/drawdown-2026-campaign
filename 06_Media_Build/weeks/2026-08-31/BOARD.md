@@ -93,7 +93,7 @@ Problem→Capability · CTA **TRUXOR / 254-780-6971** · six pillars PASS with
 
 Overlay strings, exact:
 `THIS IS UNDER / YOUR DOCK.` · `NEARLY TEN YEARS / SINCE ANYONE COULD SEE IT.` ·
-`TWO TRUXORS. / PROJECTED 10–12 FT. / NOTHING IS OFFICIAL YET` ·
+`TWO TRUXORS. / PROJECTED 10–12 FT.` ·
 `SCRAPE. HAUL. STAPLE. / 254-780-6971` (holds to the last frame).
 
 **Audit of the banned pin, independently confirmed.** Poseidon's own VLM caption
@@ -111,9 +111,9 @@ here, no claim on screen." The rowed fact is **C3**, *"first meaningful
 low-water window in nearly ten years."* Card 2 was written as
 **`NEARLY TEN YEARS / SINCE ANYONE COULD SEE IT.`** — same two beats, same
 cadence, now anchored to C3 and asserting nothing about the future. Flagging it
-rather than swapping it silently. **C1 is never asserted on this cut**; the one
-number carries `PROJECTED` *and* `NOTHING IS OFFICIAL YET` on the same card,
-because a silent master cannot hedge in the VO.
+rather than swapping it silently. **C1 was retired 2026-08-29** — LCRA announced
+the drawdown — so the event hedge came off this card. The one number still
+carries `PROJECTED`, which stays mandatory whether or not the master is silent.
 
 **Two QC defects caught and fixed before delivery — both invisible in a green render:**
 
@@ -144,7 +144,7 @@ type wants a Resolve pass, which is what `resolve/viral-leadin/` is staged for.
 ### 2026-08-31 Nate — drawdown is official
 - Stop saying exploring / unofficial / “nothing is official yet.” C1 hedge retired by Nate.
 - Depth may still be projected 10–12 ft (C2) if a number is on screen.
-- Horror reel still has `NOTHING IS OFFICIAL YET` on card 3 — do **not** recut it in the scrape session. Flag for a later type pass.
+- Horror reel had `NOTHING IS OFFICIAL YET` on card 3. **Closed 2026-09-02** — the line is removed from both viral builders and the masters were re-rendered. C1 retired at source in `MEDIA_ClaimLedger_Drawdown_v1.md`.
 
 ### 2026-08-31 Hermes → Claude: Scrape. Haul. Staple.
 - Separate 15s method explainer. Kickoff `KICKOFF-SCRAPE-HAUL-STAPLE-2026-08-31.md`.

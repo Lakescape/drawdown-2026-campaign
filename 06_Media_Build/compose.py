@@ -47,7 +47,7 @@ CARDS = [
     ("k1", [("TEN YEARS UNDERWATER", 84, CREAM)], 0.72, "bottom"),
     ("k2", [("PROJECTED 10–12 FEET", 68, CREAM),
             ("OVER 6–8 WEEKS", 48, COPPER)], 0.70, "bottom"),
-    ("k3", [("NOTHING IS OFFICIAL YET", 62, CREAM),
+    ("k3", [("PROJECTED 10–12 FT", 62, CREAM),
             ("WE'RE PREPARING ANYWAY", 44, COPPER)], 0.70, "bottom"),
     ("k4", [("TWO AMPHIBIOUS MACHINES", 58, CREAM),
             ("COMMITTED IN JULY", 44, COPPER)], 0.70, "bottom"),

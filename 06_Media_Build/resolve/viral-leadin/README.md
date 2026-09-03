@@ -53,8 +53,7 @@ cropping in Resolve.
             SINCE ANYONE COULD SEE IT.
 
 6.95–11.30  TWO TRUXORS.
-            PROJECTED 10–12 FT.
-            NOTHING IS OFFICIAL YET          (copper)
+            PROJECTED 10–12 FT.              (copper)
 
 10.95–15.30 SCRAPE. HAUL. STAPLE.
             254-780-6971                     (copper, holds to last frame)
@@ -68,11 +67,12 @@ cropping in Resolve.
 | NEARLY TEN YEARS / SINCE ANYONE COULD SEE IT. | **C3** ("first meaningful low-water window in nearly ten years") | C3 does not hedge |
 | TWO TRUXORS. | **C7** — two machines, amphibious undercarriage, both in frame | none |
 | PROJECTED 10–12 FT. | **C2** | "projected" kept |
-| NOTHING IS OFFICIAL YET | **C1** — the hedge, in the same breath, on the same card | mandatory, present |
+| *(removed 2026-08-29)* | **C1** — LCRA announced the drawdown; the event no longer needs a hedge | n/a |
 | SCRAPE. HAUL. STAPLE. | service description, not a metric claim | n/a |
 
-**C1 is never asserted on this cut** — nothing says the drawdown is happening.
-The only number is hedged twice (`PROJECTED` + `NOTHING IS OFFICIAL YET`).
+**C1 was retired 2026-08-29** when LCRA announced the drawdown, so this cut no
+longer carries the event hedge. The one number still carries `PROJECTED`, which
+stays mandatory: an announced drawdown is not a measured one.
 
 ## Files
 

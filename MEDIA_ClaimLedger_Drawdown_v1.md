@@ -6,7 +6,7 @@ hedges in the same breath — not in an end-card disclaimer.
 
 | # | Claim | Exact source | Source hedges? | Asset must hedge? | Footage required to carry it |
 |---|---|---|---|---|---|
-| C1 | Drawdown is happening this fall | "are **exploring** a drawdown this fall" | **YES** | **YES — mandatory** | any low-water shoreline |
+| C1 | Drawdown is happening this fall | LCRA announcement, **2026-08-29** | no — announced | **NO** for the event. Hedges on DEPTH (C2) and on DATES stay mandatory. | any low-water shoreline |
 | C2 | 10–12 ft drop over 6–8 weeks | "projected ten-to-twelve-foot drop over roughly six to eight weeks" | "projected" | soften to "projected" | exposed shoreline / waterline stain |
 | C3 | First meaningful window in ~10 years | "first meaningful low-water window in nearly ten years" | no | no | — |
 | C4 | Next comparable window 8–10 yrs out | "**may be** eight to ten years away" | **YES** | **YES** | — |
@@ -24,7 +24,12 @@ hedges in the same breath — not in an end-card disclaimer.
   booking and the reason capacity is scarce. Any frame under this claim must
   show amphibious/pontoon undercarriage and must show exactly two machines.
 - **C11 is a location claim.** Generic lake footage silently contradicts it.
-- **C1 and C4 are the legal exposure.** The one-pager is careful; the video must
+- **C1 changed 2026-08-29.** LCRA announced the drawdown, so the event may now be
+  stated as fact. The *depth* (C2, "projected 10–12 ft") and the *window dates*
+  (Oct–Nov) are still projections and MUST stay hedged — an announced drawdown is
+  not a scheduled one. Source: Nate, 2026-09-02; no announcement document is
+  filed in this repo, so cite the LCRA notice directly before external use.
+- **C4 remains the legal exposure.** The one-pager is careful; the video must
   be at least as careful, spoken not just captioned.
 
 ## v1 script defects caught by this ledger

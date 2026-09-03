@@ -41,7 +41,7 @@ DST = os.path.join(HERE, "DRAWDOWN_LeadIn_916_v3_VO_DRAFT.mp4")
 # inconsistently. "L C R A" is spaced so it is read as letters.
 SCRIPT = (
     "Ten years of high water hid this shoreline on Lake Austin.  "
-    "The City and L C R A are exploring a drawdown — projected, ten to twelve feet.  "
+    "The City and L C R A are drawing Lake Austin down — projected, ten to twelve feet.  "
     "We committed two amphibious machines in July.  "
     "Six ninety-five to walk yours. Credited back in full."
 )

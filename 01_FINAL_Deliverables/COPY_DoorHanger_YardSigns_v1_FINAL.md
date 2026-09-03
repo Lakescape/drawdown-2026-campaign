@@ -34,7 +34,7 @@ Word budget: front ≤ 60 words, back ≤ 190 words. A dog-walker gives the fron
 > The first real drawdown in ~10 years is being lined up.
 >
 > **SUBHEAD (sans, ~13pt):**
-> The City is exploring lowering Lake Austin 10–12 feet, pointing to October–November. When the water drops, your shoreline becomes workable — for a few weeks.
+> The City and LCRA are lowering Lake Austin a projected 10–12 feet, pointing to October–November. When the water drops, your shoreline becomes workable — for a few weeks.
 >
 > **OFFER STRIP (single rule line above and below, ~12pt):**
 > Priority Assessment — $695 · fully credited toward any work
