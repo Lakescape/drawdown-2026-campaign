@@ -48,7 +48,7 @@ XF = 0.35
 OUT = "DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4"
 WORK = "_shs"
 
-# (slot, sha prefix or None, mode, seconds, ken-burns, why this plate)
+# (slot, sha prefix, mode, seconds, ken-burns, why this plate)
 # starts land on 0 / 4 / 9 / 13, total 15.00 after the crossfades eat the overlap
 BEATS = [
     ("b1", "c6b6853c038a", "fit", 4.35, "out",
@@ -77,10 +77,10 @@ CARDS = [
             ("254-780-6971", 84, COPPER)], 0.76),
 ]
 
-# the type-only staple plate — dark ink on cream, no picture to overclaim
-STAPLE_CARD = [("STAPLE.", 118, INK),
-               ("Woven tarp.", 56, INK),
-               ("12-inch overlap.", 56, INK)]
+# STAPLE_CARD and the mode=="card" branches were deleted 2026-09-04: no BEATS
+# row used them, and the dead constant was one edit away from putting the
+# retired "Woven tarp. 12-inch overlap." claim on screen. A shot tarp comes
+# back as a photo beat with a STAPLE strap, not a type card.
 
 con = sqlite3.connect(DB)
 
@@ -106,25 +106,6 @@ def cover(im, w, h):
 os.makedirs(WORK, exist_ok=True)
 pins = []
 for slot, prefix, mode, dur, kb, why in BEATS:
-    if mode == "card":
-        pins.append((slot, "TYPE-ONLY", mode, dur, why))
-        img = Image.new("RGB", (VW, VH), CREAM[:3])
-        d = ImageDraw.Draw(img)
-        rendered = [(t, ImageFont.truetype(BOLD, s), c) for t, s, c in STAPLE_CARD]
-        heights = [d.textbbox((0, 0), t, font=f)[3] for t, f, _ in rendered]
-        gap = 26
-        total = sum(heights) + gap * (len(rendered) - 1)
-        y = int(VH * 0.50) - total // 2
-        # hairline rule above the type — reads as a deliberate plate, not a hole
-        d.line([(VW * 0.28, y - 74), (VW * 0.72, y - 74)], fill=INK[:3], width=3)
-        for i, (t, f, c) in enumerate(rendered):
-            w = d.textbbox((0, 0), t, font=f)[2]
-            d.text(((VW - w) // 2, y), t, font=f, fill=c[:3])
-            y += heights[i] + gap
-        img.save(f"{WORK}/comp_{slot}.jpg", quality=96)
-        print(f"{slot} card  TYPE-ONLY — {why}")
-        continue
-
     sha, path, rw, rh = resolve(prefix)
     pins.append((slot, sha, mode, dur, why))
     raw = Image.open(path)
@@ -192,16 +173,12 @@ for i, (slot, _, mode, dur, kb, _) in enumerate(BEATS):
     ins += ["-loop", "1", "-framerate", str(FPS), "-t", f"{dur:.2f}",
             "-i", f"{WORK}/comp_{slot}.jpg"]
     n = int(dur * FPS)
-    if mode == "card":
-        parts.append(f"[{i}:v]scale={VW}:{VH}:flags=lanczos,fps={FPS},"
-                     f"setsar=1,format=yuv420p[b{i}]")
-    else:
-        z = f"1.02+0.08*on/{n}" if kb == "in" else f"1.05-0.05*on/{n}"
-        parts.append(
-            f"[{i}:v]scale=2160:3840:flags=lanczos,"
-            f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
-            f"d=1:s={VW}x{VH}:fps={FPS},"
-            f"setsar=1,format=yuv420p[b{i}]")
+    z = f"1.02+0.08*on/{n}" if kb == "in" else f"1.05-0.05*on/{n}"
+    parts.append(
+        f"[{i}:v]scale=2160:3840:flags=lanczos,"
+        f"zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
+        f"d=1:s={VW}x{VH}:fps={FPS},"
+        f"setsar=1,format=yuv420p[b{i}]")
     labels.append(f"b{i}")
 
 card_slots = [c[0] for c in CARDS]

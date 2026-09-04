@@ -47,16 +47,18 @@ CARDS = [
     ("k1", [("TEN YEARS UNDERWATER", 84, CREAM)], 0.72, "bottom"),
     ("k2", [("PROJECTED 10–12 FEET", 68, CREAM),
             ("OVER 6–8 WEEKS", 48, COPPER)], 0.70, "bottom"),
-    ("k3", [("NOTHING IS OFFICIAL YET", 62, CREAM),
-            ("WE'RE PREPARING ANYWAY", 44, COPPER)], 0.70, "bottom"),
+    # k3 deleted 2026-09-04: "NOTHING IS OFFICIAL YET" — the hedge was retired
+    # 2026-08-29 (LCRA announced); the drawdown IS official and the phrase is
+    # banned from every cut and caption. Masters that carry it on-frame are
+    # flagged NEEDS-RECUT on the desk.
     ("k4", [("TWO AMPHIBIOUS MACHINES", 58, CREAM),
             ("COMMITTED IN JULY", 44, COPPER)], 0.70, "bottom"),
     ("k5", [("TYPICALLY 30–40% LESS", 62, CREAM),
             ("ON DRY GROUND", 46, COPPER)], 0.70, "bottom"),
     ("k6", [("ROUGHLY 25 WORKING DAYS", 56, CREAM),
             ("THEN WE'RE FULL", 46, COPPER)], 0.70, "bottom"),
-    ("k7", [("$695 PRIORITY ASSESSMENT", 58, CREAM),
-            ("100% CREDITED TOWARD THE WORK", 40, COPPER)], 0.70, "bottom"),
+    # k7 deleted 2026-09-04: "$695 PRIORITY ASSESSMENT / 100% CREDITED" —
+    # $695, credited, and assessment are banned (Nate 2026-08-31).
     ("k8", [("ATX LAKESCAPES", 82, CREAM),
             ("LAKE AUSTIN IS OUR HOME WATER", 40, COPPER)], 0.46, "full"),
 ]
