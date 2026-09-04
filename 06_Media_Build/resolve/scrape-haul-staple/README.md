@@ -14,7 +14,7 @@ Packet: `weeks/2026-08-31/GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md`.
 |---|---|
 | Master | `DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4` |
 | Duration | **15.00 s** (450 frames) |
-| Format | 1080x1920, 30 fps, H.264 CRF 18, yuv420p, +faststart |
+| Format | 1080x1920, 30 fps, H.264 CRF 18, yuvj420p full-range (color_range=pc), +faststart |
 | Audio | **none.** No stream at all — not a null AAC track (Nate 2026-08-31). |
 | Beats | 4 plates, 0.35 s crossfades |
 
@@ -37,7 +37,8 @@ a woven tarp, a stapled seam, or a 12-inch overlap.
 The nearest real plates are **green erosion-control blanket / matting on a bank**
 — `247ed525d59d` (a crew rolling matting out over scraped muck at the water's
 edge), `049c9c5aefa0`, `af49fffbf0ab`, `7a549dd65708`, `4b0528304977`. Different
-product, different job. `247ed525d59d` is filed in `stills/` as
+product, different job. Nate 2026-09-01 ruled it carries the beat as COVER
+with matching copy. `247ed525d59d` is filed in `stills/` as
 `GAP-CANDIDATE_…` **for Nate's ruling only** — do not cut it under
 "Woven tarp. 12-inch overlap." That is the same overclaim class as the
 `@two_machines` barge, one notch smaller.
@@ -72,3 +73,14 @@ trailer) can never be zoomed off the edge.
 - `stills/` — source plates at native resolution, sha in the filename
 - `composites/` — the 1350x2400 beat composites and the 1080x1920 strap PNGs
 - `qc/` — the four mid-beat extractions this cut was verified against
+
+## 2026-09-04 — orientation fix
+
+`247ed525d59d` carries a stale EXIF Orientation=6 tag over upright 1080x810
+pixels; the 09-01 build trusted the tag and shipped the COVER beat rotated 90
+degrees. The builder now checks EXIF-transposed orientation against the
+registry's `refs.width/height`, ignores a lying tag (printed, never silent),
+and fails closed on any remaining mismatch. Master rebuilt + re-QC'd
+2026-09-04, md5 `2e68544f616ce8f0…`; `qc/` and `composites/` in this bin are
+from the rebuilt cut (`card_b3.png` was also missing before this refresh).
+Full record: `weeks/2026-08-31/BOARD.md`, 2026-09-04 correction.

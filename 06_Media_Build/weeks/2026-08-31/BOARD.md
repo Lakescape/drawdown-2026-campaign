@@ -262,3 +262,41 @@ The upstream briefs — `KICKOFF-SCRAPE-HAUL-STAPLE-2026-08-31.md`,
 `CLAUDE_PROMPT_SHS.txt`, and `GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md` — still
 specify the type-only beat. They are left as written: they are the ask that went
 in, not the record of what came out. This board is the record.
+
+### 2026-09-04 CORRECTION — the COVER beat shipped sideways; caught by audit, rebuilt
+
+A max-effort Fable audit of the finished cut extracted real frames and found the
+9–13s COVER beat rendered **rotated 90°** — trees horizontal, crew sideways —
+in the 09-01 17:54 master, the desk copy, and the QC frame that had been filed
+as passing.
+
+**Root cause.** The Poseidon jpg for `247ed525d59d` stores upright landscape
+pixels (1080x810, matching `refs.width/height`) under a **stale EXIF
+Orientation=6 tag**. `ImageOps.exif_transpose` trusted the tag and swung the
+correct scene into a sideways 810x1080 portrait, which the FIT branch pasted
+nearly full-frame. The other three plates carry Orientation=1, which is why only
+beat 3 broke. The repo still displays upright in orientation-ignoring viewers —
+so the 09-01 COVER ruling was made on an upright image the cut did not show.
+
+**Fix (this branch).** `build_scrape_haul_staple.py` now treats the registry's
+`refs.width/height` as display truth: when the EXIF transpose contradicts the
+registry and the raw pixels agree with it, the tag is ignored (printed, not
+silent); if orientation still contradicts the registry after that, the build
+**fails closed** instead of shipping a sideways plate. Photo bytes untouched —
+the store is content-addressed and a byte edit would change the sha.
+
+**Rebuilt + re-verified 2026-09-04.** New master md5 `2e68544f616ce8f0` — master,
+desk copy `scrape-haul-staple-studio.mp4`, and worktree build byte-identical.
+All four QC frames re-extracted and eyeballed: two Truxors + spray under
+SCRAPE., LOAD TRAIL trailer legible under HAUL., **upright** matting under
+COVER., cutter-head CTA under HOLD. ffprobe: 15.000s, 450 frames, 30fps,
+1080x1920, single video stream, no audio. `resolve/scrape-haul-staple/qc/` and
+`composites/` refreshed from this build (composites had also been missing
+`card_b3.png`). Spec note: output is full-range `yuvj420p` (`color_range=pc`),
+not the `yuv420p` the README claimed — README corrected rather than re-grading
+a look already approved.
+
+QC lesson, standing: **extraction is not a verdict.** The failing frame was
+pulled twice on 09-01 (17:54 and 18:00) and still shipped, because the check
+stopped at strap-matches-frame. Each QC frame now gets an explicit pass on
+claim, strap, orientation, and crop before "verified" is written anywhere.

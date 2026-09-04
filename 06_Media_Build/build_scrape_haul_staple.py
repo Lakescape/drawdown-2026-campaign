@@ -86,14 +86,14 @@ con = sqlite3.connect(DB)
 
 
 def resolve(prefix):
-    row = con.execute("SELECT sha256 FROM refs WHERE sha256 LIKE ?",
+    row = con.execute("SELECT sha256, width, height FROM refs WHERE sha256 LIKE ?",
                       (prefix + "%",)).fetchone()
     if not row:
         raise SystemExit(f"UNPINNED: {prefix} not in Poseidon")
     path = os.path.join(PHOTOS, row[0] + ".jpg")
     if not os.path.exists(path):
         raise SystemExit(f"NO LOCAL BYTES: {row[0]}")
-    return row[0], path
+    return row[0], path, row[1], row[2]
 
 
 def cover(im, w, h):
@@ -125,9 +125,19 @@ for slot, prefix, mode, dur, kb, why in BEATS:
         print(f"{slot} card  TYPE-ONLY — {why}")
         continue
 
-    sha, path = resolve(prefix)
+    sha, path, rw, rh = resolve(prefix)
     pins.append((slot, sha, mode, dur, why))
-    im = ImageOps.exif_transpose(Image.open(path)).convert("RGB")
+    raw = Image.open(path)
+    im = ImageOps.exif_transpose(raw).convert("RGB")
+    # The registry's width/height is the display truth. 247ed525d59d stores
+    # upright 1080x810 pixels under a stale EXIF Orientation=6 — trusting the
+    # tag swung the COVER beat sideways (audit 2026-09-04). When the transpose
+    # contradicts the registry and the raw pixels agree with it, the tag lies.
+    if (im.width > im.height) != (rw > rh) and (raw.width > raw.height) == (rw > rh):
+        print(f"{slot} EXIF orientation tag ignored for {sha[:12]} — registry says {rw}x{rh}")
+        im = raw.convert("RGB")
+    if (im.width > im.height) != (rw > rh):
+        raise SystemExit(f"ORIENTATION: {sha[:12]} is {im.width}x{im.height}, registry {rw}x{rh}")
     if mode == "bleed":
         out = cover(im, CW, CH)
     else:
