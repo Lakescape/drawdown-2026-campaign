@@ -20,6 +20,11 @@ Packet: `weeks/2026-08-31/GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md`.
 
 ## Beats
 
+**Straps come from this table, not the packet.** The packet is the ask that
+went in; its Stage 2 table still cuts the retired `STAPLE. / Woven tarp.
+12-inch overlap.` card. Rebuilding from the packet reconstructs an overclaim
+this record exists to prevent.
+
 | # | In | Sha256 | Mode | Strap | Why |
 |---|----|--------|------|-------|-----|
 | 1 | 0.00 | `c6b6853c038a87b18338b0a6fd0c94a377f84947475caa53cbab3da44d1cff83` | **fit** | `SCRAPE.` / `We cut it off the bed.` | Two Truxors working, one throwing spray. C7 count + amphibious undercarriage. |
