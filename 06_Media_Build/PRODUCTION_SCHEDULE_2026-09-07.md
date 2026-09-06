@@ -32,9 +32,11 @@ surfaces. Pick one; the cuts recut in minutes.
 | Method cut, silent | `DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4` | none | alternate |
 | Viral lead-in, Claude lane | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` | none | cards clean (COVER, OFFICIAL). Silent-postable; VO unapproved. |
 | Viral lead-in, studio lane | `DRAWDOWN_ViralHydrilla_916_STUDIO.mp4` | none | same piece, second lane. **Pick one lane** (Cut Room Q04). |
-| Still-card series S01–S08 | `cards/DRAWDOWN_Card_S0N_*_916.jpg` + `_45.jpg` | — | built + eye-QC'd 2026-09-06, `cards/PINS.md`. Nate sign. |
+| Still-card series S01–S10 | `cards/DRAWDOWN_Card_S0N_*_916.jpg` + `_45.jpg` | — | built + eye-QC'd 2026-09-06, `cards/PINS.md`. Nate sign. |
+| Lake Coming Down 30 s | `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v2.mp4` (+ silent twin) | Lake Coming Down v2 | built 09-06, real DJI clips, `resolve/lake-coming-down/PINS.md`. Beat 1 residence flag. |
+| Bulkhead 15 s | `DRAWDOWN_Bulkhead_916_STUDIO.mp4` | none | built 09-06, `resolve/bulkhead/PINS.md`. |
 
-That is **3 videos and 8 stills**. Everything else in the folder is dirty — see the
+That is **5 videos and 10 stills** — measured in `PROOF_2026-09-06.md`. Everything else in the folder is dirty — see the
 do-not-post list at the bottom.
 
 ## Cadence
@@ -59,7 +61,7 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Lake Coming Down** — 30 s, aerials + timeline card, bed = Lake Coming Down v1/v2 | BUILD | Q02 bed pick; 4 aerial plates to eyeball (`8c7fd940fc1f`, `5a4942b7731d`, `debfb86716fa`, `ba36f7de53cb`) |
+| Mon | Reel | **Lake Coming Down** — 30 s, five real DJI clips + LCRA timeline, bed = Lake Coming Down v2 (`DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v2.mp4`) | READY (built 09-06) | Q02 can swap bed to v1; beat 1 residence flag; Nate sign |
 | Wed | Reel | Method cut, re-run with caption variant | READY | — |
 | Fri | Story | S03 Past The Dock | READY | Victoria taste (abstract plate) |
 | Fri | Feed | S07 Two Machines (4:5) | READY | — |
@@ -77,7 +79,7 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Bulkhead / seawall** 15 s — exposed soil, undercut walls, "you'll see it in October" | BUILD | plates to eyeball (`8ac72bb619a1`, `7b73d148d588`, `f9510fe9c17e`, `3c9f9a3df291`). Claim: nothing beyond "this is what low water shows" |
+| Mon | Reel | **Bulkhead / seawall** 15 s — `DRAWDOWN_Bulkhead_916_STUDIO.mp4` (`4f8cf6f78230`, `f2d734030d78`, `7b73d148d588`) | READY (built 09-06) | Nate sign |
 | Wed | Reel | Lake Coming Down, cutdown 15 s | BUILD | after W38 master |
 | Fri | Story | S08 Seven Weeks | READY | — |
 | Fri | Feed | Fleet still (`dcc-close-book/public/media/fleet.jpg`, real site photo) | READY | caption on the desk |
@@ -86,9 +88,9 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Story | "7 DAYS" type card over S01 plate | BUILD | 10 min |
+| Mon | Story | S09 "7 DAYS." card | READY (built 09-06) | — |
 | Wed | Reel | Method cut, last pre-window run | READY | — |
-| Fri | Story | "MONDAY." card | BUILD | 10 min |
+| Mon Oct 12 | Story | S10 "MONDAY." card | READY (built 09-06) | — |
 | Sun | Feed | Machines staged for Monday | NEEDS-SHOOT | one phone photo of both Truxors on the trailer, Sunday afternoon |
 
 ### W42–W48 · Oct 12 – Nov 30 — live

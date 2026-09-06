@@ -69,6 +69,16 @@ CARDS = [
       ("OCT 12 TO NOV 30. THEN IT REFILLS.", 36, CREAM),
       ("TEXT TRUXOR · 254-780-6971", 40, COPPER)],
      "Truxor working a dense mat with the open lake behind — the CTA card"),
+    # W41 countdown — same plate as S01 so the series reads as one thread
+    ("S09", "seven-days", "153d39cdb0eb", 0.5,
+     [("7 DAYS.", 130, CREAM),
+      ("LAKE AUSTIN COMES DOWN MONDAY, OCT 12.", 36, CREAM)],
+     "S01 plate again — countdown card, posts Mon Oct 5"),
+    ("S10", "monday", "153d39cdb0eb", 0.5,
+     [("MONDAY.", 130, CREAM),
+      ("THE LAKE STARTS DOWN TODAY. ABOUT A FOOT A DAY.", 34, CREAM),
+      ("TEXT TRUXOR · 254-780-6971", 36, COPPER)],
+     "S01 plate again — day-of card, posts Mon Oct 12"),
 ]
 
 C7_TWO_MACHINE = {"c6b6853c038a", "fd49bf6ffe3e"}

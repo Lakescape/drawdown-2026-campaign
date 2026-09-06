@@ -364,3 +364,29 @@ names every dirty file in this folder and why.
 **Found and parked:** `Weed Barrier Photo.png` / `Weed Mat Framed.png` at repo root
 (09-02) are LakeMat.com screenshots — third-party, not plates. 59 "tarp" captions in
 Poseidon are boat covers and tarped loads. Still no stapled-bed photo. COVER stands.
+
+### 2026-09-06 (evening) — end to end, with proof
+
+Nate: "get it done all the way end to end with proof." Three more pieces, one shared
+builder, one measured proof sheet.
+
+- **`build_timeline_cut.py`** — the shared module the 09-04 audit asked for: real
+  clips and real stills, fit-letterbox, registry-wins orientation guard, C7 count
+  check, banned-string check, xfade chain, optional bed, and it writes its own
+  resolve bin (straps, one QC frame per beat, PINS.md with md5). Two cuts live at
+  the bottom of the file; a third is a BEATS list.
+- **`DRAWDOWN_LakeComingDown_916_STUDIO[_LakeComingDown_v2].mp4`** — 30.00 s, the
+  first piece with real motion: five 2026-08-11 DJI proxies (letterboxed, never
+  upscaled) + LCRA calendar + Lake Coming Down v2 bed (I −14.5 LUFS, TP −1.7).
+  Clips 001/004/006 excluded (person on a private dock). ⚠️ Beat 1 is one
+  recognisable residence — honest, Nate's call, one-line swap.
+- **`DRAWDOWN_Bulkhead_916_STUDIO.mp4`** — 15.00 s silent, three real low-water
+  plates, no price, no percentage. First build came out 14.00 s (2 s card);
+  rebuilt with a 3 s card.
+- **S09 / S10** countdown cards on the S01 plate.
+- **`PROOF_2026-09-06.md`** — every duration, picture, audio, loudness and md5 read
+  off the files by script at write time; QC frames listed; banned-string grep
+  across the live builders. Five videos, ten stills, all eye-passed.
+
+Still Nate's: sign · 10 ft vs 10–12 ft · lead-in lane · the residence beat.
+Still Victoria's: Q02 bed, Q03 vocal, Q05 script, taste on the cards.
