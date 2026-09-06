@@ -28,3 +28,6 @@
 06_Media_Build/audio/**/*.wav
 06_Media_Build/audio/**/*.m4a
 06_Media_Build/audio/**/*.flac
+06_Media_Build/audio/**/*.jpeg
+06_Media_Build/audio/**/*.jpg
+06_Media_Build/audio/**/*.png
