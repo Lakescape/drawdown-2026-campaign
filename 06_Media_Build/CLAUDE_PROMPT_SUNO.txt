@@ -1,0 +1,20 @@
+You are in ~/drawdown-2026-campaign/06_Media_Build.
+
+Nate 2026-09-01: make ATX LakeScapes Suno tracks about the **dredge / lake lowering**. Not a generic brand jingle. Not inspection. Not $695.
+
+Use whatever Suno / audio-hub skill you have on this Claude seat (Nate said “claude audio hub”). If a CLI or skill is missing, say so in BOARD.md — do not fake an mp3.
+
+DELIVER into:
+  ~/drawdown-2026-campaign/06_Media_Build/audio/suno/
+  README.md in that folder listing each file, duration, style, lyrics/prompt used.
+
+MAKE (instrumental first, then one vocal if the hub allows):
+1. **15s reel bed** — lake lowering / machines in the mud. Loopable-ish. No vocal. For Scrape/Haul/Cover mute cut.
+2. **30–45s bed** — same world, more room. Dredge / drawdown official. Texas lake, not a meme TikTok.
+3. Optional **vocal hook** one chorus, ATX LakeScapes, lake coming down, we work the bed. No “exploring”, no “nothing is official yet”, no hydrilla extinct, no $695.
+
+TONE: calm authority, heavy water, iron. BBQ test. Not a carnival.
+
+Write the Suno style + lyrics files even if generation fails, so we can rerun.
+
+Append weeks/2026-08-31/BOARD.md when done. Do not recut the video in this session.

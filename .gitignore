@@ -24,3 +24,7 @@
 06_Media_Build/resolve/**/*.wav
 06_Media_Build/resolve/**/*.mov
 06_Media_Build/archive/*.mp4
+06_Media_Build/audio/**/*.mp3
+06_Media_Build/audio/**/*.wav
+06_Media_Build/audio/**/*.m4a
+06_Media_Build/audio/**/*.flac
