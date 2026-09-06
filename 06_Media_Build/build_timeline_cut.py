@@ -209,13 +209,14 @@ def build(slug, out_name, beats, bed=None):
 CUTS = {
     "lake-coming-down": dict(
         out_name="DRAWDOWN_LakeComingDown_916_STUDIO",
-        # Q02 unanswered — v2 is the default because it is the only take that
-        # covers 30 s with margin (39.00 s). Swap to v1 (36.96 s) if Victoria picks it.
-        bed=("LakeComingDown_v2", os.path.expanduser(
-            "~/drawdown-2026-campaign/06_Media_Build/audio/suno/02_LakeComingDown_v2.mp3")),
+        # Victoria 2026-09-06 (Cut Room Q02): v1. 36.96 s covers the 30 s picture.
+        bed=("LakeComingDown_v1", os.path.expanduser(
+            "~/drawdown-2026-campaign/06_Media_Build/audio/suno/02_LakeComingDown_v1.mp3")),
         beats=[
             ("clip", "015", 3.0, 5.6, [("LAKE AUSTIN.", 96, CREAM), ("OCT 12.", 96, CREAM)]),
-            ("clip", "009", 30.0, 5.6, [("ABOUT 10 FEET.", 84, CREAM), ("A FOOT A DAY. LCRA.", 40, COPPER)]),
+            # Victoria 2026-09-06: the recognisable residence (clip 009 t=30) is
+            # swapped out. 018 t=8 is a cove edge with a weed mat and no house.
+            ("clip", "018", 8.0, 5.6, [("ABOUT 10 FEET.", 84, CREAM), ("A FOOT A DAY. LCRA.", 40, COPPER)]),
             ("clip", "014", 15.0, 5.6, [("THIS IS UNDER IT.", 80, CREAM), ("HYDRILLA · NEARLY TEN YEARS", 34, COPPER)]),
             ("clip", "011", 40.0, 5.6, [("SCRAPE. HAUL. COVER.", 70, CREAM), ("WHILE IT'S DOWN", 40, COPPER)]),
             ("clip", "021", 10.0, 5.6, [("REFILL STARTS NOV 24.", 66, CREAM), ("SEVEN WEEKS.", 84, CREAM)]),

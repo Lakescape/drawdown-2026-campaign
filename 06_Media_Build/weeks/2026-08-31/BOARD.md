@@ -412,3 +412,24 @@ Victoria's), Lake Coming Down, Bulkhead, cards S01–S10. Desk rows flipped to
 from the desk.
 
 **Still Victoria's:** Q02 bed (v2 default), Q03 vocal, Q04 lane, Q05 script, taste.
+
+### 2026-09-06 17:55 VICTORIA'S PRODUCER PASS — seven calls, all actioned
+
+Found sitting in Lavish's store (`~/.lavish-axi/state.json`, `pending_prompts: 7`)
+— queued three minutes after my last poll, and the long poll keeps dying on this
+Mac's memory. Lesson: after any reply, run one short `--timeout-ms` poll before
+reporting "0 pending"; and the store on disk is the ground truth, not the last
+poll's answer.
+
+| Q | Victoria | Done |
+|---|---|---|
+| 02 | Lake Coming Down **v1** | rebuilt with v1 bed |
+| 03 | vocal: **undecided — needs a real demo first** | Work the Bed full-lyric demo generating on Suno, task `1f1394b9-66e5-4690-90cc-27d088f9158b` |
+| 04 | lead-in lane: **STUDIO_CLAUDE** | studio lane retired on disk (`…_RETIRED-lane-not-picked-2026-09-06.mp4`), off the desk and out of `public/media` |
+| 05 | VO: **send the script — I'll read it as written** | 08-31 wording was dead (spoke "exploring" + "projected ten to twelve"). Re-locked to the current cards, 34 words; `VO_ViralLeadin_Victoria_READ.txt` + inline in the Cut Room |
+| 07 | cards: **all eight go** | — |
+| 08 | schedule: **cadence right** — "we might still add more to this but it's a good start" | — |
+| 09 | **swap the house beat** | Lake Coming Down beat 1 → clip 018 t=8 (cove edge, weed mat, no residence). Nate had said it could stay; producer wins on taste, honesty unchanged |
+
+PROOF regenerated. Lake Coming Down ships as `_LakeComingDown_v1.mp4` now; the v2
+mux is deleted, not archived — nothing was ever posted from it.

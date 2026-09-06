@@ -30,10 +30,10 @@ Window v2, both lead-ins, Lake Coming Down (residence beat stays), Bulkhead, car
 |---|---|---|---|
 | Method cut (Scrape/Haul/Cover) | `DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4` | Mud Window v2 (Victoria pick, Cut Room Q01) | **Ready for Nate sign.** Video stream md5-identical to the fixed silent master. |
 | Method cut, silent | `DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4` | none | alternate |
-| Viral lead-in, Claude lane | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` | none | cards clean (COVER, OFFICIAL). Silent-postable; VO unapproved. |
-| Viral lead-in, studio lane | `DRAWDOWN_ViralHydrilla_916_STUDIO.mp4` | none | same piece, second lane. **Pick one lane** (Cut Room Q04). |
+| Viral lead-in — **Claude lane, PICKED** (Victoria, Q04) | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` | none until Victoria's read lands | cards clean (COVER, OFFICIAL, ABOUT 10 FT). Script sent: `weeks/2026-08-31/VO_ViralLeadin_Victoria_READ.txt`. |
+| ~~Viral lead-in, studio lane~~ | `…_STUDIO_RETIRED-lane-not-picked-2026-09-06.mp4` | — | retired 09-06. Do not post. |
 | Still-card series S01–S10 | `cards/DRAWDOWN_Card_S0N_*_916.jpg` + `_45.jpg` | — | built + eye-QC'd 2026-09-06, `cards/PINS.md`. Nate sign. |
-| Lake Coming Down 30 s | `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v2.mp4` (+ silent twin) | Lake Coming Down v2 | built 09-06, real DJI clips, `resolve/lake-coming-down/PINS.md`. Beat 1 residence flag. |
+| Lake Coming Down 30 s | `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v1.mp4` (+ silent twin) | Lake Coming Down v1 (Victoria, Q02) | built 09-06, real DJI clips, `resolve/lake-coming-down/PINS.md`. House beat swapped on Victoria's call. |
 | Bulkhead 15 s | `DRAWDOWN_Bulkhead_916_STUDIO.mp4` | none | built 09-06, `resolve/bulkhead/PINS.md`. |
 
 That is **5 videos and 10 stills** — measured in `PROOF_2026-09-06.md`. Everything else in the folder is dirty — see the
