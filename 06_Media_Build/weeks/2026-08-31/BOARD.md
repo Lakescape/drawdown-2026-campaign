@@ -300,3 +300,40 @@ QC lesson, standing: **extraction is not a verdict.** The failing frame was
 pulled twice on 09-01 (17:54 and 18:00) and still shipped, because the check
 stopped at strap-matches-frame. Each QC frame now gets an explicit pass on
 claim, strap, orientation, and crop before "verified" is written anywhere.
+
+### 2026-09-04 NATE RULING — COVER is the third verb, campaign-wide; the hedge is off every card
+
+Two open questions closed in one pass, because both lived on the same cards.
+
+**The verb.** The lead-ins closed on `SCRAPE. HAUL. STAPLE.` while the method cut
+teaches `SCRAPE. HAUL. COVER.` A homeowner who saw both learned a contradiction.
+Nate's call: **COVER everywhere.** COVER is the verb backed by a real
+photographed plate; STAPLE has no honest image anywhere in Poseidon (3,619
+captions swept, zero hits), and the method cut's third beat is erosion matting.
+The corpus still documents the actual operation — "staple woven tarp, 12 IN
+overlap" is what the crew does, and the close-sheet warranty still says so
+verbatim. The cards changed, not the job. Re-open the verb only when somebody
+shoots a woven tarp with the overlap and a staple visible.
+
+This supersedes the COPY RULING at `build_real_motion.py:24`, which read
+"'STAPLE' is correct and stays." That ruling was right about the corpus and
+wrong about the pictures: the corpus records what we DO, the cards record what
+we can SHOW.
+
+**The hedge.** `NOTHING IS OFFICIAL YET` was burned into the lead-in masters —
+not just captions — and LCRA announced on 2026-08-29. Every occurrence is now
+`THE DRAWDOWN IS OFFICIAL`. `PROJECTED 10–12 FT.` is untouched: the depth is
+still a projection and stays hedged.
+
+**Builders changed** — `build_viral_leadin_studio_claude.py`,
+`build_viral_leadin_studio.py`, `build_real_motion.py`, `build_viral_hydrilla.py`.
+Both viral lead-ins rebuilt 2026-09-04 22:27 and QC'd by eye at the two changed
+plates in each: C7 holds (two Truxors, pontoon decks, spray in frame), end card
+reads COVER, hedge plate reads OFFICIAL. Masters promoted to the main checkout
+and refreshed in the Cut Room. `build_real_motion.py` and `build_viral_hydrilla.py`
+are corrected at source but NOT rebuilt — their masters are older drafts nobody
+has picked; they build clean whenever somebody wants them.
+
+**Still open on these two:** the VO. One cut speaks the retired hedge, and
+Victoria has never approved any script. Nothing is muxed. That is question 05 in
+the Cut Room.

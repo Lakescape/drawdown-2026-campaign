@@ -48,10 +48,13 @@ CARDS = [
             ("YOUR DOCK.", 96, CREAM)], 0.74),
     ("v2", [("NEARLY TEN YEARS", 74, CREAM),
             ("SINCE ANYONE COULD SEE IT.", 44, CREAM)], 0.74),
+    # Nate 2026-09-04: hedge retired (LCRA announced 2026-08-29 — the drawdown
+    # IS official), and the third verb is COVER campaign-wide, because COVER is
+    # the one backed by a real photographed plate.
     ("v3", [("TWO TRUXORS.", 78, CREAM),
             ("PROJECTED 10–12 FT.", 60, CREAM),
-            ("NOTHING IS OFFICIAL YET", 36, COPPER)], 0.74),
-    ("v4", [("SCRAPE. HAUL. STAPLE.", 62, CREAM),
+            ("THE DRAWDOWN IS OFFICIAL", 36, COPPER)], 0.74),
+    ("v4", [("SCRAPE. HAUL. COVER.", 62, CREAM),
             ("LAKE AUSTIN IS OUR HOME WATER", 32, COPPER),
             ("TEXT TRUXOR TO 254-780-6971", 52, CREAM)], 0.74),
 ]

@@ -43,7 +43,8 @@ BEATS = [
         "5f82b8e9583becd31b381c1f8dbd8306d688bc1ff24222e398a64a6dce20488e",
         4.0,
         "cover-center",
-        ["SCRAPE. HAUL. STAPLE.", "254-780-6971"],
+        # Nate 2026-09-04: COVER campaign-wide — the verb we can photograph.
+        ["SCRAPE. HAUL. COVER.", "254-780-6971"],
     ),
 ]
 

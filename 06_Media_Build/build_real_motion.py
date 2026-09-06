@@ -19,11 +19,15 @@ TWO DECLARED DEVIATIONS:
    subject is never upscaled. Pull the originals and this gets sharper for free.
 2. Beats 1 and 4 are DIFFERENT COVES. They are NOT captioned as a before/after
    pair — that would fabricate a transformation nobody filmed. Beat 4 carries
-   the work ("SCRAPE. HAUL. STAPLE."), never a results claim.
+   the work ("SCRAPE. HAUL. COVER."), never a results claim.
 
-COPY RULINGS: "STAPLE" is correct and stays — the corpus documents the actual
-operation, "staple woven tarp 12 IN overlap"; "seal" appears zero times as a
-service. "WEED ANNIHILATORS" per Nate 2026-09-01, replacing "Truxors".
+COPY RULINGS: "STAPLE" was correct on the corpus ("staple woven tarp 12 IN
+overlap"; "seal" appears zero times as a service) but is SUPERSEDED by Nate
+2026-09-04: the third verb is COVER campaign-wide. The corpus documents what we
+DO; the cards document what we can SHOW, and no honest photograph of a stapled
+tarp exists in the library — the method cut's third beat is erosion matting.
+Re-open this only when somebody shoots a tarp with the overlap and a staple
+visible. "WEED ANNIHILATORS" per Nate 2026-09-01, replacing "Truxors".
 """
 import re
 import subprocess
@@ -60,9 +64,9 @@ COUNT_RE = re.compile(r"\b(TWO|BOTH|PAIR|2)\b")
 # (kind, source, in_point, seconds, headline, subline, sub_color)
 BEATS = [
     ("clip", BEFORE, 6.0, 3.4, "THIS IS UNDER", "YOUR DOCK.", None),
-    ("clip", BEFORE, 13.0, 3.2, "PROJECTED 10–12 FT", "NOTHING IS OFFICIAL YET", COPPER),
+    ("clip", BEFORE, 13.0, 3.2, "PROJECTED 10–12 FT", "THE DRAWDOWN IS OFFICIAL", COPPER),
     ("still", MACHINE_SHA, 0, 3.2, "TWO WEED ANNIHILATORS", "COMMITTED IN JULY", COPPER),
-    ("clip", OPEN, 40.0, 3.2, "SCRAPE. HAUL. STAPLE.", "LAKE AUSTIN IS OUR HOME WATER", COPPER),
+    ("clip", OPEN, 40.0, 3.2, "SCRAPE. HAUL. COVER.", "LAKE AUSTIN IS OUR HOME WATER", COPPER),
     ("card", None, 0, 2.0, "$695 ASSESSMENT.", "100% CREDITED.", None),
 ]
 
