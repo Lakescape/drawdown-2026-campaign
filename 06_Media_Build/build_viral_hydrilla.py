@@ -36,7 +36,7 @@ BEATS = [
         "c6b6853c038a87b18338b0a6fd0c94a377f84947475caa53cbab3da44d1cff83",
         4.0,
         "fit",
-        ["TWO TRUXORS.", "PROJECTED 10–12 FT."],
+        ["TWO TRUXORS.", "ABOUT 10 FT. OCT 12."],  # Nate 2026-09-06: LCRA's number
     ),
     (
         "@farshore_golden",

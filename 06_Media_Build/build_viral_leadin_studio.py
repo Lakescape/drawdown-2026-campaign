@@ -51,9 +51,11 @@ CARDS = [
     # Nate 2026-09-04: hedge retired (LCRA announced 2026-08-29 — the drawdown
     # IS official), and the third verb is COVER campaign-wide, because COVER is
     # the one backed by a real photographed plate.
+    # Nate 2026-09-06: ABOUT 10 FT campaign-wide — LCRA's own number (target
+    # 481.8–482.8 ft msl), not the one-pager's 10–12 projection.
     ("v3", [("TWO TRUXORS.", 78, CREAM),
-            ("PROJECTED 10–12 FT.", 60, CREAM),
-            ("THE DRAWDOWN IS OFFICIAL", 36, COPPER)], 0.74),
+            ("ABOUT 10 FT. OCT 12.", 60, CREAM),
+            ("THE DRAWDOWN IS OFFICIAL · LCRA", 36, COPPER)], 0.74),
     ("v4", [("SCRAPE. HAUL. COVER.", 62, CREAM),
             ("LAKE AUSTIN IS OUR HOME WATER", 32, COPPER),
             ("TEXT TRUXOR TO 254-780-6971", 52, CREAM)], 0.74),

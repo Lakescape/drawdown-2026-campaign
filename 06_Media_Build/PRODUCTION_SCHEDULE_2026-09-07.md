@@ -16,10 +16,10 @@ date the board caught it):
 | Normal pool | **Mon Nov 30** |
 | Dry floor window | roughly **Nov 2 → Nov 24** — ~3 weeks at the bottom, 7 weeks start to refill |
 
-⚠️ **Claim-ledger row for Nate, open:** the video cuts say `PROJECTED 10–12 FT.` (one-pager).
-LCRA says "about 10 feet" and a target band that is 9.2–10.2 ft below normal pool. The
-still cards built today say **ABOUT 10 FT** and cite LCRA. Two numbers are now on two
-surfaces. Pick one; the cuts recut in minutes.
+✅ **Settled — Nate 2026-09-06: ABOUT 10 FT campaign-wide.** LCRA's own number (target band
+9.2–10.2 ft below normal pool). The one-pager's `PROJECTED 10–12 FT.` is retired from every
+card; both viral lead-ins recut the same day. **Signed the same day:** method cut + Mud
+Window v2, both lead-ins, Lake Coming Down (residence beat stays), Bulkhead, cards S01–S10.
 
 2017 precedent (TWDB-verified, `DATA_2017_Drawdown_LakeLevels_VERIFIED.md`): 10.83 ft over
 ~7 weeks, floor Jan 13, refilled Feb 20. Usable as a number; never as a promise for 2026.
@@ -54,7 +54,7 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 |---|---|---|---|---|
 | Mon | Reel | Method cut + Mud Window v2 | READY | Nate sign |
 | Wed | Reel | Viral lead-in (chosen lane), silent | READY | Q04 lane pick, Nate sign |
-| Fri | Story | S01 dates card | READY | 10 ft vs 10–12 ft ruling |
+| Fri | Story | S01 dates card | SIGNED | — |
 | Fri | Feed | S02 Under Your Dock (4:5) | READY | — |
 
 ### W38 · Sep 14–20 — "What's under there"
@@ -138,7 +138,7 @@ photo if item 1 got shot.
 | Q03 | Vocal on the campaign at all | W39 Mon |
 | Q04 | Which lead-in lane survives | W37 Wed |
 | Q05 | Victoria VO script | W39 Wed |
-| — | 10 ft (LCRA) vs 10–12 ft (one-pager) | W37 Fri and every cut |
+| — | 10 ft (LCRA) vs 10–12 ft (one-pager) | **settled 09-06: ABOUT 10 FT** |
 
 ## Do not post — and why
 

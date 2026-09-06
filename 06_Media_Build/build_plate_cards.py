@@ -11,8 +11,8 @@ sideways (53482b8a99a8) is excluded rather than rotated.
 
 Dates and depth come from the LCRA / City of Austin release of 2026-08-20:
 Oct 12 – Nov 30, "about 10 feet", target 481.8–482.8 ft msl, refill from Nov 24.
-Cards say ABOUT 10 FT because that is what LCRA said; the video cuts still carry
-PROJECTED 10–12 FT from the one-pager — ledger row open for Nate.
+Cards say ABOUT 10 FT because that is what LCRA said. Nate 2026-09-06: ABOUT 10 FT
+campaign-wide; the one-pager's 10–12 projection is retired from every card.
 
 Outputs: cards/DRAWDOWN_Card_S0N_<slug>_916.jpg (1080x1920) and _45.jpg (1080x1350)
 plus cards/PINS.md.

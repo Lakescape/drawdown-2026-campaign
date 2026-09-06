@@ -390,3 +390,25 @@ builder, one measured proof sheet.
 
 Still Nate's: sign · 10 ft vs 10–12 ft · lead-in lane · the residence beat.
 Still Victoria's: Q02 bed, Q03 vocal, Q05 script, taste on the cards.
+
+### 2026-09-06 17:43 NATE RULINGS — ABOUT 10 FT · house beat stays · SIGNED
+
+Three calls in one line: "Lets go with the about 10ft right? 2 is fine, and sign."
+
+**Depth.** ABOUT 10 FT campaign-wide — LCRA's number (target 481.8–482.8 ft msl).
+The one-pager's `PROJECTED 10–12 FT.` is retired from every card. Changed at source:
+`build_viral_leadin_studio.py` v3, `build_viral_leadin_studio_claude.py` beat 3
+(+ C2 ledger note), `build_viral_hydrilla.py`, `build_real_motion.py`, `compose.py`
+k2, `build_plate_cards.py` docstring. Both viral lead-ins rebuilt 17:45–17:46 with
+`ABOUT 10 FT. OCT 12.` / `THE DRAWDOWN IS OFFICIAL · LCRA`; depth card eyeballed
+on both. Desk captions swept (10 to 12 → about 10; also caught two captions still
+saying "scrape, haul, staple" — now cover).
+
+**Lake Coming Down beat 1** (the recognisable residence) stays.
+
+**SIGNED:** method cut + Mud Window v2, both viral lead-ins (silent — lane pick is
+Victoria's), Lake Coming Down, Bulkhead, cards S01–S10. Desk rows flipped to
+`ready_to_copy`. PROOF regenerated with the new md5s. Still not posted; Hallie posts
+from the desk.
+
+**Still Victoria's:** Q02 bed (v2 default), Q03 vocal, Q04 lane, Q05 script, taste.

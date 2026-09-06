@@ -45,8 +45,9 @@ PICKS = [
 
 CARDS = [
     ("k1", [("TEN YEARS UNDERWATER", 84, CREAM)], 0.72, "bottom"),
-    ("k2", [("PROJECTED 10–12 FEET", 68, CREAM),
-            ("OVER 6–8 WEEKS", 48, COPPER)], 0.70, "bottom"),
+    # Nate 2026-09-06: ABOUT 10 FT campaign-wide (LCRA). 10–12 retired.
+    ("k2", [("ABOUT 10 FEET", 68, CREAM),
+            ("OCT 12 – NOV 30 · LCRA", 48, COPPER)], 0.70, "bottom"),
     # k3 deleted 2026-09-04: "NOTHING IS OFFICIAL YET" — the hedge was retired
     # 2026-08-29 (LCRA announced); the drawdown IS official and the phrase is
     # banned from every cut and caption. Masters that carry it on-frame are
