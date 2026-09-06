@@ -337,3 +337,30 @@ has picked; they build clean whenever somebody wants them.
 **Still open on these two:** the VO. One cut speaks the retired hedge, and
 Victoria has never approved any script. Nothing is muxed. That is question 05 in
 the Cut Room.
+
+### 2026-09-06 — bed picked, still series built, schedule pinned to the LCRA calendar
+
+**Q01 settled.** Victoria queued *Mud Window v2* in the Cut Room. Picked master is
+`DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4` — video stream md5
+`4eed1544dd58b0c21030597c5e47337c`, identical to the fixed silent master, so the
+bed rode the corrected picture. Nate sign is the only thing left on it.
+
+**Dates are real now.** LCRA / City of Austin release: lowering **Oct 12**, ~1 ft/day,
+target 481.8–482.8 ft msl ("about 10 feet"), refill from **Nov 24**, normal pool
+**Nov 30**. ⚠️ The cuts say `PROJECTED 10–12 FT.`; LCRA says about 10. Ledger row
+for Nate — two numbers are on two surfaces until he picks.
+
+**Still-card series S01–S08** — `build_plate_cards.py` → `cards/`, 9:16 + 4:5, eight
+real plates, all eyeballed, verdicts in `cards/PINS.md`. Dates · Under Your Dock ·
+Past The Dock · Scrape · Haul · Cover · Two Machines (C7: `fd49bf6ffe3e`, pontoons
+visible) · Seven Weeks CTA. `53482b8a99a8` excluded — bytes sideways, registry
+disagrees, guard can't certify.
+
+**Schedule:** `PRODUCTION_SCHEDULE_2026-09-07.md` — W37→W41 runway from the
+library (3 videos + 8 stills ready, 3 pieces to BUILD, 2 NEEDS-VO/CALL), W42→W48
+live from field capture with the six-item Rule 11 shoot list. Do-not-post list
+names every dirty file in this folder and why.
+
+**Found and parked:** `Weed Barrier Photo.png` / `Weed Mat Framed.png` at repo root
+(09-02) are LakeMat.com screenshots — third-party, not plates. 59 "tarp" captions in
+Poseidon are boat covers and tarped loads. Still no stapled-bed photo. COVER stands.
