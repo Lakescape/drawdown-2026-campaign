@@ -242,8 +242,64 @@ mean volume unchanged, because audio is stream-copied and never re-encoded.
 Twelve files, six slots. Nothing here has been listened to. Levels, durations, art and
 banned terms are all machine-verified; whether any of it is *good* is not.
 
+## v3 — the savage-governed set (`songs/v3/`)
+
+Nate ruled 2026-09-06 that songs fall under `atx-savage-voice`. All five rewritten
+in `LYRICS-v3.md`, one declared pole each — four ENEMY, one PAYOFF. Style strings
+rebuilt to `two-poles-reference.md` sound doctrine, not the old Americana brief.
+
+| File | Song | Pole | Dur | Raw peak | Sent as |
+|---|---|---|---:|---:|---|
+| `A_TheLid_v1.mp3` | The Lid | ENEMY | 179.8 s | −1.50 | raw — clean |
+| `A_TheLid_v2.mp3` | | | 179.7 s | −1.69 | alternate |
+| `B_Salad_v1.mp3` | Salad | ENEMY | **147.7 s** | −0.90 | short — alternate |
+| `B_Salad_v2_norm.mp3` | | | 184.8 s | **+0.15** → −0.64 | limited |
+| `C_Standing_v1_norm.mp3` | Standing | PAYOFF | 183.9 s | −0.05 → −0.73 | limited |
+| `C_Standing_v2_norm.mp3` | | | 184.3 s | **+0.42** → −0.60 | limited, alternate |
+| `D_Receipts_v1.mp3` | Receipts | ENEMY | 179.3 s | −1.03 | raw — clean |
+| `D_Receipts_v2_norm.mp3` | | | 180.1 s | **+0.07** → −0.54 | limited, alternate |
+| `E_NeverSeenIt_v1_norm.mp3` | Never Seen It | ENEMY | 179.3 s | **+0.13** → −0.54 | limited, alternate |
+| `E_NeverSeenIt_v2_norm.mp3` | | | 179.7 s | −0.14 → −0.71 | limited |
+
+Tasks: A `e781b52c` · B `fe3b987d` · C `93964e79` · D `606f5f23` · E `8384f2f9`.
+
+⚠️ **Six of ten raw takes came back at or over 0 dBTP.** Four were genuinely
+over full scale (+0.07 to +0.42), two sat within 0.15 dB of it. Same defect the
+acoustic cover had. Every affected take has a `_norm` copy limited to −1 dBTP via
+`alimiter`; raw originals are kept beside them unmodified. Only A_v1, A_v2, B_v1
+and D_v1 arrived with real headroom. **Whatever the pick, check true peak before
+it goes anywhere near a loudness-normalised platform.**
+
+⚠️ **B_Salad_v1 is 147.7 s against a 185 s request** — the same short-arrangement
+behaviour seen on `tel_v2` and `E_v2` in the v2 set. Not truncated, just briefer.
+v2 is the full-length take.
+
+Gated before generation: `voice-qa.sh` 0 hard on the lyric blocks; claim sweep
+zero banned terms, zero hedges, zero depth claims, zero dates; phone in B only.
+The three still-open conflicts from `LYRIC-HARD-PASS-2026-09-06.md` are sidestepped,
+not resolved — no depth number, no sung keyword, no $695 anywhere in v3.
+
+Still the same gate as every set before it: **nobody has listened.**
+
 ## Files are gitignored on purpose
 
 `.gitignore` excludes `06_Media_Build/audio/**/*.mp3|wav|m4a|flac`. The prompts and
 this README are the tracked source; the audio is regenerable output, same rule as
 every render and scratch frame in `06_Media_Build`.
+
+## 2026-09-06 — Work the Bed, FULL LYRIC demo (Victoria: "undecided — needs a real demo first")
+
+Generated via Suno MCP (AceData), `chirp-v5-5`, custom, male, duration target 80.
+Lyric is section B of `LYRICS-v2.md` verbatim (verse · chorus · verse · chorus · bridge ·
+chorus · tag). Style string: the track-3 brief from `PROMPTS.md` plus "weathered,
+understated, sounds like somebody who does the work". Same negative tags as before.
+Task `1f1394b9-66e5-4690-90cc-27d088f9158b`, 0.56 credit, 184 s.
+
+| File | Dur | Mean dB | Peak dB | Suno audio id |
+|---|---:|---:|---:|---|
+| `03_WorkTheBed_FULL_v1.mp3` | 80.17 s | −16.3 | −2.2 | `b7a39003-050e-47fe-8894-84db02c6553a` |
+| `03_WorkTheBed_FULL_v2.mp3` | 80.25 s | −16.2 | −2.4 | `b62c9982-a4ad-4940-8bdd-c37123be76a2` |
+
+Lyric echoed back byte-identical; no banned term. Nobody has listened — that is the
+point of the demo. Both are in the Cut Room under 03. Pick a singer → a 30 s reel gets
+cut to it (the method cut is 15 s and cannot hold a chorus; this needs its own picture).
