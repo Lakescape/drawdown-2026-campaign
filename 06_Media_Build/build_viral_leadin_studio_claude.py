@@ -32,8 +32,9 @@ Claim ledger bindings (../MEDIA_ClaimLedger_Drawdown_v1.md):
   beat 3 -> C7   two amphibious machines — must SHOW two, and show the
                  undercarriage. FIT mode exists for this line and only this line.
            C2   "PROJECTED" 10–12 ft retained verbatim
-           C1   drawdown is exploratory -> hedged on the same plate, not an
-                end card ("NOTHING IS OFFICIAL YET")
+           C1   RETIRED 2026-09-04 — LCRA announced 2026-08-29, the drawdown
+                IS official. The plate now states it as fact; the old hedge
+                ("NOTHING IS OFFICIAL YET") is banned on every surface.
   beat 4 -> C11  must read as Lake Austin
 
 Stripped per Nate 2026-08-31: $695, credited, assessment, "walk yours",
@@ -89,9 +90,12 @@ BEATS = [
         # inside the letterbox slack, which cannot touch the count.
         secs=4.20, mode="fit", bias=(0.50, 0.50), zoom=(1.000, 1.000),
         grade=(1.02, 1.05, 1.06), pan=(0.355, 0.425),
+        # Nate 2026-09-04: the hedge is retired — LCRA announced 2026-08-29, so
+        # the drawdown IS official and the old C1 line is banned everywhere.
+        # "PROJECTED" stays on the depth (C2): the number is still a projection.
         lines=[("TWO TRUXORS.", 88, CREAM),
                ("PROJECTED 10–12 FT.", 58, CREAM),
-               ("NOTHING IS OFFICIAL YET", 38, COPPER)],
+               ("THE DRAWDOWN IS OFFICIAL", 38, COPPER)],
         note="C7 count — one cutting, one at the bank, pontoon decks visible",
     ),
     dict(
@@ -106,7 +110,10 @@ BEATS = [
         # TRUXOR, not DOCK — keyword-routing-test.md:148 records that DOCK maps
         # to L2 dock-repair (smsKeywordMatch.ts serviceHint), which would route a
         # hydrilla lead to the wrong service line.
-        lines=[("SCRAPE. HAUL. STAPLE.", 72, CREAM),
+        # Nate 2026-09-04: COVER, not STAPLE, campaign-wide. COVER is the verb
+        # backed by a real photographed plate; we have no honest image of a
+        # stapled tarp, and the method cut already teaches COVER.
+        lines=[("SCRAPE. HAUL. COVER.", 72, CREAM),
                ("LAKE AUSTIN IS OUR HOME WATER", 34, COPPER),
                ("TEXT TRUXOR TO 254-780-6971", 56, CREAM)],
         note="machine + the windrow it hauled out — the work, on our water (C11)",

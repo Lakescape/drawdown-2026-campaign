@@ -262,3 +262,105 @@ The upstream briefs — `KICKOFF-SCRAPE-HAUL-STAPLE-2026-08-31.md`,
 `CLAUDE_PROMPT_SHS.txt`, and `GROK_VIDEO_ScrapeHaulStaple_v1_DRAFT.md` — still
 specify the type-only beat. They are left as written: they are the ask that went
 in, not the record of what came out. This board is the record.
+
+### 2026-09-04 CORRECTION — the COVER beat shipped sideways; caught by audit, rebuilt
+
+A max-effort Fable audit of the finished cut extracted real frames and found the
+9–13s COVER beat rendered **rotated 90°** — trees horizontal, crew sideways —
+in the 09-01 17:54 master, the desk copy, and the QC frame that had been filed
+as passing.
+
+**Root cause.** The Poseidon jpg for `247ed525d59d` stores upright landscape
+pixels (1080x810, matching `refs.width/height`) under a **stale EXIF
+Orientation=6 tag**. `ImageOps.exif_transpose` trusted the tag and swung the
+correct scene into a sideways 810x1080 portrait, which the FIT branch pasted
+nearly full-frame. The other three plates carry Orientation=1, which is why only
+beat 3 broke. The repo still displays upright in orientation-ignoring viewers —
+so the 09-01 COVER ruling was made on an upright image the cut did not show.
+
+**Fix (this branch).** `build_scrape_haul_staple.py` now treats the registry's
+`refs.width/height` as display truth: when the EXIF transpose contradicts the
+registry and the raw pixels agree with it, the tag is ignored (printed, not
+silent); if orientation still contradicts the registry after that, the build
+**fails closed** instead of shipping a sideways plate. Photo bytes untouched —
+the store is content-addressed and a byte edit would change the sha.
+
+**Rebuilt + re-verified 2026-09-04.** New master md5 `2e68544f616ce8f0` — master,
+desk copy `scrape-haul-staple-studio.mp4`, and worktree build byte-identical.
+All four QC frames re-extracted and eyeballed: two Truxors + spray under
+SCRAPE., LOAD TRAIL trailer legible under HAUL., **upright** matting under
+COVER., cutter-head CTA under HOLD. ffprobe: 15.000s, 450 frames, 30fps,
+1080x1920, single video stream, no audio. `resolve/scrape-haul-staple/qc/` and
+`composites/` refreshed from this build (composites had also been missing
+`card_b3.png`). Spec note: output is full-range `yuvj420p` (`color_range=pc`),
+not the `yuv420p` the README claimed — README corrected rather than re-grading
+a look already approved.
+
+QC lesson, standing: **extraction is not a verdict.** The failing frame was
+pulled twice on 09-01 (17:54 and 18:00) and still shipped, because the check
+stopped at strap-matches-frame. Each QC frame now gets an explicit pass on
+claim, strap, orientation, and crop before "verified" is written anywhere.
+
+### 2026-09-04 NATE RULING — COVER is the third verb, campaign-wide; the hedge is off every card
+
+Two open questions closed in one pass, because both lived on the same cards.
+
+**The verb.** The lead-ins closed on `SCRAPE. HAUL. STAPLE.` while the method cut
+teaches `SCRAPE. HAUL. COVER.` A homeowner who saw both learned a contradiction.
+Nate's call: **COVER everywhere.** COVER is the verb backed by a real
+photographed plate; STAPLE has no honest image anywhere in Poseidon (3,619
+captions swept, zero hits), and the method cut's third beat is erosion matting.
+The corpus still documents the actual operation — "staple woven tarp, 12 IN
+overlap" is what the crew does, and the close-sheet warranty still says so
+verbatim. The cards changed, not the job. Re-open the verb only when somebody
+shoots a woven tarp with the overlap and a staple visible.
+
+This supersedes the COPY RULING at `build_real_motion.py:24`, which read
+"'STAPLE' is correct and stays." That ruling was right about the corpus and
+wrong about the pictures: the corpus records what we DO, the cards record what
+we can SHOW.
+
+**The hedge.** `NOTHING IS OFFICIAL YET` was burned into the lead-in masters —
+not just captions — and LCRA announced on 2026-08-29. Every occurrence is now
+`THE DRAWDOWN IS OFFICIAL`. `PROJECTED 10–12 FT.` is untouched: the depth is
+still a projection and stays hedged.
+
+**Builders changed** — `build_viral_leadin_studio_claude.py`,
+`build_viral_leadin_studio.py`, `build_real_motion.py`, `build_viral_hydrilla.py`.
+Both viral lead-ins rebuilt 2026-09-04 22:27 and QC'd by eye at the two changed
+plates in each: C7 holds (two Truxors, pontoon decks, spray in frame), end card
+reads COVER, hedge plate reads OFFICIAL. Masters promoted to the main checkout
+and refreshed in the Cut Room. `build_real_motion.py` and `build_viral_hydrilla.py`
+are corrected at source but NOT rebuilt — their masters are older drafts nobody
+has picked; they build clean whenever somebody wants them.
+
+**Still open on these two:** the VO. One cut speaks the retired hedge, and
+Victoria has never approved any script. Nothing is muxed. That is question 05 in
+the Cut Room.
+
+### 2026-09-06 — bed picked, still series built, schedule pinned to the LCRA calendar
+
+**Q01 settled.** Victoria queued *Mud Window v2* in the Cut Room. Picked master is
+`DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4` — video stream md5
+`4eed1544dd58b0c21030597c5e47337c`, identical to the fixed silent master, so the
+bed rode the corrected picture. Nate sign is the only thing left on it.
+
+**Dates are real now.** LCRA / City of Austin release: lowering **Oct 12**, ~1 ft/day,
+target 481.8–482.8 ft msl ("about 10 feet"), refill from **Nov 24**, normal pool
+**Nov 30**. ⚠️ The cuts say `PROJECTED 10–12 FT.`; LCRA says about 10. Ledger row
+for Nate — two numbers are on two surfaces until he picks.
+
+**Still-card series S01–S08** — `build_plate_cards.py` → `cards/`, 9:16 + 4:5, eight
+real plates, all eyeballed, verdicts in `cards/PINS.md`. Dates · Under Your Dock ·
+Past The Dock · Scrape · Haul · Cover · Two Machines (C7: `fd49bf6ffe3e`, pontoons
+visible) · Seven Weeks CTA. `53482b8a99a8` excluded — bytes sideways, registry
+disagrees, guard can't certify.
+
+**Schedule:** `PRODUCTION_SCHEDULE_2026-09-07.md` — W37→W41 runway from the
+library (3 videos + 8 stills ready, 3 pieces to BUILD, 2 NEEDS-VO/CALL), W42→W48
+live from field capture with the six-item Rule 11 shoot list. Do-not-post list
+names every dirty file in this folder and why.
+
+**Found and parked:** `Weed Barrier Photo.png` / `Weed Mat Framed.png` at repo root
+(09-02) are LakeMat.com screenshots — third-party, not plates. 59 "tarp" captions in
+Poseidon are boat covers and tarped loads. Still no stapled-bed photo. COVER stands.
