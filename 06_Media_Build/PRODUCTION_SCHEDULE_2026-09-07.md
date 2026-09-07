@@ -56,8 +56,8 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | Method cut — **v2 (story style, sit-down 09-06)** or v1, both on Mud Window v2 | READY, pick pending | Victoria: v2 vs v1 (answers board 04) |
-| Wed | Reel | Viral lead-in, Claude lane + **MikeRow VO v2** (`…_CLAUDE_VO_MikeRow.mp4`) | READY, "goes" pending | answers board 02; held claims (TPWD / #1 / ten years) need a source before they're spoken |
+| Mon | Reel | Method cut **v2** (story style) | **SIGNED + SCHEDULED** | — |
+| Wed | Reel | Viral lead-in + **MikeRow VO v2** | **SIGNED + SCHEDULED** (Victoria 09-06: "VO v2 goes — Wednesday post") | held claims (TPWD / #1 / ten years) stay out until sourced |
 | Fri | Story | S01 dates card | SIGNED | — |
 | Fri | Feed | S02 Under Your Dock (4:5) | READY | — |
 
@@ -65,7 +65,7 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Lake Coming Down** — 30 s, five real DJI clips + LCRA timeline, bed = Lake Coming Down v2 (`DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v2.mp4`) | READY (built 09-06) | Q02 can swap bed to v1; beat 1 residence flag; Nate sign |
+| Mon | Reel | **Lake Coming Down** — the CALENDAR piece, recut 09-07 | **SIGNED + SCHEDULED** | — |
 | Wed | Reel | Method cut, re-run with caption variant | READY | — |
 | Fri | Story | S03 Past The Dock | READY | Victoria taste (abstract plate) |
 | Fri | Feed | S07 Two Machines (4:5) | READY | — |
@@ -164,3 +164,29 @@ on this Mac. Every shipped cut and today's cards use Arial Bold, because that is
 video series shipped with and a still that doesn't match the reel looks like a different
 company. Switching is a one-constant change in each builder. Nate's call, campaign-wide,
 not per piece.
+
+## 2026-09-07 — the calendar and the pack
+
+Victoria, on the first Lake Coming Down: *"this one is just like We Work the Bed
+now, isn't it?"* She was right — both opened on clip 015 and both said
+SCRAPE/HAUL/COVER. **The two pieces now have separate jobs:**
+
+| Piece | Owns |
+|---|---|
+| **Work the Bed** (30 s, song) | the VERBS — scrape / haul / cover, one word a beat |
+| **Lake Coming Down** (30 s, calendar) | the DATES — Oct 12 · about 10 ft · not since 2017 · seven weeks · Nov 24 refill · next window may be 8–10 years away |
+
+Different opener clip, no shared strap, different close (BOOK THE WINDOW vs WE WORK
+THE BED). `011 t=40` also put a recognisable lakefront house back in frame — the
+same thing pulled out of beat 1 — so beat 3 is now `014 t=60`, open creek and weed.
+
+**`SCHEDULING_PACK/`** — Nate: *"schedule them in Meta Business Suite — build the
+pack"*, *"same with our IG and tiktok etc"*. 18 dated slots, Sep 7 → Oct 12, one
+folder each holding the exact upload file and `caption.txt`. 172 MB. Built by
+`build_scheduling_pack.py` from the signed masters — no hand-typed filenames.
+All 18 captions pass Mogul `voice-qa.sh`: 0 hard, 0 warn.
+
+**The calendar page** — Nate: *"a full calendar layout so we can visually click and
+assess everything"*. `build_calendar_page.py` reads `pack.json` and emits
+`.lavish/calendar/calendar.html`: month grid, every slot a tile, click to play the
+real file and read the caption that ships with it. LCRA milestones marked.

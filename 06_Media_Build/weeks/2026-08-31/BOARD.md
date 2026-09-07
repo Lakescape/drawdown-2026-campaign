@@ -457,3 +457,21 @@ with a machine in it), the gate-log format, Resolve power grades (none authored)
 ffmpeg pass (available, not applied blind). Doctrine conflict logged in PROOF: Mogul
 visual-identity (Inter/Cloud White) vs campaign AGENTS.md (Cormorant/Source Sans) vs tonight's
 ruling (Arial). One reconciliation, not three.
+
+### 2026-09-07 — final answers in, pack and calendar built
+
+The last seven prompts came back off the answers board (the poll died on memory
+again; the store had them all — `pending_prompts: 7`).
+
+| Board | Answer | Done |
+|---|---|---|
+| 01 | Work the Bed reel **goes** | scheduled W39 Mon |
+| 02 | **VO v2 goes — Wednesday post** | scheduled Sep 9. The three unsourced claims stayed out of the read |
+| 03 | *"this one is just like We Work the Bed now isn't it?"* | correct — the two 30 s pieces had converged. Split: Work the Bed owns the verbs, Lake Coming Down owns the calendar. Recut with a different opener, dated straps, and a hedged C4 close. Also pulled a second recognisable house (011 t=40 → 014 t=60) |
+| 05 | Type **A — Arial** | nothing rebuilt |
+| 06 | **All ten cards go** | scheduled across W37–W41 |
+| 07 | **Meta Business Suite pack** — "same with our IG and tiktok etc" | `SCHEDULING_PACK/`, 18 dated slots, file + caption per folder, 172 MB, captions voice-QA clean |
+| 08 | *"a full calendar layout so we can visually click and assess everything"* | `.lavish/calendar/calendar.html` — grid, click a tile, the real file plays with its caption |
+
+Both new builders read from the signed masters and from `pack.json`; nothing in the
+pack or the calendar is hand-typed, so a rebuild cannot drift from what ships.

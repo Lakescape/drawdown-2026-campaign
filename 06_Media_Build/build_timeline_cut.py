@@ -218,15 +218,22 @@ CUTS = {
         # Victoria 2026-09-06 (Cut Room Q02): v1. 36.96 s covers the 30 s picture.
         bed=("LakeComingDown_v1", os.path.expanduser(
             "~/drawdown-2026-campaign/06_Media_Build/audio/suno/02_LakeComingDown_v1.mp3")),
+        # Victoria 2026-09-06: "this one is just like We Work the Bed now, isn't it?"
+        # She was right — both opened on clip 015 and both said SCRAPE/HAUL/COVER.
+        # Split the jobs: Work the Bed owns the VERBS, this one owns the CALENDAR.
+        # Different opener, no verb beat, and it closes on the window, not the method.
         beats=[
-            ("clip", "015", 3.0, 5.6, [("LAKE AUSTIN.", 96, CREAM), ("OCT 12.", 96, CREAM)]),
+            ("clip", "008", 100.0, 5.6, [("OCT 12.", 110, CREAM), ("THE LAKE STARTS DOWN.", 52, CREAM)]),
             # Victoria 2026-09-06: the recognisable residence (clip 009 t=30) is
             # swapped out. 018 t=8 is a cove edge with a weed mat and no house.
-            ("clip", "018", 8.0, 5.6, [("ABOUT 10 FEET.", 84, CREAM), ("A FOOT A DAY. LCRA.", 40, COPPER)]),
-            ("clip", "014", 15.0, 5.6, [("THIS IS UNDER IT.", 80, CREAM), ("HYDRILLA · NEARLY TEN YEARS", 34, COPPER)]),
-            ("clip", "011", 40.0, 5.6, [("SCRAPE. HAUL. COVER.", 70, CREAM), ("WHILE IT'S DOWN", 40, COPPER)]),
-            ("clip", "021", 10.0, 5.6, [("REFILL STARTS NOV 24.", 66, CREAM), ("SEVEN WEEKS.", 84, CREAM)]),
-            ("card", "015", 5.0, 3.75, [("TEXT TRUXOR", 84, CREAM), ("254-780-6971", 72, COPPER), ("LAKE AUSTIN IS OUR HOME WATER", 30, CREAM)]),
+            ("clip", "018", 8.0, 5.6, [("ABOUT 10 FEET.", 84, CREAM), ("A FOOT A DAY · LCRA", 40, COPPER)]),
+            ("clip", "014", 15.0, 5.6, [("NOBODY'S SEEN THIS", 62, CREAM), ("SINCE 2017.", 92, CREAM)]),
+            # 011 t=40 put a recognisable lakefront house back in frame — the same
+            # thing Victoria pulled out of beat 1. 014 t=60 is open creek and weed.
+            ("clip", "014", 60.0, 5.6, [("YOU GET SEVEN WEEKS.", 66, CREAM), ("NOV 24 IT STARTS REFILLING", 34, COPPER)]),
+            # C4 in the claim ledger is hedged at source and the hedge is mandatory.
+            ("clip", "021", 10.0, 5.6, [("THE NEXT WINDOW", 70, CREAM), ("MAY BE EIGHT TO TEN", 56, CREAM), ("YEARS AWAY.", 70, CREAM)]),
+            ("card", "008", 100.0, 3.75, [("BOOK THE WINDOW.", 76, CREAM), ("TEXT TRUXOR", 62, COPPER), ("254-780-6971", 62, COPPER)]),
         ]),
     # Victoria + Nate, sit-down 2026-09-06: "the bulkhead video is great — copy and
     # photos telling a story. Leverage that framework against the first video."
