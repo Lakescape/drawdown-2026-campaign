@@ -2,8 +2,8 @@
 
 Built by `build_timeline_cut.py lake-coming-down`. 30.00 s, 1080x1920, 30 fps, CRF 18, xfade 0.35s.
 
-- `DRAWDOWN_LakeComingDown_916_STUDIO.mp4` md5 `c3fe67a540ce9f84b59211df877b4b34`
-- `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v1.mp4` md5 `d5cfcbcebd19608c6f9fc47d3dc70835`
+- `DRAWDOWN_LakeComingDown_916_STUDIO.mp4` md5 `af74845fb492f2f0c6f538ef5a9c687a`
+- `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v1.mp4` md5 `43aa9ee178d984e2a13ded57aa73078b`
 
 | beat | start | dur | source | strap | QC (claim · strap · orientation · crop) |
 |---|---|---|---|---|---|
@@ -14,6 +14,8 @@ Built by `build_timeline_cut.py lake-coming-down`. 30.00 s, 1080x1920, 30 fps, C
 | 4 | 21.00 | 5.60 | clip 021 in=10.0s | REFILL STARTS NOV 24. SEVEN WEEKS. | PASS · high wide over the lake and hills · dates from LCRA release |
 | 5 | 26.25 | 3.75 | card over clip 015 t=5.0s | TEXT TRUXOR 254-780-6971 LAKE AUSTIN IS OUR HOME WATER | PASS · type card over blurred clip 015 frame · CTA only |
 
-Eye pass 2026-09-06 on `QC_b*.png`. Clips are the 2026-08-11 DJI proxies (1280x720, never upscaled past width — letterboxed over their own blur). Clips 001/004/006 were candidates and are EXCLUDED: a person on a private dock with a named boat. 016/017 excluded: residential rooftops, no lake. Bed: Lake Coming Down v2 by default (only take that covers 30 s with margin); Q02 in the Cut Room can swap it to v1. Measured after mux: I −14.5 LUFS, LRA 9.9 LU, true peak −1.7 dBFS — hot for broadcast, inside what IG/TikTok normalise; no clipping.
+Eye pass 2026-09-06 on `QC_b*.png`. Clips are the 2026-08-11 DJI proxies (1280x720, never upscaled past width — letterboxed over their own blur). Clips 001/004/006 were candidates and are EXCLUDED: a person on a private dock with a named boat. 016/017 excluded: residential rooftops, no lake. Bed: Lake Coming Down v1 — Victoria's pick (Cut Room Q02, 2026-09-06); 36.96 s covers the 30 s picture. Loudness measured after mux is in PROOF_2026-09-06.md.
+
+Eye pass 2026-09-06 on `QC_b*.png`. Clips are the 2026-08-11 DJI proxies (1280x720, never upscaled past width — letterboxed over their own blur). Clips 001/004/006 were candidates and are EXCLUDED: a person on a private dock with a named boat. 016/017 excluded: residential rooftops, no lake. Bed: Lake Coming Down v1 — Victoria's pick (Cut Room Q02, 2026-09-06); 36.96 s covers the 30 s picture. Loudness measured after mux is in PROOF_2026-09-06.md.
 
 Eye pass 2026-09-06 on `QC_b*.png`. Clips are the 2026-08-11 DJI proxies (1280x720, never upscaled past width — letterboxed over their own blur). Clips 001/004/006 were candidates and are EXCLUDED: a person on a private dock with a named boat. 016/017 excluded: residential rooftops, no lake. Bed: Lake Coming Down v1 — Victoria's pick (Cut Room Q02, 2026-09-06); 36.96 s covers the 30 s picture. Loudness measured after mux is in PROOF_2026-09-06.md.

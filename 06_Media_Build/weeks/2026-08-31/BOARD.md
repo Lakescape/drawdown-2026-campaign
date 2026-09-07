@@ -433,3 +433,27 @@ poll's answer.
 
 PROOF regenerated. Lake Coming Down ships as `_LakeComingDown_v1.mp4` now; the v2
 mux is deleted, not archived — nothing was ever posted from it.
+
+### 2026-09-06 21:30→ SIT-DOWN — Nate + Victoria on the answers board (`.lavish/answers/`)
+
+Live session, answers actioned as they landed:
+
+| Board | They said | Built |
+|---|---|---|
+| 01 singer | "different voice — Texas country, Kenny Chesney, upbeat" → **Country A, from 0:28** → **"reel goes"** | Suno re-audition (task `e95b8228`, two 80 s takes). `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4` — 30 s, real drone opener + four plates + CTA, bed offset 28 s (`build_timeline_cut.py` bed tuple now takes a start). −14.8 LUFS. **Approved.** |
+| 02 VO | "combo of 1 and 3, simply explaining coming down 10 ft, the Mike Rowe cloned voice" → "great, add two more sentences, the most informative" | `build_vo_mikerow.py` — ElevenLabs "MikeRow Story Teller" (`s4rOmUeb79uIbzKAm7kQ`, category *generated*, not a person's clone), curl not urllib (py3.14 has no CA bundle). v2 read 13.42 s, muxed at −16.3 LUFS. **Held until sourced:** "licensed for TPWD removal", "number-one monthly maintenance weed company in Central Texas", "ten years" as company age — none in the claim ledger. Added instead: the machines + the job, and "free estimate". |
+| 03 Lake Coming Down | "transitions shaky — the drone is moving; slow it or cut it" | `deshake` + `setpts=1.6*PTS` + `minterpolate` on every clip beat (`SLOW=1.6`). Rebuilt, frames checked clean. |
+| 04 method cut | "simpler, more explanatory for our ICPs, two amphibious machines, leverage the bulkhead's framework" · "bulkhead is great, 3rd video on point" | `DRAWDOWN_Method_916_STUDIO_v2[_MudWindow_v2].mp4` — same four plates, story straps: SEE THAT? THAT'S UNDER YOUR DOCK · TWO AMPHIBIOUS MACHINES. BUILT TO CUT IT · SCRAPE IT. HAUL IT OFF YOUR LOT · COVER IT. IT DOESN'T GROW BACK THROUGH. v2-vs-v1 call open. |
+| 05 type | **A — Arial stays** | nothing rebuilds |
+
+Lavish lesson, again: the foreground poll returned answers within seconds when they
+were actively queuing; the ten-minute wait moved it to background and it survived.
+The store (`~/.lavish-axi/state.json`) stayed the source of truth throughout.
+
+**Mogul check (Nate asked 22:21 "are you using all the power of atx-media-mogul?").** Honest
+answer: laws yes, pipeline no. Ran `pipeline/scripts/voice-qa.sh` over every strap, caption and
+the VO — 0 hard, 0 warn. Not used: `gen-line.sh` (AI generation — Rule 11 bans it for anything
+with a machine in it), the gate-log format, Resolve power grades (none authored), `ATX_GRADE`
+ffmpeg pass (available, not applied blind). Doctrine conflict logged in PROOF: Mogul
+visual-identity (Inter/Cloud White) vs campaign AGENTS.md (Cormorant/Source Sans) vs tonight's
+ruling (Arial). One reconciliation, not three.

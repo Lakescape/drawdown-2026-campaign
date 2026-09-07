@@ -36,7 +36,11 @@ Window v2, both lead-ins, Lake Coming Down (residence beat stays), Bulkhead, car
 | Lake Coming Down 30 s | `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v1.mp4` (+ silent twin) | Lake Coming Down v1 (Victoria, Q02) | built 09-06, real DJI clips, `resolve/lake-coming-down/PINS.md`. House beat swapped on Victoria's call. |
 | Bulkhead 15 s | `DRAWDOWN_Bulkhead_916_STUDIO.mp4` | none | built 09-06, `resolve/bulkhead/PINS.md`. |
 
-That is **5 videos and 10 stills** — measured in `PROOF_2026-09-06.md`. Everything else in the folder is dirty — see the
+| Work the Bed reel 30 s | `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4` | Suno Work the Bed, Country A, from 0:28 | built + **approved** at the 09-06 sit-down. |
+| Method cut v2 15 s | `DRAWDOWN_Method_916_STUDIO_v2_MudWindow_v2.mp4` | Mud Window v2 | story-style rewrite per Victoria; v2-vs-v1 pending. |
+| Lead-in + MikeRow VO v2 | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE_VO_MikeRow.mp4` | VO −16.3 LUFS | "goes" pending; three claims held until sourced. |
+
+That is **8 videos and 10 stills** — measured in `PROOF_2026-09-06.md`. Type: Arial stays (Nate, 09-06). Everything else in the folder is dirty — see the
 do-not-post list at the bottom.
 
 ## Cadence
@@ -52,8 +56,8 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | Method cut + Mud Window v2 | READY | Nate sign |
-| Wed | Reel | Viral lead-in (chosen lane), silent | READY | Q04 lane pick, Nate sign |
+| Mon | Reel | Method cut — **v2 (story style, sit-down 09-06)** or v1, both on Mud Window v2 | READY, pick pending | Victoria: v2 vs v1 (answers board 04) |
+| Wed | Reel | Viral lead-in, Claude lane + **MikeRow VO v2** (`…_CLAUDE_VO_MikeRow.mp4`) | READY, "goes" pending | answers board 02; held claims (TPWD / #1 / ten years) need a source before they're spoken |
 | Fri | Story | S01 dates card | SIGNED | — |
 | Fri | Feed | S02 Under Your Dock (4:5) | READY | — |
 
@@ -70,8 +74,8 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Work the Bed** vocal demo — re-gen against the full lyric, cut to method pictures | NEEDS-CALL | Q03 (vocal or not). If yes: 1 Suno task, ~0.6 credit, then a fresh listen |
-| Wed | Reel | Viral lead-in + Victoria VO | NEEDS-VO | Q05 script approval; the existing read speaks the retired hedge |
+| Mon | Reel | **Work the Bed** — `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4`, 30 s, Country take A from 0:28 | **APPROVED** (Victoria, sit-down 09-06) | — |
+| Wed | Reel | Lake Coming Down rerun, or the lead-in VO cut if it did not run W37 | READY | — |
 | Fri | Story ×3 | S04 Scrape / S05 Haul / S06 Cover as a 3-card story | READY | — |
 | Fri | Feed | S06 Cover (4:5) | READY | — |
 
