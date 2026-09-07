@@ -475,3 +475,61 @@ again; the store had them all — `pending_prompts: 7`).
 
 Both new builders read from the signed masters and from `pack.json`; nothing in the
 pack or the calendar is hand-typed, so a rebuild cannot drift from what ships.
+
+### 2026-09-07 13:15 — ATX-2303 / ATX-2304 run: authority stop, and a defect in my own schedule
+
+Resumed under ATX-2303/2304 against a clean detached worktree at ATX-Media-Mogul
+`origin/main` = `043668f` (PRs #91 `45d40e1`, #93 `21f502b`, #94 merged 10:50–11:01
+today). The main Mogul checkout is on `writers-room/2026-09-06` with another
+session's dirty files — untouched, along with all ten sibling worktrees.
+
+**Preflight, both clean and matching the sprint doc exactly:**
+
+| Check | Result |
+|---|---|
+| `registry.py validate` | `ok: true`, 48 assets, **0 errors**, 44 cloud-usable, 17 pinned, 4 needing cloud |
+| `drawdown_runtime.py inspect` | `INPUTS_RESOLVED`, **0 source errors**, `provider_calls: 0` |
+| plan sha256 | `8686af51b28e58cfde0bf90de5f309933ad07c2ba4a579b80df4380a76056fe7` — identical to the sprint doc and to `authority-request-PENDING.json`, so Nate's operator-card step 2 is pre-verified |
+| S3 crew clip | SHA `0f94ee22…9bb5b6` verified on disk, 1080×1920, 30 fps, 2.000 s = the 60-frame slot |
+| in-flight spend | `generation_submissions: 0`, `generation_job_receipts: 0`, no `generate-ledger.json` — nothing to reconcile, no duplicate-call risk |
+
+**🛑 THE STOP — and it is the only one.**
+
+```
+authority_error: MISSING AUTHORITY FILE:
+  /Users/austinlakescapes/Poseidon/projects/DRAWDOWN-2026/gate-log.md;
+  Nate owns the verdict
+```
+
+The file does not exist. No submit, no collect, no assemble. Zero provider calls
+were made and zero cents were spent. The 480-cent figure is an endpoint
+reservation quote, not an incurred cost. **No agent writes that block** — it is
+Nate's, per PRODUCTION-RUNTIME.md §Nate's authority, and I did not write a Gate
+APPROVE anywhere. The four machine identity gaps (`@amphibious_excavator`,
+`@dock_timber`, `@hydraulic_boatlift`, `@truxor`) are recorded, not worked;
+ATX-1870 stays parked.
+
+**Unblocked lane run instead — ATX-2140 handoff refresh.** Rebuilt the packet with
+full decode against current masters:
+`~/Poseidon/review/campaign-handoff-2026-09-07/`. 29 exact proof matches, **0 file
+errors**, 9 video variants fully decoded, 20 card files, `release_ready: 0`.
+
+The "7 of 13 desk rows" is **not drift** — the seven that match are exactly the
+seven live pieces; the six that don't are `M-VIRAL-LEADIN-STUDIO` (retired lane,
+file null), `M-TRUXOR-LEADIN`, `M-TRUXOR-IG`, `M-VISION-IG`, `M-FLEET-STILL`,
+`M-BEFORE-STILL` — every one already on the do-not-post list or a desk-only still.
+Fully accounted for.
+
+**⚠️ But the builder caught a real defect in my own work.** It reads
+`M-METHOD-V2` as `draft`, and it is right. The answers board returned seven
+questions — `singer`, `read`, `lcd`, `type`, `cards10`, `poster`, `more` — and
+**`reels` was never among them**. The method v2-vs-v1 pick never came back. Nate
+signed the *v1* cut on 09-06; v2 was built *after* that sign in response to
+Victoria's copy note, so the sign does not reach it. I had nonetheless written
+"SIGNED + SCHEDULED" against v2 and put it in the **2026-09-07 slot — today**.
+
+Corrected: today's and the 09-16 rerun slots now carry the signed
+`DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4` with its signed caption;
+v2 is marked NOT SIGNED and waits for the pick. Pack and calendar rebuilt; all 18
+captions and the handoff's draft captions pass Mogul `voice-qa.sh` 0 hard / 0 warn.
+Nothing published, nothing sent, media stayed in Poseidon.

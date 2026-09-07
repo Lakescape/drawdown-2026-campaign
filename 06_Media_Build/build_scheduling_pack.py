@@ -15,9 +15,13 @@ TAGS = "#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dock
 
 # (date, weekday, platform, kind, source file, title, caption)
 SLOTS = [
-    ("2026-09-07", "Mon", "IG Reels · TikTok · FB", "video", "DRAWDOWN_Method_916_STUDIO_v2_MudWindow_v2.mp4",
-     "Method cut v2 — see that?",
-     "See that? That's under your dock.\n\nTwo amphibious machines, built to cut it. We scrape it, haul it off your lot, and cover it so it doesn't grow back through.\n\nLake Austin comes down about 10 feet starting Oct 12. Seven weeks of dry ground, then it refills.\n\n" + CTA),
+    # 2026-09-07: the SIGNED method cut is v1 (Nate 09-06). v2 was built after that
+    # sign, in response to Victoria's copy note, and the v2-vs-v1 pick came back
+    # unanswered — the answers board returned singer/read/lcd/type/cards10/poster/more
+    # and no `reels`. Today's slot ships the signed asset; v2 waits for the pick.
+    ("2026-09-07", "Mon", "IG Reels · TikTok · FB", "video", "DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4",
+     "Method cut — scrape haul cover",
+     "Three words. That's the dry-window job.\n\nScrape the marked bed.\nHaul the spoil off your lot.\nCover the bed while the lake is down.\n\nLake Austin comes down about 10 feet starting Oct 12. Seven weeks of dry ground, then it refills.\n\n" + CTA),
     ("2026-09-09", "Wed", "IG Reels · TikTok", "video", "DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE_VO_MikeRow.mp4",
      "Viral lead-in + VO",
      "This is what's under Lake Austin docks. Ten years of it — and you've never seen it.\n\nThe drawdown is official. About 10 feet, starting Oct 12.\n\nTwo amphibious machines. We scrape it, haul it off, cover it.\n\n" + CTA),
@@ -29,7 +33,7 @@ SLOTS = [
     ("2026-09-14", "Mon", "IG Reels · TikTok · FB", "video", "DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v1.mp4",
      "Lake Coming Down — the calendar",
      "Oct 12, the lake starts down. About a foot a day, to roughly 10 feet below normal.\n\nNobody's seen that lakebed since 2017. You get seven weeks — Nov 24 it starts refilling.\n\nThe next window may be eight to ten years away.\n\n" + CTA),
-    ("2026-09-16", "Wed", "IG Reels · TikTok", "video", "DRAWDOWN_Method_916_STUDIO_v2_MudWindow_v2.mp4",
+    ("2026-09-16", "Wed", "IG Reels · TikTok", "video", "DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4",
      "Method cut rerun",
      "Scrape the marked bed. Haul the spoil off your lot. Cover it while the lake is down.\n\nThree words, one dry window.\n\n" + CTA),
     ("2026-09-18", "Fri", "IG Story", "image", "DRAWDOWN_Card_S03_past-the-dock_916.jpg", "S03 — past the dock",

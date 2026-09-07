@@ -56,7 +56,8 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | Method cut **v2** (story style) | **SIGNED + SCHEDULED** | — |
+| Mon | Reel | Method cut **v1** (`…ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4`) | **SIGNED 09-06 + SCHEDULED** | — |
+| — | — | Method cut **v2** (story style) | **NOT SIGNED — the pick never came back** | the answers board returned singer/read/lcd/type/cards10/poster/more; `reels` (v2 vs v1) was never answered, and v2 was built *after* the 09-06 sign, so that sign does not cover it. Caught 2026-09-07 by the ATX-2140 handoff builder, which reads the desk row as `draft`. |
 | Wed | Reel | Viral lead-in + **MikeRow VO v2** | **SIGNED + SCHEDULED** (Victoria 09-06: "VO v2 goes — Wednesday post") | held claims (TPWD / #1 / ten years) stay out until sourced |
 | Fri | Story | S01 dates card | SIGNED | — |
 | Fri | Feed | S02 Under Your Dock (4:5) | READY | — |
