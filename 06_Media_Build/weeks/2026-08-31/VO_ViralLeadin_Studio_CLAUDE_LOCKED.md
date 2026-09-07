@@ -1,52 +1,48 @@
-# VO — viral hydrilla lead-in (Claude studio pass) · LOCKED WORDING, UNREAD
+# VO — viral hydrilla lead-in (Claude lane) · SENT TO VICTORIA 2026-09-06
 
-**Status: locked wording, NOT recorded, NOT muxed.**
-Victoria has not approved these words. The master
-`DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` ships **silent** and stays silent
-until she does. Nothing gets generated in her cloned voice before that.
+**Status: wording re-locked to the current cards, sent to Victoria to read as written.**
+Cut Room Q05, 2026-09-06: "send the script — I'll read it as written." This is
+the script. The master `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` (the
+picked lane, Q04) stays silent until her read comes back; the VO cut ships as
+a separate file.
 
-Per Nate 2026-08-30: `truxor-leadin-15-vo.mp4` does not ship — a scratch VO is
-not a Nate read and not a Nate-approved voice. Same rule applies here.
+The 2026-08-31 wording is retired — it spoke "exploring" and "projected ten to
+twelve feet", both banned since (Nate 2026-08-31 and 2026-09-06). Never record
+that version.
 
 ---
 
-## The read — 36 words, ~13.5s of speech inside a 15.00s picture
+## The read — 34 words, ~13 s of speech inside a 15.00 s picture
 
 | Cue | Picture | Line |
 |-----|---------|------|
 | 0.5–3.0 | hydrilla under the dock | This is what's under Lake Austin docks. |
 | 3.5–7.0 | submerged bed, clear water | Ten years of it. Nobody's seen the bottom. |
-| 7.5–11.0 | two Truxors working | The City's exploring a drawdown. Projected ten to twelve feet. |
+| 7.5–11.0 | two Truxors working | The drawdown's official. About ten feet, from October twelfth. |
 | 11.5–14.3 | Truxor + hauled windrow | While it's dry, we work. Lake Austin is our home water. |
 
-VO ends at 14.3s so the last 0.7s fades clean. Bed −20 LUFS under the read,
-programme target −14 LUFS. Low cello or lake ambience — not a meme track.
+Read ends by 14.3 s so the last 0.7 s fades clean. Neighbour pace, not
+auctioneer. Bed −20 LUFS under the read, programme −14 LUFS.
 
-## Why the VO says less than the cards
+## Claim audit
 
-The cards carry the information; the voice carries the tone. Fitting everything
-on screen into 15 seconds of speech would need ~250 wpm, which is an auctioneer,
-not a neighbour. The cards keep **TWO TRUXORS** and **NOTHING IS OFFICIAL YET**;
-the read keeps **exploring** and **projected**.
+| Row | Where it lands |
+|-----|----------------|
+| Drawdown is official (LCRA release 2026-08-20) | spoken — "The drawdown's official"; card — THE DRAWDOWN IS OFFICIAL · LCRA |
+| About 10 ft, from Oct 12 (Nate 2026-09-06) | spoken — "About ten feet, from October twelfth"; card — ABOUT 10 FT. OCT 12. |
+| C3 ten-year window | "Ten years of it." |
+| C7 two amphibious machines | carried by the card and the frame, never the read |
+| C11 home water | spoken and captioned |
 
-## Hedge audit (`../../MEDIA_ClaimLedger_Drawdown_v1.md`)
+## Banned — verified absent
 
-| Row | Requirement | Where it lands |
-|-----|-------------|----------------|
-| **C1** drawdown is exploratory | hedge mandatory, spoken not just captioned | spoken — "**exploring** a drawdown"; captioned — "NOTHING IS OFFICIAL YET" |
-| **C2** 10–12 ft | keep "projected" | spoken — "**projected** ten to twelve feet"; captioned identically |
-| **C3** ten-year window | no hedge required | "Ten years of it. Nobody's seen the bottom." |
-| **C7** two amphibious machines | must SHOW two + undercarriage | carried by the card and the frame, not the read |
-| **C11** Lake Austin home water | must read as Lake Austin | spoken and captioned |
+exploring · unofficial · nothing is official yet · projected · ten to twelve ·
+$695 · credited · assessment · extinct · any slot count.
 
-## Banned on this cut — verified absent from both picture and read
+## When the read comes back
 
-$695 · credited · assessment · Priority Assessment · "walk yours" ·
-"I'll tell you to your face" · any slot count.
-
-## If Victoria approves
-
-Clone path is in `06_Media_Build/build_leadin_vo.py`. Generate a fresh read of
-**these exact words** — do **not** splice the 77s scratch VO, and do not reuse
-`vo_victoria_viral.mp3`, which was cut to a different script. The silent master
-remains the master; the VO cut ships as a separate file.
+Clone path is `06_Media_Build/build_leadin_vo.py` — generate **these exact
+words** in Victoria's ElevenLabs voice, or take her own recording if she reads
+it herself. Do not splice the 77 s scratch VO; do not reuse
+`vo_victoria_viral.mp3` (cut to a retired script). Mux over the silent Claude
+master; silent master stays the master.

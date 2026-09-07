@@ -31,7 +31,8 @@ Claim ledger bindings (../MEDIA_ClaimLedger_Drawdown_v1.md):
   beat 2 -> C3   ten-year window, no hedge required
   beat 3 -> C7   two amphibious machines — must SHOW two, and show the
                  undercarriage. FIT mode exists for this line and only this line.
-           C2   "PROJECTED" 10–12 ft retained verbatim
+           C2   SUPERSEDED 2026-09-06 — ABOUT 10 FT, LCRA's number, not the
+                one-pager's 10–12 projection
            C1   RETIRED 2026-09-04 — LCRA announced 2026-08-29, the drawdown
                 IS official. The plate now states it as fact; the old hedge
                 ("NOTHING IS OFFICIAL YET") is banned on every surface.
@@ -92,10 +93,11 @@ BEATS = [
         grade=(1.02, 1.05, 1.06), pan=(0.355, 0.425),
         # Nate 2026-09-04: the hedge is retired — LCRA announced 2026-08-29, so
         # the drawdown IS official and the old C1 line is banned everywhere.
-        # "PROJECTED" stays on the depth (C2): the number is still a projection.
+        # Nate 2026-09-06: ABOUT 10 FT campaign-wide — LCRA's number (target
+        # 481.8–482.8 ft msl). The one-pager's 10–12 projection is retired.
         lines=[("TWO TRUXORS.", 88, CREAM),
-               ("PROJECTED 10–12 FT.", 58, CREAM),
-               ("THE DRAWDOWN IS OFFICIAL", 38, COPPER)],
+               ("ABOUT 10 FT. OCT 12.", 58, CREAM),
+               ("THE DRAWDOWN IS OFFICIAL · LCRA", 38, COPPER)],
         note="C7 count — one cutting, one at the bank, pontoon decks visible",
     ),
     dict(

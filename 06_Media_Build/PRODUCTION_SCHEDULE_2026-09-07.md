@@ -16,10 +16,10 @@ date the board caught it):
 | Normal pool | **Mon Nov 30** |
 | Dry floor window | roughly **Nov 2 → Nov 24** — ~3 weeks at the bottom, 7 weeks start to refill |
 
-⚠️ **Claim-ledger row for Nate, open:** the video cuts say `PROJECTED 10–12 FT.` (one-pager).
-LCRA says "about 10 feet" and a target band that is 9.2–10.2 ft below normal pool. The
-still cards built today say **ABOUT 10 FT** and cite LCRA. Two numbers are now on two
-surfaces. Pick one; the cuts recut in minutes.
+✅ **Settled — Nate 2026-09-06: ABOUT 10 FT campaign-wide.** LCRA's own number (target band
+9.2–10.2 ft below normal pool). The one-pager's `PROJECTED 10–12 FT.` is retired from every
+card; both viral lead-ins recut the same day. **Signed the same day:** method cut + Mud
+Window v2, both lead-ins, Lake Coming Down (residence beat stays), Bulkhead, cards S01–S10.
 
 2017 precedent (TWDB-verified, `DATA_2017_Drawdown_LakeLevels_VERIFIED.md`): 10.83 ft over
 ~7 weeks, floor Jan 13, refilled Feb 20. Usable as a number; never as a promise for 2026.
@@ -30,11 +30,17 @@ surfaces. Pick one; the cuts recut in minutes.
 |---|---|---|---|
 | Method cut (Scrape/Haul/Cover) | `DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4` | Mud Window v2 (Victoria pick, Cut Room Q01) | **Ready for Nate sign.** Video stream md5-identical to the fixed silent master. |
 | Method cut, silent | `DRAWDOWN_ScrapeHaulStaple_916_STUDIO.mp4` | none | alternate |
-| Viral lead-in, Claude lane | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` | none | cards clean (COVER, OFFICIAL). Silent-postable; VO unapproved. |
-| Viral lead-in, studio lane | `DRAWDOWN_ViralHydrilla_916_STUDIO.mp4` | none | same piece, second lane. **Pick one lane** (Cut Room Q04). |
-| Still-card series S01–S08 | `cards/DRAWDOWN_Card_S0N_*_916.jpg` + `_45.jpg` | — | built + eye-QC'd 2026-09-06, `cards/PINS.md`. Nate sign. |
+| Viral lead-in — **Claude lane, PICKED** (Victoria, Q04) | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` | none until Victoria's read lands | cards clean (COVER, OFFICIAL, ABOUT 10 FT). Script sent: `weeks/2026-08-31/VO_ViralLeadin_Victoria_READ.txt`. |
+| ~~Viral lead-in, studio lane~~ | `…_STUDIO_RETIRED-lane-not-picked-2026-09-06.mp4` | — | retired 09-06. Do not post. |
+| Still-card series S01–S10 | `cards/DRAWDOWN_Card_S0N_*_916.jpg` + `_45.jpg` | — | built + eye-QC'd 2026-09-06, `cards/PINS.md`. Nate sign. |
+| Lake Coming Down 30 s | `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v1.mp4` (+ silent twin) | Lake Coming Down v1 (Victoria, Q02) | built 09-06, real DJI clips, `resolve/lake-coming-down/PINS.md`. House beat swapped on Victoria's call. |
+| Bulkhead 15 s | `DRAWDOWN_Bulkhead_916_STUDIO.mp4` | none | built 09-06, `resolve/bulkhead/PINS.md`. |
 
-That is **3 videos and 8 stills**. Everything else in the folder is dirty — see the
+| Work the Bed reel 30 s | `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4` | Suno Work the Bed, Country A, from 0:28 | built + **approved** at the 09-06 sit-down. |
+| Method cut v2 15 s | `DRAWDOWN_Method_916_STUDIO_v2_MudWindow_v2.mp4` | Mud Window v2 | story-style rewrite per Victoria; v2-vs-v1 pending. |
+| Lead-in + MikeRow VO v2 | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE_VO_MikeRow.mp4` | VO −16.3 LUFS | "goes" pending; three claims held until sourced. |
+
+That is **8 videos and 10 stills** — measured in `PROOF_2026-09-06.md`. Type: Arial stays (Nate, 09-06). Everything else in the folder is dirty — see the
 do-not-post list at the bottom.
 
 ## Cadence
@@ -50,16 +56,17 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | Method cut + Mud Window v2 | READY | Nate sign |
-| Wed | Reel | Viral lead-in (chosen lane), silent | READY | Q04 lane pick, Nate sign |
-| Fri | Story | S01 dates card | READY | 10 ft vs 10–12 ft ruling |
+| Mon | Reel | Method cut **v1** (`…ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4`) | **SIGNED 09-06 + SCHEDULED** | — |
+| — | — | Method cut **v2** (story style) | **NOT SIGNED — the pick never came back** | the answers board returned singer/read/lcd/type/cards10/poster/more; `reels` (v2 vs v1) was never answered, and v2 was built *after* the 09-06 sign, so that sign does not cover it. Caught 2026-09-07 by the ATX-2140 handoff builder, which reads the desk row as `draft`. |
+| Wed | Reel | Viral lead-in + **MikeRow VO v2** | **SIGNED + SCHEDULED** (Victoria 09-06: "VO v2 goes — Wednesday post") | held claims (TPWD / #1 / ten years) stay out until sourced |
+| Fri | Story | S01 dates card | SIGNED | — |
 | Fri | Feed | S02 Under Your Dock (4:5) | READY | — |
 
 ### W38 · Sep 14–20 — "What's under there"
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Lake Coming Down** — 30 s, aerials + timeline card, bed = Lake Coming Down v1/v2 | BUILD | Q02 bed pick; 4 aerial plates to eyeball (`8c7fd940fc1f`, `5a4942b7731d`, `debfb86716fa`, `ba36f7de53cb`) |
+| Mon | Reel | **Lake Coming Down** — the CALENDAR piece, recut 09-07 | **SIGNED + SCHEDULED** | — |
 | Wed | Reel | Method cut, re-run with caption variant | READY | — |
 | Fri | Story | S03 Past The Dock | READY | Victoria taste (abstract plate) |
 | Fri | Feed | S07 Two Machines (4:5) | READY | — |
@@ -68,8 +75,8 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Work the Bed** vocal demo — re-gen against the full lyric, cut to method pictures | NEEDS-CALL | Q03 (vocal or not). If yes: 1 Suno task, ~0.6 credit, then a fresh listen |
-| Wed | Reel | Viral lead-in + Victoria VO | NEEDS-VO | Q05 script approval; the existing read speaks the retired hedge |
+| Mon | Reel | **Work the Bed** — `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4`, 30 s, Country take A from 0:28 | **APPROVED** (Victoria, sit-down 09-06) | — |
+| Wed | Reel | Lake Coming Down rerun, or the lead-in VO cut if it did not run W37 | READY | — |
 | Fri | Story ×3 | S04 Scrape / S05 Haul / S06 Cover as a 3-card story | READY | — |
 | Fri | Feed | S06 Cover (4:5) | READY | — |
 
@@ -77,7 +84,7 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Bulkhead / seawall** 15 s — exposed soil, undercut walls, "you'll see it in October" | BUILD | plates to eyeball (`8ac72bb619a1`, `7b73d148d588`, `f9510fe9c17e`, `3c9f9a3df291`). Claim: nothing beyond "this is what low water shows" |
+| Mon | Reel | **Bulkhead / seawall** 15 s — `DRAWDOWN_Bulkhead_916_STUDIO.mp4` (`4f8cf6f78230`, `f2d734030d78`, `7b73d148d588`) | READY (built 09-06) | Nate sign |
 | Wed | Reel | Lake Coming Down, cutdown 15 s | BUILD | after W38 master |
 | Fri | Story | S08 Seven Weeks | READY | — |
 | Fri | Feed | Fleet still (`dcc-close-book/public/media/fleet.jpg`, real site photo) | READY | caption on the desk |
@@ -86,9 +93,9 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Story | "7 DAYS" type card over S01 plate | BUILD | 10 min |
+| Mon | Story | S09 "7 DAYS." card | READY (built 09-06) | — |
 | Wed | Reel | Method cut, last pre-window run | READY | — |
-| Fri | Story | "MONDAY." card | BUILD | 10 min |
+| Mon Oct 12 | Story | S10 "MONDAY." card | READY (built 09-06) | — |
 | Sun | Feed | Machines staged for Monday | NEEDS-SHOOT | one phone photo of both Truxors on the trailer, Sunday afternoon |
 
 ### W42–W48 · Oct 12 – Nov 30 — live
@@ -136,7 +143,7 @@ photo if item 1 got shot.
 | Q03 | Vocal on the campaign at all | W39 Mon |
 | Q04 | Which lead-in lane survives | W37 Wed |
 | Q05 | Victoria VO script | W39 Wed |
-| — | 10 ft (LCRA) vs 10–12 ft (one-pager) | W37 Fri and every cut |
+| — | 10 ft (LCRA) vs 10–12 ft (one-pager) | **settled 09-06: ABOUT 10 FT** |
 
 ## Do not post — and why
 
@@ -158,3 +165,29 @@ on this Mac. Every shipped cut and today's cards use Arial Bold, because that is
 video series shipped with and a still that doesn't match the reel looks like a different
 company. Switching is a one-constant change in each builder. Nate's call, campaign-wide,
 not per piece.
+
+## 2026-09-07 — the calendar and the pack
+
+Victoria, on the first Lake Coming Down: *"this one is just like We Work the Bed
+now, isn't it?"* She was right — both opened on clip 015 and both said
+SCRAPE/HAUL/COVER. **The two pieces now have separate jobs:**
+
+| Piece | Owns |
+|---|---|
+| **Work the Bed** (30 s, song) | the VERBS — scrape / haul / cover, one word a beat |
+| **Lake Coming Down** (30 s, calendar) | the DATES — Oct 12 · about 10 ft · not since 2017 · seven weeks · Nov 24 refill · next window may be 8–10 years away |
+
+Different opener clip, no shared strap, different close (BOOK THE WINDOW vs WE WORK
+THE BED). `011 t=40` also put a recognisable lakefront house back in frame — the
+same thing pulled out of beat 1 — so beat 3 is now `014 t=60`, open creek and weed.
+
+**`SCHEDULING_PACK/`** — Nate: *"schedule them in Meta Business Suite — build the
+pack"*, *"same with our IG and tiktok etc"*. 18 dated slots, Sep 7 → Oct 12, one
+folder each holding the exact upload file and `caption.txt`. 172 MB. Built by
+`build_scheduling_pack.py` from the signed masters — no hand-typed filenames.
+All 18 captions pass Mogul `voice-qa.sh`: 0 hard, 0 warn.
+
+**The calendar page** — Nate: *"a full calendar layout so we can visually click and
+assess everything"*. `build_calendar_page.py` reads `pack.json` and emits
+`.lavish/calendar/calendar.html`: month grid, every slot a tile, click to play the
+real file and read the caption that ships with it. LCRA milestones marked.

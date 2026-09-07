@@ -11,8 +11,8 @@ sideways (53482b8a99a8) is excluded rather than rotated.
 
 Dates and depth come from the LCRA / City of Austin release of 2026-08-20:
 Oct 12 – Nov 30, "about 10 feet", target 481.8–482.8 ft msl, refill from Nov 24.
-Cards say ABOUT 10 FT because that is what LCRA said; the video cuts still carry
-PROJECTED 10–12 FT from the one-pager — ledger row open for Nate.
+Cards say ABOUT 10 FT because that is what LCRA said. Nate 2026-09-06: ABOUT 10 FT
+campaign-wide; the one-pager's 10–12 projection is retired from every card.
 
 Outputs: cards/DRAWDOWN_Card_S0N_<slug>_916.jpg (1080x1920) and _45.jpg (1080x1350)
 plus cards/PINS.md.
@@ -69,6 +69,16 @@ CARDS = [
       ("OCT 12 TO NOV 30. THEN IT REFILLS.", 36, CREAM),
       ("TEXT TRUXOR · 254-780-6971", 40, COPPER)],
      "Truxor working a dense mat with the open lake behind — the CTA card"),
+    # W41 countdown — same plate as S01 so the series reads as one thread
+    ("S09", "seven-days", "153d39cdb0eb", 0.5,
+     [("7 DAYS.", 130, CREAM),
+      ("LAKE AUSTIN COMES DOWN MONDAY, OCT 12.", 36, CREAM)],
+     "S01 plate again — countdown card, posts Mon Oct 5"),
+    ("S10", "monday", "153d39cdb0eb", 0.5,
+     [("MONDAY.", 130, CREAM),
+      ("THE LAKE STARTS DOWN TODAY. ABOUT A FOOT A DAY.", 34, CREAM),
+      ("TEXT TRUXOR · 254-780-6971", 36, COPPER)],
+     "S01 plate again — day-of card, posts Mon Oct 12"),
 ]
 
 C7_TWO_MACHINE = {"c6b6853c038a", "fd49bf6ffe3e"}

@@ -364,3 +364,172 @@ names every dirty file in this folder and why.
 **Found and parked:** `Weed Barrier Photo.png` / `Weed Mat Framed.png` at repo root
 (09-02) are LakeMat.com screenshots — third-party, not plates. 59 "tarp" captions in
 Poseidon are boat covers and tarped loads. Still no stapled-bed photo. COVER stands.
+
+### 2026-09-06 (evening) — end to end, with proof
+
+Nate: "get it done all the way end to end with proof." Three more pieces, one shared
+builder, one measured proof sheet.
+
+- **`build_timeline_cut.py`** — the shared module the 09-04 audit asked for: real
+  clips and real stills, fit-letterbox, registry-wins orientation guard, C7 count
+  check, banned-string check, xfade chain, optional bed, and it writes its own
+  resolve bin (straps, one QC frame per beat, PINS.md with md5). Two cuts live at
+  the bottom of the file; a third is a BEATS list.
+- **`DRAWDOWN_LakeComingDown_916_STUDIO[_LakeComingDown_v2].mp4`** — 30.00 s, the
+  first piece with real motion: five 2026-08-11 DJI proxies (letterboxed, never
+  upscaled) + LCRA calendar + Lake Coming Down v2 bed (I −14.5 LUFS, TP −1.7).
+  Clips 001/004/006 excluded (person on a private dock). ⚠️ Beat 1 is one
+  recognisable residence — honest, Nate's call, one-line swap.
+- **`DRAWDOWN_Bulkhead_916_STUDIO.mp4`** — 15.00 s silent, three real low-water
+  plates, no price, no percentage. First build came out 14.00 s (2 s card);
+  rebuilt with a 3 s card.
+- **S09 / S10** countdown cards on the S01 plate.
+- **`PROOF_2026-09-06.md`** — every duration, picture, audio, loudness and md5 read
+  off the files by script at write time; QC frames listed; banned-string grep
+  across the live builders. Five videos, ten stills, all eye-passed.
+
+Still Nate's: sign · 10 ft vs 10–12 ft · lead-in lane · the residence beat.
+Still Victoria's: Q02 bed, Q03 vocal, Q05 script, taste on the cards.
+
+### 2026-09-06 17:43 NATE RULINGS — ABOUT 10 FT · house beat stays · SIGNED
+
+Three calls in one line: "Lets go with the about 10ft right? 2 is fine, and sign."
+
+**Depth.** ABOUT 10 FT campaign-wide — LCRA's number (target 481.8–482.8 ft msl).
+The one-pager's `PROJECTED 10–12 FT.` is retired from every card. Changed at source:
+`build_viral_leadin_studio.py` v3, `build_viral_leadin_studio_claude.py` beat 3
+(+ C2 ledger note), `build_viral_hydrilla.py`, `build_real_motion.py`, `compose.py`
+k2, `build_plate_cards.py` docstring. Both viral lead-ins rebuilt 17:45–17:46 with
+`ABOUT 10 FT. OCT 12.` / `THE DRAWDOWN IS OFFICIAL · LCRA`; depth card eyeballed
+on both. Desk captions swept (10 to 12 → about 10; also caught two captions still
+saying "scrape, haul, staple" — now cover).
+
+**Lake Coming Down beat 1** (the recognisable residence) stays.
+
+**SIGNED:** method cut + Mud Window v2, both viral lead-ins (silent — lane pick is
+Victoria's), Lake Coming Down, Bulkhead, cards S01–S10. Desk rows flipped to
+`ready_to_copy`. PROOF regenerated with the new md5s. Still not posted; Hallie posts
+from the desk.
+
+**Still Victoria's:** Q02 bed (v2 default), Q03 vocal, Q04 lane, Q05 script, taste.
+
+### 2026-09-06 17:55 VICTORIA'S PRODUCER PASS — seven calls, all actioned
+
+Found sitting in Lavish's store (`~/.lavish-axi/state.json`, `pending_prompts: 7`)
+— queued three minutes after my last poll, and the long poll keeps dying on this
+Mac's memory. Lesson: after any reply, run one short `--timeout-ms` poll before
+reporting "0 pending"; and the store on disk is the ground truth, not the last
+poll's answer.
+
+| Q | Victoria | Done |
+|---|---|---|
+| 02 | Lake Coming Down **v1** | rebuilt with v1 bed |
+| 03 | vocal: **undecided — needs a real demo first** | Work the Bed full-lyric demo generating on Suno, task `1f1394b9-66e5-4690-90cc-27d088f9158b` |
+| 04 | lead-in lane: **STUDIO_CLAUDE** | studio lane retired on disk (`…_RETIRED-lane-not-picked-2026-09-06.mp4`), off the desk and out of `public/media` |
+| 05 | VO: **send the script — I'll read it as written** | 08-31 wording was dead (spoke "exploring" + "projected ten to twelve"). Re-locked to the current cards, 34 words; `VO_ViralLeadin_Victoria_READ.txt` + inline in the Cut Room |
+| 07 | cards: **all eight go** | — |
+| 08 | schedule: **cadence right** — "we might still add more to this but it's a good start" | — |
+| 09 | **swap the house beat** | Lake Coming Down beat 1 → clip 018 t=8 (cove edge, weed mat, no residence). Nate had said it could stay; producer wins on taste, honesty unchanged |
+
+PROOF regenerated. Lake Coming Down ships as `_LakeComingDown_v1.mp4` now; the v2
+mux is deleted, not archived — nothing was ever posted from it.
+
+### 2026-09-06 21:30→ SIT-DOWN — Nate + Victoria on the answers board (`.lavish/answers/`)
+
+Live session, answers actioned as they landed:
+
+| Board | They said | Built |
+|---|---|---|
+| 01 singer | "different voice — Texas country, Kenny Chesney, upbeat" → **Country A, from 0:28** → **"reel goes"** | Suno re-audition (task `e95b8228`, two 80 s takes). `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4` — 30 s, real drone opener + four plates + CTA, bed offset 28 s (`build_timeline_cut.py` bed tuple now takes a start). −14.8 LUFS. **Approved.** |
+| 02 VO | "combo of 1 and 3, simply explaining coming down 10 ft, the Mike Rowe cloned voice" → "great, add two more sentences, the most informative" | `build_vo_mikerow.py` — ElevenLabs "MikeRow Story Teller" (`s4rOmUeb79uIbzKAm7kQ`, category *generated*, not a person's clone), curl not urllib (py3.14 has no CA bundle). v2 read 13.42 s, muxed at −16.3 LUFS. **Held until sourced:** "licensed for TPWD removal", "number-one monthly maintenance weed company in Central Texas", "ten years" as company age — none in the claim ledger. Added instead: the machines + the job, and "free estimate". |
+| 03 Lake Coming Down | "transitions shaky — the drone is moving; slow it or cut it" | `deshake` + `setpts=1.6*PTS` + `minterpolate` on every clip beat (`SLOW=1.6`). Rebuilt, frames checked clean. |
+| 04 method cut | "simpler, more explanatory for our ICPs, two amphibious machines, leverage the bulkhead's framework" · "bulkhead is great, 3rd video on point" | `DRAWDOWN_Method_916_STUDIO_v2[_MudWindow_v2].mp4` — same four plates, story straps: SEE THAT? THAT'S UNDER YOUR DOCK · TWO AMPHIBIOUS MACHINES. BUILT TO CUT IT · SCRAPE IT. HAUL IT OFF YOUR LOT · COVER IT. IT DOESN'T GROW BACK THROUGH. v2-vs-v1 call open. |
+| 05 type | **A — Arial stays** | nothing rebuilds |
+
+Lavish lesson, again: the foreground poll returned answers within seconds when they
+were actively queuing; the ten-minute wait moved it to background and it survived.
+The store (`~/.lavish-axi/state.json`) stayed the source of truth throughout.
+
+**Mogul check (Nate asked 22:21 "are you using all the power of atx-media-mogul?").** Honest
+answer: laws yes, pipeline no. Ran `pipeline/scripts/voice-qa.sh` over every strap, caption and
+the VO — 0 hard, 0 warn. Not used: `gen-line.sh` (AI generation — Rule 11 bans it for anything
+with a machine in it), the gate-log format, Resolve power grades (none authored), `ATX_GRADE`
+ffmpeg pass (available, not applied blind). Doctrine conflict logged in PROOF: Mogul
+visual-identity (Inter/Cloud White) vs campaign AGENTS.md (Cormorant/Source Sans) vs tonight's
+ruling (Arial). One reconciliation, not three.
+
+### 2026-09-07 — final answers in, pack and calendar built
+
+The last seven prompts came back off the answers board (the poll died on memory
+again; the store had them all — `pending_prompts: 7`).
+
+| Board | Answer | Done |
+|---|---|---|
+| 01 | Work the Bed reel **goes** | scheduled W39 Mon |
+| 02 | **VO v2 goes — Wednesday post** | scheduled Sep 9. The three unsourced claims stayed out of the read |
+| 03 | *"this one is just like We Work the Bed now isn't it?"* | correct — the two 30 s pieces had converged. Split: Work the Bed owns the verbs, Lake Coming Down owns the calendar. Recut with a different opener, dated straps, and a hedged C4 close. Also pulled a second recognisable house (011 t=40 → 014 t=60) |
+| 05 | Type **A — Arial** | nothing rebuilt |
+| 06 | **All ten cards go** | scheduled across W37–W41 |
+| 07 | **Meta Business Suite pack** — "same with our IG and tiktok etc" | `SCHEDULING_PACK/`, 18 dated slots, file + caption per folder, 172 MB, captions voice-QA clean |
+| 08 | *"a full calendar layout so we can visually click and assess everything"* | `.lavish/calendar/calendar.html` — grid, click a tile, the real file plays with its caption |
+
+Both new builders read from the signed masters and from `pack.json`; nothing in the
+pack or the calendar is hand-typed, so a rebuild cannot drift from what ships.
+
+### 2026-09-07 13:15 — ATX-2303 / ATX-2304 run: authority stop, and a defect in my own schedule
+
+Resumed under ATX-2303/2304 against a clean detached worktree at ATX-Media-Mogul
+`origin/main` = `043668f` (PRs #91 `45d40e1`, #93 `21f502b`, #94 merged 10:50–11:01
+today). The main Mogul checkout is on `writers-room/2026-09-06` with another
+session's dirty files — untouched, along with all ten sibling worktrees.
+
+**Preflight, both clean and matching the sprint doc exactly:**
+
+| Check | Result |
+|---|---|
+| `registry.py validate` | `ok: true`, 48 assets, **0 errors**, 44 cloud-usable, 17 pinned, 4 needing cloud |
+| `drawdown_runtime.py inspect` | `INPUTS_RESOLVED`, **0 source errors**, `provider_calls: 0` |
+| plan sha256 | `8686af51b28e58cfde0bf90de5f309933ad07c2ba4a579b80df4380a76056fe7` — identical to the sprint doc and to `authority-request-PENDING.json`, so Nate's operator-card step 2 is pre-verified |
+| S3 crew clip | SHA `0f94ee22…9bb5b6` verified on disk, 1080×1920, 30 fps, 2.000 s = the 60-frame slot |
+| in-flight spend | `generation_submissions: 0`, `generation_job_receipts: 0`, no `generate-ledger.json` — nothing to reconcile, no duplicate-call risk |
+
+**🛑 THE STOP — and it is the only one.**
+
+```
+authority_error: MISSING AUTHORITY FILE:
+  /Users/austinlakescapes/Poseidon/projects/DRAWDOWN-2026/gate-log.md;
+  Nate owns the verdict
+```
+
+The file does not exist. No submit, no collect, no assemble. Zero provider calls
+were made and zero cents were spent. The 480-cent figure is an endpoint
+reservation quote, not an incurred cost. **No agent writes that block** — it is
+Nate's, per PRODUCTION-RUNTIME.md §Nate's authority, and I did not write a Gate
+APPROVE anywhere. The four machine identity gaps (`@amphibious_excavator`,
+`@dock_timber`, `@hydraulic_boatlift`, `@truxor`) are recorded, not worked;
+ATX-1870 stays parked.
+
+**Unblocked lane run instead — ATX-2140 handoff refresh.** Rebuilt the packet with
+full decode against current masters:
+`~/Poseidon/review/campaign-handoff-2026-09-07/`. 29 exact proof matches, **0 file
+errors**, 9 video variants fully decoded, 20 card files, `release_ready: 0`.
+
+The "7 of 13 desk rows" is **not drift** — the seven that match are exactly the
+seven live pieces; the six that don't are `M-VIRAL-LEADIN-STUDIO` (retired lane,
+file null), `M-TRUXOR-LEADIN`, `M-TRUXOR-IG`, `M-VISION-IG`, `M-FLEET-STILL`,
+`M-BEFORE-STILL` — every one already on the do-not-post list or a desk-only still.
+Fully accounted for.
+
+**⚠️ But the builder caught a real defect in my own work.** It reads
+`M-METHOD-V2` as `draft`, and it is right. The answers board returned seven
+questions — `singer`, `read`, `lcd`, `type`, `cards10`, `poster`, `more` — and
+**`reels` was never among them**. The method v2-vs-v1 pick never came back. Nate
+signed the *v1* cut on 09-06; v2 was built *after* that sign in response to
+Victoria's copy note, so the sign does not reach it. I had nonetheless written
+"SIGNED + SCHEDULED" against v2 and put it in the **2026-09-07 slot — today**.
+
+Corrected: today's and the 09-16 rerun slots now carry the signed
+`DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4` with its signed caption;
+v2 is marked NOT SIGNED and waits for the pick. Pack and calendar rebuilt; all 18
+captions and the handoff's draft captions pass Mogul `voice-qa.sh` 0 hard / 0 warn.
+Nothing published, nothing sent, media stayed in Poseidon.
