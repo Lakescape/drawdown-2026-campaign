@@ -18,3 +18,19 @@ Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuil
 Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
 
 Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.
+
+Eye pass 2026-09-06 on `QC_b*.png`. First build ran 14.00 s (card 2.0 s); rebuilt with a 3.0 s card to hit 15.00 s. Stale frame from the 14 s build deleted.

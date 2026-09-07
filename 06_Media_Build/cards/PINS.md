@@ -44,3 +44,33 @@ Eye pass 2026-09-06 (Claude, this Mac) on both crops via contact sheet. `53482b8
 All plates carry `permission_status=internal_only` — so does every one of the 3,632 refs in Poseidon, including the plates already in the shipped cuts. It is the ingest default, not a verdict. `customer_identifiable=0` on all. Nate signs release at Gate 0.
 
 ⚠️ `build_plate_cards.py` rewrites this file on every run; verdicts are re-applied by `proof.py`. Re-run proof after any rebuild.
+
+Eye pass 2026-09-06 (Claude, this Mac) on both crops via contact sheet. `53482b8a99a8` (two workers + Truxor) was a candidate and is EXCLUDED: stored pixels are sideways while the registry says 1080x810 — neither the tag nor the registry describes the bytes, so the guard cannot certify it.
+
+All plates carry `permission_status=internal_only` — so does every one of the 3,632 refs in Poseidon, including the plates already in the shipped cuts. It is the ingest default, not a verdict. `customer_identifiable=0` on all. Nate signs release at Gate 0.
+
+⚠️ `build_plate_cards.py` rewrites this file on every run; verdicts are re-applied by `proof.py`. Re-run proof after any rebuild.
+
+Eye pass 2026-09-06 (Claude, this Mac) on both crops via contact sheet. `53482b8a99a8` (two workers + Truxor) was a candidate and is EXCLUDED: stored pixels are sideways while the registry says 1080x810 — neither the tag nor the registry describes the bytes, so the guard cannot certify it.
+
+All plates carry `permission_status=internal_only` — so does every one of the 3,632 refs in Poseidon, including the plates already in the shipped cuts. It is the ingest default, not a verdict. `customer_identifiable=0` on all. Nate signs release at Gate 0.
+
+⚠️ `build_plate_cards.py` rewrites this file on every run; verdicts are re-applied by `proof.py`. Re-run proof after any rebuild.
+
+Eye pass 2026-09-06 (Claude, this Mac) on both crops via contact sheet. `53482b8a99a8` (two workers + Truxor) was a candidate and is EXCLUDED: stored pixels are sideways while the registry says 1080x810 — neither the tag nor the registry describes the bytes, so the guard cannot certify it.
+
+All plates carry `permission_status=internal_only` — so does every one of the 3,632 refs in Poseidon, including the plates already in the shipped cuts. It is the ingest default, not a verdict. `customer_identifiable=0` on all. Nate signs release at Gate 0.
+
+⚠️ `build_plate_cards.py` rewrites this file on every run; verdicts are re-applied by `proof.py`. Re-run proof after any rebuild.
+
+Eye pass 2026-09-06 (Claude, this Mac) on both crops via contact sheet. `53482b8a99a8` (two workers + Truxor) was a candidate and is EXCLUDED: stored pixels are sideways while the registry says 1080x810 — neither the tag nor the registry describes the bytes, so the guard cannot certify it.
+
+All plates carry `permission_status=internal_only` — so does every one of the 3,632 refs in Poseidon, including the plates already in the shipped cuts. It is the ingest default, not a verdict. `customer_identifiable=0` on all. Nate signs release at Gate 0.
+
+⚠️ `build_plate_cards.py` rewrites this file on every run; verdicts are re-applied by `proof.py`. Re-run proof after any rebuild.
+
+Eye pass 2026-09-06 (Claude, this Mac) on both crops via contact sheet. `53482b8a99a8` (two workers + Truxor) was a candidate and is EXCLUDED: stored pixels are sideways while the registry says 1080x810 — neither the tag nor the registry describes the bytes, so the guard cannot certify it.
+
+All plates carry `permission_status=internal_only` — so does every one of the 3,632 refs in Poseidon, including the plates already in the shipped cuts. It is the ingest default, not a verdict. `customer_identifiable=0` on all. Nate signs release at Gate 0.
+
+⚠️ `build_plate_cards.py` rewrites this file on every run; verdicts are re-applied by `proof.py`. Re-run proof after any rebuild.
