@@ -59,7 +59,12 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont  # noqa: 
 # ── paths ────────────────────────────────────────────────────────────────────
 SRC = "/Users/austinlakescapes/drawdown-2026-campaign/06_Media_Build"        # READ ONLY
 V2 = "/Users/austinlakescapes/drawdown-2026-campaign/.claude/worktrees/platform-native-renders/06_Media_Build"
-OUT = os.path.join(V2, "renders", "LCD_v2")
+# ROUND 5: the output directory is overridable so a revision can be rendered
+# beside the round-4 deliverables Nate is reviewing instead of over them.
+# Default is unchanged.  `LCD_OUT=<dir>` or `python3 build_lcd_v2.py <dir>`.
+OUT = (os.environ.get("LCD_OUT")
+       or (sys.argv[1] if len(sys.argv) > 1 else None)
+       or os.path.join(V2, "renders", "LCD_v2"))
 STRAPS, SEG, QC, LOGS = (os.path.join(OUT, d) for d in ("straps", "seg", "qc", "logs"))
 BED = os.path.join(SRC, "audio", "suno", "02_LakeComingDown_v2.mp3")
 MASTER = os.path.join(SRC, "DRAWDOWN_LakeComingDown_916_SUNO_BED.mp4")
@@ -194,8 +199,19 @@ def track_em(text, base):
 #   name  plate          mode   f0   f1   scale  pan   vpan  push          sat  warm  sharp jit  drift
 SHOTS = [
     ("01a", "8c7fd940fc1f", "bleed",   0, 166, 1.10, 0.18, 0.50, (1.000, 1.120), 45, -0.022, 1.05, 0.00,    0),
-    ("02a", "5a4942b7731d", "bleed", 167, 276, 1.05, 0.62, 0.50, (1.120, 1.050), 40, -0.008, 0.60, 0.55,    0),
-    ("02b", "5a4942b7731d", "bleed", 277, 386, 1.05, 0.33, 0.50, (1.050, 1.120), 40, -0.008, 0.60, 0.55,    0),
+    # ROUND 5 · defect 1, HYDRILLA SHIMMER.  Both beats carried jit 0.55 — the
+    # two-frequency handheld shake — over a still-water reflection whose whole
+    # surface is high-frequency specular texture.  Measured mean inter-frame
+    # |diff| 8.48 / 7.96 against 1.6-2.5 everywhere else in the film: the shake
+    # is not reading as a camera, it is reading as the water flickering.  The
+    # shake is OFF on this plate and the beat is driven by the same continuous
+    # zoompan push every other plate uses — 10.0 % over 3.667 s = 2.73 %/s,
+    # inside the 2-4 %/s band, monotone, restarting on the f277 framing change
+    # exactly as 03a/03b restart on theirs.  12 % measured 3.72 on the same
+    # picture-band metric that produced the 8.48 reading, i.e. just over the
+    # 3.5 ceiling; 10 % lands both metrics inside the band.
+    ("02a", "5a4942b7731d", "bleed", 167, 276, 1.05, 0.62, 0.50, (1.000, 1.100), 40, -0.008, 0.60, 0.00,    0),
+    ("02b", "5a4942b7731d", "bleed", 277, 386, 1.05, 0.33, 0.50, (1.000, 1.100), 40, -0.008, 0.60, 0.00,    0),
     # f387 = 12.900 s — the frame directive E names.  It is a REAL HARD CUT to
     # the payoff, and the payoff is two beats on two plates, each pushing well
     # over 2 %/s with a lateral creep on top so the centre of frame moves too.
@@ -433,7 +449,22 @@ INKBOX = []                   # (name, bbox) BEFORE the shadow — directive D
 #   (0.57 s), which is the critic's own fix; the 5 f ease is untouched.
 SCHED = {"s1": (0, 156), "s2": (177, 370), "s3": (392, 480), "s4": (612, 755)}
 CARD_IN = 772                 # the end card's own first frame
-CTA_IN = 775                  # CTA full at f780 -> f899 = 120 f = 4.000 s
+# ROUND 5 · defect 2, END-CARD STAGGER ORDER.  Round 4 brought the CTA in at
+# f775 — so at f780 the title, the tag, 'Text TRUXOR to' and the phone number
+# were all at full while the four dated rows were still animating in ABOVE
+# them.  The card resolved from the bottom up and the number, the one thing
+# the film exists for, arrived before the schedule it is the answer to.
+# The order is now strictly top-down and the number is LAST:
+#   wordmark + its rule (already on, f0, hard) -> title -> ruleA -> the five
+#   schedule rows -> ruleB -> tag -> 'Text TRUXOR to' -> the number.
+# Stagger is 2 frames, not 4, so the whole cascade fits before the number's
+# deadline.  Entrances are untouched: IN_F = 5, smoothstep, 16 px rise.
+CTA_IN = 786                  # 'Text TRUXOR to'
+CTA_NUM_IN = 787              # the number, LAST.  Full at f792 = 26.400 s,
+                              # holding f792-f899 = 108 f = 3.600 s.
+DATE_IN = CARD_IN + 3         # 775, 777, 779, 781, 783
+DATE_STEP = 2
+CTA_HOLD_MIN = 108            # 3.600 s at full — the floor, not a target
 
 
 def add(name, im, fin, fout=None, move=False, hard=False):
@@ -581,7 +612,7 @@ def build_elements():
         SANS7, T_LEAD, CREAM + (255,), 0.01), **NS), CTA_IN, move=True)
     add("cta_number", layer(lambda d: draw_tracked(
         d, (place_x(CTA_LINE2, SANS7, T_HEAD1, 0.02), cta2_y), CTA_LINE2,
-        SANS7, T_HEAD1, CREAM + (255,), 0.02), **NS), CTA_IN, move=True)
+        SANS7, T_HEAD1, CREAM + (255,), 0.02), **NS), CTA_NUM_IN, move=True)
     add("end_title", layer(lambda d: d.text(
         (place_x(END_TITLE, SERIF, T_TITLE), title_y), END_TITLE,
         font=font(SERIF, T_TITLE), fill=CREAM + (255,)), **NS),
@@ -591,13 +622,13 @@ def build_elements():
     # the tag read as the first line of the CTA block.  Restored to #C4976E.
     add("end_tag", layer(lambda d: draw_tracked(
         d, (place_x(END_TAG, SANS7, T_TAG, 0.01), tag_y), END_TAG,
-        SANS7, T_TAG, BRONZE + (255,), 0.01), **NS), CARD_IN + 6, move=True)
+        SANS7, T_TAG, BRONZE + (255,), 0.01), **NS), CARD_IN + 13, move=True)
     add("end_ruleB", layer(lambda d: d.rectangle(
         [GRID_X, ruleB, GRID_X + RULE_W - 1, ruleB + RULE_H - 1],
-        fill=BRONZE + (255,)), **NS), CARD_IN + 4)
+        fill=BRONZE + (255,)), **NS), CARD_IN + 12)
     add("end_ruleA", layer(lambda d: d.rectangle(
         [GRID_X, ruleA, GRID_X + RULE_W - 1, ruleA + RULE_H - 1],
-        fill=BRONZE + (255,)), **NS), CARD_IN + 4)
+        fill=BRONZE + (255,)), **NS), CARD_IN + 1)
     for i, (dcell, ecell) in enumerate(rows):
         def _row(d, dc=dcell, ec=ecell, idx=i):
             sz, av = _sz(idx)
@@ -610,7 +641,7 @@ def build_elements():
             d.text((place_x(ec, SANS4, sz, 0.0, COL_EVENT, opt=False),
                     _row_y(idx, ec, sz)), ec, font=font(SANS4, sz),
                    fill=CREAM + (av,))
-        add(f"end_date{i}", layer(_row, **NS), CARD_IN + 8 + 4 * i, move=True)
+        add(f"end_date{i}", layer(_row, **NS), DATE_IN + DATE_STEP * i, move=True)
 
     deepest = max(b[3] for _, b in BBOXES)
     print("elements OK — %d layers, deepest ink y=%d (floor %d, clearance %d)"
@@ -621,8 +652,20 @@ def build_elements():
                         f)[0] >= 0.999]
     print("  CTA full opacity f%d-f%d = %d frames = %.3f s"
           % (full[0], full[-1], len(full), len(full) / FPS))
-    if len(full) != 120:
-        raise SystemExit(f"CTA hold is {len(full)} f, not 120 (4.000 s)")
+    if len(full) < CTA_HOLD_MIN:
+        raise SystemExit(f"CTA hold is {len(full)} f, under the "
+                         f"{CTA_HOLD_MIN} f ({CTA_HOLD_MIN/FPS:.3f} s) floor")
+    # ROUND 5 · defect 2.  The number must be the LAST thing to enter, and it
+    # must reach full no later than f792 = 26.400 s.
+    last_in = max(e["fin"] for e in ELEMENTS)
+    num_in = next(e["fin"] for e in ELEMENTS if e["name"] == "cta_number")
+    if num_in != last_in or full[0] > 792:
+        raise SystemExit(f"STAGGER ORDER: cta_number in at f{num_in}, last "
+                         f"entrance f{last_in}, full at f{full[0]} (max 792)")
+    print("  end-card stagger: " + " -> ".join(
+        f"{e['name']}@f{e['fin']}" for e in
+        sorted((e for e in ELEMENTS if e["fin"] >= CARD_IN),
+               key=lambda e: e["fin"])))
     # DIRECTIVE D — ONE left edge, proved on the ink, not on the alpha bbox.
     # Every element that starts at the film's margin must land on 84 +- 2.
     off = [(n, b[0]) for n, b in INKBOX
@@ -979,6 +1022,11 @@ def render_segments(pins):
         sha, png, lpng, trim = m["sha"], m["png"], m["lpng"], m["trim"]
         s_raw, smul, vl, ve = m["s_raw"], m["smul"], m["lock"], m["eye"]
         post = m["base"] + (f",eq=brightness={trim:.4f}" if abs(trim) > 0.002 else "")
+        if name == "05":
+            # ROUND 5 · defect 3.  The card's last SEAM_F frames only.
+            x = f"clip((n-{n - SEAM_F})/{SEAM_F - 1},0,1)"
+            post += (f",eq=brightness='{SEAM_LIFT:.4f}*({x})*({x})"
+                     f"*(3-2*({x}))':eval=frame")
         z = (f"{z0:.3f}+{z1-z0:.3f}*on/{n}" if z1 >= z0
              else f"{z0:.3f}-{z0-z1:.3f}*on/{n}")
         xs = jx(jit) + (f"+{drift:.1f}*on/{n}" if drift else "")
@@ -1002,6 +1050,16 @@ def render_segments(pins):
 
 
 XFADE_F = 6                      # the one dissolve: 04b -> end card, f772
+
+# ROUND 5 · defect 3, LOOP SEAM.  f899 -> f0 stepped +28 YAVG on auto-loop.
+# The fix is on the GROUND, not the type and not the opening frame: over the
+# last SEAM_F frames of the card the ground rises SEAM_LIFT toward the opening
+# aerial's mean luma, on a smoothstep so it is a settle and not a flash.  It is
+# an eq=brightness on the card segment only — the navy token #1B2A4A is
+# untouched for the 118 frames the card actually holds, and the phone number's
+# own 7:1 floor is re-measured on the lifted frames (a QC sample was added at
+# t = 29.93 for exactly that).
+SEAM_F, SEAM_LIFT = 10, 0.075
 
 
 def concat_picture():
@@ -1161,7 +1219,7 @@ def mux():
 #   thumbnail frame, both sides of the money cut, and the CTA's 4 s hold.
 QC_T = (0.00, 0.17, 0.33, 1.00, 3.00, 5.00, 7.00, 8.50, 10.50, 12.00,
         13.50, 15.00, 16.00, 17.50, 19.50, 21.50, 23.00, 25.00,
-        26.50, 28.00, 29.60)
+        26.50, 28.00, 29.60, 29.93)
 
 
 def grab(src, t, dst, scale=None):
@@ -1393,8 +1451,13 @@ def proof():
 
 
 def before_after():
+    # ROUND 5: the reference row is overridable so a revision can be shown
+    # against the round it revises instead of against v1.  Default unchanged.
+    ref = os.environ.get("LCD_CMP_REF") or MASTER
+    lab = (os.environ.get("LCD_CMP_A") or "v1  SHIPPED MASTER",
+           os.environ.get("LCD_CMP_B") or "v2  ROUND 4")
     for t in (1, 5, 15, 28):
-        grab(MASTER, t, f"{QC}/v1_{t}.jpg")
+        grab(ref, t, f"{QC}/v1_{t}.jpg")
         grab(FINAL, t, f"{QC}/v2_{t}.jpg")
     CW_, CH_ = 400, 711
     pad, hdr = 14, 46
@@ -1402,8 +1465,7 @@ def before_after():
                       (18, 20, 24))
     d = ImageDraw.Draw(sheet)
     f_lab, f_row = font(SANS7, 22), font(SANS7, 26)
-    for r, (tag, pre) in enumerate((("v1  SHIPPED MASTER", "v1"),
-                                    ("v2  ROUND 4", "v2"))):
+    for r, (tag, pre) in enumerate(((lab[0], "v1"), (lab[1], "v2"))):
         ry = hdr + r * (CH_ + hdr + pad)
         d.text((pad, ry - 34), tag, font=f_row, fill=(232, 226, 216))
         for c, t in enumerate((1, 5, 15, 28)):
@@ -1411,8 +1473,8 @@ def before_after():
             x = pad + c * (CW_ + pad)
             sheet.paste(im, (x, ry))
             d.rectangle([x, ry + CH_ - 34, x + CW_, ry + CH_], fill=(0, 0, 0))
-            d.text((x + 10, ry + CH_ - 30), f"{pre}  t = {t}.0 s", font=f_lab,
-                   fill=(240, 236, 228))
+            d.text((x + 10, ry + CH_ - 30), f"{tag.split()[0]}  t = {t}.0 s",
+                   font=f_lab, fill=(240, 236, 228))
     sheet.save(os.path.join(OUT, "BEFORE_AFTER.png"))
 
 
