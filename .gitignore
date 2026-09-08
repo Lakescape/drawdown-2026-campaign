@@ -31,3 +31,6 @@
 06_Media_Build/audio/**/*.jpeg
 06_Media_Build/audio/**/*.jpg
 06_Media_Build/audio/**/*.png
+
+# per-platform renders (slice 1+) — media, never git
+06_Media_Build/renders/
