@@ -64,17 +64,32 @@ Output gives you, per shape and totalled: square feet, perimeter, sediment cubic
 
 ---
 
-## The permit cliff is the output that matters most
+## The permit posture is the output that matters most
 
-The tool evaluates every volume against ATX-1697, because this is the largest single price driver on a drawdown job and it turns on an agency action ATX does not control:
+⚠️ **CORRECTED 2026-08-05.** An earlier version of this runbook and of `kml_measure.py` stated a
+**"25 – 2,000 cy LCRA Lakewide Permit"** path. **That was wrong and is retracted.** The 2,000 cy figure
+comes from a lake-lowering registration model on **LCRA-operated** lakes (Inks Lake). LCRA's published
+lakewide permits cover **Lake Buchanan and Lake Travis only** — Lake Austin is a City lake and is not on
+them. Source: `ATX-Jobs/2026-2708-scenic-williams/20-analysis/PERMIT-AUTHORITY-v2-2026-08-04.md` §3.
 
-| Volume | Posture |
+The tool now evaluates two independent triggers — **volume and linear feet** — because either one alone
+pushes the job into Tier II:
+
+| Trigger | Posture |
 | -- | -- |
-| **< 25 cy** | COA administrative approval (LDC §25-2-1176) |
-| **25 – 2,000 cy** | Sellable **only** if the drawdown is announced, LCRA registration is open, *and* this address is registered. Unregistered, sellable volume collapses to **< 25 cy** |
-| **> 2,000 cy** | Over the LCRA/USACE Lakewide Permit ceiling — individual permit, do not bid as routine |
+| **< 25 cy** | City allows without a variance — LDC **§25-8-261(C)(9)(a)**. LCRA HLDO authorization still applies separately |
+| **> 25 cy** | **City variance required** — this is the binding ceiling on Lake Austin — *plus* LCRA HLDO |
+| **> 500 cy** | **LCRA HLDO Tier II** individual permit, plus the City variance |
+| **> 500 LF shoreline disturbed** | **Tier II independently of volume.** A long wall run can trip this at low cubic yardage |
 
-A polygon that computes to 800 cy is not an 800 cy job. It is an 800 cy job **contingent on registration**, or a 25 cy job. Both numbers belong in the bid, as a contingent clause — never one flat number.
+A polygon that computes to 800 cy is not an 800 cy job. It is a **variance-contingent** 800 cy job with a
+**<25 cy fallback**. Both numbers belong in the bid as a contingent clause — never one flat number.
+
+🛑 **The open question that can override all of it.** LCRA HLDO Tier I carves out, verbatim,
+*"commercial dredge and fill activity."* ATX performs the work for hire, so the cheap Tier I
+written-notification path may be unavailable **even under 500 cy** — which would push routine jobs to
+Tier II and change lead time and cost on every drawdown bid. **Unresolved. Call LCRA Water Quality
+512-578-2324.** Until that is answered, do not promise a Tier I timeline to any client.
 
 ---
 
