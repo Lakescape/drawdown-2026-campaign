@@ -44,6 +44,11 @@ ROUND 4 (head of production).  Directives A-G, each measured in BUILD_NOTES.
     · scrim transitions are ZERO frames, landing on the cut.  No 4 f ramp.
     · the film opens on the AERIAL, not the hydrilla — the legible frame.
 
+ROUND 6 (plates).  The hook and the hydrilla beats move onto 4096x3072 DJI
+  stills from the 2025-10-13 Oyster Landing survey (see SHOTS).  No copy, cut
+  frame, grid, grade curve, scrim, type or audio change.  Rendered beside r5
+  with LCD_OUT=renders/LCD_v2/_r6 and compared against r5 in BEFORE_AFTER.
+
 Run:  python3 build_lcd_v2.py
 """
 import json, os, re, shutil, subprocess, sys
@@ -198,7 +203,20 @@ def track_em(text, base):
 #   picture still was not moving.  A creep moves every pixel.
 #   name  plate          mode   f0   f1   scale  pan   vpan  push          sat  warm  sharp jit  drift
 SHOTS = [
-    ("01a", "8c7fd940fc1f", "bleed",   0, 166, 1.10, 0.18, 0.50, (1.000, 1.120), 45, -0.022, 1.05, 0.00,    0),
+    # ROUND 6 · the plates.  Every round before this one graded, sharpened and
+    # scrimmed a 1080x607 aerial covered 3.16x and a 1080x810 reflected-sky
+    # hydrilla plate covered 2.37x — gap 8 (soft) and gap 6 (steel-blue) were
+    # the PLATES, not the chain.  Four DJI drone stills from the 2025-10-13
+    # Oyster Landing (Lake Austin) cut-areas survey are now sha-pinned in the
+    # registry, 4096x3072 each: a 9:16 window is 1728x3072 native, so the hook
+    # is a DOWNSAMPLE for the first time.  Top-down dock fingers with boats in
+    # their slips, sitting in a solid hydrilla mat — the subject is legible at
+    # thumbnail scale, which the old aerial never was.  `sharp` is 0.0 on all
+    # three: there is nothing to rescue.  `sat` rises 45/40 -> 56/54 because
+    # the mat is actually green; the cool trim is dropped for the same reason.
+    # Registry status pending_approval, customer_identifiable=1 (a commercial
+    # client's docks and their customers' boats) — Nate signs at Gate 0.
+    ("01a", "d6ac3e52945b", "bleed",   0, 166, 1.10, 0.42, 0.50, (1.000, 1.120), 56,  0.000, 0.00, 0.00,    0),
     # ROUND 5 · defect 1, HYDRILLA SHIMMER.  Both beats carried jit 0.55 — the
     # two-frequency handheld shake — over a still-water reflection whose whole
     # surface is high-frequency specular texture.  Measured mean inter-frame
@@ -210,8 +228,9 @@ SHOTS = [
     # exactly as 03a/03b restart on theirs.  12 % measured 3.72 on the same
     # picture-band metric that produced the 8.48 reading, i.e. just over the
     # 3.5 ceiling; 10 % lands both metrics inside the band.
-    ("02a", "5a4942b7731d", "bleed", 167, 276, 1.05, 0.62, 0.50, (1.000, 1.100), 40, -0.008, 0.60, 0.00,    0),
-    ("02b", "5a4942b7731d", "bleed", 277, 386, 1.05, 0.33, 0.50, (1.000, 1.100), 40, -0.008, 0.60, 0.00,    0),
+    # ROUND 6: two plates, one hard cut at f277 — the same shape 03a/03b use.
+    ("02a", "7c078e758eeb", "bleed", 167, 276, 1.05, 0.55, 0.50, (1.000, 1.100), 54,  0.000, 0.00, 0.00,    0),
+    ("02b", "ee147aed310d", "bleed", 277, 386, 1.05, 0.45, 0.50, (1.000, 1.100), 54,  0.000, 0.00, 0.00,    0),
     # f387 = 12.900 s — the frame directive E names.  It is a REAL HARD CUT to
     # the payoff, and the payoff is two beats on two plates, each pushing well
     # over 2 %/s with a lateral creep on top so the centre of frame moves too.
@@ -254,7 +273,7 @@ BRIEF_BAN = re.compile(
 # fd49bf6ffe3e, which is in C7_TWO_MACHINE — the imported COUNT guard proves it
 # and fails the build the moment anyone moves it.  03b carries NO type, so no
 # count is claimed over c6b6853c038a and C7 never applies to it.
-CARD_PLATE = {"s1": "8c7fd940fc1f", "s2": "5a4942b7731d",
+CARD_PLATE = {"s1": "d6ac3e52945b", "s2": "7c078e758eeb",
               "s3": "fd49bf6ffe3e", "s4": "cd351a221a00"}
 
 
@@ -697,7 +716,12 @@ def build_elements():
 #   measured motion of the picture underneath it.  44 is solved against bronze
 #   at 4.5:1 with margin (bronze needs ground <= 55) and the DELIVERED ratio is
 #   still measured per element, per frame, and printed.
-LOCK_TARGET, EYE_TARGET = 86.0, 39.0
+# ROUND 6: 39 solved to 0.79 against the new worst eyebrow ground (131.9, the
+# Truxor beat) and the bronze eyebrows measured 4.33:1 on the green mat and
+# 4.33:1 on the Truxor plate — under the 4.5 floor.  33 solves to 0.84, the
+# exact value round 5 delivered, and holds the floor on both.  Same trade as
+# before: 16 % of the picture through the band, measured motion halves there.
+LOCK_TARGET, EYE_TARGET = 86.0, 33.0
 TOP_A = 0.58                  # ONE constant, solved against the WORST-LOCAL
                               # 16x16 ground tile, not the mean.  The critic's
                               # 0.45 measures 4.6:1 there and 0.52 measures
