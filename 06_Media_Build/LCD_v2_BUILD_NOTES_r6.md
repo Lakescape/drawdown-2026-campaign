@@ -4,7 +4,13 @@
 h264 yuv420p · faststart · md5 `e8c658f043acf938c70d34d5e06621af` · 32,105,105 bytes.
 
 Rendered 2026-09-10 beside round 5 (`LCD_OUT=…/_r6`), compared against round 5 in
-`_r6/BEFORE_AFTER.png`. Round 5's outputs were not written to. **Nothing posted. Not signed.**
+`_r6/BEFORE_AFTER.png`. Round 5's outputs were not written to.
+
+**SIGNED — Nate, 2026-09-16: "r6 goes, rebuild the pack."** Installed as
+`06_Media_Build/DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4` (md5 `e8c658f0…`), per-platform
+renders 4/4 PASS, `SCHEDULING_PACK/` rebuilt — all three LCD slots carry r6. The four Oyster
+plates are `approved` in the registry (rows had already been flipped by an `ai-promote` pass on
+09-15, which also overwrote their provenance notes — restored 09-16).
 
 ## What this round is
 
@@ -111,12 +117,14 @@ LCD_OUT=$R/_r6 LCD_CMP_REF=$R/_r5/LCD_v2_916.mp4 \
 
 `LCD_OUT` must be absolute — a relative value makes the concat `list.txt` double the path.
 
-## What this does NOT do
+## What changed after the sign (2026-09-16)
 
-- Does not touch `SCHEDULING_PACK/`. The pack still ships round 5 (`f23ec45d…`) in three
-  slots, and round 5 was never signed either — that is the open finding from 09-10, not
-  something this round fixes. Sign r5 or r6; then the pack rebuilds from the signed master.
-- Does not post. Does not change the Sep 7 `DRAWDOWN_LakeComingDown_916_SUNO_BED.mp4` the
-  schedule doc names as signed.
+- `SCHEDULING_PACK/` rebuilt by `build_scheduling_pack.py`: `2026-09-14_Lake-Coming-Down`,
+  `2026-09-14_GBP`, `2026-09-30_Lake-Coming-Down-rerun` all carry master `e8c658f043ac`;
+  platform subfolders re-rendered by `build_platform_renders.py` — ig-reels / tiktok /
+  fb-reels / gbp 4/4 PASS, −14.01 LUFS, 30.0 s.
+- `PRODUCTION_SCHEDULE_2026-09-07.md` and `PROOF_2026-09-06.md` name r6 as the master;
+  r5 and the 09-06/09-07 v1 cuts are superseded.
+- Still not posted. Routing Gate + Hallie's upload are the remaining steps.
 
 **Nothing posts. Nate sees it first.**
