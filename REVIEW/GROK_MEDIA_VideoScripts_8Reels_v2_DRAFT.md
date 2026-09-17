@@ -73,7 +73,7 @@ Unresolved REAL-ONLY shots block generation until real footage is sourced or the
 | 0:11–0:14 | End card | Silence | **$695. Fully credited. Protect your option.** |
 
 **Voiceover (optional):**  
-“The City is exploring the first real Lake Austin drawdown in nearly ten years. Most will wait. We’re already preparing.”
+“The City and LCRA have announced the first real Lake Austin drawdown in nearly ten years. Most will wait. We’re already preparing.”
 
 **Pole:** Payoff  
 **Note:** This is the correctly hedged reference model for the set.

@@ -10,7 +10,7 @@ Nate sends. Nothing here posts without Gate 3 + Routing PASS.
 
 Ten years of high water on Lake Austin, and nobody has seen what is under it.
 
-The City and LCRA are exploring a drawdown this fall — a projected 10 to 12 feet
+The City and LCRA are drawing Lake Austin down this fall — a projected 10 to 12 feet
 over roughly six to eight weeks. Nothing is on the calendar yet and I am not
 going to pretend otherwise.
 
@@ -36,7 +36,7 @@ This is what staging looks like when the water is already low.
 That is our barge in a Lake Austin cove, equipment moved in over exposed lakebed
 you would normally be floating across.
 
-The City and LCRA are exploring a drawdown this fall, projected at 10 to 12 feet
+The City and LCRA are drawing Lake Austin down this fall, projected at 10 to 12 feet
 over roughly six to eight weeks. It is not scheduled, and I am not going to tell
 you it is. But I have worked this lake long enough to know that when the water
 drops everybody calls the same week, and specialized machine capacity is finite.
@@ -56,7 +56,7 @@ months. If your dock and bulkhead are fine, we will tell you that.
 
 | Claim | Where | Verdict |
 |---|---|---|
-| C1 drawdown happening | "are exploring", "not on the calendar" / "not scheduled" | hedged, mandatory hedge met |
+| C1 drawdown happening | announced by LCRA 2026-08-29; "not on the calendar" / "not scheduled" still applies to DATES | event unhedged, date hedge met |
 | C2 10–12 ft / 6–8 wks | "projected", "roughly" | hedged |
 | C3 ten years | unhedged | correct, source does not hedge |
 | C6 impossible at full pool | reel caption only | unhedged, correct |
@@ -112,7 +112,7 @@ Timed to the four cards: hydrilla (0-3.5) · bank (3.5-6.5) · two Truxors
 ```
 Ten years of high water hid this shoreline on Lake Austin.
 
-The City and LCRA are exploring a drawdown — projected, ten to twelve feet.
+The City and LCRA are drawing Lake Austin down — projected, ten to twelve feet.
 
 We committed two amphibious machines in July.
 

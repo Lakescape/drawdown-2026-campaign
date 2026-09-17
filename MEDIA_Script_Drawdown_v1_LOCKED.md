@@ -27,8 +27,8 @@ then replace. Do not ship the scratch.
 | # | ~In | Line | Claims | Notes |
 |---|---|---|---|---|
 | 1 | 0:00 | "Ten years of high water. Everything on your shoreline that's been under it that whole time — you've never actually seen it." | C3 | Hook. No claim to defend. |
-| 2 | 0:07 | "The City and the LCRA are exploring a drawdown this fall. Projected — ten to twelve feet, over six to eight weeks." | C1, C2 | **"exploring" and "projected" are load-bearing. Do not trim to "is happening."** |
-| 3 | 0:16 | "Nothing's official until it's official. I'd rather say that up front than sell you urgency." | **C1** | The trust beat. Second clause is the whole reason this lands as credibility instead of a disclaimer. |
+| 2 | 0:07 | "The City and the LCRA have announced a drawdown this fall. Projected — ten to twelve feet, over six to eight weeks." | C1, C2 | **Updated 2026-08-29: LCRA announced it, so the event is fact. "Projected" is still load-bearing on the DEPTH — do not trim it.** |
+| 3 | 0:16 | "The dates aren't locked yet. I'd rather say that up front than sell you urgency." | **C2 / dates** | The trust beat, kept. C1 retired 2026-08-29, so the candour moves from the event to the window — which is where the uncertainty actually is. Second clause is still the whole reason this lands as credibility instead of a disclaimer. |
 | 4 | 0:23 | "But we committed two amphibious machines back in July. That's what preparing looks like." | **C7** | Needs Shot 1 + Shot 2 under it. Do not voice this over conventional-track footage. |
 | 5 | 0:30 | "When the water drops — your bulkhead, your sediment, the base of your dock — exposed. And for a few weeks, practical to fix." | C6 | Needs Shot 5 or 6. |
 | 6 | 0:41 | "That work typically runs thirty to forty percent less on dry ground than it does off a barge. Some of it isn't possible any other way." | C5, C6 | **"typically" is load-bearing.** |
