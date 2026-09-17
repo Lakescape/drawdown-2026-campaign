@@ -1,0 +1,239 @@
+[
+  {
+    "date": "2026-09-07",
+    "weekday": "Mon",
+    "platform": "IG Reels \u00b7 TikTok \u00b7 FB",
+    "kind": "video",
+    "file": "DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4",
+    "title": "Method cut \u2014 scrape haul cover",
+    "folder": "2026-09-07_Method-cut",
+    "md5": "d0ce3709e373",
+    "bytes": 14175154,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-09",
+    "weekday": "Wed",
+    "platform": "IG Reels \u00b7 TikTok",
+    "kind": "video",
+    "file": "DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE_VO_MikeRow.mp4",
+    "title": "Viral lead-in + VO",
+    "folder": "2026-09-09_Viral-lead-in-+-VO",
+    "md5": "7899ae4426e0",
+    "bytes": 12671012,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-11",
+    "weekday": "Fri",
+    "platform": "IG Story",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S01_dates_916.jpg",
+    "title": "S01 \u2014 the dates",
+    "folder": "2026-09-11_S01",
+    "md5": "aedcc8212831",
+    "bytes": 572491,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-11",
+    "weekday": "Fri",
+    "platform": "IG Feed \u00b7 FB \u00b7 LinkedIn",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S02_under-your-dock_45.jpg",
+    "title": "S02 \u2014 under your dock",
+    "folder": "2026-09-11_S02",
+    "md5": "c321980abc4f",
+    "bytes": 524779,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-14",
+    "weekday": "Mon",
+    "platform": "IG Reels \u00b7 TikTok \u00b7 FB",
+    "kind": "video",
+    "file": "DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4",
+    "title": "Lake Coming Down \u2014 HERO attractor",
+    "folder": "2026-09-14_Lake-Coming-Down",
+    "md5": "e8c658f043ac",
+    "bytes": 32105105,
+    "platform_renders": [
+      "ig-reels",
+      "tiktok",
+      "fb-reels"
+    ]
+  },
+  {
+    "date": "2026-09-14",
+    "weekday": "Mon",
+    "platform": "Google Business Profile",
+    "kind": "video",
+    "file": "DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4",
+    "title": "GBP \u2014 listing video + Google Post",
+    "folder": "2026-09-14_GBP",
+    "md5": "e8c658f043ac",
+    "bytes": 32105105,
+    "platform_renders": [
+      "gbp"
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "weekday": "Wed",
+    "platform": "IG Reels \u00b7 TikTok",
+    "kind": "video",
+    "file": "DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4",
+    "title": "Method cut rerun",
+    "folder": "2026-09-16_Method-cut-rerun",
+    "md5": "d0ce3709e373",
+    "bytes": 14175154,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-18",
+    "weekday": "Fri",
+    "platform": "IG Story",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S03_past-the-dock_916.jpg",
+    "title": "S03 \u2014 past the dock",
+    "folder": "2026-09-18_S03",
+    "md5": "cfe3cc550150",
+    "bytes": 778940,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-18",
+    "weekday": "Fri",
+    "platform": "IG Feed \u00b7 FB \u00b7 LinkedIn",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S07_two-machines_45.jpg",
+    "title": "S07 \u2014 two machines",
+    "folder": "2026-09-18_S07",
+    "md5": "cbb16df0b7fb",
+    "bytes": 571772,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-21",
+    "weekday": "Mon",
+    "platform": "IG Reels \u00b7 TikTok \u00b7 FB",
+    "kind": "video",
+    "file": "DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4",
+    "title": "Work the Bed \u2014 the song",
+    "folder": "2026-09-21_Work-the-Bed",
+    "md5": "312f1f31099d",
+    "bytes": 24304853,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-23",
+    "weekday": "Wed",
+    "platform": "IG Reels \u00b7 TikTok \u00b7 FB",
+    "kind": "video",
+    "file": "DRAWDOWN_Turnkey_916_SUNO_BED.mp4",
+    "title": "Turnkey \u2014 DRAFT until Nate Gate 3",
+    "folder": "2026-09-23_Turnkey",
+    "md5": "0fba97d456a6",
+    "bytes": 14846387,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-25",
+    "weekday": "Fri",
+    "platform": "IG Story \u00d73",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S04_scrape_916.jpg",
+    "title": "S04\u2013S06 \u2014 scrape / haul / cover",
+    "folder": "2026-09-25_S04\u2013S06",
+    "md5": "6e6c47cce068",
+    "bytes": 567707,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-25",
+    "weekday": "Fri",
+    "platform": "IG Feed \u00b7 FB",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S06_cover_45.jpg",
+    "title": "S06 \u2014 cover",
+    "folder": "2026-09-25_S06",
+    "md5": "01a4d8a68fa5",
+    "bytes": 602054,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-28",
+    "weekday": "Mon",
+    "platform": "IG Reels \u00b7 TikTok \u00b7 FB",
+    "kind": "video",
+    "file": "DRAWDOWN_Bulkhead_916_STUDIO.mp4",
+    "title": "Bulkhead \u2014 what the water hides",
+    "folder": "2026-09-28_Bulkhead",
+    "md5": "2e70a444ced4",
+    "bytes": 10660726,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-09-30",
+    "weekday": "Wed",
+    "platform": "IG Reels \u00b7 TikTok",
+    "kind": "video",
+    "file": "DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4",
+    "title": "Lake Coming Down rerun",
+    "folder": "2026-09-30_Lake-Coming-Down-rerun",
+    "md5": "e8c658f043ac",
+    "bytes": 32105105,
+    "platform_renders": [
+      "ig-reels",
+      "tiktok"
+    ]
+  },
+  {
+    "date": "2026-10-02",
+    "weekday": "Fri",
+    "platform": "IG Story",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S08_seven-weeks_916.jpg",
+    "title": "S08 \u2014 seven weeks",
+    "folder": "2026-10-02_S08",
+    "md5": "b97f60052279",
+    "bytes": 739244,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-10-05",
+    "weekday": "Mon",
+    "platform": "IG Story \u00b7 FB",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S09_seven-days_916.jpg",
+    "title": "S09 \u2014 7 days",
+    "folder": "2026-10-05_S09",
+    "md5": "143d20c706fa",
+    "bytes": 560958,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-10-07",
+    "weekday": "Wed",
+    "platform": "IG Reels \u00b7 TikTok",
+    "kind": "video",
+    "file": "DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4",
+    "title": "Work the Bed rerun",
+    "folder": "2026-10-07_Work-the-Bed-rerun",
+    "md5": "312f1f31099d",
+    "bytes": 24304853,
+    "platform_renders": []
+  },
+  {
+    "date": "2026-10-12",
+    "weekday": "Mon",
+    "platform": "IG Story \u00b7 FB \u00b7 TikTok",
+    "kind": "image",
+    "file": "DRAWDOWN_Card_S10_monday_916.jpg",
+    "title": "S10 \u2014 MONDAY",
+    "folder": "2026-10-12_S10",
+    "md5": "b28e947fe833",
+    "bytes": 573862,
+    "platform_renders": []
+  }
+]

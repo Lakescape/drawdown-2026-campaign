@@ -1,0 +1,19 @@
+Kitchen: ~/drawdown-2026-campaign/06_Media_Build/
+
+Read KICKOFF-POSTING-CALENDAR-2026-09-07.md then do it.
+
+Nate wants the posts ON THE CALENDAR. Hero = Lake Coming Down 30s with the song (DRAWDOWN_LakeComingDown_916_SUNO_BED.mp4) on IG + TikTok + Facebook + Google Business Profile listing video, Sep 14. Same file, one magnet. GBP: listing video + Google Post, leave it up, do not stack other reels on Maps.
+
+The calendar already exists — do not invent another:
+- build_scheduling_pack.py → SCHEDULING_PACK/ (Hallie uploads from here into Meta Business Suite Planner, TikTok scheduler, GBP)
+- build_calendar_page.py → ../.lavish/calendar/calendar.html (Nate click-to-play)
+- PRODUCTION_SCHEDULE_2026-09-07.md
+- weeks/2026-08-31/BOARD.md APPEND ONLY
+
+Hermes already patched SLOTS: Sep 14 LCD file is SUNO_BED + a GBP slot; Sep 23 is Turnkey DRAFT (Gate 3 — do not tell Hallie to schedule that one yet); Sep 30 LCD rerun uses SUNO_BED.
+
+Run: python3 build_scheduling_pack.py && python3 build_calendar_page.py
+Confirm Sep 14 folders exist and the mp4 is in them.
+Append BOARD with what you verified. Do not overwrite BOARD.
+Do not post. Do not log into Meta or Google.
+Banned: $695, inspection, unofficial, barge-as-Truxor, hydrilla extinct.

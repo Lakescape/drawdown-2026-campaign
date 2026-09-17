@@ -66,7 +66,8 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Lake Coming Down** — the CALENDAR piece, **v2 round 6** (`DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4`, md5 `e8c658f0`) | **SIGNED Nate 09-16 (r6) · pack rebuilt 09-16** | Slot date passed unsigned; whatever went out 09-14 is not on record. Hallie uploads the platform subfolder file from `SCHEDULING_PACK/2026-09-14_Lake-Coming-Down/<platform>/`, not the master |
+| Mon | Reel | **Lake Coming Down HERO** — 30s + song (`DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4`, **r6**, md5 `e8c658f0`) IG/TT/FB | **SIGNED Nate 09-16 (r6) · pack rebuilt 09-16** | Slot date passed unsigned; whatever went out 09-14 is not on record. Hallie: upload the platform subfolder file from `SCHEDULING_PACK/2026-09-14_Lake-Coming-Down/<platform>/`, not the master |
+| Mon | GBP | **Same file** as listing video + Google Post (`2026-09-14_GBP/`) | **SCHEDULED** | leave it up; do not stack other reels on Maps |
 | Wed | Reel | Method cut, re-run with caption variant | READY | — |
 | Fri | Story | S03 Past The Dock | READY | Victoria taste (abstract plate) |
 | Fri | Feed | S07 Two Machines (4:5) | READY | — |
@@ -76,7 +77,7 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
 | Mon | Reel | **Work the Bed** — `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4`, 30 s, Country take A from 0:28 | **APPROVED** (Victoria, sit-down 09-06) | — |
-| Wed | Reel | Lake Coming Down rerun, or the lead-in VO cut if it did not run W37 | READY | — |
+| Wed | Reel | **Turnkey 15s** — permits / expert crew / haul off / 100% turnkey (`DRAWDOWN_Turnkey_916_SUNO_BED.mp4`) | **DRAFT** (built 09-07, C7 recut same day) | Nate Gate 3 |
 | Fri | Story ×3 | S04 Scrape / S05 Haul / S06 Cover as a 3-card story | READY | — |
 | Fri | Feed | S06 Cover (4:5) | READY | — |
 

@@ -533,3 +533,195 @@ Corrected: today's and the 09-16 rerun slots now carry the signed
 v2 is marked NOT SIGNED and waits for the pick. Pack and calendar rebuilt; all 18
 captions and the handoff's draft captions pass Mogul `voice-qa.sh` 0 hard / 0 warn.
 Nothing published, nothing sent, media stayed in Poseidon.
+
+### 2026-09-07 Hermes — Turnkey 15s (permits / crew / haul / easy)
+
+Nate: speak that we file the permits, expert team, convenience, paint turnkey.
+Separate piece from method and from Lake Coming Down.
+
+**`DRAWDOWN_Turnkey_916_STUDIO.mp4`** (~14.65s silent) + Mud Window v2 mux
+`DRAWDOWN_Turnkey_916_SUNO_BED.mp4`. Builder `build_turnkey.py`. Desk draft
+`M-TURNKEY` → `public/media/turnkey-studio.mp4`. Packet
+`GROK_VIDEO_Turnkey_v1_DRAFT.md`. Slot **W39 Wed**. Unsigned. FFmpeg preview.
+
+| Beat | Plate | Strap |
+|---|---|---|
+| 1 | `153d39cdb0eb` | ZERO PERMITS TO FILE / WE HANDLE COA & LCRA |
+| 2 | `c6b6853c038a` FIT C7 | EXPERT TEAM ON THE WATER / AMPHIBIOUS TRUXORS |
+| 3 | `83f97f1642cd` FIT | OFF THE BARGE. / INTO THE TRAILER. |
+| 4 | `870b907f2401` | 100% TURNKEY / TEXT TRUXOR · 254-780-6971 |
+
+C7 miss on first cut: beat 3 used `83f97f1642cd` (pile still on the bank) under
+"100% HAULED OFF-SITE". Recut same day to the S05 truck-bed plate. `@two_machines`
+never on this cut. No $695. No tarp/staple claim.
+
+### 2026-09-07 Nate — not the truck, barge into trailer
+
+Turnkey beat 3 swapped off `c30cdc0fe978` (pickup bed) onto `83f97f1642cd` FIT
+centered so the LOAD TRAIL dump trailer stays in 9:16 with the barge pile.
+Strap: OFF THE BARGE. / INTO THE TRAILER. QC t10: trailer + barge both hold.
+Desk caption updated. Still draft / Gate 3.
+
+### 2026-09-07 — push farther (18s, five beats)
+
+Turnkey now: YOU DON'T FILE A THING → OUR CREW. OUR IRON. → OFF THE BARGE.
+→ INTO THE TRAILER. (portrait dump-bed `5e85f06eda86`, fills 9:16) →
+WE RUN IT. YOU DON'T. Rejected `a366` (identifiable houses). QC t12.5 packed
+bed + lake holds. `DRAWDOWN_Turnkey_916_SUNO_BED.mp4` 18.00s. Desk draft.
+
+### 2026-09-07 LCD + Truxors
+
+Lake Coming Down recut with two Truxor beats (`c6b6853c038a` pair + shoreline
+harvest still). User liked the 30s aerial; posting = IG/TT Reels primary, FB
+groups, 4:5 cards to LinkedIn. Gate 3 still Nate. Do not treat ffmpeg mux as master.
+
+### 2026-09-07 — STOP dual Hermes on Turnkey
+
+Two Hermes sessions (`140924_7b83fa` + `145230_83e616`) both patched
+`build_turnkey.py`. Nate called it. **Claude QC owns the stamp now.**
+Packet: `HERMES_QC_TURNKEY.md` + `CLAUDE_PROMPT_TURNKEY_QC.txt`.
+Haul 1 is bleed ax=0.90 on `83f97f1642cd` (LOAD TRAIL + barge). Haul 2 is
+`5e85f06eda86` packed bed. Hermes does not rebuild. Claude writes
+`GATE3_TURNKEY.md` PASS/FAIL. Nate Gate 3 after that. Nothing posts.
+
+### 2026-09-07 — posting calendar (Nate: put it on the calendar)
+
+Place that already exists — no new calendar app:
+- Pack: `SCHEDULING_PACK/` (Hallie → Meta Planner / TikTok / GBP)
+- Click grid: `.lavish/calendar/calendar.html`
+- Builder: `build_scheduling_pack.py` + `build_calendar_page.py`
+
+Hero = LCD 30s + song `DRAWDOWN_LakeComingDown_916_SUNO_BED.mp4`
+- **Mon Sep 14** IG/TT/FB folder `2026-09-14_Lake-Coming-Down/`
+- **Same day GBP** listing video + Google Post `2026-09-14_GBP/` — leave it, don't stack
+- **Wed Sep 23** Turnkey DRAFT `2026-09-23_Turnkey/` — Gate 3 before Meta schedule
+
+Kickoff: `KICKOFF-POSTING-CALENDAR-2026-09-07.md`
+Claude prompt: `CLAUDE_PROMPT_POSTING.txt`
+Rebuild verified 19 slots, 0 missing. Nothing posted.
+
+### 2026-09-07 20:05 CT — Claude verification pass (posting calendar)
+
+Ran `python3 build_scheduling_pack.py && python3 build_calendar_page.py`.
+Result: **19 slots, 0 missing**; calendar wrote 19 slots, 15 assets copied.
+Nothing posted. No Meta login. No Google login.
+
+Verified on disk:
+
+| Slot | Folder | File | md5 (12) |
+|---|---|---|---|
+| Mon Sep 14 IG/TT/FB | `2026-09-14_Lake-Coming-Down/` | `DRAWDOWN_LakeComingDown_916_SUNO_BED.mp4` | `93a76df11556` |
+| Mon Sep 14 GBP | `2026-09-14_GBP/` | same file, same md5 | `93a76df11556` |
+| Wed Sep 23 Turnkey DRAFT | `2026-09-23_Turnkey/` | `DRAWDOWN_Turnkey_916_SUNO_BED.mp4` | `0fba97d456a6` |
+| Wed Sep 30 LCD rerun | `2026-09-30_Lake-Coming-Down-rerun/` | same LCD file | `93a76df11556` |
+
+- One magnet confirmed: all three LCD slots are byte-identical to the kitchen master
+  (`19,558,093` bytes), so IG/TT/FB and the GBP listing video are literally one file.
+- LCD carries the song — ffprobe: `h264` video + `aac` audio, `30.000000` s.
+- Both Sep 14 folders hold `caption.txt`. GBP caption is the short one with
+  the CTA and **no hashtags**; the social caption carries the tag line.
+- `.lavish/calendar/calendar.html` rebuilt 20:05, both Sep 14 tiles present
+  (`2026-09-14_Lake-Coming-Down`, `2026-09-14_GBP`), LCD SUNO_BED copied in for
+  click-to-play.
+- Banned scan across every `caption.txt` + `calendar.html`: clean. Only hit is
+  `SCHEDULING_PACK/README.md` line 42, which is the guard sentence naming the
+  banned set — internal, not posted copy.
+
+For Hallie: schedule Sep 7 → Sep 21 and Sep 25 onward.
+**Do not schedule `2026-09-23_Turnkey/`** — it stays DRAFT until Nate Gate 3.
+GBP gets the Sep 14 listing video + one Google Post, then left alone; the Sep 30
+LCD rerun is IG/TikTok only.
+
+### 2026-09-07 23:15 CT — platform-native renders, slice 1 (Claude)
+
+Nate: "we don't have each video custom edited specifically to the platform." Confirmed —
+`build_scheduling_pack.py` copies one mp4 into the IG / TikTok / FB / GBP folders.
+
+Built on branch `worktree-platform-native-renders` → PR #12 (draft):
+https://github.com/Lakescape/drawdown-2026-campaign/pull/12
+
+- `06_Media_Build/build_platform_renders.py` — one master in, per platform out:
+  render.mp4 (−14 LUFS two-pass, 30 fps, faststart, duration capped), safe-zone proof
+  PNG at 5 s and at the CTA beat, cover.jpg, qc.json, QC_SHEET.md.
+- Ran on `DRAWDOWN_LakeComingDown_916_SUNO_BED.mp4`: **4/4 PASS**, 25 s.
+  ig-reels / tiktok / fb-reels 30.10 s −13.22 LUFS · gbp 30.00 s −13.19 LUFS.
+- Renders live in the worktree: `.claude/worktrees/platform-native-renders/06_Media_Build/renders/`
+  (gitignored). Not in SCHEDULING_PACK yet — slice 2 wires them in.
+
+**Finding from the proof frames (the reason this matters):**
+- TikTok, 5 s: the "LAKE AUSTIN / DRAWDOWN 2026" title card sits entirely inside the
+  bottom caption dead zone. A TikTok viewer never sees it.
+- CTA beat: the headline's last letter bleeds into the right icon rail on TikTok, touches it on IG.
+- Slice 2 (ATX-2313) re-anchors straps per platform. Until then the pack still ships the master.
+
+Docs: `docs/architecture/platform-native-renders-2026-09-07.md` ·
+`docs/research/platform-native-renders-2026-09-07.md` (Gary V PAC/SOC/PCS from the PDF on disk) ·
+`docs/maps/platform-native-renders.html` · FigJam https://www.figma.com/board/kguEVAEMPpCFkfknnwkueB
+Linear: ATX-2312 (slice 1), ATX-2313 (slice 2), ATX-2314 (slice 3).
+
+**Routing Gate is still not PASS (ATX-1748).** `pipeline/keyword-routing-test.md` reads
+BLOCKED 2026-08-03; publish-log empty; last live test FAIL 2026-08-13. Sep 14 hero CTA
+points at an unproven keyword. Remaining step: one TRUXOR text from a phone not on the
+business account → Slack card → log PASS. Nate's two minutes.
+
+MKT1: not a video tool. Only `mkt1_gaccs` (one campaign brief) belongs in this pipeline.
+Nothing posted.
+
+### 2026-09-08 07:40 CT — Lake Coming Down v2, craft rebuild round 4 (Claude)
+
+Nate 01:18: "that render is god awful ... did it get better? show me how." Slice 1 had not
+changed the picture. This did. Four rounds: 4 readers → 3 directors → 3 judges → build →
+3 adversarial critics, 27 agents.
+
+Delivered (worktree `platform-native-renders`, PR #12, Linear ATX-2316):
+- `06_Media_Build/build_lcd_v2.py` + `LCD_v2_SPEC.md` + `LCD_v2_BUILD_NOTES_r4.md` (committed)
+- Kitchen copies for your click: `DRAWDOWN_LakeComingDown_916_SUNO_BED_v2_r4_DRAFT.mp4`,
+  `LCD_v2_r4_BEFORE_AFTER.png` — DRAFT, unsigned, beside the untouched master.
+
+Kept from the signed master: Suno bed (v2 take, r=1.000 waveform match), approved plates
+in order, every word verbatim, dates, Truxor beat. Changed: DM Serif/DM Sans by path,
+flush-left grid, one bronze rule, no slabs, cuts on the measured 130.85 BPM grid, branded
+frame 0, navy end card, CTA verbatim 4.000 s, all type ≥ 4.5:1 (number ≥ 7:1), deepest ink
+y=1362 (< 1436 TikTok line), −14.2 LUFS.
+
+Critics r4: 6.5 / 7 / 7. Better than v1: 3/3 every round. Agency bar: not yet.
+
+**Nate decisions (Gate 3 items):**
+1. Hierarchy: card 1 = DRAWDOWN 2026 big, LAKE AUSTIN eyebrow (v1 had LAKE AUSTIN big).
+2. Fifth plate: v2 adds pinned C7 plate `fd49bf6ffe3e` (two Truxors, overhead) at 12.9–16.6 s
+   so "TWO AMPHIBIOUS TRUXORS" sits on a frame with exactly two machines. Not in v1.
+3. Hook plate: opening aerial `8c7fd940fc1f` is 1080×607 upscaled 3.16× — soft. Every critic
+   names it the weakest frame. Real fix is a 4K drone plate of Lake Austin, not a filter.
+4. End card on GBP: TikTok-safe layout leaves 648 px of navy under the number; GBP has no
+   dead zone. That is the per-platform cut (ATX-2313) doing its job.
+
+Mechanical fixes running now into `renders/LCD_v2/_r5/` (r4 untouched): hydrilla-plate
+shimmer, end-card stagger order (number lands last), loop seam. Nothing posted.
+
+### 2026-09-08 08:05 CT — LCD v2 round 5, mechanical (Claude)
+
+Kitchen: `DRAWDOWN_LakeComingDown_916_SUNO_BED_v2_r5_DRAFT.mp4` — current best. r4 kept.
+- End-card order fixed: number is the last of 11 entrances, full at f792 (26.400 s), holds 3.600 s. Verified PASS.
+- Loop seam +24 → +7.5 YAVG. Verified PASS. Cost: "scrape · haul · cover" bronze tag dips to 3.6:1 for the last 200 ms. Nate's call — `SEAM_LIFT = 0.0` in `build_lcd_v2.py` reverts.
+- Hydrilla shimmer: cause was handheld-jitter on a still-water reflection, not interpolation. Jitter removed, plate now pushes 2.73 %/s like the others. 2.2× calmer; verifier still reads 4.2 on full-frame vs the 3.5 target — remaining motion is the footage itself.
+No regressions on t=1/5/15/22/28. Nothing posted.
+
+### 2026-09-08 15:13 CT — Nate Gate 3 on LCD v2 (r5)
+
+Nate: "these are way better! thats what im talking about." Decisions, all YES:
+1. Card 1 hierarchy: DRAWDOWN 2026 headline, LAKE AUSTIN eyebrow — KEEP.
+2. Fifth plate `fd49bf6ffe3e` (two Truxors overhead, 12.9–16.6 s) — KEEP.
+3. Opening aerial soft (1080×607 source) — ACCEPT as is.
+v2 r5 is now the LCD file for the calendar: `DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4`
+(kitchen copy of r5; the v1 master stays on disk untouched). Wiring into SCHEDULING_PACK
+Sep 14 (IG/TT/FB + GBP) and Sep 30 with per-platform subfolders follows. Nothing posted.
+
+### 2026-09-08 15:30 CT — pack rebuilt on LCD v2 (Claude)
+
+`python3 build_scheduling_pack.py && python3 build_calendar_page.py` → 19 slots, 0 missing, captions clean.
+- `2026-09-14_Lake-Coming-Down/` = `DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4` + `ig-reels/ tiktok/ fb-reels/` subfolders
+- `2026-09-14_GBP/` = same master + `gbp/` subfolder
+- `2026-09-30_Lake-Coming-Down-rerun/` = same master + `ig-reels/ tiktok/`
+Each subfolder: the platform-normalized file (−14.0 LUFS, 30 fps) + `safezone_proof.png`.
+For Hallie: upload the subfolder file to that app. Sep 7–11 folders unchanged.
+Calendar page rebuilt. Committed on PR #12. Nothing posted; Routing Gate still open.
