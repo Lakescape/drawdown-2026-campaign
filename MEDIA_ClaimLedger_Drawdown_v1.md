@@ -6,8 +6,8 @@ hedges in the same breath — not in an end-card disclaimer.
 
 | # | Claim | Exact source | Source hedges? | Asset must hedge? | Footage required to carry it |
 |---|---|---|---|---|---|
-| C1 | Drawdown is happening this fall | LCRA announcement, **2026-08-29** | no — announced | **NO** for the event. Hedges on DEPTH (C2) and on DATES stay mandatory. | any low-water shoreline |
-| C2 | 10–12 ft drop over 6–8 weeks | "projected ten-to-twelve-foot drop over roughly six to eight weeks" | "projected" | soften to "projected" | exposed shoreline / waterline stain |
+| C1 | Drawdown is happening — Oct 12 to Nov 30, 2026 | LCRA announcement, **2026-08-29**; dates per LCRA release (down from Oct 12, refill from Nov 24, normal pool Nov 30) | no — announced, dated | **NO.** State the event and the dates as fact. Retired: "exploring", "unofficial", "nothing is official yet", "this fall" with no date. | any low-water shoreline |
+| C2 | About 10 ft drop (target 481.8–482.8 ft msl) | LCRA's own number — Nate ruling **2026-09-06**, campaign-wide | no | **NO.** Say "about 10 feet". Retired: "projected", "10–12", "ten to twelve". | exposed shoreline / waterline stain |
 | C3 | First meaningful window in ~10 years | "first meaningful low-water window in nearly ten years" | no | no | — |
 | C4 | Next comparable window 8–10 yrs out | "**may be** eight to ten years away" | **YES** | **YES** | — |
 | C5 | 30–40% cheaper during drawdown | "typically 30–40% less expensive" | "typically" | keep "typically" | dry-ground work vs barge work |
@@ -24,11 +24,13 @@ hedges in the same breath — not in an end-card disclaimer.
   booking and the reason capacity is scarce. Any frame under this claim must
   show amphibious/pontoon undercarriage and must show exactly two machines.
 - **C11 is a location claim.** Generic lake footage silently contradicts it.
-- **C1 changed 2026-08-29.** LCRA announced the drawdown, so the event may now be
-  stated as fact. The *depth* (C2, "projected 10–12 ft") and the *window dates*
-  (Oct–Nov) are still projections and MUST stay hedged — an announced drawdown is
-  not a scheduled one. Source: Nate, 2026-09-02; no announcement document is
-  filed in this repo, so cite the LCRA notice directly before external use.
+- **C1 retired 2026-08-29, dated 2026-09-04, depth fixed 2026-09-06.** LCRA announced
+  the drawdown 2026-08-29 (source: Nate, 2026-09-02). Nate 2026-09-04: hedge retired,
+  dates on screen. Nate 2026-09-06: ABOUT 10 FT campaign-wide, LCRA's number, 10–12
+  retired. The builders on `main` (`compose.py`, `build_lcd_v2.py`, `build_plate_cards.py`,
+  `build_scheduling_pack.py`) already ship these strings; this ledger now matches them.
+  No LCRA notice document is filed in this repo — cite the LCRA release directly
+  before any external legal use.
 - **C4 remains the legal exposure.** The one-pager is careful; the video must
   be at least as careful, spoken not just captioned.
 
