@@ -1,0 +1,143 @@
+<!-- ============================================================
+     ATX LAKESCAPES — HTML TOKEN BLOCK
+     GENERATED from ATX-PROPOSAL-DESIGN-SYSTEM.css. Do not hand-edit:
+     edit the CSS and re-run  python3 make-atx-tokens.py
+     ------------------------------------------------------------
+     Paste both lines below at the top of ANY ATX html surface —
+     artifact, map, dashboard, one-pager. design-system-guard.sh
+     blocks an ATX html file that defines colours without them.
+     ============================================================ -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* structure */
+  --navy:      #1B2A4A;  /* header/footer bands, section structure, VALUES, total band */
+  --navy-deep: #14213d;  /* darker navy for covers / subtle draft strip */
+
+  /* the ONE accent — soft bronze, used SPARINGLY */
+  --bronze:    #C4976E;  /* tagline, bullet dots, section-head tiny-caps, callout left-border, "recommended" badge */
+  --bronze-deep:#A87F56; /* bronze borders / pressed states */
+
+  /* text */
+  --ink:       #3D3229;  /* body + values (WARM dark brown — never cool gray, never pure black) */
+  --taupe:     #8C7E72;  /* secondary text + tiny-caps labels */
+
+  /* surfaces */
+  --cream:     #FAF6F0;  /* page background (warm, light) */
+  --cream-2:   #F0E8DC;  /* panels, alternating table rows, callout fill (SOLID — never an rgba tint) */
+  --mute:      #D4C5B0;  /* footer text, "valid 30 days" line, hairline-2 */
+  --rule:      #E2D8C9;  /* hairlines on cream */
+
+  /* semantic (engineering diagrams only — NOT brand accents) */
+  --danger:    #b0573f;  /* "failure / before" red in before/after structural diagrams */
+  --ok:        #3f7a55;  /* "correct / after" green */
+
+  --serif: 'DM Serif Text', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+}
+</style>
+<title>Platform-Native Renders Map</title>
+<style>
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+  header{background:var(--navy);color:var(--cream);padding:24px 32px}
+  header h1{font-family:var(--serif);font-weight:400;font-size:28px;margin:0 0 4px}
+  header p{margin:0;color:var(--mute)}
+  header a{color:var(--cream)}
+  main{padding:24px 32px 48px;max-width:1200px}
+  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .lane h2{font-family:var(--serif);font-weight:400;font-size:18px;margin:0 0 8px;color:var(--navy)}
+  .lane .tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+  .node{background:var(--cream-2);border:1px solid var(--rule);padding:12px;margin-bottom:12px}
+  .node h3{margin:0 0 4px;font-size:14px;font-weight:700;color:var(--navy)}
+  .node p{margin:0 0 8px;color:var(--ink)}
+  .node .why{color:var(--taupe);font-size:12px}
+  .node .where{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--taupe);word-break:break-all}
+  .status{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border:1px solid var(--rule);margin-bottom:8px}
+  .built{color:var(--ok);border-color:var(--ok)}
+  .slice1{color:var(--navy);border-color:var(--navy)}
+  .planned{color:var(--taupe)}
+  .blocked{color:var(--danger);border-color:var(--danger)}
+  .arrow{text-align:center;color:var(--bronze);font-size:18px;margin:-4px 0 8px}
+  .callout{border-left:3px solid var(--bronze);background:var(--cream-2);padding:12px 16px;margin:24px 0}
+  .callout strong{color:var(--navy)}
+  footer{padding:16px 32px;color:var(--taupe);font-size:12px;border-top:1px solid var(--rule)}
+  a{color:var(--navy)}
+</style>
+
+<header>
+  <h1>Platform-Native Renders</h1>
+  <p>One pillar cut, laid out per feed, QC before anything ships · updated 2026-09-07 ·
+     <a href="https://linear.app/atxlakescapes/project/lake-austin-drawdown-campaign-media-blitz-revenue-capture-oct-2026-412293ef8e7e">Linear project</a> ·
+     <a href="../architecture/platform-native-renders-2026-09-07.md">Arch doc</a> ·
+     <a href="../research/platform-native-renders-2026-09-07.md">Research</a> ·
+     <a href="https://www.figma.com/board/kguEVAEMPpCFkfknnwkueB">FigJam</a></p>
+</header>
+
+<main>
+  <div class="lanes">
+
+    <section class="lane">
+      <div class="tag">Upstream · Media Mogul law</div>
+      <h2>Make the master</h2>
+      <div class="node"><span class="status built">BUILT</span><h3>GACCS brief</h3>
+        <p>Goals, Audience, Creative, Channels, Stakeholders. The one brief every cut answers to.</p>
+        <p class="why">Why: agencies brief before they cut. MKT1 <code>mkt1_gaccs</code> writes it; nothing else in MKT1 touches video.</p></div>
+      <div class="arrow">&darr;</div>
+      <div class="node"><span class="status built">BUILT</span><h3>Gates 0 &rarr; 3</h3>
+        <p>Six Pillars &rarr; selects &rarr; grade strip &rarr; Nate signs the 9:16 draft.</p>
+        <p class="why">Why: taste stays with Nate; agents work between the diamonds.</p>
+        <p class="where">~/ATX-Media-Mogul/pipeline/WORKFLOW-MAP.md</p></div>
+      <div class="arrow">&darr;</div>
+      <div class="node"><span class="status built">BUILT</span><h3>Pillar master</h3>
+        <p>Lake Coming Down 30s + Suno bed. Signed. Read-only from here on.</p>
+        <p class="where">06_Media_Build/DRAWDOWN_LakeComingDown_916_SUNO_BED.mp4</p></div>
+    </section>
+
+    <section class="lane">
+      <div class="tag">New · this project</div>
+      <h2>Cut it native</h2>
+      <div class="node"><span class="status planned">SLICE 3</span><h3>SOC pass</h3>
+        <p>Hook 0&ndash;3s, cohort line, platform caption, sound choice, CTA legibility. One checklist per piece.</p>
+        <p class="why">Why: Gary V, <em>Day Trading Attention</em> &mdash; same video, native per feed, judged by comments.</p></div>
+      <div class="arrow">&darr;</div>
+      <div class="node"><span class="status slice1">SLICE 1 &middot; RUNS</span><h3>Four platform renders</h3>
+        <p>IG Reels &middot; TikTok &middot; FB Reels &middot; GBP listing. Spec table in code, &minus;14 LUFS two-pass, 30 fps, faststart.</p>
+        <p class="why">Why: the pack shipped one file to four apps. That is the "not enterprise" tell.</p>
+        <p class="where">06_Media_Build/build_platform_renders.py &rarr; renders/&lt;piece&gt;/&lt;platform&gt;/</p></div>
+      <div class="arrow">&darr;</div>
+      <div class="node"><span class="status slice1">SLICE 1 &middot; RUNS</span><h3>QC gate</h3>
+        <p>Safe-zone proof PNG per platform (red = app UI, green = safe), duration cap, LUFS &plusmn;1, res, fps. <code>QC_SHEET.md</code>.</p>
+        <p class="why">Why: a $50k team ships nothing that fails QC. Ours is a file, not a feeling.</p></div>
+      <div class="arrow">&darr;</div>
+      <div class="node"><span class="status planned">SLICE 2</span><h3>Re-layout + captions + pack wiring</h3>
+        <p>Move straps/CTA out of dead zones per platform, burn captions for muted autoplay, per-platform cover, pack copies <code>render.mp4</code> per app.</p>
+        <p class="where">build_scheduling_pack.py &middot; build_calendar_page.py</p></div>
+    </section>
+
+    <section class="lane">
+      <div class="tag">Downstream · publish + learn</div>
+      <h2>Ship and listen</h2>
+      <div class="node"><span class="status blocked">BLOCKED</span><h3>Routing Gate</h3>
+        <p>TEXT TRUXOR to 254-780-6971 must produce a Slack lead card. Last live test FAIL 2026-08-13. One TRUXOR text from a non-business phone remains.</p>
+        <p class="why">Why: a perfect video pointed at a dead keyword is burned reach (Mogul gates-sop).</p>
+        <p class="where"><a href="https://linear.app/atxlakescapes/issue/ATX-1748">ATX-1748</a> &middot; pipeline/keyword-routing-test.md</p></div>
+      <div class="arrow">&darr;</div>
+      <div class="node"><span class="status built">BUILT</span><h3>SCHEDULING_PACK + calendar</h3>
+        <p>One folder per slot, caption.txt, Hallie uploads. Click-to-play grid for Nate.</p>
+        <p class="where">06_Media_Build/SCHEDULING_PACK/ &middot; .lavish/calendar/calendar.html</p></div>
+      <div class="arrow">&darr;</div>
+      <div class="node"><span class="status planned">SLICE 3</span><h3>Performance log + PCS</h3>
+        <p>Texts per 1k views per post. Read the comments. Feed the next SOC pass.</p>
+        <p class="why">Why: Post-Creative Strategy &mdash; the loop is what makes cut N+1 better than cut N.</p>
+        <p class="where">~/ATX-Media-Mogul/marketing/performance-log.md</p></div>
+    </section>
+
+  </div>
+
+  <div class="callout">
+    <strong>Least confident:</strong> safe-zone pixels are 2026 third-party guides, not platform specs; FB Reels and GBP rows are assumptions.
+    The proof PNGs exist so the numbers get checked on our frames, on a phone, before Sep 14.
+  </div>
+</main>
+
+<footer>Self-contained, git-versioned. Regenerate nothing &mdash; edit this file. Design tokens from ~/ATX-Proposal-System.</footer>

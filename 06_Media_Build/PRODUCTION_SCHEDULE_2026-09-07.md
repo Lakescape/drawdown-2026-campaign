@@ -33,7 +33,7 @@ Window v2, both lead-ins, Lake Coming Down (residence beat stays), Bulkhead, car
 | Viral lead-in — **Claude lane, PICKED** (Victoria, Q04) | `DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE.mp4` | none until Victoria's read lands | cards clean (COVER, OFFICIAL, ABOUT 10 FT). Script sent: `weeks/2026-08-31/VO_ViralLeadin_Victoria_READ.txt`. |
 | ~~Viral lead-in, studio lane~~ | `…_STUDIO_RETIRED-lane-not-picked-2026-09-06.mp4` | — | retired 09-06. Do not post. |
 | Still-card series S01–S10 | `cards/DRAWDOWN_Card_S0N_*_916.jpg` + `_45.jpg` | — | built + eye-QC'd 2026-09-06, `cards/PINS.md`. Nate sign. |
-| Lake Coming Down 30 s | `DRAWDOWN_LakeComingDown_916_STUDIO_LakeComingDown_v1.mp4` (+ silent twin) | Lake Coming Down v1 (Victoria, Q02) | built 09-06, real DJI clips, `resolve/lake-coming-down/PINS.md`. House beat swapped on Victoria's call. |
+| Lake Coming Down 30 s — **v2 round 6, SIGNED Nate 09-16** | `DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4` md5 `e8c658f0` (+ `_v2_STUDIO.mp4` silent, `_v2_COVER.jpg`) | Lake Coming Down v2 (Suno) | built 09-10 on 4096×3072 Oyster Landing drone plates (registry `oyster-landing`, approved). `LCD_v2_BUILD_NOTES_r6.md`. Per-platform renders 4/4 PASS. r5 (`f23ec45d`) and the 09-06/09-07 v1 cuts are superseded — do not post. |
 | Bulkhead 15 s | `DRAWDOWN_Bulkhead_916_STUDIO.mp4` | none | built 09-06, `resolve/bulkhead/PINS.md`. |
 
 | Work the Bed reel 30 s | `DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4` | Suno Work the Bed, Country A, from 0:28 | built + **approved** at the 09-06 sit-down. |
@@ -66,7 +66,7 @@ Legend — **READY** built and QC'd · **BUILD** from library, no shoot needed �
 
 | Day | Slot | Piece | State | Blocker |
 |---|---|---|---|---|
-| Mon | Reel | **Lake Coming Down** — the CALENDAR piece, recut 09-07 | **SIGNED + SCHEDULED** | — |
+| Mon | Reel | **Lake Coming Down** — the CALENDAR piece, **v2 round 6** (`DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4`, md5 `e8c658f0`) | **SIGNED Nate 09-16 (r6) · pack rebuilt 09-16** | Slot date passed unsigned; whatever went out 09-14 is not on record. Hallie uploads the platform subfolder file from `SCHEDULING_PACK/2026-09-14_Lake-Coming-Down/<platform>/`, not the master |
 | Wed | Reel | Method cut, re-run with caption variant | READY | — |
 | Fri | Story | S03 Past The Dock | READY | Victoria taste (abstract plate) |
 | Fri | Feed | S07 Two Machines (4:5) | READY | — |
