@@ -17,7 +17,7 @@ Uploaded 2026-07-27. Two packages, one pipeline: **shot-pack** (waterfront intel
 - `ZONE_SCORECARD.md` + `zone_scorecard.csv` — composite zone scores (Value 35% · Density 25% · Machinery Access 25% · WorkOps 15%)
 - `zones.geojson` + `zones_preview.png` + `zone_ramp_distances.json` — zone polygons, map, ramp transit data
 - `L1_match_report.md`, `L1_profile_report.md` — matching results: 1,947 Jobber clients → 654 Lake Austin (500 in-zone / 154 near, 69 pods) + 602 Lake LBJ territory tagged
-- `L3_workops_research.md`, `L3_workops.json` — sediment-removal ops: 6 removal zones, permits (COA <25 cy; 2,000 cy drawdown window), 7 verified ramps, disposal sites
+- `L3_workops_research.md`, `L3_workops.json` — sediment-removal ops: 6 removal zones, permits (COA <25 cy per address is the binding ceiling; the "2,000 cy drawdown window" is **retracted** — no lakewide-permit path is confirmed for Lake Austin), 7 verified ramps, disposal sites
 - `HOA_CONTACTS.md`, `hoa-contacts.csv`, `L4_hoa.json` — 29 sourced HOA/POA records. **Leverage: Goodwin manages 5 target HOAs, Spectrum 2, Cohere 1**
 - `OUTREACH_PLAYBOOK.md` — tag taxonomy + 7 sequences (incl. drawdown-window campaign on 72-hr standby)
 - `OUTREACH_COMPLIANCE.md` — TCPA / CAN-SPAM / TX SB 140 pre-flight gate (blocking — nothing ships without it)

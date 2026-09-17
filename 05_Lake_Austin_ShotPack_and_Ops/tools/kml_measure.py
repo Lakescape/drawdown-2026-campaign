@@ -11,14 +11,26 @@ three numbers ATX actually bids off.
 Polygons  -> area (sq ft) + sediment volume at the given depth (cubic yards)
 LineStrings -> length (linear ft), for bulkhead / seawall / tie-back runs
 
-Permit cliff (ATX-1697) is evaluated on every volume, because it is the single
-biggest scope-and-price driver and it turns on an agency action ATX does not
-control:
+Permit posture is evaluated on every volume, because it is the single biggest
+scope-and-price driver on drawdown work.
 
-    < 25 cy    COA administrative approval
-    25-2,000cy REQUIRES drawdown announced + LCRA registration open + address
-               registered. Unregistered, the sellable volume collapses to <25 cy.
-    > 2,000 cy over the LCRA/USACE Lakewide Permit ceiling — individual permit
+    < 25 cy    City of Austin allows without a variance — LDC 25-8-261(C)(9)(a).
+               This is the binding ceiling on Lake Austin.
+    > 25 cy    City variance required, AND separate LCRA HLDO authorization.
+    > 500 cy   LCRA HLDO Tier II individual permit (also >500 LF disturbed).
+
+CORRECTED 2026-08-05. Earlier versions of this tool encoded a "2,000 cy LCRA
+Lakewide Permit" ceiling. That was WRONG and is retracted — see
+ATX-Jobs/2026-2708-scenic-williams/20-analysis/PERMIT-AUTHORITY-v2-2026-08-04.md
+section 3. The 2,000 cy figure comes from a lake-lowering registration model on
+LCRA-OPERATED lakes (Inks Lake). LCRA's published lakewide permits cover Lake
+Buchanan and Lake Travis ONLY. Lake Austin is a City lake and is not on them.
+There is no confirmed 2,000 cy path on Lake Austin.
+
+Open question that can override all of the above: LCRA HLDO Tier I carves out
+"commercial dredge and fill activity" verbatim. ATX performing work for hire may
+be excluded from the Tier I shortcut even under 500 cy, forcing Tier II on
+routine jobs. Unresolved - call LCRA Water Quality 512-578-2324.
 
 No dependencies. Stdlib only, so it runs on any machine on the crew without a
 venv. Area uses a local tangent-plane projection about each shape's own
@@ -42,9 +54,10 @@ M_PER_FT = 0.3048
 CY_PER_FT3 = 1.0 / 27.0
 EARTH_R_M = 6371008.8  # IUGG mean radius
 
-# ATX-1697 permit cliff thresholds, cubic yards
-COA_ADMIN_CEILING_CY = 25
-LAKEWIDE_PERMIT_CEILING_CY = 2000
+# Permit thresholds, cubic yards. See module docstring for sources and the
+# 2026-08-05 correction that removed the retracted 2,000 cy figure.
+COA_NO_VARIANCE_CEILING_CY = 25  # LDC 25-8-261(C)(9)(a) — binding on Lake Austin
+HLDO_TIER_II_CY = 500  # LCRA HLDO: above this, individual Tier II permit
 
 
 def parse_coords(text: str) -> list[tuple[float, float]]:
@@ -102,17 +115,17 @@ def path_length_m(xy: list[tuple[float, float]], closed: bool = False) -> float:
 
 
 def permit_note(cy: float) -> str:
-    if cy < COA_ADMIN_CEILING_CY:
-        return "COA administrative approval (under 25 cy)"
-    if cy <= LAKEWIDE_PERMIT_CEILING_CY:
+    if cy < COA_NO_VARIANCE_CEILING_CY:
+        return "City OK without variance (under 25 cy, LDC 25-8-261(C)(9)(a)); LCRA HLDO still applies"
+    if cy <= HLDO_TIER_II_CY:
         return (
-            f"NEEDS LCRA registration — {cy:,.0f} cy is only sellable if the drawdown "
-            "is announced, registration is open, AND this address is registered. "
-            "Unregistered, sellable volume collapses to <25 cy"
+            f"CITY VARIANCE REQUIRED — {cy:,.0f} cy is over the 25 cy no-variance ceiling. "
+            "Plus LCRA HLDO authorization. Tier I may be unavailable: the ordinance carves out "
+            "'commercial dredge and fill activity' and ATX works for hire — unresolved"
         )
     return (
-        f"OVER Lakewide Permit ceiling ({cy:,.0f} cy > 2,000) — individual "
-        "LCRA/USACE permit required, do not bid as routine"
+        f"LCRA HLDO TIER II — {cy:,.0f} cy exceeds 500 cy, individual permit required, "
+        "plus City variance. Do not bid as routine"
     )
 
 
@@ -205,16 +218,24 @@ def report(rows: list[dict]) -> None:
         print(f"{'TOTAL':<38} {sum(r['linear_ft'] for r in lines):>11,.1f}")
 
     total_cy = sum(r["sediment_cy"] for r in areas)
-    if total_cy > LAKEWIDE_PERMIT_CEILING_CY:
+    if total_cy > HLDO_TIER_II_CY:
         print(
-            f"\n!! {total_cy:,.0f} cy total exceeds the 2,000 cy Lakewide Permit "
-            "ceiling. Individual permit territory — escalate before quoting."
+            f"\n!! {total_cy:,.0f} cy total exceeds the 500 cy LCRA HLDO Tier II line. "
+            "Individual permit plus City variance — escalate before quoting."
         )
-    elif total_cy >= COA_ADMIN_CEILING_CY:
+    elif total_cy >= COA_NO_VARIANCE_CEILING_CY:
         print(
-            f"\n!! {total_cy:,.0f} cy total is registration-contingent. Per ATX-1697 "
-            "this must be a contingent clause in the bid, not a flat number."
+            f"\n!! {total_cy:,.0f} cy total is over the City's 25 cy no-variance ceiling. "
+            "Bid it as a variance-contingent clause with a <25 cy fallback, not a flat number."
         )
+
+    if lines:
+        total_lf = sum(r["linear_ft"] for r in lines)
+        if total_lf > 500:
+            print(
+                f"\n!! {total_lf:,.0f} LF of shoreline disturbed exceeds the 500 LF "
+                "HLDO Tier II line independently of volume."
+            )
 
     print(
         '\nReminder: never write "dredging" in a customer-facing artifact '
@@ -239,10 +260,14 @@ def verify() -> None:
     expected_perim = 400.0 / M_PER_FT
     assert abs(perim_ft - expected_perim) / expected_perim < 0.001, "perimeter off"
 
-    # Permit cliff boundaries
-    assert "administrative" in permit_note(24)
-    assert "NEEDS LCRA registration" in permit_note(500)
-    assert "OVER Lakewide" in permit_note(2500)
+    # Permit boundaries. The 2,000 cy figure is retracted — assert it is gone,
+    # so a re-introduction fails loudly instead of quietly shipping a wrong ceiling.
+    assert "without variance" in permit_note(24)
+    assert "CITY VARIANCE REQUIRED" in permit_note(400)
+    assert "TIER II" in permit_note(2500)
+    assert "TIER II" in permit_note(501)
+    for cy in (24, 400, 501, 2500):
+        assert "2,000" not in permit_note(cy), "retracted 2,000 cy ceiling reintroduced"
 
     print(f"verify OK — 100m square = {area_ft2:,.0f} sq ft (err {err:.4%})")
 
