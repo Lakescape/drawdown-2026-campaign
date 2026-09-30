@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drawdown 2026 — Campaign Calendar</title>
+<style>
+:root{--ink:#121A20;--ink2:#1B252D;--ink3:#232F38;--cream:#F4EFE6;--dim:#9AA5AD;--copper:#E8B070;--good:#7FB069;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--ink);color:var(--cream);font:15px/1.5 -apple-system,"Source Sans 3",Helvetica,Arial,sans-serif}
+.wrap{max-width:1400px;margin:0 auto;padding:26px 20px 90px}
+header{border-bottom:1px solid #2b3740;padding-bottom:16px;margin-bottom:20px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--copper);margin:0 0 6px}
+h1{font-size:32px;margin:0 0 8px}
+.lede{color:var(--dim);margin:0;max-width:840px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.stats div{background:var(--ink2);border:1px solid #2b3740;border-radius:10px;padding:9px 13px;font-family:var(--mono);font-size:11px;color:var(--dim)}
+.stats b{display:block;color:var(--copper);font-size:17px;font-family:inherit}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0 6px;font-size:12.5px;color:var(--dim)}
+.legend span{display:flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-top:10px}
+.hd{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--dim);text-align:center;padding:4px 0}
+.day{background:var(--ink2);border:1px solid #2b3740;border-radius:9px;min-height:104px;padding:7px}
+.day.past{opacity:.3}
+.day.has{border-color:#3a4a56}
+.day.mile{border-color:var(--copper);background:rgba(232,176,112,.09)}
+.dnum{font-family:var(--mono);font-size:11px;color:var(--dim);margin-bottom:5px}
+.milelabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--copper);margin-bottom:5px;line-height:1.3}
+.slot{display:block;width:100%;text-align:left;margin:0 0 4px;padding:6px 7px;border-radius:6px;border:0;cursor:pointer;
+  font:600 11.5px/1.35 inherit;color:var(--cream);background:var(--ink3)}
+.slot.video{background:rgba(232,176,112,.17);color:#F6D9B4}
+.slot.image{background:rgba(127,176,105,.15);color:#CDE4C2}
+.slot:hover{outline:1px solid var(--copper)}
+#panel{position:fixed;inset:auto 0 0 0;background:var(--ink2);border-top:1px solid var(--copper);
+  padding:18px 22px 22px;display:none;max-height:78vh;overflow:auto;box-shadow:0 -18px 44px rgba(0,0,0,.55)}
+#panel.on{display:block}
+.pgrid{max-width:1360px;margin:0 auto;display:grid;gap:22px;grid-template-columns:minmax(0,250px) minmax(0,1fr)}
+@media(max-width:720px){.pgrid{grid-template-columns:1fr}}
+#pmedia video,#pmedia img{width:100%;border-radius:10px;display:block;background:#000}
+#ptitle{font-size:20px;font-weight:700;margin:0 0 4px}
+#pmeta{font-family:var(--mono);font-size:11px;color:var(--dim);margin-bottom:12px}
+#pcap{background:var(--ink);border:1px solid #2b3740;border-radius:10px;padding:13px 15px;white-space:pre-wrap;font-size:14px;color:#DCD6CB}
+.close{position:absolute;top:14px;right:20px;background:none;border:0;color:var(--dim);font-size:24px;cursor:pointer}
+footer{color:var(--dim);font-size:13px;margin-top:26px;border-top:1px solid #2b3740;padding-top:18px}
+code{font-family:var(--mono);font-size:.9em;color:var(--copper)}
+form.decide{margin-top:22px}
+fieldset{border:1px solid #2b3740;border-radius:12px;padding:14px 16px 16px;background:rgba(27,37,45,.5)}
+legend{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--copper);padding:0 8px}
+.choices{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.choice{display:flex;gap:10px;padding:10px 12px;border:1px solid #2b3740;border-radius:10px;cursor:pointer;background:var(--ink)}
+.choice:has(input:checked){border-color:var(--copper);background:rgba(232,176,112,.08)}
+.choice input{margin-top:4px;accent-color:var(--copper)}
+.choice b{display:block}.choice i{font-style:normal;color:var(--dim);font-size:13px}
+textarea{width:100%;margin-top:12px;min-height:70px;background:var(--ink);color:var(--cream);border:1px solid #2b3740;border-radius:10px;padding:10px;font:inherit}
+button.q{background:var(--copper);color:var(--ink);border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;font:inherit;margin-top:12px}
+.queued{font-family:var(--mono);font-size:12px;color:var(--good);margin-left:10px}
+</style></head><body><div class="wrap">
+
+<header>
+  <p class="kicker">ATX LAKESCAPES · DRAWDOWN 2026 · CAMPAIGN CALENDAR</p>
+  <h1>Every post, every date, click to see it</h1>
+  <p class="lede">The whole runway from tomorrow to the day the lake starts down. Click any tile: the actual file plays and the caption that ships with it is right there. All of it is built, signed, and sitting in <code>06_Media_Build/SCHEDULING_PACK/</code> — one folder per slot, file plus <code>caption.txt</code>, ready to load into Meta Business Suite.</p>
+  <div class="stats">
+    <div>Slots<b>19</b></div>
+    <div>Unique videos<b>6</b></div>
+    <div>Unique stills<b>9</b></div>
+    <div>First post<b>Mon Sep 7</b></div>
+    <div>Lowering<b>Mon Oct 12</b></div>
+    <div>Refill<b>Tue Nov 24</b></div>
+  </div>
+  <div class="legend">
+    <span><i class="dot" style="background:rgba(232,176,112,.6)"></i> reel / video</span>
+    <span><i class="dot" style="background:rgba(127,176,105,.6)"></i> still / story</span>
+    <span><i class="dot" style="background:var(--copper)"></i> LCRA milestone</span>
+  </div>
+</header>
+
+<div class="cal">
+  <div class="hd">MON</div><div class="hd">TUE</div><div class="hd">WED</div><div class="hd">THU</div><div class="hd">FRI</div><div class="hd">SAT</div><div class="hd">SUN</div>
+  <div class="day has"><div class="dwrap"><div class="dnum">7</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4" data-kind="video" data-title="Method cut — scrape haul cover" data-plat="IG Reels · TikTok · FB" data-folder="2026-09-07_Method-cut" data-caption="Three words. That&#x27;s the dry-window job.
+
+Scrape the marked bed.
+Haul the spoil off your lot.
+Cover the bed while the lake is down.
+
+Lake Austin comes down about 10 feet starting Oct 12. Seven weeks of dry ground, then it refills.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Method cut</button></div></div><div class="day"><div class="dwrap"><div class="dnum">8</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">9</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_ViralHydrilla_916_STUDIO_CLAUDE_VO_MikeRow.mp4" data-kind="video" data-title="Viral lead-in + VO" data-plat="IG Reels · TikTok" data-folder="2026-09-09_Viral-lead-in-+-VO" data-caption="This is what&#x27;s under Lake Austin docks. Ten years of it — and you&#x27;ve never seen it.
+
+The drawdown is official. About 10 feet, starting Oct 12.
+
+Two amphibious machines. We scrape it, haul it off, cover it.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Viral lead-in + VO</button></div></div><div class="day"><div class="dwrap"><div class="dnum">10</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">11</div><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S01_dates_916.jpg" data-kind="image" data-title="S01 — the dates" data-plat="IG Story" data-folder="2026-09-11_S01" data-caption="Oct 12 – Nov 30. Lake Austin comes down about 10 feet. LCRA and the City announced it.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S01</button><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S02_under-your-dock_45.jpg" data-kind="image" data-title="S02 — under your dock" data-plat="IG Feed · FB · LinkedIn" data-folder="2026-09-11_S02" data-caption="This is under your dock. Nearly ten years since anyone could see it.
+
+When the lake drops about 10 feet on Oct 12, you get seven weeks of dry ground to deal with it.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S02</button></div></div><div class="day"><div class="dwrap"><div class="dnum">12</div></div></div><div class="day"><div class="dwrap"><div class="dnum">13</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">14</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4" data-kind="video" data-title="Lake Coming Down — HERO attractor" data-plat="IG Reels · TikTok · FB" data-folder="2026-09-14_Lake-Coming-Down" data-caption="Oct 12, the lake starts down. About a foot a day, to roughly 10 feet below normal.
+
+Nobody&#x27;s seen that lakebed since 2017. You get seven weeks — Nov 24 it starts refilling.
+
+The next window may be eight to ten years away.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Lake Coming Down</button><button class="slot video" data-lavish-action data-file="DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4" data-kind="video" data-title="GBP — listing video + Google Post" data-plat="Google Business Profile" data-folder="2026-09-14_GBP" data-caption="Lake Austin drops Oct 12. About 10 feet, LCRA. We scrape, haul, and cover while it&#x27;s down.
+
+Text TRUXOR to 254-780-6971." onclick="show(this)">▶ GBP</button></div></div><div class="day"><div class="dwrap"><div class="dnum">15</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">16</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_ScrapeHaulStaple_916_SUNO_MudWindow_v2.mp4" data-kind="video" data-title="Method cut rerun" data-plat="IG Reels · TikTok" data-folder="2026-09-16_Method-cut-rerun" data-caption="Scrape the marked bed. Haul the spoil off your lot. Cover it while the lake is down.
+
+Three words, one dry window.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Method cut rerun</button></div></div><div class="day"><div class="dwrap"><div class="dnum">17</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">18</div><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S03_past-the-dock_916.jpg" data-kind="image" data-title="S03 — past the dock" data-plat="IG Story" data-folder="2026-09-18_S03" data-caption="It doesn&#x27;t stop at the dock. Hydrilla runs the whole shallow shelf.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S03</button><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S07_two-machines_45.jpg" data-kind="image" data-title="S07 — two machines" data-plat="IG Feed · FB · LinkedIn" data-folder="2026-09-18_S07" data-caption="Two amphibious machines, committed for the drawdown window.
+
+They work where a truck can&#x27;t and a boat won&#x27;t.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S07</button></div></div><div class="day"><div class="dwrap"><div class="dnum">19</div></div></div><div class="day"><div class="dwrap"><div class="dnum">20</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">21</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4" data-kind="video" data-title="Work the Bed — the song" data-plat="IG Reels · TikTok · FB" data-folder="2026-09-21_Work-the-Bed" data-caption="We work the bed.
+
+Two amphibious machines. Scrape it, haul it, cover it — while Lake Austin is down.
+
+Lake Austin is home.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Work the Bed</button></div></div><div class="day"><div class="dwrap"><div class="dnum">22</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">23</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_Turnkey_916_SUNO_BED.mp4" data-kind="video" data-title="Turnkey — DRAFT until Nate Gate 3" data-plat="IG Reels · TikTok · FB" data-folder="2026-09-23_Turnkey" data-caption="Lake Austin comes down Oct 12.
+
+You don&#x27;t file the City permit. You don&#x27;t file LCRA. We do.
+
+Our crew. Our iron. Amphibious Truxors on the bed.
+Off the barge. Into the dump trailer. Gone off your lot.
+
+We run it. You don&#x27;t.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Turnkey</button></div></div><div class="day"><div class="dwrap"><div class="dnum">24</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">25</div><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S04_scrape_916.jpg" data-kind="image" data-title="S04–S06 — scrape / haul / cover" data-plat="IG Story ×3" data-folder="2026-09-25_S04–S06" data-caption="Scrape. Haul. Cover. Post all three back to back as one story run.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S04–S06</button><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S06_cover_45.jpg" data-kind="image" data-title="S06 — cover" data-plat="IG Feed · FB" data-folder="2026-09-25_S06" data-caption="Cover the bed while the lake is down. A covered bed doesn&#x27;t grow back through the mat.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S06</button></div></div><div class="day"><div class="dwrap"><div class="dnum">26</div></div></div><div class="day"><div class="dwrap"><div class="dnum">27</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">28</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_Bulkhead_916_STUDIO.mp4" data-kind="video" data-title="Bulkhead — what the water hides" data-plat="IG Reels · TikTok · FB" data-folder="2026-09-28_Bulkhead" data-caption="What the water hides.
+
+Your wall. Your dock footings. You&#x27;ll see them Oct 12 — and you can fix them on dry ground.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Bulkhead</button></div></div><div class="day"><div class="dwrap"><div class="dnum">29</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">30</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_LakeComingDown_916_v2_SUNO_BED.mp4" data-kind="video" data-title="Lake Coming Down rerun" data-plat="IG Reels · TikTok" data-folder="2026-09-30_Lake-Coming-Down-rerun" data-caption="Twelve days out. About 10 feet. Seven weeks.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Lake Coming Down rerun</button></div></div><div class="day"><div class="dwrap"><div class="dnum">1</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">2</div><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S08_seven-weeks_916.jpg" data-kind="image" data-title="S08 — seven weeks" data-plat="IG Story" data-folder="2026-10-02_S08" data-caption="Seven weeks. Oct 12 to Nov 30. Then it refills.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S08</button></div></div><div class="day"><div class="dwrap"><div class="dnum">3</div></div></div><div class="day"><div class="dwrap"><div class="dnum">4</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">5</div><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S09_seven-days_916.jpg" data-kind="image" data-title="S09 — 7 days" data-plat="IG Story · FB" data-folder="2026-10-05_S09" data-caption="7 days. Lake Austin comes down Monday, Oct 12.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S09</button></div></div><div class="day"><div class="dwrap"><div class="dnum">6</div></div></div><div class="day has"><div class="dwrap"><div class="dnum">7</div><button class="slot video" data-lavish-action data-file="DRAWDOWN_WorkTheBed_916_STUDIO_CountryA_from28s.mp4" data-kind="video" data-title="Work the Bed rerun" data-plat="IG Reels · TikTok" data-folder="2026-10-07_Work-the-Bed-rerun" data-caption="Five days out. We work the bed.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▶ Work the Bed rerun</button></div></div><div class="day"><div class="dwrap"><div class="dnum">8</div></div></div><div class="day"><div class="dwrap"><div class="dnum">9</div></div></div><div class="day"><div class="dwrap"><div class="dnum">10</div></div></div><div class="day"><div class="dwrap"><div class="dnum">11</div></div></div><div class="day mile has"><div class="dwrap"><div class="dnum">12</div><div class="milelabel">LOWERING STARTS</div><button class="slot image" data-lavish-action data-file="DRAWDOWN_Card_S10_monday_916.jpg" data-kind="image" data-title="S10 — MONDAY" data-plat="IG Story · FB · TikTok" data-folder="2026-10-12_S10" data-caption="The lake starts down today. About a foot a day.
+
+Seven weeks of dry ground starts now.
+
+Text TRUXOR to 254-780-6971.
+
+#lakeaustin #drawdown #hydrilla #atxlakescapes #austintx #lakelife #dockrepair" onclick="show(this)">▣ S10</button></div></div><div class="day"><div class="dwrap"><div class="dnum">13</div></div></div><div class="day"><div class="dwrap"><div class="dnum">14</div></div></div><div class="day"><div class="dwrap"><div class="dnum">15</div></div></div><div class="day"><div class="dwrap"><div class="dnum">16</div></div></div><div class="day"><div class="dwrap"><div class="dnum">17</div></div></div><div class="day"><div class="dwrap"><div class="dnum">18</div></div></div>
+</div>
+
+<form class="decide" data-lavish-question="calendar" onsubmit="q(event)">
+  <fieldset><legend>Anything you'd move</legend>
+    <div class="choices">
+      <label class="choice"><input type="radio" name="calendar" value="calendar approved — load the pack into Meta"><span><b>Approved</b><i>Load the pack and schedule it.</i></span></label>
+      <label class="choice"><input type="radio" name="calendar" value="move something — notes below"><span><b>Move something</b><i>Which slot, to when.</i></span></label>
+      <label class="choice"><input type="radio" name="calendar" value="caption edits — notes below"><span><b>Caption edits</b><i>Which post, what line.</i></span></label>
+      <label class="choice"><input type="radio" name="calendar" value="more posts per week"><span><b>Denser</b><i>More than 3+1 a week.</i></span></label>
+    </div>
+    <textarea name="why" placeholder="Date + what changes."></textarea>
+    <button class="q" type="submit">Queue</button><span class="queued" id="qd"></span>
+  </fieldset>
+</form>
+
+<footer>
+  <b>Reality check:</b> nothing here posts itself. The pack is files and captions; a person loads them into Meta Business Suite (IG + FB together) and TikTok separately.
+  Everything from Oct 12 on is a placeholder until somebody shoots the window — the shoot list is in <code>PRODUCTION_SCHEDULE_2026-09-07.md</code>, and the first item is still a tarp with the overlap and a staple visible.
+</footer>
+</div>
+
+<div id="panel">
+  <button class="close" onclick="document.getElementById('panel').classList.remove('on')">×</button>
+  <div class="pgrid">
+    <div id="pmedia"></div>
+    <div>
+      <p id="ptitle"></p>
+      <div id="pmeta"></div>
+      <div id="pcap"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(el){
+  var d = el.dataset;
+  document.getElementById('pmedia').innerHTML = d.kind === 'video'
+    ? '<video src="' + d.file + '" controls autoplay playsinline></video>'
+    : '<img src="' + d.file + '" alt="">';
+  document.getElementById('ptitle').textContent = d.title;
+  document.getElementById('pmeta').textContent = d.plat + '  ·  ' + d.file + '  ·  SCHEDULING_PACK/' + d.folder + '/';
+  document.getElementById('pcap').textContent = d.caption;
+  document.getElementById('panel').classList.add('on');
+}
+function q(ev){
+  ev.preventDefault();
+  var f = ev.currentTarget, fd = new FormData(f);
+  var pick = fd.get('calendar'), why = (fd.get('why')||'').toString().trim();
+  if(!pick && !why) return;
+  var msg = 'Campaign calendar: ' + (pick || '(notes only)');
+  if(why) msg += ' — "' + why + '"';
+  if(window.lavish && window.lavish.queuePrompt){
+    window.lavish.queuePrompt(msg, {tag:'calendar', text:'Calendar: ' + (pick||'notes'), element:f, queueKey:'calendar',
+      data:{question:'calendar', answer:pick||null, rationale:why||null}});
+  }
+  document.getElementById('qd').textContent = '✓ queued';
+}
+</script>
+</body></html>

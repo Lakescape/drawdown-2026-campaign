@@ -725,3 +725,9 @@ Sep 14 (IG/TT/FB + GBP) and Sep 30 with per-platform subfolders follows. Nothing
 Each subfolder: the platform-normalized file (−14.0 LUFS, 30 fps) + `safezone_proof.png`.
 For Hallie: upload the subfolder file to that app. Sep 7–11 folders unchanged.
 Calendar page rebuilt. Committed on PR #12. Nothing posted; Routing Gate still open.
+
+### 2026-09-28 16:05 CT — drawdown cancelled (Claude)
+
+Nate: the lake lowering is not happening. Everything in SCHEDULING_PACK and the calendar is
+stale — do not schedule. Reusable media work extracted to ATX-Media-Mogul PR #113 (craft
+rebuild loop playbook + workflow scripts + platform renderer). Recalibration next.

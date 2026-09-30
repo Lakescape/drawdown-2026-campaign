@@ -1,0 +1,149 @@
+<!-- Design source: the campaign's own system (compose.py CREAM/COPPER/INK + Arial),
+     per Lavish rule 2 — match the project the artifact is about. -->
+<meta charset="utf-8">
+<title>Drawdown campaign audit — 2026-09-03</title>
+<style>
+  :root{
+    --cream:#f4efe6; --ink:#0f0f23; --copper:#e8b070;
+    --paper:#fbf8f2; --line:#ded5c6; --muted:#6b6455;
+    --bad:#b3261e; --warn:#b06a00; --ok:#2e6b3f;
+  }
+  *{box-sizing:border-box; min-width:0}
+  body{margin:0; background:var(--cream); color:var(--ink);
+       font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+  .wrap{max-width:1120px; margin:0 auto; padding:44px 28px 90px}
+  h1{font-size:34px; letter-spacing:-.02em; margin:0 0 6px}
+  .sub{color:var(--muted); margin:0 0 30px}
+  .rule{height:8px; width:180px; background:var(--copper); margin:0 0 26px}
+  h2{font-size:20px; margin:44px 0 14px; letter-spacing:-.01em}
+  h2 .n{color:var(--copper); font-variant-numeric:tabular-nums; margin-right:10px}
+  p{margin:0 0 14px}
+  .lede{font-size:18px; background:var(--paper); border-left:5px solid var(--copper);
+        padding:18px 22px; margin:0 0 30px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));
+        gap:14px; margin:0 0 12px}
+  .tile{background:var(--paper); border:1px solid var(--line); padding:16px 18px}
+  .tile .k{font-size:27px; font-weight:700; letter-spacing:-.02em}
+  .tile .l{font-size:12.5px; color:var(--muted); text-transform:uppercase;
+           letter-spacing:.07em; margin-top:3px}
+  .tw{overflow-x:auto; border:1px solid var(--line); background:var(--paper); margin:0 0 14px}
+  table{border-collapse:collapse; width:100%; min-width:660px; font-size:14.5px}
+  th{text-align:left; font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+     color:var(--muted); padding:11px 14px; border-bottom:2px solid var(--line); white-space:nowrap}
+  td{padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  code{font:13px ui-monospace,SFMono-Regular,Menlo,monospace; background:#ece5d8;
+       padding:1px 5px; border-radius:3px; overflow-wrap:anywhere}
+  .pill{display:inline-block; font-size:11px; font-weight:700; text-transform:uppercase;
+        letter-spacing:.06em; padding:3px 9px; border-radius:99px; white-space:nowrap}
+  .p-bad{background:#f7dedc; color:var(--bad)} .p-warn{background:#f9ecd5; color:var(--warn)}
+  .p-ok{background:#dcebe0; color:var(--ok)}  .p-mut{background:#e8e2d6; color:var(--muted)}
+  .card{background:var(--paper); border:1px solid var(--line); border-left:5px solid var(--copper);
+        padding:20px 22px; margin:0 0 16px}
+  .card.bad{border-left-color:var(--bad)} .card.ok{border-left-color:var(--ok)}
+  .card h3{margin:0 0 9px; font-size:17px}
+  .vs{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:14px}
+  .vs .q{background:#fff; border:1px solid var(--line); padding:14px 16px; font-size:14.5px}
+  .vs .q b{display:block; font-size:11.5px; text-transform:uppercase; letter-spacing:.07em;
+           color:var(--muted); margin-bottom:7px}
+  .quote{font-style:italic; color:#3a3527}
+  ul{margin:0 0 14px; padding-left:20px} li{margin-bottom:7px}
+  .foot{margin-top:46px; padding-top:18px; border-top:1px solid var(--line);
+        color:var(--muted); font-size:13.5px}
+</style>
+
+<div class="wrap">
+
+<h1>Drawdown campaign — review &amp; audit</h1>
+<p class="sub">2026-09-03 · audit of commit <code>616b6be</code> (C1 hedge retirement) and full campaign state</p>
+<div class="rule"></div>
+
+<p class="lede"><b>The hedge retirement is sound and well executed.</b> It fixed the root first, applied a real distinction, re-rendered both masters, and eyeballed frames. <b>Four gaps remain</b> — one of them is a live contradiction between two repos on the campaign's central claim.</p>
+
+<div class="grid">
+  <div class="tile"><div class="k" style="color:var(--ok)">3</div><div class="l">Masters, spec-clean</div></div>
+  <div class="tile"><div class="k" style="color:var(--bad)">4</div><div class="l">Open findings</div></div>
+  <div class="tile"><div class="k" style="color:var(--bad)">FAIL</div><div class="l">Routing gate</div></div>
+  <div class="tile"><div class="k" style="color:var(--warn)">0</div><div class="l">Assets publishable</div></div>
+</div>
+
+<h2><span class="n">01</span>The claim change — what it got right</h2>
+
+<p><code>616b6be</code> retired C1's mandatory hedge on the basis that LCRA announced the drawdown on 2026-08-29. The reasoning is the part worth keeping:</p>
+
+<div class="vs">
+  <div class="q"><b>Event</b>Now fact. “The City and LCRA have announced a drawdown.”</div>
+  <div class="q"><b>Depth</b>Still projected. <code>PROJECTED 10–12 FT</code> stays everywhere.</div>
+  <div class="q"><b>Dates</b>Still projected. “An announced drawdown is not a scheduled one.”</div>
+</div>
+
+<p style="margin-top:16px">It fixed the ledger row first rather than the 51 downstream strings, which is why the change didn't fragment. Both masters were re-rendered and frames pulled at t=9.0 and eyeballed — <span class="pill p-ok">verified</span> I re-pulled them independently: card 3 reads <code>TWO TRUXORS. / PROJECTED 10–12 FT.</code>, two machines with pontoon decks in frame, C7 intact.</p>
+
+<h2><span class="n">02</span>Findings</h2>
+
+<div class="tw"><table>
+<thead><tr><th>#</th><th>Finding</th><th>Evidence</th><th>Severity</th></tr></thead>
+<tbody>
+<tr>
+  <td><b>F1</b></td>
+  <td><b>Two repos now contradict each other on the central claim.</b> The copy source of truth still says the drawdown is unannounced.</td>
+  <td><code>ATX-Media-Mogul/docs/campaigns/drawdown-2026/COPY-SOURCE-OF-TRUTH.md:33</code> — <span class="quote">“projected / under City–LCRA discussion, <b>not a confirmed dated event</b>. LCRA publicly: no Highland Lakes lowering plans posted.”</span></td>
+  <td><span class="pill p-bad">blocking</span></td>
+</tr>
+<tr>
+  <td><b>F2</b></td>
+  <td><b>The new C1 mandates a DATES hedge; two assets assert a season without one.</b> The commit's own rule says “nothing here asserts a date.”</td>
+  <td><code>build_real_motion.py:63</code> card <code>LAKE AUSTIN, THIS FALL</code> · <code>VO_ViralLeadin_Studio_LOCKED.md</code> “drawing Lake Austin down this fall,” depth hedged, date bare</td>
+  <td><span class="pill p-bad">blocking</span></td>
+</tr>
+<tr>
+  <td><b>F3</b></td>
+  <td><b>No LCRA announcement document is filed.</b> The largest claim change in the campaign rests on a verbal report. The commit flags this itself.</td>
+  <td><span class="quote">“No announcement document is filed in this repo… cite the LCRA notice itself before the next external send.”</span></td>
+  <td><span class="pill p-warn">risk</span></td>
+</tr>
+<tr>
+  <td><b>F4</b></td>
+  <td><b>“WEED ANNIHILATORS” never reached the masters.</b> Your 2026-09-01 naming direction is in <code>build_real_motion.py</code> only; both shipped viral cuts still say “TWO TRUXORS.”</td>
+  <td>Card 3, both masters, re-pulled today</td>
+  <td><span class="pill p-mut">minor</span></td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="card bad">
+<h3>F1 is the one that bites</h3>
+<p><code>COPY-SOURCE-OF-TRUTH.md</code> is named canonical in <code>CLAUDE.md</code> for all customer-facing copy. A seat reading it today will conclude the campaign is asserting an unannounced event and re-add the hedge — or escalate. The campaign repo and the brain repo now disagree about whether the drawdown was announced.</p>
+<p style="margin:0"><b>Fix:</b> update the truth floor in the same shape as C1 — event announced 2026-08-29, depth and dates still projected — and cite the notice once F3 is closed.</p>
+</div>
+
+<h2><span class="n">03</span>Asset state</h2>
+
+<div class="tw"><table>
+<thead><tr><th>Asset</th><th>Spec</th><th>Gate 3</th><th>Claims</th><th>Publishable</th></tr></thead>
+<tbody>
+<tr><td><code>ViralHydrilla_STUDIO_CLAUDE</code></td><td>15.00s · 30fps · silent</td><td><span class="pill p-ok">signed</span></td><td>C1/C2/C7/C11 ✓</td><td><span class="pill p-bad">routing FAIL</span></td></tr>
+<tr><td><code>ViralHydrilla_STUDIO</code></td><td>15.30s · 30fps · silent</td><td><span class="pill p-mut">unsigned</span></td><td>C1/C2/C7/C11 ✓</td><td><span class="pill p-bad">routing FAIL</span></td></tr>
+<tr><td><code>RealMotion_v1_DRAFT</code></td><td>15.00s · 30fps · silent</td><td><span class="pill p-mut">unsigned</span></td><td><b>F2 — bare date</b></td><td><span class="pill p-bad">blocked</span></td></tr>
+</tbody>
+</table></div>
+
+<p>All three are spec-clean and genuinely silent — the <code>anullsrc</code> dead-track problem is gone. None can publish: the Routing Gate still reads <code>VERDICT: FAIL</code> and <span class="quote">“NOT run, so the gate is not a full PASS yet.”</span></p>
+
+<div class="card">
+<h3>I did not send the TRUXOR text</h3>
+<p style="margin:0">You asked me to send it and log the PASS. I have no SMS capability that would constitute a valid test — the gate requires an inbound text <b>from a non-business phone</b>, and logging a PASS I did not observe would be fabricating the one record that exists to stop exactly that. It needs your phone, roughly thirty seconds: text <code>TRUXOR</code> → confirm auto-reply → confirm a lead lands with source <code>quo_sms</code>. Then I log it with the evidence.</p>
+</div>
+
+<h2><span class="n">04</span>What I'd do, in order</h2>
+<ul>
+<li><b>Fix F1</b> — align the copy source of truth with C1. One edit, removes a live cross-repo contradiction.</li>
+<li><b>Fix F2</b> — either hedge the date (“projected for this fall”) or drop “THIS FALL” from the card and the LOCKED VO. The captions already do this correctly and are the model.</li>
+<li><b>Close F3</b> — file the LCRA notice. Everything above rests on it.</li>
+<li><b>Send the TRUXOR text</b> — unblocks all three assets.</li>
+<li><b>F4</b> — decide whether “WEED ANNIHILATORS” is the real name. If yes, it belongs in the masters, not one unbuilt script.</li>
+</ul>
+
+<p class="foot">Audit run 2026-09-03 · claims checked against <code>MEDIA_ClaimLedger_Drawdown_v1.md</code> and <code>COPY-SOURCE-OF-TRUTH.md</code> · frames re-pulled from both masters rather than taken from the commit message · design tokens from <code>compose.py</code></p>
+
+</div>

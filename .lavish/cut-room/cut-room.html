@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cut Room — Victoria's pass</title>
+<style>
+  :root{
+    --ink:#121A20; --ink-2:#18232B; --ink-3:#22303A;
+    --cream:#F4EFE6; --cream-dim:#BFB8AC;
+    --copper:#E8B070; --copper-dim:#A87B48;
+    --line:#2C3B46; --good:#7FB069; --warn:#E8B070; --stop:#D9705F;
+    --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;min-width:0}
+  body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--sans);
+       line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 96px}
+
+  header.top{padding:48px 0 28px;border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+          color:var(--copper);margin:0 0 12px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.05;margin:0 0 14px;letter-spacing:-.02em}
+  .lede{font-size:17px;color:var(--cream-dim);max-width:64ch;margin:0}
+  .lede strong{color:var(--cream);font-weight:600}
+
+  .ground{margin:26px 0 0;padding:18px 20px;background:var(--ink-2);border-left:3px solid var(--copper);
+          border-radius:0 8px 8px 0}
+  .ground h2{font-size:12px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;
+             color:var(--copper);margin:0 0 10px}
+  .ground ul{margin:0;padding-left:18px;font-size:14px;color:var(--cream-dim)}
+  .ground li{margin:5px 0}
+  .ground b{color:var(--cream)}
+
+  section.q{padding:44px 0;border-bottom:1px solid var(--line)}
+  .qhead{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+  .qnum{font-family:var(--mono);font-size:12px;color:var(--copper);letter-spacing:.1em}
+  h2.qt{font-size:clamp(21px,3vw,27px);margin:0;letter-spacing:-.01em}
+  .qsub{color:var(--cream-dim);font-size:15px;margin:8px 0 22px;max-width:70ch}
+  .qsub code{font-family:var(--mono);font-size:13px;background:var(--ink-3);padding:1px 5px;border-radius:3px}
+
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+  .opt{background:var(--ink-2);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+       display:flex;flex-direction:column}
+  .opt-label{padding:12px 14px 0}
+  .opt-name{font-weight:650;font-size:15px}
+  .opt-meta{font-family:var(--mono);font-size:11px;color:var(--cream-dim);margin-top:3px}
+  video{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:contain}
+  audio{width:100%;margin:12px 0 0;filter:invert(.9) hue-rotate(180deg)}
+  .opt-body{padding:12px 14px 16px;font-size:13.5px;color:var(--cream-dim);flex:1}
+  .opt-body p{margin:8px 0 0}
+
+  form.decide{margin-top:22px;background:var(--ink-2);border:1px solid var(--line);
+              border-radius:10px;padding:18px 20px}
+  fieldset{border:0;margin:0;padding:0}
+  legend{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+         color:var(--copper);padding:0 0 10px}
+  .choices{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
+  label.choice{display:flex;gap:11px;align-items:flex-start;padding:9px 11px;border-radius:7px;
+               cursor:pointer;font-size:14.5px;transition:background .12s}
+  label.choice:hover{background:var(--ink-3)}
+  label.choice input{margin:3px 0 0;accent-color:var(--copper);flex:none}
+  label.choice span b{display:block;font-weight:600;color:var(--cream)}
+  label.choice span i{font-style:normal;color:var(--cream-dim);font-size:13px}
+  textarea{width:100%;background:var(--ink);color:var(--cream);border:1px solid var(--line);
+           border-radius:7px;padding:10px 12px;font-family:inherit;font-size:14px;resize:vertical;
+           min-height:64px}
+  textarea:focus,label.choice input:focus{outline:2px solid var(--copper-dim);outline-offset:1px}
+  .actions{display:flex;gap:12px;align-items:center;margin-top:14px;flex-wrap:wrap}
+  button{background:var(--copper);color:var(--ink);border:0;border-radius:7px;padding:10px 18px;
+         font-weight:650;font-size:14px;font-family:inherit;cursor:pointer}
+  button:hover{background:#F0C089}
+  .queued{font-family:var(--mono);font-size:12px;color:var(--good)}
+  .queued:empty{display:none}
+
+  .flag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+        text-transform:uppercase;padding:2px 7px;border-radius:3px;vertical-align:middle}
+  .flag.ok{background:rgba(127,176,105,.16);color:var(--good)}
+  .flag.new{background:rgba(232,176,112,.16);color:var(--warn)}
+  .flag.stop{background:rgba(217,112,95,.16);color:var(--stop)}
+
+  footer{padding:40px 0 0;color:var(--cream-dim);font-size:14px}
+  footer b{color:var(--cream)}
+  @media (max-width:640px){ .wrap{padding:0 16px 72px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <p class="kicker">ATX LakeScapes · Drawdown 2026 · producer pass</p>
+  <h1>Cut Room</h1>
+  <p class="lede">Six music takes, three slots, two lead-in lanes — and <strong>nobody has listened to any of it yet.</strong> Levels and durations are measured; musical fit is not. That is the call being asked for here. Watch, listen, pick, and say why. Every question sends one note back.</p>
+
+  <div class="ground">
+    <h2>Ground truth before you start</h2>
+    <ul>
+      <li><b>The drawdown is official.</b> LCRA / City of Austin release: lowering starts <b>Oct 12</b>, about a foot a day, target 481.8–482.8 ft msl ("about 10 feet"), refill from <b>Nov 24</b>, normal pool <b>Nov 30</b>. Nothing here hedges it, and nothing may.</li>
+      <li><b>ABOUT 10 FT everywhere — Nate ruled 2026-09-06.</b> LCRA's number. The one-pager's 10–12 is retired; both lead-ins were recut the same day.</li>
+      <li><b>Nate signed 2026-09-06:</b> method cut + Mud Window v2, both lead-ins (silent), Lake Coming Down (house beat stays), Bulkhead, cards S01–S10. Your calls below are taste and lane picks on signed work — they still matter, they are no longer blockers.</li>
+      <li><b>The Scrape/Haul cut is claim-clean and verified upright.</b> An audit caught its third beat rendering sideways this morning; it was rebuilt and every frame re-checked. What you see below is the corrected cut.</li>
+      <li><b>COVER is the third verb everywhere</b> — Nate ruled 2026-09-04. The plate is erosion matting and we have no honest photo of a stapled tarp, so the cards follow the picture. The crew still staples woven tarp at 12-inch overlap; the warranty still says so.</li>
+      <li><b>The vocal take you'll hear is a four-line hook stub</b>, not the full lyric. Three complete songs are written and unrecorded.</li>
+      <li>Banned everywhere: <i>exploring · unofficial · "nothing is official yet" · $695 · credited · assessment · extinct</i>.</li>
+    </ul>
+  </div>
+</header>
+
+<!-- 1 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">01</span><h2 class="qt">Which bed sits under the method cut?</h2><span class="flag ok">settled · Mud Window v2 · signed by Nate 09-06</span></div>
+  <p class="qsub"><b>Your call came back: Mud Window v2.</b> That file is now the picked master (video stream md5-identical to the fixed silent cut) and waits on Nate's sign only. Re-queue below if you change your mind. Same 15 seconds, three ways. The cut was built silent on purpose so the picture had to carry it alone — these two music passes are stream-copies of that exact master with <code>Mud Window</code> laid under. Takes run 17–19 s against a 15 s picture, so whichever wins gets trimmed in Resolve.</p>
+
+  <div class="grid">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Silent master</div><div class="opt-meta">15.00 s · no audio stream</div></div>
+      <video src="shs_silent.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p>The reference. If the picture reads without help, silence is a real answer — it is the one option nobody has to defend later.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Mud Window v1</div><div class="opt-meta">19.72 s take · −17.1 dB · instrumental</div></div>
+      <video src="shs_mud_v1.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p>Longer take, quieter average. More room to trim to the 15 s picture.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Mud Window v2</div><div class="opt-meta">17.16 s take · −16.5 dB · instrumental</div></div>
+      <video src="shs_mud_v2.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p>Tighter take, slightly hotter. Less trim, less headroom to move the downbeat.</p></div>
+    </div>
+  </div>
+
+  <form class="decide" data-lavish-question="bed" onsubmit="q(event,'bed','Mud Window bed for the Scrape/Haul cut')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="bed" value="silent"><span><b>Keep it silent</b><i>Picture carries it. No bed.</i></span></label>
+        <label class="choice"><input type="radio" name="bed" value="Mud Window v1"><span><b>Mud Window v1</b><i>The 19.72 s take.</i></span></label>
+        <label class="choice"><input type="radio" name="bed" value="Mud Window v2"><span><b>Mud Window v2</b><i>The 17.16 s take.</i></span></label>
+        <label class="choice"><input type="radio" name="bed" value="neither — regenerate"><span><b>Neither — go back to Suno</b><i>Wrong feel entirely. Tell us what to chase.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Why — and where exactly it wins or breaks. Timecodes help (&quot;the hit at 0:09 lands on the wrong frame&quot;)."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-bed"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 2 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">02</span><h2 class="qt">Lake Coming Down — v1 or v2?</h2><span class="flag ok">settled 09-06 · v1 · Victoria · cut to picture, see 09</span></div>
+  <p class="qsub">The long instrumental, meant for the lead-in and anything that needs to breathe. Nothing is muxed yet — pick the take and it gets cut to picture next.</p>
+
+  <div class="grid">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Lake Coming Down v1</div><div class="opt-meta">36.96 s · −15.1 dB · peak −1.2</div></div>
+      <div class="opt-body"><audio src="lake_v1.mp3" controls preload="metadata"></audio><p>Shorter, marginally louder average.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Lake Coming Down v2</div><div class="opt-meta">39.00 s · −15.6 dB · peak −1.5</div></div>
+      <div class="opt-body"><audio src="lake_v2.mp3" controls preload="metadata"></audio><p>Longest take we have. More runway under a 30 s cut.</p></div>
+    </div>
+  </div>
+
+  <form class="decide" data-lavish-question="lake" onsubmit="q(event,'lake','Lake Coming Down take')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="lake" value="v1"><span><b>v1</b><i>36.96 s.</i></span></label>
+        <label class="choice"><input type="radio" name="lake" value="v2"><span><b>v2</b><i>39.00 s.</i></span></label>
+        <label class="choice"><input type="radio" name="lake" value="neither"><span><b>Neither</b><i>Regenerate this slot.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="What it needs to do under the lead-in — and what this take does instead."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-lake"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 3 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">03</span><h2 class="qt">Work the Bed — is there a vocal on this campaign at all?</h2><span class="flag new">Victoria: needs a real demo first · full-lyric demo generating on Suno</span></div>
+  <p class="qsub">The only take with a voice on it. What was actually sung is the <b>four-line hook stub</b> from the original prompt sheet — not the full song. Three complete lyrics (<i>The Window</i>, <i>Work the Bed</i>, <i>Home Water</i>) are written and unrecorded, so a yes here means re-generating against the real lyric, not shipping these takes.</p>
+  <p class="qsub">The brief's own bar: <b>BBQ test</b> — it should sound like somebody who does the work, not somebody selling it. No jingle, no barker, no sung phone number.</p>
+
+  <div class="grid">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Work the Bed v1</div><div class="opt-meta">25.76 s · −16.9 dB · male vocal</div></div>
+      <div class="opt-body"><audio src="bed_v1.mp3" controls preload="metadata"></audio><p>Hook stub only: <i>"We work the bed / Scrape it, haul it, cover it / Lake Austin is home."</i></p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Work the Bed v2</div><div class="opt-meta">27.80 s · −16.0 dB · peak −0.8</div></div>
+      <div class="opt-body"><audio src="bed_v2.mp3" controls preload="metadata"></audio><p>Same stub, hotter peak — closest take to clipping of the six.</p></div>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-bottom:18px">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Work the Bed — FULL LYRIC, take 1</div><div class="opt-meta">80.17 s · −16.3 dB mean · peak −2.2 · male · generated 09-06 on your call</div></div>
+      <div class="opt-body"><audio src="03_WorkTheBed_FULL_v1.mp3" controls preload="metadata" style="width:100%"></audio><p>Verse 1 · chorus · verse 2 · chorus · bridge · chorus · tag. The whole song from LYRICS-v2, not the stub. Same style brief.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Work the Bed — FULL LYRIC, take 2</div><div class="opt-meta">80.25 s · −16.2 dB mean · peak −2.4 · male</div></div>
+      <div class="opt-body"><audio src="03_WorkTheBed_FULL_v2.mp3" controls preload="metadata" style="width:100%"></audio><p>Same lyric, Suno's second take. Pick the singer, then we cut a 30 s reel to it.</p></div>
+    </div>
+  </div>
+  <form class="decide" data-lavish-question="vocal" onsubmit="q(event,'vocal','Vocal direction for the campaign')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="vocal" value="v1 voice, re-cut to the full lyric"><span><b>Full take 1 — that's the singer</b><i>Cut a 30 s reel to it.</i></span></label>
+        <label class="choice"><input type="radio" name="vocal" value="v2 voice, re-cut to the full lyric"><span><b>Full take 2 — that's the singer</b><i>Cut a 30 s reel to it.</i></span></label>
+        <label class="choice"><input type="radio" name="vocal" value="instrumental only — no vocal on this campaign"><span><b>No vocal anywhere on this campaign</b><i>Instrumental beds only. Kills the slot.</i></span></label>
+        <label class="choice"><input type="radio" name="vocal" value="undecided — needs a real demo first"><span><b>Neither — regenerate</b><i>Say what's wrong with the voice or the feel.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Does it pass the BBQ test? If it sounds like an ad, say where it turns."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-vocal"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 4 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">04</span><h2 class="qt">The third verb — settled, shown here for your eye</h2><span class="flag ok">settled 09-06 · Claude lane · Victoria · studio lane retired</span></div>
+  <p class="qsub"><b>COVER everywhere.</b> The lead-ins used to close on "SCRAPE. HAUL. STAPLE." while the method cut taught COVER — a homeowner who saw both learned a contradiction. COVER is the verb we can actually photograph; STAPLE has zero honest imagery in the library. The crew still staples woven tarp at 12-inch overlap and the warranty still says so — the cards changed, not the job.</p>
+  <p class="qsub">Both lead-ins below are the <b>re-cut versions</b>: new end card, and the retired "NOTHING IS OFFICIAL YET" plate replaced with "THE DRAWDOWN IS OFFICIAL". You're not being asked to re-decide — just tell us if the new cards land, and which of these two lanes survives.</p>
+
+  <div class="grid">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Viral lead-in — STUDIO</div><div class="opt-meta">re-cut 22:27 · 15.30 s · silent</div></div>
+      <video src="viral_studio.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p><span class="flag ok">cards clean</span> Hauled-mound end plate. Blocked on VO only.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Viral lead-in — STUDIO_CLAUDE</div><div class="opt-meta">re-cut 22:27 · 15.00 s · silent</div></div>
+      <video src="viral_claude.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p><span class="flag ok">cards clean</span> Different plates and builder — machine plus the windrow it hauled. Two lanes built the same piece; one of these dies.</p></div>
+    </div>
+  </div>
+
+  <form class="decide" data-lavish-question="verbs" onsubmit="q(event,'verbs','Lead-in lane + new cards')">
+    <fieldset>
+      <legend>Which lane survives</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="verbs" value="STUDIO lane"><span><b>STUDIO</b><i>Kill the CLAUDE lane.</i></span></label>
+        <label class="choice"><input type="radio" name="verbs" value="STUDIO_CLAUDE lane"><span><b>STUDIO_CLAUDE</b><i>Kill the STUDIO lane.</i></span></label>
+        <label class="choice"><input type="radio" name="verbs" value="neither — the cards still need work"><span><b>Neither yet</b><i>The new cards don't land. Say what's wrong.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Do the new end cards land? Anything about the OFFICIAL plate or the COVER card that reads wrong."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-verbs"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 5 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">05</span><h2 class="qt">Your voice — the script has never been read</h2><span class="flag ok">Victoria 09-06: "send the script — I'll read it as written" · sent below</span></div>
+  <p class="qsub">VO wording is locked in the build folder and <b>nothing has been muxed</b>, because you have not approved the words. One existing cut has a cloned-voice VO on it that <b>speaks the retired hedge</b> — that one is flagged for re-record no matter what. Nothing goes out in your voice without your yes.</p>
+
+  <div class="opt" style="margin-bottom:18px"><div class="opt-label"><div class="opt-name">The read — as written</div><div class="opt-meta">34 words · ~13 s inside a 15 s picture · also at <code>VO_ViralLeadin_Victoria_READ.txt</code></div></div><div class="opt-body"><p>1. This is what's under Lake Austin docks.</p><p>2. Ten years of it. Nobody's seen the bottom.</p><p>3. The drawdown's official. About ten feet, from October twelfth.</p><p>4. While it's dry, we work. Lake Austin is our home water.</p><p style="opacity:.7">Neighbour pace. Small beat between lines. Finish by 14 s. Record it any way you like — phone in a quiet room is fine — and drop the file to Nate; it gets muxed over the silent master.</p></div></div>
+  <form class="decide" data-lavish-question="vo" onsubmit="q(event,'vo','Victoria VO approval')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="vo" value="send the script — I'll read it as written"><span><b>Send me the script</b><i>Ready to read it as written.</i></span></label>
+        <label class="choice"><input type="radio" name="vo" value="send the script — I want changes first"><span><b>Send it, but I want changes</b><i>Note what needs to move below.</i></span></label>
+        <label class="choice"><input type="radio" name="vo" value="no VO — silent or music only"><span><b>No VO at all</b><i>These pieces work silent or on music.</i></span></label>
+        <label class="choice"><input type="radio" name="vo" value="no cloned voice — retire the clone"><span><b>Retire the cloned voice</b><i>If it reads, it's a real read.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Anything about tone, pace, or words you won't say."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-vo"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 6 -->
+
+<!-- 7 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">07</span><h2 class="qt">Still-card series — eight real plates, built last night</h2><span class="flag ok">signed by Nate 09-06</span></div>
+  <p class="qsub">Stories and feed posts for the five weeks before Oct 12. Every plate is an ATX job photo, sha-pinned, checked upright, no generated pixels anywhere. Same type and copper as the reels so the still and the reel read as one company. Full-size files: <code>06_Media_Build/cards/</code>, verdicts in <code>cards/PINS.md</code>.</p>
+  <div class="grid">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S01 · Oct 12 – Nov 30. About 10 ft. LCRA.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S01_dates_916.jpg" alt="Oct 12 – Nov 30. About 10 ft. LCRA." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>hydrilla mat, wooded shoreline</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S02 · This is under your dock.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S02_under-your-dock_916.jpg" alt="This is under your dock." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>dock deck in frame, choked water below</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S03 · It doesn't stop at the dock.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S03_past-the-dock_916.jpg" alt="It doesn't stop at the dock." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>aerial texture — the abstract one; your taste call</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S04 · Scrape.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S04_scrape_916.jpg" alt="Scrape." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>operator seat, harvested load on deck</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S05 · Haul. Spoil leaves your lot.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S05_haul_916.jpg" alt="Haul. Spoil leaves your lot." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>cut weed in a truck bed under a tarp</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S06 · Cover.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S06_cover_916.jpg" alt="Cover." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>crew laying green matting on a scraped bed</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S07 · Two machines. Committed.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S07_two-machines_916.jpg" alt="Two machines. Committed." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>both Truxors, pontoons visible — C7 holds</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S08 · Seven weeks. Text TRUXOR.</div><div class="opt-meta">9:16 + 4:5 · real plate</div></div>
+      <img src="card_S08_seven-weeks_916.jpg" alt="Seven weeks. Text TRUXOR." style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>one machine working a mat, open lake behind</p></div>
+    </div>
+  </div>
+  <form class="decide" data-lavish-question="cards" onsubmit="q(event,'cards','Still-card series')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="cards" value="all eight go"><span><b>All eight go</b><i>To Nate for sign as a set.</i></span></label>
+        <label class="choice"><input type="radio" name="cards" value="pull some"><span><b>Pull some</b><i>Name the slots below.</i></span></label>
+        <label class="choice"><input type="radio" name="cards" value="re-strap"><span><b>Right pictures, wrong words</b><i>Say which lines move.</i></span></label>
+        <label class="choice"><input type="radio" name="cards" value="wrong look"><span><b>Wrong look entirely</b><i>Type, colour, crop — tell us what to chase.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Slot numbers help (&quot;S03 reads like pond scum, S07 is the strongest thing here&quot;)."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-cards"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 8 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">08</span><h2 class="qt">The schedule — W37 to refill</h2><span class="flag ok">signed by Nate 09-06 · pinned to LCRA dates</span></div>
+  <p class="qsub">Three reels/stories and one feed still a week. Five weeks from the library, then seven weeks from the field once the lake is actually coming down. Full sheet: <code>06_Media_Build/PRODUCTION_SCHEDULE_2026-09-07.md</code>.</p>
+  <div class="grid">
+    <div class="opt"><div class="opt-label"><div class="opt-name">W37 · Sep 7</div><div class="opt-meta">"It's official"</div></div><div class="opt-body"><p>Mon method cut + Mud Window v2 · Wed viral lead-in (silent, one lane) · Fri S01 dates story + S02 feed.<br><b>Ready.</b> Needs Nate sign, Q04 lane pick.</p></div></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">W38 · Sep 14</div><div class="opt-meta">"What's under there"</div></div><div class="opt-body"><p>Mon <b>Lake Coming Down</b> 30 s (<b>built</b> — see 09; your Q02 bed) · Wed method cut rerun · Fri S03 story + S07 feed.</p></div></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">W39 · Sep 21</div><div class="opt-meta">"This is the job"</div></div><div class="opt-body"><p>Mon <b>Work the Bed</b> vocal demo (only if Q03 says yes) · Wed lead-in + your VO (Q05) · Fri Scrape/Haul/Cover 3-card story + S06 feed.</p></div></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">W40 · Sep 28</div><div class="opt-meta">"What the water hides"</div></div><div class="opt-body"><p>Mon <b>bulkhead / seawall</b> 15 s (<b>built</b> — see 09) · Wed Lake Coming Down 15 s cutdown · Fri S08 story + fleet still feed.</p></div></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">W41 · Oct 5</div><div class="opt-meta">countdown</div></div><div class="opt-body"><p>"7 days" and "Monday." cards (<b>built</b> — S09/S10 in 09) · method cut last run · Sun: one real phone photo of both machines staged on the trailer.</p></div></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">W42–48 · Oct 12 → Nov 30</div><div class="opt-meta">live from the field</div></div><div class="opt-body"><p>The library is out of new honest pictures by here. Weekly reel from that week's capture, "day N" story with the gauge number, method cut rerun. Six-item shoot list — the first one is <b>tarp + staple + overlap in one frame</b>, which unlocks STAPLE on every card.</p></div></div>
+  </div>
+  <form class="decide" data-lavish-question="schedule" onsubmit="q(event,'schedule','Production schedule')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="schedule" value="cadence right"><span><b>Cadence is right</b><i>Three plus one a week. Run it.</i></span></label>
+        <label class="choice"><input type="radio" name="schedule" value="too much"><span><b>Too much</b><i>Say what to cut.</i></span></label>
+        <label class="choice"><input type="radio" name="schedule" value="reorder"><span><b>Reorder</b><i>Different first week, different lead piece.</i></span></label>
+        <label class="choice"><input type="radio" name="schedule" value="missing"><span><b>Something's missing</b><i>A piece you expected and don't see.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Week numbers help."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-schedule"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+
+<!-- 9 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">09</span><h2 class="qt">Two new cuts and the countdown cards — built today, all real</h2><span class="flag ok">signed by Nate 09-06</span></div>
+  <p class="qsub">Lake Coming Down is the first piece with real motion: five DJI clips from the Aug 11 Rob Roy flight, letterboxed, never upscaled, with the LCRA calendar on top and your Lake Coming Down v2 bed under it (v1 swaps in if Q02 says so). Bulkhead is three real low-water plates. Proof of every number: <code>06_Media_Build/PROOF_2026-09-06.md</code>.</p>
+  <div class="grid">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Lake Coming Down</div><div class="opt-meta">30.00 s · Lake Coming Down v1 bed (your pick) · house beat swapped</div></div>
+      <video src="lcd_v1.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p>Oct 12 · about 10 feet · this is under it · scrape haul cover · refill Nov 24 · CTA. <b>Your call 09-06:</b> house beat swapped — now a cove edge with a weed mat, no residence.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Bulkhead / seawall</div><div class="opt-meta">15.00 s · silent</div></div>
+      <video src="bulkhead.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p>What the water hides · your wall, your footings · fixed on dry ground · CTA. No price, no percentage.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S09 · 7 days</div><div class="opt-meta">posts Mon Oct 5</div></div>
+      <img src="card_S09_seven-days_916.jpg" alt="7 days" style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>Same plate as S01 so the countdown reads as one thread.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">S10 · Monday</div><div class="opt-meta">posts Mon Oct 12</div></div>
+      <img src="card_S10_monday_916.jpg" alt="Monday" style="width:100%;display:block;background:#000">
+      <div class="opt-body"><p>Day-of card. "About a foot a day" is LCRA's phrase.</p></div>
+    </div>
+  </div>
+  <form class="decide" data-lavish-question="newcuts" onsubmit="q(event,'newcuts','Lake Coming Down + Bulkhead')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="newcuts" value="both go"><span><b>Both go</b><i>To Nate for sign.</i></span></label>
+        <label class="choice"><input type="radio" name="newcuts" value="lake coming down only"><span><b>Lake Coming Down only</b><i>Bulkhead needs work — say what.</i></span></label>
+        <label class="choice"><input type="radio" name="newcuts" value="bulkhead only"><span><b>Bulkhead only</b><i>Lake Coming Down needs work — say what.</i></span></label>
+        <label class="choice"><input type="radio" name="newcuts" value="swap the house beat"><span><b>Swap the house beat</b><i>Lose the recognisable residence in Lake Coming Down.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Timecodes help."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-newcuts"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 10 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">10</span><h2 class="qt">Lake Coming Down — round 6 (new plates) against round 5</h2><span class="flag ok">signed by Nate 09-16 — r6 goes · pack rebuilt</span></div>
+  <p class="qsub">Same 30 s, same words, same cuts, same bed. Only the pictures under the first 12.9 s changed: the 1080-px aerial and the reflected-sky hydrilla plate are out; four 4096×3072 DJI stills from the Oct 2025 Oyster Landing survey are in — top-down dock fingers with boats in their slips, sitting in a solid hydrilla mat. First frame now reads at thumbnail size. Registry rows are <code>pending_approval</code>, <code>customer_identifiable=1</code> (a client's docks and their customers' boats) — Nate signs the plates at Gate 0. <b>Signed 09-16:</b> r6 is the master; the pack and all three LCD slots carry it. Measured: <code>06_Media_Build/LCD_v2_BUILD_NOTES_r6.md</code>.</p>
+  <img src="lcd_r6_before_after.png" alt="round 5 vs round 6 at 1, 5, 15, 28 s" style="width:100%;display:block;background:#000;margin-bottom:14px">
+  <div class="grid">
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Round 5</div><div class="opt-meta">30.00 s · what the pack has today · md5 f23ec45d</div></div>
+      <video src="lcd_r5.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p>Opens on the 1080×607 aerial covered 3.16×. Hydrilla beat is a reflected sky, steel-blue.</p></div>
+    </div>
+    <div class="opt">
+      <div class="opt-label"><div class="opt-name">Round 6</div><div class="opt-meta">30.00 s · new plates · md5 e8c658f0</div></div>
+      <video src="lcd_r6.mp4" controls preload="metadata" playsinline></video>
+      <div class="opt-body"><p>Opens on docks in the mat, 1728×3072 native window — a downsample, not an upscale. Hydrilla beat is actually green, one boat stranded in it. Loop seam −10.5 (was +7.5), every cut inside ±8, worst eyebrow 5.06:1 (was 4.76).</p></div>
+    </div>
+  </div>
+  <form class="decide" data-lavish-question="lcd-r6" onsubmit="q(event,'lcd-r6','Lake Coming Down r6 vs r5')">
+    <fieldset>
+      <legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="lcd-r6" value="r6 goes"><span><b>Round 6 goes</b><i>Plates approved, pack rebuilds on r6.</i></span></label>
+        <label class="choice"><input type="radio" name="lcd-r6" value="r6 with notes"><span><b>Round 6, with notes</b><i>Right direction — say what to chase.</i></span></label>
+        <label class="choice"><input type="radio" name="lcd-r6" value="stay on r5"><span><b>Stay on round 5</b><i>Sign r5 as-is so the pack is honest.</i></span></label>
+        <label class="choice"><input type="radio" name="lcd-r6" value="plates no"><span><b>Can't use those plates</b><i>Client/permission problem with the Oyster Landing stills.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Timecodes help. The boats are somebody's — say if that matters."></textarea>
+      <div class="actions"><button type="submit">Queue this call</button><span class="queued" id="q-lcd-r6"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<section class="q" style="border-bottom:0">
+  <div class="qhead"><span class="qnum">06</span><h2 class="qt">Anything else you'd change</h2></div>
+  <p class="qsub">Straps, pacing, plate choice, the order of the beats, what's missing. You can also highlight any text or element on this page and annotate it directly — that comes back attached to what you pointed at.</p>
+  <form class="decide" data-lavish-question="open" onsubmit="q(event,'open','Producer notes')">
+    <fieldset>
+      <legend>Open notes</legend>
+      <textarea name="why" placeholder="Say it plainly. Timecodes and beat numbers welcome." style="min-height:110px"></textarea>
+      <div class="actions"><button type="submit">Queue notes</button><span class="queued" id="q-open"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<footer>
+  <p><b>How this comes back:</b> each Queue button stacks one note. When you're done, hit <b>Send to Agent</b> in the Lavish bar — everything queued goes back at once and the work starts from your calls.</p>
+</footer>
+
+</div>
+
+<script>
+function q(ev, key, label){
+  ev.preventDefault();
+  var f = ev.currentTarget;
+  var d = new FormData(f);
+  var pick = d.get(key);
+  var why = (d.get('why')||'').toString().trim();
+  if(!pick && !why) return;
+  var msg = label + ': ' + (pick ? pick : '(no option selected)');
+  if(why) msg += ' — Victoria: "' + why + '"';
+  if(window.lavish && window.lavish.queuePrompt){
+    window.lavish.queuePrompt(msg, {
+      tag:'producer', text: label + ': ' + (pick||'notes'),
+      element: f, queueKey: key,
+      data:{ question:key, answer:pick||null, rationale:why||null }
+    });
+  }
+  var badge = document.getElementById('q-'+key);
+  if(badge) badge.textContent = '✓ queued — edit and re-queue anytime';
+}
+</script>
+</body>
+</html>

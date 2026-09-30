@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drawdown — Sit-Down Board</title>
+<style>
+:root{--ink:#121A20;--ink2:#1B252D;--cream:#F4EFE6;--cream-dim:#C9C2B6;--copper:#E8B070;--good:#7FB069;--warn:#E8B070;--stop:#D9705F;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--ink);color:var(--cream);font:16px/1.5 -apple-system,"Source Sans 3",Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 22px 80px}
+header{border-bottom:1px solid #2b3740;padding-bottom:18px;margin-bottom:8px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--copper);margin:0 0 6px}
+h1{font-size:34px;margin:0 0 6px;letter-spacing:-.01em}
+.lede{color:var(--cream-dim);margin:0;max-width:820px}
+.clock{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
+.clock div{background:var(--ink2);border:1px solid #2b3740;border-radius:10px;padding:10px 14px;font-family:var(--mono);font-size:12px}
+.clock b{display:block;color:var(--copper);font-size:16px;font-family:inherit}
+section.q{padding:30px 0;border-bottom:1px solid #2b3740}
+.qhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.qnum{font-family:var(--mono);color:var(--copper);font-size:13px}
+.qt{font-size:22px;margin:0}
+.who{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;padding:3px 8px;border-radius:999px;background:rgba(232,176,112,.16);color:var(--copper)}
+.who.n{background:rgba(127,176,105,.16);color:var(--good)}
+.qsub{color:var(--cream-dim);margin:4px 0 16px;max-width:860px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.opt{background:var(--ink2);border:1px solid #2b3740;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.opt-label{padding:10px 14px 6px}
+.opt-name{font-weight:700}
+.opt-meta{font-family:var(--mono);font-size:11px;color:var(--cream-dim)}
+.opt video,.opt img{width:100%;display:block;background:#000}
+.opt-body{padding:10px 14px 14px;font-size:13.5px;color:var(--cream-dim);flex:1}
+.opt-body p{margin:6px 0 0}
+audio{width:100%;margin-top:6px}
+form.decide{margin-top:16px}
+fieldset{border:1px solid #2b3740;border-radius:12px;padding:14px 16px 16px;background:rgba(27,37,45,.5)}
+legend{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--copper);padding:0 8px}
+.choices{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.choice{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #2b3740;border-radius:10px;cursor:pointer;background:var(--ink)}
+.choice:has(input:checked){border-color:var(--copper);background:rgba(232,176,112,.08)}
+.choice input{margin-top:4px;accent-color:var(--copper)}
+.choice b{display:block}.choice i{font-style:normal;color:var(--cream-dim);font-size:13px}
+textarea{width:100%;margin-top:12px;min-height:64px;background:var(--ink);color:var(--cream);border:1px solid #2b3740;border-radius:10px;padding:10px;font:inherit}
+.actions{display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap}
+button{background:var(--copper);color:var(--ink);border:0;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;font:inherit}
+.queued{font-family:var(--mono);font-size:12px;color:var(--good)}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,96px),1fr));gap:8px}
+.strip img{width:100%;border-radius:6px;display:block}
+.script{background:var(--ink2);border:1px solid #2b3740;border-radius:12px;padding:16px 20px;font-size:19px;line-height:1.7;max-width:720px}
+.script small{display:block;color:var(--cream-dim);font-size:13px;margin-top:8px}
+footer{color:var(--cream-dim);font-size:13.5px;padding-top:26px}
+code{font-family:var(--mono);font-size:.9em;color:var(--copper)}
+</style></head><body><div class="wrap">
+
+<header>
+  <p class="kicker">ATX LAKESCAPES · DRAWDOWN 2026 · SIT-DOWN BOARD · NATE + VICTORIA</p>
+  <h1>Eight answers and the campaign is live</h1>
+  <p class="lede">Everything below is built, real, and signed. What's left is taste and a few picks. Answer top to bottom, hit <b>Send to Agent</b> once at the end. Each queued answer is one line; nothing here needs an essay.</p>
+  <div class="clock">
+    <div>Lowering starts<b>Mon Oct 12</b></div>
+    <div>About<b>10 ft · LCRA</b></div>
+    <div>Refill from<b>Tue Nov 24</b></div>
+    <div>First post<b>Mon Sep 7</b></div>
+    <div>Ready now<b>5 videos · 10 stills</b></div>
+  </div>
+</header>
+
+<!-- 1 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">01</span><h2 class="qt">Work the Bed — reel approved ✓</h2><span class="who">VICTORIA</span></div>
+  <p class="qsub">You said "needs a real demo first." <b>Your note landed: "Texas country, Kenny Chesney, upbeat."</b> Two takes on that brief are first below. The gravel pair you passed on stays underneath for the A/B.</p>
+  <div class="grid" style="margin-bottom:16px"><div class="opt" style="border-color:var(--good)"><div class="opt-label"><div class="opt-name">THE REEL — Work the Bed</div><div class="opt-meta">30 s · Country A from 0:28 · lake → two machines → scrape → haul → cover → CTA</div></div><video src="wtb.mp4" controls preload="metadata" playsinline></video><div class="opt-body"><p>Song carries it; straps are one word each and match the chorus. Real drone opener, real plates, same CTA card.</p></div></div></div>
+  <div class="grid" style="margin-bottom:16px">
+    <div class="opt" style="border-color:var(--copper)"><div class="opt-label"><div class="opt-name">COUNTRY take A</div><div class="opt-meta">80 s · Texas country, upbeat · new</div></div><div class="opt-body"><audio src="03_WorkTheBed_COUNTRY_v1.mp3" controls preload="metadata"></audio></div></div>
+    <div class="opt" style="border-color:var(--copper)"><div class="opt-label"><div class="opt-name">COUNTRY take B</div><div class="opt-meta">80 s · Texas country, upbeat · new</div></div><div class="opt-body"><audio src="03_WorkTheBed_COUNTRY_v2.mp3" controls preload="metadata"></audio></div></div>
+  </div>
+  <div class="grid">
+    <div class="opt"><div class="opt-label"><div class="opt-name">Gravel take 1 (passed)</div><div class="opt-meta">80 s · male · −16.3 dB</div></div><div class="opt-body"><audio src="03_WorkTheBed_FULL_v1.mp3" controls preload="metadata"></audio></div></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">Gravel take 2 (passed)</div><div class="opt-meta">80 s · male · −16.2 dB</div></div><div class="opt-body"><audio src="03_WorkTheBed_FULL_v2.mp3" controls preload="metadata"></audio></div></div>
+  </div>
+  <form class="decide" data-lavish-question="singer" onsubmit="q(event,'singer','Work the Bed reel')">
+    <fieldset><legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="singer" value="reel goes"><span><b>Reel goes</b><i>Slots into W39 Monday.</i></span></label>
+        <label class="choice"><input type="radio" name="singer" value="different start point / picture order — notes"><span><b>Different start or picture order</b><i>Say the second and the order.</i></span></label>
+        <label class="choice"><input type="radio" name="singer" value="switch to Country B"><span><b>Switch to Country B</b></span></label>
+      </div>
+      <textarea name="why" placeholder="e.g. 'start at 0:31', 'machines first'."></textarea>
+      <div class="actions"><button type="submit">Queue</button><span class="queued" id="q-singer"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 2 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">02</span><h2 class="qt">The VO — two sentences added, as asked. Does it go?</h2><span class="who">VICTORIA</span></div>
+  <p class="qsub">Added the two most informative things that are already true on the cards: the machines + the job, and the ask. 13.4 s of speech inside the 15 s picture. <b>Held back, need a source before they go in anyone's mouth:</b> "licensed for TPWD removal" · "number-one monthly maintenance weed company in Central Texas" · "doing this for ten years" (the ten-year line on the cards is the <i>lake's</i> window, not the company's age). Say which of those is documented and it goes in.</p>
+  <div class="grid"><div class="opt"><div class="opt-label"><div class="opt-name">Lead-in + MikeRow VO</div><div class="opt-meta">15 s · v2 · −16.3 LUFS · MikeRow voice</div></div><video src="viral_claude_vo.mp4" controls preload="metadata" playsinline></video><div class="opt-body"><p>"This is what's under Lake Austin docks. The drawdown's official — about ten feet, from October twelfth. Two amphibious machines. We scrape it, haul it off, cover it. Text TRUXOR for a free estimate."</p></div></div></div>
+  <form class="decide" data-lavish-question="read" onsubmit="q(event,'read','VO cut v2')">
+    <fieldset><legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="read" value="VO v2 goes — Wednesday post"><span><b>Goes</b><i>This is Wednesday.</i></span></label>
+        <label class="choice"><input type="radio" name="read" value="add the TPWD line — documented"><span><b>Add "licensed for TPWD removal"</b><i>Only if that permit is on file.</i></span></label>
+        <label class="choice"><input type="radio" name="read" value="add the ten-years / number-one line — documented"><span><b>Add ten years / number one</b><i>Say what backs it.</i></span></label>
+        <label class="choice"><input type="radio" name="read" value="redo — notes"><span><b>Redo</b><i>Words, pace, or voice.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Permit number, year founded, or the line you want."></textarea>
+      <div class="actions"><button type="submit">Queue</button><span class="queued" id="q-read"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 3 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">03</span><h2 class="qt">Lake Coming Down, rebuilt on your calls — does it go?</h2><span class="who">VICTORIA</span> <span class="who n">NATE SIGNED</span></div>
+  <p class="qsub">Rebuilt on your note: every drone clip de-shaken and slowed to ~60% with motion interpolation. v1 bed, house beat swapped. Watch it again.</p>
+  <div class="grid">
+    <div class="opt"><div class="opt-label"><div class="opt-name">Lake Coming Down</div><div class="opt-meta">30.00 s · Lake Coming Down v1 · de-shaken · slowed · REBUILT</div></div><video src="lcd_v1.mp4" controls preload="metadata" playsinline></video></div>
+  </div>
+  <form class="decide" data-lavish-question="lcd" onsubmit="q(event,'lcd','Lake Coming Down final')">
+    <fieldset><legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="lcd" value="goes"><span><b>Goes</b><i>Done.</i></span></label>
+        <label class="choice"><input type="radio" name="lcd" value="one more change"><span><b>One more change</b><i>Timecode + what.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="e.g. 'strap at 0:14 too long' — timecodes help."></textarea>
+      <div class="actions"><button type="submit">Queue</button><span class="queued" id="q-lcd"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 4 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">04</span><h2 class="qt">Method cut rewritten in the bulkhead's style — v2 or v1?</h2><span class="who">VICTORIA</span> <span class="who n">NATE SIGNED</span></div>
+  <p class="qsub">Your note: simpler, more explanatory, two amphibious machines said out loud, bulkhead's story framework. v2 is that. Bulkhead and lead-in unchanged — you called them on point.</p>
+  <div class="grid">
+    <div class="opt" style="border-color:var(--copper)"><div class="opt-label"><div class="opt-name">Method cut v2 — story style, per your note</div><div class="opt-meta">15 s · Mud Window v2 · NEW</div></div><video src="method_v2.mp4" controls preload="metadata" playsinline></video><div class="opt-body"><p>Hook → the machines → the job → the promise. "See that? That's under your dock." · "Two amphibious machines. Built to cut it." · "Scrape it. Haul it off your lot." · "Cover it. It doesn't grow back through."</p></div></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">Method cut v1 (for the A/B)</div><div class="opt-meta">15 s · Mud Window v2</div></div><video src="shs_mud_v2.mp4" controls preload="metadata" playsinline></video></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">Viral lead-in · Claude lane</div><div class="opt-meta">15 s · silent · posts Wed Sep 9</div></div><video src="viral_claude.mp4" controls preload="metadata" playsinline></video></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">Bulkhead</div><div class="opt-meta">15 s · silent · W40</div></div><video src="bulkhead.mp4" controls preload="metadata" playsinline></video></div>
+  </div>
+  <form class="decide" data-lavish-question="reels" onsubmit="q(event,'reels','Method cut v2')">
+    <fieldset><legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="reels" value="v2 goes — replaces v1 for Monday"><span><b>v2 goes</b><i>Replaces v1 for Monday.</i></span></label>
+        <label class="choice"><input type="radio" name="reels" value="v2 close — line edits below"><span><b>v2, with line edits</b><i>Say which line, to what.</i></span></label>
+        <label class="choice"><input type="radio" name="reels" value="keep v1"><span><b>Keep v1</b></span></label>
+      </div>
+      <textarea name="why" placeholder="Beat number + the line you want."></textarea>
+      <div class="actions"><button type="submit">Queue</button><span class="queued" id="q-reels"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 5 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">05</span><h2 class="qt">Type — the shipped look, or brand law?</h2><span class="who">NATE</span> <span class="who">VICTORIA</span></div>
+  <p class="qsub">Every reel and card shipped in Arial Bold (left). The campaign's brand file says Cormorant Garamond + Source Sans 3 (right — same card, same plate). One constant per builder to switch; everything rebuilds in ten minutes. Campaign-wide call, not per piece.</p>
+  <div class="grid">
+    <div class="opt"><div class="opt-label"><div class="opt-name">A · Arial Bold</div><div class="opt-meta">what's shipped</div></div><img src="fontA_arial.jpg" alt="Arial"></div>
+    <div class="opt"><div class="opt-label"><div class="opt-name">B · Cormorant + Source Sans 3</div><div class="opt-meta">brand law</div></div><img src="fontB_brand.jpg" alt="Brand fonts"></div>
+  </div>
+  <form class="decide" data-lavish-question="type" onsubmit="q(event,'type','Type direction')">
+    <fieldset><legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="type" value="A — keep Arial, ship as is"><span><b>A — keep what's shipped</b><i>Nothing rebuilds.</i></span></label>
+        <label class="choice"><input type="radio" name="type" value="B — brand fonts, rebuild everything"><span><b>B — brand fonts everywhere</b><i>All 5 reels + 10 cards rebuild tonight.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Optional."></textarea>
+      <div class="actions"><button type="submit">Queue</button><span class="queued" id="q-type"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 6 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">06</span><h2 class="qt">Ten cards — pull any?</h2><span class="who">VICTORIA</span></div>
+  <p class="qsub">You said all eight go; S09 and S10 (countdown) came after. Click any to look. S03 is the abstract one.</p>
+  <div class="strip">
+    <img src="card_S01_dates_916.jpg"><img src="card_S02_under-your-dock_916.jpg"><img src="card_S03_past-the-dock_916.jpg"><img src="card_S04_scrape_916.jpg"><img src="card_S05_haul_916.jpg"><img src="card_S06_cover_916.jpg"><img src="card_S07_two-machines_916.jpg"><img src="card_S08_seven-weeks_916.jpg"><img src="card_S09_seven-days_916.jpg"><img src="card_S10_monday_916.jpg">
+  </div>
+  <form class="decide" data-lavish-question="cards10" onsubmit="q(event,'cards10','Ten cards')">
+    <fieldset><legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="cards10" value="all ten go"><span><b>All ten go</b></span></label>
+        <label class="choice"><input type="radio" name="cards10" value="pull — named below"><span><b>Pull some</b><i>S-numbers below.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="S03 …"></textarea>
+      <div class="actions"><button type="submit">Queue</button><span class="queued" id="q-cards10"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 7 -->
+<section class="q">
+  <div class="qhead"><span class="qnum">07</span><h2 class="qt">Who posts, and from where?</h2><span class="who n">NATE</span></div>
+  <p class="qsub">The desk has every piece as <code>ready_to_copy</code> with caption and file. Schedule says Mon / Wed / Fri. Somebody's thumb has to hit Post.</p>
+  <form class="decide" data-lavish-question="poster" onsubmit="q(event,'poster','Who posts')">
+    <fieldset><legend>Your call</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="poster" value="Hallie from the desk, Mon/Wed/Fri"><span><b>Hallie, from the desk</b><i>Mon / Wed / Fri per the schedule.</i></span></label>
+        <label class="choice"><input type="radio" name="poster" value="Victoria posts"><span><b>Victoria posts</b></span></label>
+        <label class="choice"><input type="radio" name="poster" value="Nate posts"><span><b>Nate posts</b></span></label>
+        <label class="choice"><input type="radio" name="poster" value="schedule them in Meta Business Suite — build the pack"><span><b>Pre-schedule in Meta Business Suite</b><i>I build a dated pack: file + caption per slot.</i></span></label>
+      </div>
+      <textarea name="why" placeholder="Handles / accounts if it's not the ATX IG."></textarea>
+      <div class="actions"><button type="submit">Queue</button><span class="queued" id="q-poster"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<!-- 8 -->
+<section class="q" style="border-bottom:0">
+  <div class="qhead"><span class="qnum">08</span><h2 class="qt">"We might still add more" — what?</h2><span class="who">VICTORIA</span> <span class="who n">NATE</span></div>
+  <p class="qsub">Five weeks of runway are covered. What's the piece you expected and don't see? Anything that needs a machine, a tarp, or a crew in frame waits for Oct 12 — say it anyway, it goes on the shoot list.</p>
+  <form class="decide" data-lavish-question="more" onsubmit="q(event,'more','Add to the schedule')">
+    <fieldset><legend>Open notes</legend>
+      <textarea name="why" placeholder="One idea per line." style="min-height:110px"></textarea>
+      <div class="actions"><button type="submit">Queue notes</button><span class="queued" id="q-more"></span></div>
+    </fieldset>
+  </form>
+</section>
+
+<footer><b>How this comes back:</b> each Queue stacks one line. When you're both done, hit <b>Send to Agent</b> in the Lavish bar. I read the store directly — nothing gets lost — and the work starts from your answers.</footer>
+</div>
+<script>
+function q(ev, key, label){
+  ev.preventDefault();
+  var f = ev.currentTarget, d = new FormData(f);
+  var pick = d.get(key), why = (d.get('why')||'').toString().trim();
+  if(!pick && !why) return;
+  var msg = label + ': ' + (pick ? pick : '(notes only)');
+  if(why) msg += ' — "' + why + '"';
+  if(window.lavish && window.lavish.queuePrompt){
+    window.lavish.queuePrompt(msg, { tag:'sitdown', text: label + ': ' + (pick||'notes'), element: f, queueKey: key, data:{ question:key, answer:pick||null, rationale:why||null } });
+  }
+  var b = document.getElementById('q-'+key); if(b) b.textContent = '✓ queued — edit and re-queue anytime';
+}
+</script>
+</body></html>

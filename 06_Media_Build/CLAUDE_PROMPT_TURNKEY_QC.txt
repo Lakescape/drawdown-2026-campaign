@@ -1,0 +1,25 @@
+You are in ~/drawdown-2026-campaign/06_Media_Build.
+
+THIS SESSION = QC only. One piece. Do not rebuild.
+
+READ:
+1. weeks/2026-08-31/HERMES_QC_TURNKEY.md
+2. weeks/CURRENT → weeks/2026-08-31/BOARD.md (append when done; do not rewrite history)
+3. build_turnkey.py (beats + straps — do not run it unless a beat FAILs)
+4. The five QC frames listed in HERMES_QC_TURNKEY.md — Read the PNGs, do not trust ffmpeg exit 0.
+
+LOCKED
+- Pickup bed c30cdc0fe978 banned.
+- @two_machines is a barge. Banned on Truxor lines.
+- No $695. No tarp/staple claim. No t2v.
+- Two Hermes chats already collided on this builder. You own the stamp. They stop.
+
+JOB
+Look at QC_turnkey_t1.2 / t5.0 / t8.8 / t12.5 / t16.5.
+C7: strap must match picture. Two Truxors must both be in 9:16. LOAD TRAIL must read on t8.8. Packed trailer + lake on t12.5, no identifiable house.
+
+WRITE weeks/2026-08-31/GATE3_TURNKEY.md with Verdict PASS or FAIL and one line per beat.
+If FAIL, stop. Do not recut unless Nate is in the thread and says recut.
+If PASS, say "ready for Nate Gate 3" and stop. Nothing posts.
+
+Append one short paragraph to BOARD.md.
